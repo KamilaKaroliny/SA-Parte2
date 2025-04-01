@@ -15,7 +15,7 @@ function validarFormulario() {
     }
 
     if(!senha){
-        alert('Por favor, preencha o nome.');
+        alert('Por favor, preencha a senha.');
         return;
     }else{
         console.log(senha);
