@@ -3,9 +3,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="" href="validaLogin.js">
+
     <title>login</title>
 </head>
 <body>
+    <div id="formulario">
+        <H1>LOGIN</H1>
+        <form action="" id="gestorForm">
     
+            <label for="email">E-mail</label><br>
+            <input type="text" nome="email" id="email_gestor" required>
+    
+            <br>
+    
+            <label for="senha">Senha</label><br>
+            <input type="text" nome="senha" id="senha_gestor" required>
+    
+    
+            <button type="button" onclick="validaFormulario()">Enviar</button>
+    
+        </form>
+    </div>
 </body>
 </html>
