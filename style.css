@@ -35,3 +35,7 @@ body {
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
+
+::-webkit-input-placeholder {
+    color: rgb(255, 255, 255);
+ }
