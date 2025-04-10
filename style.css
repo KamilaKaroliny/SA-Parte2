@@ -14,13 +14,17 @@ body {
     border-radius: 10px;
 }
 
+
+
 #logo {
     height: 300px;
     width: 300px;
+   
 }
 
 .flex{
     display: flex;
+   
 }
 
 #logo1 {
