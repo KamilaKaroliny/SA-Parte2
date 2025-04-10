@@ -1,12 +1,12 @@
 body {
-    background-color: rgb(2, 32, 122);
+    background-color: rgb(86, 106, 189);
     color: rgb(255, 255, 255);
 }
 
 .button2{
     padding: 10px 67px;
     text-align: center;
-    background-color: rgb(2, 32, 122); 
+    background-color: rgb(86, 106, 189); 
     color: rgb(255, 254, 254); 
     border: 2px solid #ffffff;
 }
