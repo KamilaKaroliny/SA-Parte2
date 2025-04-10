@@ -22,3 +22,8 @@ body {
 .flex{
     display: flex;
 }
+
+#logo1 {
+    height: 30px;
+    width: 30px;
+}
