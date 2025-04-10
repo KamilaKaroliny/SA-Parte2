@@ -14,6 +14,8 @@ body {
     border-radius: 10px;
 }
 
+
+
 #logo {
     height: 300px;
     width: 300px;
@@ -32,9 +34,4 @@ body {
     color: rgb(255, 254, 254); 
     border: 2px solid #ffffff;
     border-radius: 10px;
-}
-
-#logo1 {
-    height: 170px;
-    width: 170px;
 }
