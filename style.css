@@ -11,11 +11,15 @@ body {
     border: 2px solid #ffffff;
 }
 
+
+
 #logo {
     height: 300px;
     width: 300px;
+   
 }
 
 .flex{
     display: flex;
+   
 }
