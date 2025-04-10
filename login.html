@@ -8,27 +8,33 @@
     <title>login</title>
 </head>
 <body>
-    <div id="formulario">
-        <img id = "logo" src="imagens/logo_tremalize.png" alt="Logo Tremalize">
-        <div class="titulo">
-            <h1>LOGIN</h1>
+    <div class="flex">
+        <div id="formulario">
+            <img id = "logo" src="imagens/logo_tremalize.png" alt="Logo Tremalize">
+            <div class="titulo">
+                <h1>LOGIN</h1>
+            </div>
+            <form action="" id="gestorForm">
+        
+                <label for="email">E-mail</label><br>
+                <input class="esticadinho" type="text" nome="email" id="email_gestor" value="" placeholder="E-mail" required>
+    
+                <br>
+        
+                <label for="senha">Senha</label><br>
+                <input class="esticadinho" type="text" nome="senha" id="senha_gestor" value="" placeholder="Senha" required>
+                <a href="esqueceusenha.html">Esqueceu a senha?</a>
+                <br>
+                <br>
+        
+                <button class='button2' type="button" onclick="validaFormulario()">Enviar</button>
+                <div class="flex">
+                    <h3>não tem uma conta?</h3>
+                    <a href="cadastro.html">Cadraste-se</a>
+                </div>
+                
+            </form>
         </div>
-        <form action="" id="gestorForm">
-    
-            <label for="email">E-mail</label><br>
-            <input type="text" nome="email" id="email_gestor" required>
-
-            <br>
-    
-            <label for="senha">Senha</label><br>
-            <input type="text" nome="senha" id="senha_gestor" required>
-
-            <br>
-            <br>
-    
-            <button class='button2' type="button" onclick="validaFormulario()">Enviar</button>
-    
-        </form>
     </div>
 </body>
 </html>
