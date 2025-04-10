@@ -1,6 +1,8 @@
 body {
     background-color: rgb(86, 106, 189);
     color: rgb(255, 255, 255);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
 }
 
 .button2{
@@ -9,6 +11,7 @@ body {
     background-color: rgb(86, 106, 189); 
     color: rgb(255, 254, 254); 
     border: 2px solid #ffffff;
+    border-radius: 10px;
 }
 
 
