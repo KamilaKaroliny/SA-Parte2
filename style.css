@@ -14,12 +14,14 @@ body {
     border-radius: 10px;
 }
 
-
-
 #logo {
     height: 300px;
     width: 300px;
-   
+}
+
+#logo1 {
+    height: 170px;
+    width: 170px;
 }
 
 .flex{
