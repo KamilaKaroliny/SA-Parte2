@@ -30,11 +30,17 @@ body {
     justify-content: center;
 }
 
+.flex-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .esticadinho{
     padding: 20px 90px; 
     background-color: rgb(86, 106, 189); 
     color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
+    border: 1px solid #cecccc;
     border-radius: 10px;
 }
 
@@ -64,7 +70,7 @@ body {
     padding: 15px 90px; 
     background-color: rgb(86, 106, 189); 
     color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
+    border: 1px solid #cecccc;
     border-radius: 10px;
 }
 
