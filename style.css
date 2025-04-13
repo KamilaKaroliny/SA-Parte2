@@ -9,32 +9,6 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.button1{
-    padding: 20px 155px; 
-    text-align: center;
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-}
-.button2{
-    padding: 15px 165px; 
-    text-align: center;
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-}
-
-.button3{
-    padding: 20px 165px; 
-    text-align: center;
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-}
-
 #logo {
     height: 200px;
     width: 300px;
@@ -46,7 +20,7 @@ body {
 }
 
 #logo2 {
-    height: 150px;
+    height: 145px;
     width: 220px;
 }
 
@@ -55,24 +29,49 @@ body {
     width: 30px;
 }
 
-.flex{
+#flex{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.flex-container{
+#flex-container{
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-.padding{
+#padding{
     margin: 0px;
-    border: px;
+    border: 0px;
     padding: 20px;
 }
 
+#button1{
+    padding: 20px 155px; 
+    text-align: center;
+    background-color: rgb(86, 106, 189); 
+    color: rgb(255, 254, 254); 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+#button2{
+    padding: 13px 155px; 
+    text-align: center;
+    background-color: rgb(86, 106, 189); 
+    color: rgb(255, 254, 254); 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+#button3{
+    padding: 20px 155px; 
+    text-align: center;
+    background-color: rgb(86, 106, 189); 
+    color: rgb(255, 254, 254); 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
 
 .esticadinho{
     padding: 20px 90px; 
@@ -83,14 +82,14 @@ body {
 }
 
 .esticadinho2{
-    padding: 15px 90px; 
+    padding: 13px 90px; 
     background-color: rgb(86, 106, 189); 
     color: rgb(255, 254, 254); 
     border: 1px solid #cecccc;
     border-radius: 10px;
 }
 
-.esqueceuSenhaa {
+#esqueceuSenhaa {
     text-align: right;
 }
 
