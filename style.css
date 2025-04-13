@@ -5,8 +5,29 @@ body {
     text-align: center;
 }
 
-.button2{
+::-webkit-input-placeholder {
+    color: rgb(255, 255, 255);
+}
+
+.button1{
     padding: 20px 155px; 
+    text-align: center;
+    background-color: rgb(86, 106, 189); 
+    color: rgb(255, 254, 254); 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+.button2{
+    padding: 15px 165px; 
+    text-align: center;
+    background-color: rgb(86, 106, 189); 
+    color: rgb(255, 254, 254); 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+.button3{
+    padding: 20px 165px; 
     text-align: center;
     background-color: rgb(86, 106, 189); 
     color: rgb(255, 254, 254); 
@@ -24,6 +45,16 @@ body {
     width: 170px;
 }
 
+#logo2 {
+    height: 150px;
+    width: 220px;
+}
+
+#sininho {
+    height: 30px;
+    width: 30px;
+}
+
 .flex{
     display: flex;
     align-items: center;
@@ -36,42 +67,18 @@ body {
     justify-content: flex-start;
 }
 
+.padding{
+    margin: 0px;
+    border: px;
+    padding: 20px;
+}
+
+
 .esticadinho{
     padding: 20px 90px; 
     background-color: rgb(86, 106, 189); 
     color: rgb(255, 254, 254); 
     border: 1px solid #cecccc;
-    border-radius: 10px;
-}
-
-.esqueceuSenhaa {
-    text-align: right;
-}
-
-::-webkit-input-placeholder {
-    color: rgb(255, 255, 255);
-}
-
-#sininho {
-    height: 30px;
-    width: 30px;
-}
-
-.button3{
-    padding: 15px 165px; 
-    text-align: center;
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-}
-
-.button4{
-    padding: 20px 165px; 
-    text-align: center;
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
     border-radius: 10px;
 }
 
@@ -83,14 +90,9 @@ body {
     border-radius: 10px;
 }
 
-#logo2 {
-    height: 150px;
-    width: 220px;
+.esqueceuSenhaa {
+    text-align: right;
 }
 
-.padding{
-    margin: 0px;
-    border: px;
-    padding: 20px;
-}
+
 
