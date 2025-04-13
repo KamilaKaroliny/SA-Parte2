@@ -44,10 +44,27 @@ body {
 
 ::-webkit-input-placeholder {
     color: rgb(255, 255, 255);
- }
+}
 
-
- #sininho {
+#sininho {
     height: 30px;
     width: 30px;
- }
+}
+
+.button3{
+    padding: 15px 145px; 
+    text-align: center;
+    background-color: rgb(86, 106, 189); 
+    color: rgb(255, 254, 254); 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+.esticadinho2{
+    padding: 15px 90px; 
+    background-color: rgb(86, 106, 189); 
+    color: rgb(255, 254, 254); 
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
