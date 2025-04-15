@@ -1,8 +1,8 @@
 body {
-    background-color: rgb(86, 106, 189);
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
+    background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
 }
 
 ::-webkit-input-placeholder {
@@ -29,53 +29,54 @@ body {
     width: 30px;
 }
 
-#flex{
+#flex {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#flex-container{
+#flex-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
 }
 
-#padding{
+#padding {
     margin: 0px;
     border: 0px;
     padding: 20px;
 }
 
-#button1{
-    padding: 20px 155px; 
+#button1 {
+    padding: 20px 155px;
     text-align: center;
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-}
-#button2{
-    padding: 13px 155px; 
-    text-align: center;
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
 
-.esticadinho{
-    padding: 20px 90px; 
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
+#button2 {
+    padding: 13px 155px;
+    text-align: center;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+.esticadinho {
+    padding: 20px 90px;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
     border: 1px solid #cecccc;
     border-radius: 10px;
 }
 
-.esticadinho2{
-    padding: 13px 90px; 
-    background-color: rgb(86, 106, 189); 
-    color: rgb(255, 254, 254); 
+.esticadinho2 {
+    padding: 13px 90px;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
     border: 1px solid #cecccc;
     border-radius: 10px;
 }
@@ -83,6 +84,3 @@ body {
 #esqueceuSenhaa {
     text-align: right;
 }
-
-
-
