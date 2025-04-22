@@ -93,12 +93,14 @@ body {
 }
 
 .azul{
-    background-color: blue;
+    background-color: rgb(86, 106, 189);
     padding: 80px;
 }
 
 .amarelo {
-    background-color: yellow;
+    background-color: rgb(86, 106, 189);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
     padding: 50px;
     margin: 10px;
 }
