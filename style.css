@@ -108,5 +108,15 @@ body {
     margin: 14px;
 }
 
+.flex1{
+    display: flex;
+}
 
+a:link {
+    color: white;
+    text-decoration: none;
+  }
 
+a:hover {
+    color: rgb(32, 13, 175);
+}
