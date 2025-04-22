@@ -3,6 +3,13 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
+    height: 807px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-top: 8px;
+    text-align: center;
+    width: 384px;
 }
 
 ::-webkit-input-placeholder {
