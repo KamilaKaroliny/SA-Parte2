@@ -31,6 +31,11 @@ body {
     width: 220px;
 }
 
+#logo3 {
+    height: 100px;
+    width: 180px;
+}
+
 #sininho {
     height: 30px;
     width: 30px;
@@ -46,6 +51,14 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+
+#flex-container2 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    width: 30px;
 }
 
 #padding {
