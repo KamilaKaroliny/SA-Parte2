@@ -1,7 +1,6 @@
 body {
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    text-align: center;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
     height: 807px;
     margin-bottom: 8px;
@@ -34,12 +33,14 @@ body {
 #logo3 {
     height: 100px;
     width: 180px;
-    padding: 50px;
+    padding: 35px;
 }
 
 #sininho {
     height: 30px;
     width: 30px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #casa {
@@ -50,12 +51,14 @@ body {
 #flex {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #flex2 {
-    display: flex;
+    display: flex;   
     align-items: stretch;
+    justify-content: center;
+
 }
 
 #flex3 {
@@ -154,7 +157,7 @@ a:hover {
 }
 
 .imgTelaInfo{
-    width: 80px;
+    width: 60px;
 }
 
 .dados {
