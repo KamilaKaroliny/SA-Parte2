@@ -92,19 +92,10 @@ body {
     text-align: right;
 }
 
-.azul{
-    background-color: rgb(86, 106, 189);
-    padding: 80px;
-}
-
 .amarelo {
     background-color: rgb(86, 106, 189);
     border: 1px solid #cecccc;
     border-radius: 10px;
     padding: 50px;
     margin: 10px;
-}
-
-.flex1{
-    display: flex;
 }
