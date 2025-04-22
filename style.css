@@ -119,8 +119,8 @@ body {
 }
 
 #pagina {
-    padding: 80px;
-    margin: 14px;
+    padding: 0px;
+    margin: 10px;
 }
 
 a:link {
@@ -139,6 +139,10 @@ a:hover {
 
 .imgTelaInicial{
     width: 60px;
+}
+
+.imgTelaInfo{
+    width: 80px;
 }
 
 .dados {
