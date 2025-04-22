@@ -36,9 +36,15 @@ body {
     width: 180px;
     padding: 50px;
 }
+
 #sininho {
     height: 30px;
     width: 30px;
+}
+
+#casa {
+    height: 70px;
+    width: 70px;
 }
 
 #flex {
@@ -50,6 +56,10 @@ body {
 #flex2 {
     display: flex;
     align-items: stretch;
+}
+
+#flex3 {
+    justify-content: flex-end;
 }
 
 #flex-container {
