@@ -96,6 +96,17 @@ body {
     background-color: rgb(86, 106, 189);
     border: 1px solid #cecccc;
     border-radius: 10px;
-    padding: 60px;
+    padding: 80px;
     margin: 14px;
 }
+
+#pagina {
+    background-color: rgb(86, 106, 189);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+    padding: 80px;
+    margin: 14px;
+}
+
+
+
