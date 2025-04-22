@@ -1,28 +1,11 @@
-function validarFormulario() {
+function paginaInicial() {
+    window.location.href="paginaInicial.html";
+}
 
-    //Pegar os dados!
+function login() {
+    window.location.href="login.html";
+}
 
-    const nome = document.getElementById('email_gestor').value.trim();
-    const idade = parseInt(document.getElementById('senha_gestor').value, 10);
-
-    //Processar os dados (obrigatoriedades)!
-
-    if(!email){
-        alert('Por favor, preencha o nome.');
-        return;
-    }else{
-        console.log(email);
-    }
-
-    if(!senha){
-        alert('Por favor, preencha a senha.');
-        return;
-    }else{
-        console.log(senha);
-    }
-
-    //Devolver
-
-    alert('Formulário enviado com sucesso')
-
+function esqueceusenha2() {
+    window.location.href="esqueceusenha2.html";
 }

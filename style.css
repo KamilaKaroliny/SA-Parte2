@@ -96,6 +96,21 @@ body {
     background-color: rgb(86, 106, 189);
     border: 1px solid #cecccc;
     border-radius: 10px;
-    padding: 60px;
+    padding: 80px;
     margin: 14px;
+}
+
+#pagina {
+    background-color: rgb(86, 106, 189);
+    padding: 80px;
+    margin: 14px;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+
+a:hover {
+    color: rgb(32, 13, 175);
 }
