@@ -34,12 +34,14 @@ body {
 #logo3 {
     height: 100px;
     width: 180px;
-    padding: 50px;
+    padding: 35px;
 }
 
 #sininho {
     height: 30px;
     width: 30px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #casa {
@@ -50,12 +52,14 @@ body {
 #flex {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 #flex2 {
-    display: flex;
+    display: flex;   
     align-items: stretch;
+    justify-content: center;
+
 }
 
 #flex3 {
