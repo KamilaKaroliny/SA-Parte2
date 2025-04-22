@@ -141,6 +141,10 @@ a:hover {
     width: 80px;
 }
 
+.imgTelaInfo{
+    width: 80px;
+}
+
 .dados {
     align-items: left;
     text-align: left;
