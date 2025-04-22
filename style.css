@@ -84,3 +84,14 @@ body {
 #esqueceuSenhaa {
     text-align: right;
 }
+
+.azul{
+    background-color: blue;
+    padding: 80px;
+}
+
+.amarelo {
+    background-color: yellow;
+    padding: 50px;
+    margin: 10px;
+}
