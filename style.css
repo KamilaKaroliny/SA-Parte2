@@ -44,6 +44,11 @@ body {
     margin: 0px;
 }
 
+#casa {
+    height: 70px;
+    width: 70px;
+}
+
 #flex {
     display: flex;
     align-items: center;
@@ -55,6 +60,10 @@ body {
     align-items: stretch;
     justify-content: center;
 
+}
+
+#flex3 {
+    justify-content: flex-end;
 }
 
 #flex-container {
@@ -121,6 +130,8 @@ body {
     border-radius: 10px;
     padding: 10px;
     margin: 14px;
+    width: 120;
+    height: 110;
 }
 
 #pagina {
@@ -143,11 +154,11 @@ a:hover {
 }
 
 .imgTelaInicial{
-    width: 60px;
+    width: 70px;
 }
 
 .imgTelaInfo{
-    width: 80px;
+    width: 60px;
 }
 
 .dados {
