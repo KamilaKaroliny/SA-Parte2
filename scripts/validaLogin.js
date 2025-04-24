@@ -1,5 +1,5 @@
 function paginaInicial() {
-    window.location.href="./public/paginaInicial.html";
+    window.location.href="paginaInicial.html";
 }
 
 function login() {
