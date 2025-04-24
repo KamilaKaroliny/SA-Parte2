@@ -43,7 +43,7 @@ body {
 
 #seta{
     height: 25px;
-    width: 25px;
+    width: 35px;
 }
 
 #sininho {
@@ -144,14 +144,24 @@ body {
     text-align: right;
 }
 
-.amarelo {
+.quadradinho1 {
     background-color: rgb(86, 106, 189);
     border: 1px solid #cecccc;
     border-radius: 10px;
     padding: 10px;
     margin: 14px;
-    width: 120;
-    height: 110;
+    width: 120px;
+    height: 110px;
+}
+
+.quadradinho2 {
+    background-color: rgb(86, 106, 189);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    height: 60px;
 }
 
 #pagina {
@@ -184,4 +194,10 @@ a:hover {
 .dados {
     align-items: left;
     text-align: left;
+}
+
+#fonte{
+    font-size: 35px;
+    justify-items: center;
+    align-items: center;
 }
