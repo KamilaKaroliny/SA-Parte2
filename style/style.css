@@ -294,4 +294,12 @@ a:hover {
     background-color: #f7f5f5;
     color: black;
    border-radius: 10px;
+   
+}
+.branca h3{
+    padding: 10px;
+   
+}
+.branca p{
+    height: 110px;
 }
