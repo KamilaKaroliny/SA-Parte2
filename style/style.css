@@ -97,7 +97,8 @@ body {
 #flex6 {
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    padding: 5px;
 }
 
 #flex-container {
