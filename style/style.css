@@ -99,7 +99,7 @@ body {
 }
 
 #flex7 {
-    justify-content: flex-start;
+    justify-content: space-between;
     display: flex;
     align-items: center;
 }
@@ -233,9 +233,7 @@ a:hover {
 .icone2{
     width: 50px; 
     height: 50px;
-    padding: 0px;
-    margin: 0px;
- }
+}
 
 .imgTelaInicial{
     width: 70px;
@@ -265,9 +263,11 @@ a:hover {
     margin: 0px;
 }
 
+.meio{
+    width:50%;
+}
 .branca{
     background-color: #f7f5f5;
     color: black;
    border-radius: 10px;
 }
-
