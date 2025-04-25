@@ -258,3 +258,10 @@ a:hover {
     padding: 0px;
     margin: 0px;
 }
+
+.branca{
+    background-color: #f7f5f5;
+    color: black;
+   border-radius: 10px;
+}
+
