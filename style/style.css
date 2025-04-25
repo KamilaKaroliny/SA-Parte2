@@ -108,6 +108,8 @@ body {
     justify-content: space-between;
     display: flex;
     align-items: center;
+    padding: 8px;
+    margin: 1px;
 }
 
 #flex-container {
