@@ -285,21 +285,41 @@ a:hover {
 .nome{
     padding: 0px;
     margin: 0px;
+    width:25%;
 }
 
-.meio{
+.meio1{
     width:50%;
 }
+
+.meio2{
+    width:15%;
+}
+
+.meio3{
+    width:10%;
+}
+
+.meio4{
+    width:70%;
+}
+
+.meio5{
+    width:85%;
+}
+
 .branca{
     background-color: #f7f5f5;
     color: black;
    border-radius: 10px;
    
 }
+
 .branca h3{
     padding: 10px;
    
 }
+
 .branca p{
     height: 110px;
 }
