@@ -262,3 +262,12 @@ a:hover {
     padding: 0px;
     margin: 0px;
 }
+
+.meio{
+    width:50%;
+}
+.branca{
+    background-color: #f7f5f5;
+    color: black;
+   border-radius: 10px;
+}
