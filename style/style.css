@@ -86,6 +86,20 @@ body {
     justify-content: space-around;
 }
 
+#flex5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0px;
+    margin: 0px;
+}
+
+#flex6 {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
 #flex-container {
     display: flex;
     align-items: center;
@@ -177,9 +191,20 @@ body {
     border: 1px solid #cecccc;
     border-radius: 10px;
     padding: 5px;
-    margin: 5px;
-    width: 200px;
+    margin: 0px;
+    width: 350px;
     height: 60px;
+    justify-content: flex-start;
+}
+
+.quadradinho3 {
+    background-color: rgb(86, 106, 189);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 14px;
+    width: 120px;
+    height: 110px;
 }
 
 #pagina {
@@ -196,10 +221,17 @@ a:hover {
     color: rgb(32, 13, 175);
 }
 
-.icone{
+.icone1{
    width: 50px; 
    height: 50px;
 }
+
+.icone2{
+    width: 50px; 
+    height: 50px;
+    padding: 0px;
+    margin: 0px;
+ }
 
 .imgTelaInicial{
     width: 70px;
@@ -215,7 +247,12 @@ a:hover {
 }
 
 #fonte{
-    font-size: 35px;
-    justify-items: center;
+    font-size: 40px;
+    justify-content: center;
     align-items: center;
+}
+
+.nome{
+    padding: 0px;
+    margin: 0px;
 }
