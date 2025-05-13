@@ -428,3 +428,9 @@ a:hover {
     color: #ffffff;
     transition: 0.5s ease;
 }
+
+.rodape{
+    position: absolute;
+    bottom:0%;
+    width: 100%;
+}
