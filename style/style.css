@@ -235,6 +235,16 @@ body {
     height: 15px;
 }
 
+.quadradinhoMapa {
+    background-color: rgb(86, 106, 189);
+    border: 2px solid #cecccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px;
+    width: 20px;
+    height: 15px;
+}
+
 #pagina {
     padding: 0px;
     margin: 10px;
