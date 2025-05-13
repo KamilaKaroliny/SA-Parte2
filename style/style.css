@@ -419,3 +419,12 @@ a:hover {
     width: 20px; 
     height: 20px;
 }
+
+#notificacoes{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #4557a1; 
+    color: #ffffff;
+    transition: 0.5s ease;
+}
