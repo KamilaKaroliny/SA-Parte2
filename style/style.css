@@ -224,6 +224,16 @@ body {
     height: 15px;
 }
 
+.quadradinhoMapa {
+    background-color: rgb(86, 106, 189);
+    border: 2px solid #cecccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3px;
+    width: 384px;
+    height: 350px;
+}
+
 #pagina {
     padding: 0px;
     margin: 10px;
@@ -334,4 +344,17 @@ a:hover {
 
 .branca p{
     height: 110px;
+}
+
+
+#josevaldo {
+    width: 60px; 
+    height: 60px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#nomee {
+    font-size: 18px;
+    font-family: 'bold Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
