@@ -255,8 +255,8 @@ a:hover {
 }
 
 .icone2{
-    width: 50px; 
-    height: 50px;
+    width: 60px; 
+    height: 60px;
 }
 
 .imgTelaInicial{
@@ -285,28 +285,38 @@ a:hover {
 .nome{
     padding: 0px;
     margin: 0px;
-    width:25%;
+    display: flex;
+    padding-left: 1rem;
 }
 
 .meio1{
-    width:50%;
+    width:100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    padding-left: 0.8rem;
 }
 
 .meio2{
-    width:15%;
+    width:100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    padding-left: 1rem;
+    justify-content: flex-end
 }
 
 .meio3{
-    width:10%;
+    width:20%;
 }
 
 .meio4{
-    width:70%;
+    width:85%;
+    text-align: center;
+    justify-content: center
 }
 
-.meio5{
-    width:85%;
-}
+
 
 .branca{
     background-color: #f7f5f5;
@@ -322,4 +332,17 @@ a:hover {
 
 .branca p{
     height: 110px;
+}
+
+
+#josevaldo {
+    width: 60px; 
+    height: 60px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#nomee {
+    font-size: 18px;
+    font-family: 'bold Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
