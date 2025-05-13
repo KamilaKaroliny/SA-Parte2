@@ -33,7 +33,7 @@ body {
 #logo3 {
     height: 100px;
     width: 180px;
-    padding: 35px;
+    padding: 30px 35px 35px 10px;
 }
 
 #logo4 {
@@ -47,10 +47,8 @@ body {
 }
 
 #sininho {
-    height: 30px;
+    height: 60px;
     width: 30px;
-    padding: 0px;
-    margin: 0px;
 }
 
 #casa1 {
@@ -68,7 +66,6 @@ body {
     display: flex;   
     align-items: stretch;
     justify-content: center;
-
 }
 
 #flex3 {
@@ -122,14 +119,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-}
-
-#flex-container2 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 60px;
-    width: 30px;
 }
 
 #padding {
@@ -323,10 +312,23 @@ a:hover {
 .meio4{
     width:85%;
     text-align: center;
-    justify-content: center
+    justify-content: center;
 }
 
+.meio5{
+    width:10%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+}
 
+.meio6{
+    width:100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-around
+}
 
 .branca{
     background-color: #f7f5f5;
