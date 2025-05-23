@@ -1,71 +1,82 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/validaLogin.js"></script>
-    <title>Tremalize</title>
-</head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/style.css" />
+  <script src="../scripts/validaLogin.js" defer></script>
+  <title>Tremalize</title>
+</head>
 <body>
-    <div id="flex4">
-        <div class="meio1">
-            <a href="paginaInicial.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta">
-            </a>
-        </div>
 
-        <div class="meio1">
-            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
-        </div>
-
-        <div class="meio2">
-            <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
-            </a>
-        </div>
+  <!-- Cabeçalho com logo e navegação -->
+  <header id="flex4">
+    <div class="meio1">
+      <a href="paginaInicial.html">
+        <img id="seta" src="../assets/icons/seta.png" alt="Voltar para a página anterior" />
+      </a>
     </div>
-
-    <br>
-
-    <div>
-        <div id="flex8">
-            <div class="quadradinho3" id="flex"> 
-                <h5>20%</h5>
-               <img class="imgMapa" src="../assets/icons/umidade.png" alt="Imagem de Trilho">
-            </div>
-            <div class="quadradinho3" id="flex"><h5>30°C</h5><img class="imgMapa" src="../assets/icons/sol.png" alt="Imagem chat"></div>
-            <div class="quadradinhoLegenda"><img class="imgMapa" src="../assets/icons/legenda.png" alt="Imagem chat"></div>
-        </div>
+    <div class="meio1">
+      <img id="logo4" src="../assets/icons/logoTremalize.png" alt="Logo da Tremalize" />
     </div>
-    <br>
-
-    <div>
-        <div id="flex8">
-            <div class="quadradinhoMapa">
-                <div style="width: 100%">
-                    <iframe width="350" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" 
-                    src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=+(Mpa)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                    <a href="https://www.gps.ie/collections/personal-trackers/">Personl trackers</a>
-                    </iframe>
-                </div>
-            </div>
-        </div>
+    <div class="meio2">
+      <a href="paginaInicial.html">
+        <img id="casa1" src="../assets/icons/casa.png" alt="Ir para a página inicial" />
+      </a>
     </div>
-    <div>
-        <div class="quadradinhoMapaInformacao">
-            <div class="MapaInformacao">
-                <div><h2>ebideie</h2></div>
-            </div>
-            <div><h2>ebideie</h2></div>
+  </header>
 
+  <!-- Conteúdo principal -->
+  <main>
+
+    <!-- Seção de informações do clima -->
+    <section aria-label="Informações de clima" id="clima-info">
+      <div id="flex8">
+        <div class="quadradinho3">
+          <h3>20% Umidade</h3>
+          <img class="imgMapa" src="../assets/icons/umidade.png" alt="Ícone de umidade" />
         </div>
-            
-        
-    </div>
+        <div class="quadradinho3">
+          <h3>30°C Temperatura</h3>
+          <img class="imgMapa" src="../assets/icons/sol.png" alt="Ícone de sol" />
+        </div>
+        <div class="quadradinhoLegenda">
+          <img class="imgMapa" src="../assets/icons/legenda.png" alt="Legenda do mapa" />
+        </div>
+      </div>
+    </section>
 
-   
-        
-    
+    <!-- Seção do mapa -->
+    <section aria-label="Mapa de localização" id="mapa">
+      <div id="flex8">
+        <div class="quadradinhoMapa">
+          <iframe
+            title="Mapa de localização"
+            width="350"
+            height="350"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+            src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=+(Mpa)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de informações adicionais -->
+    <section aria-label="Informações adicionais" id="info-adicional">
+      <div class="quadradinhoMapaInformacao">
+        <div class="MapaInformacao">
+          <h2>ebideie</h2>
+        </div>
+        <div>
+          <h2>ebideie</h2>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
 </body>
 </html>
