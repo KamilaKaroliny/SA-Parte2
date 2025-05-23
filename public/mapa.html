@@ -3,80 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../style/styleMapa.css" />
   <script src="../scripts/validaLogin.js" defer></script>
   <title>Tremalize</title>
 </head>
 <body>
 
-  <!-- Cabeçalho com logo e navegação -->
-  <header id="flex4">
-    <div class="meio1">
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+    <div class="cabecalho-item">
       <a href="paginaInicial.html">
-        <img id="seta" src="../assets/icons/seta.png" alt="Voltar para a página anterior" />
+        <img class="icone-voltar" src="../assets/icons/seta.png" alt="Voltar" />
       </a>
     </div>
-    <div class="meio1">
-      <img id="logo4" src="../assets/icons/logoTremalize.png" alt="Logo da Tremalize" />
+    <div class="cabecalho-item centralizado">
+      <img class="logo" src="../assets/icons/logoTremalize.png" alt="Logo Tremalize" />
     </div>
-    <div class="meio2">
+    <div class="cabecalho-item direita">
       <a href="paginaInicial.html">
-        <img id="casa1" src="../assets/icons/casa.png" alt="Ir para a página inicial" />
+        <img class="icone-casa" src="../assets/icons/casa.png" alt="Página inicial" />
       </a>
     </div>
   </header>
 
-  <!-- Conteúdo principal -->
   <main>
 
-    <!-- Seção de informações do clima -->
-    <section aria-label="Informações de clima" id="clima-info">
-      <div id="flex8">
-        <div class="quadradinho3">
+    <!-- Clima -->
+    <section aria-label="Informações do clima" class="secao-info">
+      <div class="info-container">
+        <div class="info-box">
           <h3>20% Umidade</h3>
-          <img class="imgMapa" src="../assets/icons/umidade.png" alt="Ícone de umidade" />
+          <img class= "imagemLegenda" src="../assets/icons/umidade.png" alt="Ícone Umidade" />
         </div>
-        <div class="quadradinho3">
-          <h3>30°C Temperatura</h3>
-          <img class="imgMapa" src="../assets/icons/sol.png" alt="Ícone de sol" />
+        <div class="info-box">
+          <h3>30°C</h3>
+          <img class= "imagemLegenda" src="../assets/icons/sol.png" alt="Ícone Sol" />
         </div>
-        <div class="quadradinhoLegenda">
-          <img class="imgMapa" src="../assets/icons/legenda.png" alt="Legenda do mapa" />
-        </div>
-      </div>
-    </section>
-
-    <!-- Seção do mapa -->
-    <section aria-label="Mapa de localização" id="mapa">
-      <div id="flex8">
-        <div class="quadradinhoMapa">
-          <iframe
-            title="Mapa de localização"
-            width="350"
-            height="350"
-            frameborder="0"
-            scrolling="no"
-            marginheight="0"
-            marginwidth="0"
-            src="https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=+(Mpa)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-          </iframe>
+        <div class="info-box">
+          <img class= "imagemLegenda" src="../assets/icons/legenda.png" alt="Legenda" />
         </div>
       </div>
     </section>
 
-    <!-- Seção de informações adicionais -->
-    <section aria-label="Informações adicionais" id="info-adicional">
-      <div class="quadradinhoMapaInformacao">
-        <div class="MapaInformacao">
-          <h2>ebideie</h2>
+    <!-- Mapa -->
+    <section aria-label="Mapa de localização" class="secao-mapa">
+      <div class="mapa-container">
+        <iframe
+          title="Mapa"
+          width="100%"
+          height="350"
+          frameborder="0"
+          style="border:0"
+          src="https://maps.google.com/maps?q=Joinville&z=12&output=embed"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- Informações adicionais -->
+    <section aria-label="Informações adicionais" class="secao-info-adicional">
+      <div class="info-extra">
+        <div>
+          <h2>Informação 1</h2>
         </div>
         <div>
-          <h2>ebideie</h2>
+          <h2>Informação 2</h2>
         </div>
       </div>
     </section>
 
   </main>
-
 </body>
 </html>
