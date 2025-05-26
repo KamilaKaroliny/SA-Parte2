@@ -59,12 +59,11 @@
     border: 2px solid #cecccc;
     border-radius: 8px;
     padding: 0.2rem 0.8rem;
-    text-align: center;
     min-width: 10px;
   }
   
   .info-box img {
-    width: 30px;
+    width: 8px;
     margin-top: 0.5rem;
   }
   
@@ -76,6 +75,7 @@
   }
 
   .imagemLegenda {
+    width: 4%;
     display: flex
   }
   
@@ -93,11 +93,11 @@
   }
   
   h2, h3 {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.2rem;
   }
   
   /* Responsivo */
-  @media (max-width: 600px) {
+  @media (max-width: 429px) {
     .info-container {
       flex-direction: column;
       align-items: center;
