@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -13,7 +12,6 @@
     padding: 1rem;
   }
   
-  /* Cabeçalho */
   .cabecalho {
     display: flex;
     justify-content: space-between;
@@ -21,79 +19,63 @@
     margin-bottom: 1.5rem;
   }
   
-  .cabecalho-item {
-    flex: 1;
-  }
-  
-  .centralizado {
-    text-align: center;
-  }
-  
-  .direita {
-    text-align: right;
-  }
-  
   .logo {
     height: 80px;
   }
   
-  .icone-voltar,
-  .icone-casa {
+  .iconeVoltar,
+  .iconeCasa {
     height: 40px;
     width: 40px;
   }
   
   /* Seções */
-  .secao-info, .secao-mapa, .secao-info-adicional {
+  .secaoLegenda, .secaoMapa, .secaoInfo {
     margin-bottom: 2rem;
   }
   
-  .info-container {
+  .infoContainer {
     display: flex;
     justify-content: center;
     gap: 0.4rem;
   }
   
-  .info-box {
+  .infoBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
     padding: 0.2rem 0.8rem;
-    min-width: 10px;
   }
   
-  .info-box img {
-    width: 8px;
-    margin-top: 0.5rem;
+  .infoBox img {
+    width: 20px;
+    padding: 0.1rem 0.1rem;
   }
   
-  .mapa-container {
+  .mapaContainer {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
-    overflow: hidden;
   }
 
-  .imagemLegenda {
-    width: 4%;
-    display: flex
-  }
-  
-  .secao-info-adicional .info-extra {
+  .secaoInfo .infoExtra {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
     padding: 1rem;
     display: flex;
-    flex-direction: row; /* Muda de column para row */
-    gap: 1rem; /* Mantém um espaço entre os elementos */
+    flex-direction: row;
+    gap: 1rem;
     text-align: center;
-    justify-content: center; /* Opcional: centraliza os itens na horizontal */
+    justify-content: center; 
 
   }
   
-  h2, h3 {
-    margin-bottom: 0.2rem;
+  h2, h4 {
+    margin-bottom: 0.1rem;
   }
   
   /* Responsivo */
