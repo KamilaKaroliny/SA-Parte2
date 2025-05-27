@@ -307,7 +307,9 @@ a:hover {
 .dados {
     align-items: left;
     text-align: left;
-    left: 30%;
+    padding: 10px;
+    margin: 14px;
+    font-weight: bold;
 }
 
 #fonte {
