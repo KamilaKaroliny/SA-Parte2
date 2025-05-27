@@ -61,19 +61,51 @@
     border-radius: 8px;
   }
 
+  .bateria {
+    padding: 0px;
+    width: 30px;
+  }
+
+  .parte1 {
+    display: flex;
+    justify-content: flex-end
+  }
+
+  .parte2 {
+    padding: 0px;
+    display: flex;
+    justify-content: center
+  }
+
+  .trem {
+    width: 60px;
+  }
+  
+  .infoMaquinista{
+    background-color: #566abd;
+    border: 2px solid #cecccc;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+  }
+
+  .maquinista{
+    width: 30px;
+  }
+
+
   .secaoInfo .infoExtra {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    text-align: center;
-    justify-content: center; 
-
+    padding: 0.4rem 0.3rem;
+    margin: 0.004rem;
   }
   
+  
+
   h2, h4 {
     margin-bottom: 0.1rem;
   }
