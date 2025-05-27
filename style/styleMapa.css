@@ -77,6 +77,20 @@
     justify-content: center
   }
 
+  .trem {
+    width: 60px;
+  }
+  
+  .infoMaquinista{
+    background-color: #566abd;
+    border: 2px solid #cecccc;
+    border-radius: 8px;
+    padding: 0.4rem 0.3rem;
+    margin: 0.3rem;
+    display: flex;
+  }
+
+
   .secaoInfo .infoExtra {
     background-color: #566abd;
     border: 2px solid #cecccc;
@@ -85,6 +99,8 @@
     margin: 0.004rem;
   }
   
+  
+
   h2, h4 {
     margin-bottom: 0.1rem;
   }
