@@ -114,7 +114,12 @@ body {
     display: flex;
     align-items: center;
 }
+.estrelas{
+    width: 60px;
+    padding: 20px 50px 10px 10px;
+    
 
+}
 #flex-container {
     display: flex;
     align-items: center;
