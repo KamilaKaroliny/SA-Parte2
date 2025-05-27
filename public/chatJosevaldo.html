@@ -1,54 +1,35 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chat Josevaldo</title>
-    <link rel="stylesheet" href= "../style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 
 </head>
+
 <body>
 
     <div id="flex-container">
         <img id="seta" src="../assets/icons/seta.png" alt="seta">
-        <img id="josevaldo" src="../assets/images/josevaldo.png" alt="Foto Josevaldo"> <span id="nomee">JOSEVALDO</span>
+        <img id="josevaldo" src="../assets/images/josevaldo.png" alt="Foto Josevaldo">
+        <span id="nome1">JOSEVALDO</span>
     </div>
 
-    <div id="flex-mensagens">
-
-        <div class="flex10">
-            <div id="flex12">
-                <span>Rua Pio XIII está interditada!</span>
-            </div>
-        </div>
-
-            <br>
-        
-            <div id="flex11">
-                <span>Qual a próxima rota?</span>
-            </div>
-        
-            <br>
-        
-            <div id="flex12">
-                <span id="mensagem">Rua 123, Bairro Bonito</span>
-            </div>
-        </div>
-
+    <div class="container-mensagens">
+        <div class="mensagem">Rua Pio XII está interditada!</div>
+        <div class="mensagem">Qual a próxima rota?</div>
+        <div class="mensagem">Rua 123, Bairro Bonito</div>
     </div>
-   
-    
-    
 
-    <footer class="rodape">
-        <div id="flex13">
-            <form action="" id="Mensagens">
-                <label for="mensagem"></label><br>
-                <input class="esticadinho3" type="text" nome="mensagem" id="mensagem_id" value="" placeholder="Digite aqui..." required> 
-                <button id='button5' type="button" onclick ><img id="entregar" src="../assets/icons/entregar.png" alt="Enviar"></button>
-        </div>
-    </footer>
-
-
+    <form id="flex-container1">
+        <input class="esticadinho3" type="text" id="mensagem_id" placeholder="Digite aqui..." required>
+        <button id="button5" type="submit">
+            <img id="entregar" src="../assets/icons/entregar.png" alt="Enviar">
+        </button>
+    </form>
+    </div>
 
 </body>
+
 </html>

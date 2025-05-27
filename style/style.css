@@ -41,7 +41,7 @@ body {
     width: 150px;
 }
 
-#seta{
+#seta {
     height: 25px;
     width: 35px;
 }
@@ -63,7 +63,7 @@ body {
 }
 
 #flex2 {
-    display: flex;   
+    display: flex;
     align-items: stretch;
     justify-content: center;
 }
@@ -115,49 +115,17 @@ body {
     align-items: center;
 }
 
-#flex10{
-    background-color: #566abd;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px solid #ffffff;
-    width: 200px;
-    display: flex;
-}
-
-#flex11 {
-    background-color: #566abd;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px solid #ffffff;
-    width: 150px;
-}
-
-#flex12 {
-    background-color: #566abd;
-    margin: 5px;
-    padding: 10px;
-    border-radius: 50px;
-    border: 2px solid #ffffff;
-    width: 170px;
-}
-
-#flex13 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#flex-mensagens {
-    display: flex;
-    flex-direction: column
-}
-
 #flex-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    gap: 10px;
+    padding: 15px 20px;
+}
+
+#flex-container1 {
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
 }
 
 #padding {
@@ -203,12 +171,13 @@ body {
 }
 
 #button5 {
-    padding: 10px 10px;
-    text-align: center;
-    background-color: rgb(86, 106, 189);
-    color: rgb(255, 254, 254);
-    border: 2px solid #ffffff;
-    border-radius: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #5a66d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 19px;
 }
 
 .esticadinho {
@@ -228,11 +197,13 @@ body {
 }
 
 .esticadinho3 {
-    padding: 20px 50px;
-    background-color: rgb(86, 106, 189);
-    color: rgb(255, 254, 254);
-    border: 1px solid #cecccc;
-    border-radius: 10px;
+    padding: 15px 57px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #5a66d6;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
 }
 
 #esqueceuSenhaa {
@@ -298,31 +269,31 @@ body {
 a:link {
     color: white;
     text-decoration: none;
-  }
+}
 
 a:hover {
     color: rgb(32, 13, 175);
 }
 
-.icone1{
-   width: 50px; 
-   height: 50px;
+.icone1 {
+    width: 50px;
+    height: 50px;
 }
 
-.icone2{
-    width: 60px; 
+.icone2 {
+    width: 60px;
     height: 60px;
 }
 
-.imgTelaInicial{
+.imgTelaInicial {
     width: 70px;
 }
 
-.imgMapa{
+.imgMapa {
     width: 20px;
 }
 
-.imgTelaInfo{
+.imgTelaInfo {
     width: 50px;
 }
 
@@ -331,29 +302,29 @@ a:hover {
     text-align: left;
 }
 
-#fonte{
+#fonte {
     font-size: 40px;
     justify-content: center;
     align-items: center;
 }
 
-.nome{
+.nome {
     padding: 0px;
     margin: 0px;
     display: flex;
     padding-left: 1rem;
 }
 
-.meio1{
-    width:100%;
+.meio1 {
+    width: 100%;
     padding: 0px;
     margin: 0px;
     display: flex;
     padding-left: 0.8rem;
 }
 
-.meio2{
-    width:100%;
+.meio2 {
+    width: 100%;
     padding: 0px;
     margin: 0px;
     display: flex;
@@ -361,76 +332,98 @@ a:hover {
     justify-content: flex-end
 }
 
-.meio3{
-    width:20%;
+.meio3 {
+    width: 20%;
 }
 
-.meio4{
-    width:85%;
+.meio4 {
+    width: 85%;
     text-align: center;
     justify-content: center;
 }
 
-.meio5{
-    width:10%;
+.meio5 {
+    width: 10%;
     padding: 0px;
     margin: 0px;
     display: flex;
 }
 
-.meio6{
-    width:100%;
+.meio6 {
+    width: 100%;
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: space-around
 }
 
-.branca{
+.branca {
     background-color: #f7f5f5;
     color: black;
-   border-radius: 10px;
-   
+    border-radius: 10px;
+
 }
 
-.branca h3{
+.branca h3 {
     padding: 10px;
-   
+
 }
 
-.branca p{
+.branca p {
     height: 110px;
 }
 
 
 #josevaldo {
-    width: 60px; 
+    width: 60px;
     height: 60px;
     margin: 10px;
     padding: 5px;
 }
 
-#nomee {
+#nome1 {
     font-size: 18px;
     font-family: 'bold Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #entregar {
-    width: 20px; 
-    height: 20px;
+    width: 25px;
+    height: 30px;
 }
 
-#notificacoes{
+#notificacoes {
     height: 100%;
     width: 100%;
     position: absolute;
-    background-color: #4557a1; 
+    background-color: #4557a1;
     color: #ffffff;
     transition: 0.5s ease;
 }
 
-.rodape{
-    position: absolute;
-    bottom:0%;
-    width: 100%;
+.mensagem {
+    background-color: transparent;
+    color: white;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 20px;
+    max-width: 70%;
+    font-weight: bold;
+}
+
+.mensagem:nth-child(1) {
+    align-self: flex-end;
+}
+
+.mensagem:nth-child(3) {
+    align-self: flex-end;
+}
+
+.container-mensagens {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 10px;
+    height: 58%;
+    padding: 0 15px 50px 15px;
 }
