@@ -85,9 +85,14 @@
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
-    padding: 0.4rem 0.3rem;
-    margin: 0.3rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+  }
+
+  .maquinista{
+    width: 30px;
   }
 
 
