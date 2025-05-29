@@ -429,12 +429,14 @@ a:hover {
     pointer-events: none;
 }
 
+/* Cuida do "botão" que trás a aba na paginaInicial.html */
 .noticacao{
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
 }
 
+/* Cuida da borda que está em volta do "botão" na paginaInicial.html */
 .toggle{
     position: absolute;
     height: 30px;
