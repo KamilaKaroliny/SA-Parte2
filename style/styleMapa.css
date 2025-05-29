@@ -89,8 +89,9 @@
   
   .infoMaquinista{
     background-color: #566abd;
-    padding: 1px;
+    padding: 4px;
     border: 2px solid #cecccc;
+    margin: 4px;
     border-radius: 8px;
     display: flex;
     align-items: center;
