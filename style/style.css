@@ -114,10 +114,12 @@ body {
     margin: 1px;
 }
 
-#flex9 {
+#flex9 {                        /*essa classe alinha o nome com a imagen das estrelas*/
     justify-content: space-between;
     display: flex;
     align-items: center;
+    margin: 0px;
+    padding: 0px 0px;
 }
 .estrelas{                                     /*essa classe cuida das imagens das estrelas tela feedback*/
     width: 70px;
