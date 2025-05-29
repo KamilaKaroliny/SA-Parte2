@@ -408,6 +408,7 @@ a:hover {
     height: 30px;
 }
 
+/* Cuida das escritas e titulo que ficam dentro da aba na paginaInicial.html */
 .notificacoes {
     height: 100%;
     width: 50%;
@@ -418,6 +419,7 @@ a:hover {
     transform: translateX(-105%);
 }
 
+/* Cuida do titulo que ficam dentro da aba na paginaInicial.html */
 .titulo{
     color: #ffffff;
     font-weight: 50px;
@@ -460,7 +462,6 @@ input:checked ~ .notificacoes{
     text-decoration: none;
     transition: 0.2s ease-out;
 }
-
 
 .mensagem {
     background-color: transparent;
