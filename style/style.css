@@ -119,6 +119,7 @@ body {
     display: flex;
     align-items: center;
     margin: 0px;
+    padding: 0px 0px;
 }
 .estrelas{                                     /*essa classe cuida das imagens das estrelas tela feedback*/
     width: 70px;
