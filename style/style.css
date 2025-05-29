@@ -391,6 +391,7 @@ a:hover {
 .branca p {                           /*essa classe cuida dos textos dos feedback da tela feedback*/
     height: 100px;
     padding: 0px 30px 60px 60px;
+    align-items: baseline;
 }
 
 
