@@ -13,10 +13,7 @@
   }
   
   .cabecalho {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
+    padding: 0 0 30px;
   }
   
   .logo {
@@ -128,6 +125,44 @@
 
   h2, h4 {
     margin-bottom: 0.1rem;
+  }
+
+  #flex4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .meio1 {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    padding-left: 0.8rem;
+  }
+
+  .meio2 {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    padding-left: 1rem;
+    justify-content: flex-end
+  }
+
+  #seta {
+    height: 25px;
+    width: 35px;
+  }
+
+  #logo4 {
+    height: 90px;
+    width: 150px;
+  }
+
+  #casa1 {
+    height: 60px;
+    width: 60px;
   }
   
   /* Responsivo */
