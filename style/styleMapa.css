@@ -87,7 +87,7 @@
     border-radius: 8px;
   }
 
-  .bateria {
+  .iconeBateria {
     padding: 0px;
     width: 30px;
   }
@@ -103,17 +103,17 @@
     justify-content: center
   }
 
-  .parte3 {
+  .infoComplementarTrem {
     padding: 10px;
     display: flex;
     justify-content: center
   }
 
-  .trem {
+  .imagemTrem {
     width: 60px;
   }
   
-  .infoMaquinista{
+  .boxMaquinistaInfo{
     background-color: #566abd;
     padding: 4px;
     border: 2px solid #cecccc;
@@ -125,7 +125,7 @@
     flex-direction: column
   }
 
-  .infoTrem{
+  .boxTipoVelocidadeTrem{
     background-color: #566abd;
     padding: 4px 43px;
     border: 2px solid #cecccc;
@@ -137,7 +137,7 @@
     flex-direction: row
   }
 
-  .infoMaquinista img{
+  .boxMaquinistaInfo img{
     width: 40px;
   }
 
@@ -171,7 +171,7 @@
     }
   }
 
-  .maquinista{
+  .iconeMarcacao{
     width: 30px;
   }
   
