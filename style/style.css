@@ -114,12 +114,13 @@ body {
     margin: 1px;
 }
 
-#flex9 {
+#flex9 {                        /*essa classe alinha o nome com a imagen das estrelas*/
     justify-content: space-between;
     display: flex;
     align-items: center;
+    margin: 0px;
 }
-.estrelas{
+.estrelas{                                     /*essa classe cuida das imagens das estrelas tela feedback*/
     width: 70px;
     padding: 20px 140px 30px 10px;
     
@@ -372,7 +373,7 @@ a:hover {
     justify-content: space-around
 }
 
-.branca {
+.branca {                       /*essa classe cuida dos fundos brancos da tela feedback*/
     background-color: #f7f5f5;
     color: black;
     border-radius: 10px;
@@ -380,12 +381,13 @@ a:hover {
 }
 
 
-.branca h3 {
-    padding: 10px 0px;               
+.branca h3 {                  /*essa classe cuida dos titulos dos nomes da tela feedback*/
+    padding: 0px 0px;   
+    margin: 0px;            
 
 }
 
-.branca p {
+.branca p {                           /*essa classe cuida dos textos dos feedback da tela feedback*/
     height: 100px;
     padding: 0px 30px 60px 60px;
 }
@@ -424,8 +426,7 @@ a:hover {
     color: #ffffff;
     font-weight: 50px;
     text-align: right;
-    padding: 10px;
-    padding-right: 15px;
+    padding: 30 15 15px;
     pointer-events: none;
 }
 
@@ -439,10 +440,10 @@ a:hover {
 /* Cuida da borda que está em volta do "botão" na paginaInicial.html */
 .toggle{
     position: absolute;
+  top: 20px;
+    left: 45px;
     height: 30px;
     width: 30px;
-    top: 20px;
-    left: 15px;
     z-index: 1;
     cursor: pointer;
     border-radius: 2px;
