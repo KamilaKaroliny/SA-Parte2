@@ -381,7 +381,7 @@ a:hover {
 
 
 .branca h3 {
-    padding: 10px 20px;
+    padding: 10px 0px;               
 
 }
 
@@ -408,6 +408,7 @@ a:hover {
     height: 30px;
 }
 
+/* Cuida das escritas e titulo que ficam dentro da aba na paginaInicial.html */
 .notificacoes {
     height: 100%;
     width: 50%;
@@ -418,6 +419,7 @@ a:hover {
     transform: translateX(-105%);
 }
 
+/* Cuida do titulo que ficam dentro da aba na paginaInicial.html */
 .titulo{
     color: #ffffff;
     font-weight: 50px;
@@ -427,12 +429,14 @@ a:hover {
     pointer-events: none;
 }
 
+/* Cuida do "botão" que trás a aba na paginaInicial.html */
 .noticacao{
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
 }
 
+/* Cuida da borda que está em volta do "botão" na paginaInicial.html */
 .toggle{
     position: absolute;
     height: 30px;
@@ -446,11 +450,13 @@ a:hover {
     box-shadow: 0 0 5px #ffffff;
 }
 
+/* Cuida da transição da aba na paginaInicial.html */
 input:checked ~ .notificacoes{
     transform: translateX(0);
     box-shadow: 0 0 4px #ffffff;
 }
 
+/* Cuida da escrita que está dentro da aba na paginaInicial.html */
 .noti{
     font-size:medium;
     color: #fefefe;
