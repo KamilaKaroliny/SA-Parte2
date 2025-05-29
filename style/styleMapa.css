@@ -98,13 +98,13 @@
 
   .infoTrem{
     background-color: #566abd;
-    padding: 4px;
+    padding: 4px 43px;
     border: 2px solid #cecccc;
     margin: 4px;
     border-radius: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row
   }
 
