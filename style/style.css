@@ -114,7 +114,7 @@ body {
     margin: 1px;
 }
 
-#flex9 {
+#flex9 {                         /*essa classe alinha o nome com a imagen das estrelas*/
     justify-content: space-between;
     display: flex;
     align-items: center;
