@@ -77,12 +77,19 @@
     justify-content: center
   }
 
+  .parte3 {
+    padding: 10px;
+    display: flex;
+    justify-content: center
+  }
+
   .trem {
     width: 60px;
   }
   
   .infoMaquinista{
     background-color: #566abd;
+    padding: 1px;
     border: 2px solid #cecccc;
     border-radius: 8px;
     display: flex;
@@ -126,5 +133,9 @@
       height: 30px;
       width: 30px;
     }
+  }
+
+  .maquinista{
+    width: 30px;
   }
   
