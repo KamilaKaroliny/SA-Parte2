@@ -474,6 +474,7 @@ input:checked ~ .notificacoes{
     transition: 0.2s ease-out;
 }
 
+/* Essa class cuida do titulo que está dentro da aba na paginaInicial.html */
 .tituloNoti{
     font-size: 16px;
     padding: 0px;
