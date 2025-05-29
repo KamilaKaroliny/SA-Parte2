@@ -463,15 +463,28 @@ input:checked ~ .notificacoes{
 
 /* Essa class cuida da escrita que está dentro da aba na paginaInicial.html */
 .noti{
-    font-size:medium;
+    font-weight: 400;
+    font-size: 14px;
     color: #fefefe;
-    padding: 6px 0;
+    padding: 0 0 20px;
+    margin: 0px;
     display: block;
     text-transform: capitalize;
     text-decoration: none;
     transition: 0.2s ease-out;
 }
 
+/* Essa class cuida do titulo que está dentro da aba na paginaInicial.html */
+.tituloNoti{
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    color: #fefefe;
+    display: block;
+    text-transform: capitalize;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+}
 
 .mensagem {
     background-color: transparent;
