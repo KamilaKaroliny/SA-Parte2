@@ -54,12 +54,12 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 35px;
 }
 
-#sininho {
+#sininho {     /*não está sendo usada*/
     height: 60px;
     width: 30px;
 }
 
-#sininho2 {
+#sininho2 {            /*Essa classe deixa a seta certinho no tamanho padrão do site*/
     height: 25px;
     width: 20px;
 }
