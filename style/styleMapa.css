@@ -210,8 +210,15 @@
   color: white;
 }
 
+.telaFlutuanteConfirmacao{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
   /* Responsivo */
   @media (max-width: 229px) {
+
     .containerClima {
       flex-direction: column;
       align-items: center;
@@ -226,6 +233,7 @@
       height: 30px;
       width: 30px;
     }
+
   }
   
 
