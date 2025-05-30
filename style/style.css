@@ -36,6 +36,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 220px;
 }
 
+/*Essa classe cuida do tamanho da logo do tremalize nas paginas paginaInicial.html, feedback.html, */
 #logo3 {
     height: 100px;
     width: 180px;
