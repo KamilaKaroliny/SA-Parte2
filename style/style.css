@@ -137,6 +137,13 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     padding: 0px 0px;
 }
 
+#flex10 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+}
+
 /*essa classe cuida das imagens das estrelas tela feedback*/
 .estrelas{                                     
     width: 70px;
@@ -588,4 +595,9 @@ a:active{
 .erro{
     color: red;
     font-size: 0.9em;
+}
+
+#foto {
+    width: 120px;
+    height: 120px;
 }
