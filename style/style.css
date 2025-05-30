@@ -1,4 +1,4 @@
- body {
+body {
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
@@ -343,6 +343,7 @@ a:hover {
     align-items: center;
 }
 
+/*Essa classe cuida do tamanho dos nomes dos maquinistas na telaChat.html*/
 .nome {
     padding: 0px;
     margin: 0px;
