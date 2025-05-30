@@ -36,13 +36,14 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 220px;
 }
 
-/*Essa classe cuida do tamanho da logo do tremalize nas paginas paginaInicial.html, feedback.html, */
+/*Essa classe cuida do tamanho da logo do tremalize nas paginas paginaInicial.html, feedback.html */
 #logo3 {
     height: 100px;
     width: 180px;
     padding: 30px 35px 35px 10px;
 }
 
+/*Essa classe cuida do tamanho da logo do tremalize nas paginas telaLinha.html, telaChat.html*/
 #logo4 {
     height: 90px;
     width: 150px;
