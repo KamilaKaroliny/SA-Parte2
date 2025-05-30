@@ -11,3 +11,19 @@ function esqueceusenha2() {
 }
 
 
+document.getElementById("openModalBtn").onclick = function() {
+  document.getElementById("marcacaoModal").style.display = "block";
+}
+
+
+document.querySelector(".closeBtn").onclick = function() {
+  document.getElementById("marcacaoModal").style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  const modal = document.getElementById("marcacaoModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
