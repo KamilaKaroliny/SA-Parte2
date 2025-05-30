@@ -554,7 +554,7 @@ input:checked ~ .notificacoes{
     width: 380px;
     height: 55px;
     align-items: center;
-    padding: 15 0 15px;
+    padding: 33 0 33px;
 }
 
 /*Essa classe cuida do tamanho/posição da div azul na telaLinha.html*/
@@ -564,4 +564,16 @@ input:checked ~ .notificacoes{
     margin: 0px;
     width: 350px;
     height: 5px;
+}
+
+a:hover{
+    color: #ffffff;
+} 
+
+a:visited {
+    color: #ffffff;
+}
+
+a:active{
+    color: #ffffff;
 }
