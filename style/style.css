@@ -1,5 +1,5 @@
 /*Greralzão do site, é o que deixa o fundo azul com efeito*/
-body {                                        
+body {                                  
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
@@ -12,8 +12,8 @@ body {
     width: 384px;
 }
 
-/* Éo que deixa as letras dentro da caixa do imput branca*/
-::-webkit-input-placeholder {            
+ /* Éo que deixa as letras dentro da caixa do imput branca*/
+::-webkit-input-placeholder {        
     color: rgb(255, 255, 255);
 }
 
@@ -52,19 +52,19 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 /*Essa classe deixa a seta certinho no tamanho padrão do site*/
-#seta {    
+#seta {   
     height: 25px;
     width: 35px;
 }
 
-/*não está sendo usada*/
-#sininho {     
+ /*não está sendo usada*/
+#sininho {    
     height: 60px;
     width: 30px;
 }
 
  /*Essa classe deixa a seta certinho no tamanho padrão do site*/
-#sininho2 {           
+#sininho2 {         
     height: 25px;
     width: 20px;
 }
