@@ -280,6 +280,17 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     height: 15px;
 }
 
+.quadradinho4 {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 31px;
+    padding: 5px;
+    margin: 11px;
+    width: 140px;
+    height: 100px;
+    font-size: 11px;
+}
+
 .quadradinhoLegenda {
     background-color: rgb(86, 106, 189);
     border: 2px solid #cecccc;
@@ -601,4 +612,9 @@ a:active{
 #foto {
     width: 120px;
     height: 120px;
+}
+
+#imgTelaRela {
+    width: 80px;
+    height: 60px;
 }
