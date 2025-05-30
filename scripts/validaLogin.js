@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (id.length < 6) {
-      document.getElementById("erroId").textContent = "O senha deve ter pelo menos 6 caracteres";
+      document.getElementById("erroId").textContent = "O ID deve ter pelo menos 6 caracteres";
       valido = false;
     }
 
