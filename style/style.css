@@ -22,22 +22,28 @@ login.html, */
     width: 300px;
 }
 
+/*Essa classe cuida do tamanho da logo do tremalize e não está sendo ultilizada*/
 #logo1 {
     height: 70px;
     width: 170px;
 }
 
+/*Essa classe cuida do tamanho da logo do tremalize nas paginas cadastro.html, telainformacoesClodoaldo.html,
+telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLuiza.html, telainformacoesPedro.html
+, telainformacoesRobson.html*/
 #logo2 {
     height: 145px;
     width: 220px;
 }
 
+/*Essa classe cuida do tamanho da logo do tremalize nas paginas paginaInicial.html, feedback.html. */
 #logo3 {
     height: 100px;
     width: 180px;
     padding: 30px 35px 35px 10px;
 }
 
+/*Essa classe cuida do tamanho da logo do tremalize nas paginas telaLinha.html, telaChat.html*/
 #logo4 {
     height: 90px;
     width: 150px;
