@@ -22,6 +22,7 @@ login.html, */
     width: 300px;
 }
 
+/*Essa classe cuida do tamanho da logo do tremalize e não está sendo ultilizada*/
 #logo1 {
     height: 70px;
     width: 170px;
