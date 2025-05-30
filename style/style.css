@@ -277,15 +277,15 @@
     height: 350px;
 }
 
+/*Essa classe cuida do tamanho/posição da borda (quadradinho) ao redor das linhas na telaLinha.html*/
 .quadradinhoLinha {
     background-color: rgb(86, 106, 189);
     border: 1px solid #cecccc;
     border-radius: 10px;
-    padding: 5px;
+    padding: 0px;
     margin: 0px;
     width: 350px;
-    height: 555px;
-    justify-content: flex-start;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -548,6 +548,7 @@ input:checked ~ .notificacoes{
     padding: 15 0 15px;
 }
 
+/*Essa classe cuida do tamanho/posição da div azul na telaLinha.html*/
 .linhaAzul{
     background-color:rgb(61, 77, 138);
     padding: 0px;
