@@ -1,4 +1,4 @@
-body {
+ body {
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
@@ -114,18 +114,22 @@ body {
     margin: 1px;
 }
 
-#flex9 {                        /*essa classe alinha o nome com a imagen das estrelas*/
+/*essa classe alinha o nome com a imagen das estrelas*/
+#flex9 {                        
     justify-content: space-between;
     display: flex;
     align-items: center;
     margin: 0px;
     padding: 0px 0px;
 }
-.estrelas{                                     /*essa classe cuida das imagens das estrelas tela feedback*/
+
+/*essa classe cuida das imagens das estrelas tela feedback*/
+.estrelas{                                     
     width: 70px;
     padding: 20px 140px 20px 10px;
     
 }
+
 #flex-container {
     display: flex;
     align-items: center;
@@ -373,7 +377,7 @@ a:hover {
     justify-content: space-around
 }
 
-/*Essa class cuida dos fundos brancos da tela feedback*/
+/*Essa classe cuida dos fundos brancos da tela feedback*/
 .branca {                       
     background-color: #f7f5f5;
     color: black;
@@ -381,14 +385,14 @@ a:hover {
     padding: 0px 10px 0px 10px;
 }
 
-/*Essa class cuida dos titulos dos nomes da tela feedback*/
+/*Essa classe cuida dos titulos dos nomes da tela feedback*/
 .branca h3 {                  
     padding: 0px 0px;   
     margin: 0px;            
 
 }
 
- /*Essa class cuida dos textos dos feedback da tela feedback*/
+ /*Essa classe cuida dos textos dos feedback da tela feedback*/
 .branca p {                          
     height: 100px;
     padding: 0px 10px 40px 0px;
@@ -413,7 +417,7 @@ a:hover {
     height: 30px;
 }
 
-/* Essa class cuida das escritas e titulo que ficam dentro da aba na paginaInicial.html */
+/* Essa classe cuida das escritas e titulo que ficam dentro da aba na paginaInicial.html */
 .notificacoes {
     height: 100%;
     width: 50%;
@@ -424,7 +428,7 @@ a:hover {
     transform: translateX(-105%);
 }
 
-/* Essa class cuida do titulo que ficam dentro da aba na paginaInicial.html */
+/* Essa classe cuida do titulo que ficam dentro da aba na paginaInicial.html */
 .titulo{
     color: #ffffff;
     font-weight: 50px;
@@ -433,14 +437,14 @@ a:hover {
     pointer-events: none;
 }
 
-/* Essa class cuida do "botão" que trás a aba na paginaInicial.html */
+/* Essa classe cuida do "botão" que trás a aba na paginaInicial.html */
 .noticacao{
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
 }
 
-/* Essa class cuida da borda que está em volta do "botão" na paginaInicial.html */
+/* Essa classe cuida da borda que está em volta do "botão" na paginaInicial.html */
 .toggle{
     position: absolute;
     top: 20px;
@@ -454,13 +458,13 @@ a:hover {
     box-shadow: 0 0 5px #ffffff;
 }
 
-/* Quando esse input estiver "marcado" essa class fará a transição da aba na paginaInicial.html */
+/* Quando esse input estiver "marcado" essa classe fará a transição da aba na paginaInicial.html */
 input:checked ~ .notificacoes{
     transform: translateX(0);
     box-shadow: 0 0 4px #ffffff;
 }
 
-/* Essa class cuida da escrita que está dentro da aba na paginaInicial.html */
+/* Essa classe cuida da escrita que está dentro da aba na paginaInicial.html */
 .noti{
     font-weight: 400;
     font-size: 14px;
@@ -473,7 +477,7 @@ input:checked ~ .notificacoes{
     transition: 0.2s ease-out;
 }
 
-/* Essa class cuida do titulo que está dentro da aba na paginaInicial.html */
+/* Essa classe cuida do titulo que está dentro da aba na paginaInicial.html */
 .tituloNoti{
     font-size: 16px;
     padding: 0px;
