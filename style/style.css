@@ -277,6 +277,21 @@
     height: 350px;
 }
 
+.quadradinhoLinha {
+    background-color: rgb(86, 106, 189);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 0px;
+    width: 350px;
+    height: 555px;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
 #pagina {
     padding: 0px;
     margin: 10px;
@@ -340,7 +355,6 @@ a:hover {
     padding: 0px;
     margin: 0px;
     display: flex;
-    padding-left: 1rem;
     justify-content: center;
 }
 
@@ -532,4 +546,12 @@ input:checked ~ .notificacoes{
     height: 55px;
     align-items: center;
     padding: 15 0 15px;
+}
+
+.linhaAzul{
+    background-color:rgb(61, 77, 138);
+    padding: 0px;
+    margin: 0px;
+    width: 350px;
+    height: 5px;
 }
