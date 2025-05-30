@@ -17,19 +17,20 @@
             <form action="" id="gestorForm">
         
                 <label for="email"></label><br>
-                <input class="esticadinho" type="text" nome="email" id="email_gestor" value="" placeholder="E-mail" required>
+                <input class="esticadinho" type="email" nome="email" id="email" value="" placeholder="E-mail">
+                <div class="erro" id="erroEmail"></div>
     
-                <br>
-        
                 <label for="senha"></label><br>
-                <input class="esticadinho" type="text" nome="senha" id="senha_gestor" value="" placeholder="Senha" required>
+                <input class="esticadinho" type="password" nome="senha" id="senha" value="" placeholder="Senha">
+                <div class="erro" id="erroSenha"></div>
+
                 <div id="esqueceuSenhaa">
                     <a href="../public/esqueceusenha.html">Esqueceu a senha?</a>
                 </div>
                 <br>
                 <br>
         
-                <button id='button1' type="button" onclick="paginaInicial()">Enviar</button>
+                <button id='button1' type="submit">Enviar</button>
 
                 <div id="flex-container">
                     <h3>Não tem uma conta? </h3>

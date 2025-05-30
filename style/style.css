@@ -577,3 +577,8 @@ a:visited {
 a:active{
     color: #ffffff;
 }
+
+.erro{
+    color: red;
+    font-size: 0.9em;
+}
