@@ -11,15 +11,15 @@ function esqueceusenha2() {
 }
 
 
+// Código para fazer com que apareça a tela flutuante
+
 document.getElementById("openMarcacao").onclick = function() {
   document.getElementById("marcacaoModal").style.display = "block";
 }
 
-
 document.querySelector(".closeBtn").onclick = function() {
   document.getElementById("marcacaoModal").style.display = "none";
 }
-
 
 window.onclick = function(event) {
   const modal = document.getElementById("marcacaoModal");
