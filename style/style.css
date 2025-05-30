@@ -1,4 +1,4 @@
-body {
+body {                                        /*Greralzão do site, é o que deixa o fundo azul com efeito*/
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
@@ -11,7 +11,7 @@ body {
     width: 384px;
 }
 
-::-webkit-input-placeholder {
+::-webkit-input-placeholder {            /* Éo que deixa as letras dentro da caixa do imput branca*/
     color: rgb(255, 255, 255);
 }
 
@@ -49,7 +49,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 150px;
 }
 
-#seta {
+#seta {    /*Essa classe deixa a seta certinho no tamanho padrão do site*/
     height: 25px;
     width: 35px;
 }
