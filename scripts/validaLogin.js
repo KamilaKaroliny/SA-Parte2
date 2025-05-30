@@ -44,8 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
   const formulario = document.getElementById("esqueceusenha");
 
-  formulario.addEventListener("submit", function (e) {
-    e.preventDefault();
+  formulario.addEventListener("submit", function (s) {
+    s.preventDefault();
 
     let valido = true;
 
@@ -58,6 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const email = document.getElementById("email").value.trim();
     const id = document.getElementById("id").value.trim();
 
+    console.log(nome);
     console.log(email);
     console.log(id);
 

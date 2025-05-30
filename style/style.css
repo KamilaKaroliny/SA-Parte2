@@ -151,26 +151,26 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     padding: 20px 140px 20px 10px;
     
 }
-
+/**/
 #flex-container {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 15px 20px;
 }
-
+/**/
 #flex-container1 {
     display: flex;
     align-items: stretch;
     gap: 10px;
 }
-
+/**/
 #padding {
     margin: 0px;
     border: 0px;
     padding: 20px;
 }
-
+/**/
 #button1 {
     padding: 20px 155px;
     text-align: center;
@@ -179,7 +179,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
-
+/**/
 #button2 {
     padding: 13px 165px;
     text-align: center;
@@ -188,7 +188,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
-
+/**/
 #button3 {
     padding: 20px 165px;
     text-align: center;
@@ -197,7 +197,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
-
+/**/
 #button4 {
     padding: 20px 145px;
     text-align: center;
@@ -206,7 +206,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
-
+/**/
 #button5 {
     border: 1px solid white;
     border-radius: 5px;
@@ -216,7 +216,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     justify-content: center;
     padding: 0 19px;
 }
-
+/**/
 .esticadinho {
     padding: 20px 90px;
     background-color: rgb(86, 106, 189);
@@ -224,7 +224,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 1px solid #cecccc;
     border-radius: 10px;
 }
-
+/**/
 .esticadinho2 {
     padding: 13px 90px;
     background-color: rgb(86, 106, 189);
@@ -232,7 +232,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 1px solid #cecccc;
     border-radius: 10px;
 }
-
+/**/
 .esticadinho3 {
     padding: 15px 57px;
     border: 1px solid white;
@@ -242,12 +242,12 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     font-weight: bold;
     font-size: 14px;
 }
-
+/**/
 #esqueceuSenhaa {
     text-align: right;
     padding: 20px 20px;
 }
-
+/**/
 .quadradinho1 {
     background-color: rgb(86, 106, 189);
     border: 3px solid white;
@@ -258,7 +258,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     height: 100px;
     font-size: 11px;
 }
-
+/**/
 .quadradinho2 {
     background-color: rgb(86, 106, 189);
     border: 1px solid #cecccc;
@@ -269,7 +269,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     height: 60px;
     justify-content: flex-start;
 }
-
+/**/
 .quadradinho3 {
     background-color: rgb(86, 106, 189);
     border: 2px solid #cecccc;
@@ -280,17 +280,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     height: 15px;
 }
 
-.quadradinho4 {
-    background-color: transparent;
-    border: 1px solid white;
-    border-radius: 31px;
-    padding: 5px;
-    margin: 11px;
-    width: 140px;
-    height: 100px;
-    font-size: 11px;
-}
-
+/**/
 .quadradinhoLegenda {
     background-color: rgb(86, 106, 189);
     border: 2px solid #cecccc;
@@ -300,7 +290,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 20px;
     height: 15px;
 }
-
+/**/
 .quadradinhoMapa {
     background-color: rgb(86, 106, 189);
     border: 2px solid #cecccc;
@@ -325,44 +315,44 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     justify-content: space-evenly;
     flex-direction: column;
 }
-
+/**/
 #pagina {
     padding: 0px;
     margin: 10px;
 }
-
+/**/
 a:link {
     color: white;
     text-decoration: none;
 }
-
+/**/
 a:hover {
     color: rgb(32, 13, 175);
 }
-
+/**/
 .icone1 {
     width: 50px;
     height: 50px;
 }
-
+/**/
 .icone2 {
     width: 60px;
     height: 60px;
 }
-
+/**/
 .imgTelaInicial {
     width: 70px;
 }
-
+/**/
 .imgMapa {
     width: 20px;
 }
-
+/**/
 #imgTelaInfo {
     width: 60px;
     height: 60px;
 }
-
+/**/
 .dados {
     align-items: left;
     text-align: left;
@@ -370,7 +360,7 @@ a:hover {
     margin: 14px;
     font-weight: bold;
 }
-
+/**/
 #fonte {
     font-size: 40px;
     justify-content: center;
@@ -392,7 +382,7 @@ a:hover {
     display: flex;
     justify-content: center;
 }
-
+/**/
 .meio1 {
     width: 100%;
     padding: 0px;
@@ -400,7 +390,7 @@ a:hover {
     display: flex;
     padding-left: 0.8rem;
 }
-
+/**/
 .meio2 {
     width: 100%;
     padding: 0px;
@@ -409,24 +399,24 @@ a:hover {
     padding-left: 1rem;
     justify-content: flex-end
 }
-
+/**/
 .meio3 {
     width: 20%;
 }
-
+/**/
 .meio4 {
     width: 85%;
     text-align: center;
     justify-content: center;
 }
-
+/**/
 .meio5 {
     width: 10%;
     padding: 0px;
     margin: 0px;
     display: flex;
 }
-
+/**/
 .meio6 {
     width: 100%;
     padding: 0px;
@@ -456,20 +446,19 @@ a:hover {
     padding: 0px 10px 40px 0px;
     align-items: baseline;
 }
-
-
+/**/
 #josevaldo {
     width: 60px;
     height: 60px;
     margin: 10px;
     padding: 5px;
 }
-
+/**/
 #nome1 {
     font-size: 18px;
     font-family: 'bold Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+/**/
 #entregar {
     width: 25px;
     height: 30px;
@@ -546,7 +535,7 @@ input:checked ~ .notificacoes{
     text-decoration: none;
     transition: 0.2s ease-out;
 }
-
+/**/
 .mensagem {
     background-color: transparent;
     color: white;
@@ -556,15 +545,15 @@ input:checked ~ .notificacoes{
     max-width: 70%;
     font-weight: bold;
 }
-
+/**/
 .mensagem:nth-child(1) {
     align-self: flex-end;
 }
-
+/**/
 .mensagem:nth-child(3) {
     align-self: flex-end;
 }
-
+/**/
 .container-mensagens {
     display: flex;
     flex-direction: column;
@@ -591,24 +580,24 @@ input:checked ~ .notificacoes{
     width: 350px;
     height: 5px;
 }
-
+/**/
 a:hover{
     color: #ffffff;
 } 
-
+/**/
 a:visited {
     color: #ffffff;
 }
-
+/**/
 a:active{
     color: #ffffff;
 }
-
+/**/
 .erro{
     color: red;
     font-size: 0.9em;
 }
-
+/**/
 #foto {
     width: 120px;
     height: 120px;
