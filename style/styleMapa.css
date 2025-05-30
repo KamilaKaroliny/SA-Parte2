@@ -197,8 +197,11 @@
   border-radius: 10px;
   width: 80%;
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   position: relative;
+  align-items: center;
 }
 
 .closeBtn {
