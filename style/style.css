@@ -151,7 +151,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     padding: 20px 140px 20px 10px;
     
 }
-/**/
+/*Junta os icones "seta, imagem, e nome" alem de colocar todos no centro*/
 #flex-container {
     display: flex;
     align-items: center;
