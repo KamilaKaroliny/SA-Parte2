@@ -335,6 +335,15 @@ a:hover {
     padding-left: 1rem;
 }
 
+/*Essa classe cuida do tamanho/posição das linhas na telaLinha.html*/
+.linha{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    padding-left: 1rem;
+    justify-content: center;
+}
+
 .meio1 {
     width: 100%;
     padding: 0px;
@@ -515,4 +524,12 @@ input:checked ~ .notificacoes{
     gap: 10px;
     height: 58%;
     padding: 0 15px 50px 15px;
+}
+
+/*Essa classe cuida do tamanho/posição da imagem da aba de pesquisa na telaLinha.html*/
+.abaPesquisa{
+    width: 380px;
+    height: 55px;
+    align-items: center;
+    padding: 15 0 15px;
 }
