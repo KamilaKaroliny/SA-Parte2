@@ -15,22 +15,25 @@
       <form action="" id="esqueceusenha2">
             
         <label for="nome"></label> <br> 
-        <input class="esticadinho" type="text" name="nome" id="nome_gestor" value="" placeholder="Nome completo" required>
+        <input class="esticadinho" type="text" name="nome" id="nome" value="" placeholder="Nome completo">
+        <div class="erro" id="erroNome"></div>
     
         <br> 
 
         <label for="ID"></label> <br>
-        <input class="esticadinho" type="number" name="idade" id="id_gestor" value="" placeholder="ID" required>
+        <input class="esticadinho" type="number" name="id" id="id" value="" placeholder="ID">
+        <div class="erro" id="erroId"></div>
 
         <br>
 
         <label for="email"></label><br>
-        <input class="esticadinho" type="text" nome="email" id="email_gestor" value="" placeholder="E-mail" required>
+        <input class="esticadinho" type="email" nome="email" id="email" value="" placeholder="E-mail">
+        <div class="erro" id="erroEmail"></div>
     
         <br>
         <br>
     
-        <button id='button3' type="button" onclick="esqueceusenha2()"> ⟶ </button>
+        <button id='button3' type="submit" > ⟶ </button>
       </form>
     </div>
   </header>
