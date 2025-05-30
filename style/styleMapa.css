@@ -115,6 +115,7 @@
   
   .boxMaquinistaInfo{
     background-color: #566abd;
+    color: white;
     padding: 4px;
     border: 2px solid #cecccc;
     margin: 4px;
@@ -169,6 +170,29 @@
     .icone-casa {
       height: 30px;
       width: 30px;
+    }
+
+    #containerCabecalho {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  
+    .colunaCabecalhoEsq, .colunaCabecalhoCentro {
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      padding-left: 0.8rem;
+    }
+  
+    .colunaCabecalhoDir {
+      width: 100%;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      padding-left: 1rem;
+      justify-content: flex-end
     }
 
   }
