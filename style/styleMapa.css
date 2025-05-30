@@ -141,47 +141,6 @@
     width: 40px;
   }
 
-  #openMarcacao{
-    background-color: #566abd;
-    color: rgb(255, 255, 255);
-    padding: 4px;
-    border: 2px solid #cecccc;
-    margin: 4px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column
-  }
-
-  #openMarcacao img {
-    width: 40px;
-  }
-
-  #botaoConfirmacao{
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #566abd;
-    color: rgb(255, 255, 255);
-    width: 40px;
-  }
-
-  #botaoConfirmacao img{
-    padding: 30px;
-    margin: 10px;
-  }
-
-
-  .boxTelaFlutuante{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-
   .secaoInfo, .cartaoInfoTrem {
     background-color: #566abd;
     border: 2px solid #cecccc;
@@ -193,51 +152,6 @@
   h2, h4 {
     margin-bottom: 0.1rem;
   }
-
- /* Tela flutuante quando aperta o botão da Marcação*/
-
-  .modal {
-  display: none; 
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-}
-
-.modal-content {
-  background-color: #ffffff;
-  color: rgb(0, 0, 0);
-  border-color: #566abd;
-  border: 10px;
-  margin: 15% auto;
-  padding: 20px;
-  border-radius: 10px;
-  width: 80%;
-  max-width: 300px;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  position: relative;
-  align-items: center;
-}
-
-.closeBtn {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 20px;
-  cursor: pointer;
-  color: white;
-}
-
-.telaFlutuanteConfirmacao{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 
   /* Responsivo */
   @media (max-width: 229px) {
