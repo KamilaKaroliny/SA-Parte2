@@ -137,6 +137,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     padding: 0px 0px;
 }
 
+/*Coloco a imagem ao lado da escrita e modifica um pouco com o padding*/
 #flex10 {
     display: flex;
     align-items: center;
