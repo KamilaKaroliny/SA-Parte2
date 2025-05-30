@@ -68,12 +68,13 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     height: 25px;
     width: 20px;
 }
-
+ /*Essa classe deixa a casa certinho no tamanho padrão do site*/
 #casa1 {
     height: 60px;
     width: 60px;
 }
 
+/*essa classe faz os icones ficar no meio*/
 #flex {
     display: flex;
     align-items: center;
