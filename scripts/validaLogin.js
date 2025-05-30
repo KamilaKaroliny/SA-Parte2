@@ -11,7 +11,7 @@ function esqueceusenha2() {
 }
 
 
-document.getElementById("openModalBtn").onclick = function() {
+document.getElementById("openMarcacao").onclick = function() {
   document.getElementById("marcacaoModal").style.display = "block";
 }
 
