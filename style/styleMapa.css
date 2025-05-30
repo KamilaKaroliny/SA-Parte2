@@ -168,6 +168,13 @@
     width: 40px;
   }
 
+  .boxTelaFlutuante{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
 
   .secaoInfo, .cartaoInfoTrem {
     background-color: #566abd;
