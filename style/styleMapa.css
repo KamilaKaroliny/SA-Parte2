@@ -168,6 +168,12 @@
     width: 40px;
   }
 
+  #botaoConfirmacao img{
+    padding: 30px;
+    margin: 10px;
+  }
+
+
   .boxTelaFlutuante{
     display: flex;
     flex-direction: row;
@@ -202,8 +208,10 @@
 }
 
 .modal-content {
-  background-color: #3A56A1;
-  color: white;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border-color: #566abd;
+  border: 10px;
   margin: 15% auto;
   padding: 20px;
   border-radius: 10px;
