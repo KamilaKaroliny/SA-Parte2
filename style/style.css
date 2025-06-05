@@ -618,3 +618,11 @@ a:active{
     width: 80px;
     height: 60px;
 }
+
+.secaoRelatorio {
+    background-color: #ffffff;
+    border-radius: 31px;
+    padding: 5px 6px;
+    margin: 17px;
+    height: 350px;
+}
