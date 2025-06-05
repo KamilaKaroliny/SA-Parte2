@@ -145,6 +145,11 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     padding: 7px;
 }
 
+#flex11 {
+    display: flex;
+    justify-content: flex-start
+}
+
 /*essa classe cuida das imagens das estrelas tela feedback*/
 .estrelas{                                     
     width: 70px;
@@ -681,9 +686,7 @@ a:active{
 
 #grafico {
     display: flex;
-    justify-content: flex-end;
     height: 100px;
     width: 100px;
-    padding: 1px 1px;
 }
 
