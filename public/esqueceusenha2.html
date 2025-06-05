@@ -15,15 +15,16 @@
         <form action="" id="esqueceusenha2">
          
             
-          <label for="Nova senha"></label> <br> 
-          <input class="esticadinho" type="text" name="nova senha" id="novasenha_gestor" value="" placeholder="Sua nova senha" required>
+          <label for="novaSenha"></label> <br> 
+          <input class="esticadinho" type="text" name="novaSenha" id="novaSenha" value="" placeholder="Sua nova senha" required>
+          <div class="erro" id="erroNovaSenha"></div>
       
           <br> 
           
           
         <label for="codigo"></label> <br>
         <input class="esticadinho" type="number" name="codigo" id="codigo" value="" placeholder="codigo">
-        <div class="erro" id="erroId"></div>
+        <div class="erro" id="erroCodigo"></div>
 
   
           <br>
@@ -34,7 +35,7 @@
           <br>
           <br>
           <br>
-          <button id='button4' type="button" onclick="login()">Redefinir</button>
+          <button id='button4' type="submit">Redefinir</button>
         </form>
       </div>
     </header>
