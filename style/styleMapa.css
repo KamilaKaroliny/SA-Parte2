@@ -154,88 +154,71 @@
     margin-bottom: 0.1rem;
   }
 
-
   .noticacao{
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
   }
 
-.toggle{
-  position: absolute;
-  top: 730px;
-  right: 79px;
-  height: 20px;
-  width: 40px;
-  z-index: 1;
-  cursor: pointer;
-  border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .toggle{
+   position: absolute;
+    top: 730px;
+    right: 79px;
+   height: 20px;
+    width: 40px;
+   z-index: 1;
+   cursor: pointer;
+   border-radius: 2px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  }
 
-input:checked ~ .notificacoes{
-  transform: translateX(0);
-  box-shadow: 0 0 4px #ffffff;
-}
+  input:checked ~ .notificacoes{
+    transform: translateX(0);
+    box-shadow: 0 0 4px #ffffff;
+  }
 
-.tituloNoti{
-  font-size: 16px;
-  padding: 0px;
-  margin: 0px;
-  color: #fefefe;
-  display: block;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: 0.2s ease-out;
-}
+  .notificacoes {
+    display: flex;
+    height: 50%;
+    width: 60%;
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    padding: 8px;
+    border: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #000000;
+    background-color: #ffffff;
+    transform: translateX(-505%);
+    flex-direction: column;
+    align-items: center;
+  }
 
-.notificacoes {
-  display: flex;
-  height: 50%;
-  width: 60%;
-  position: absolute;
-  top: 30%;
-  right: 20%;
-  background-color: #ffffff;
-  border: 4px;
-  border-color: #000000;
-  transform: translateX(-505%);
-  flex-direction: column;
-  align-items: center;
-}
+  .titulo{
+    color: #566abd;
+    font-weight: 50px;
+    text-align: right;
+    padding: 70 15 15px;
+    pointer-events: none;
+  }
 
-.titulo{
-  color: #566abd;
-  font-weight: 50px;
-  text-align: right;
-  padding: 70 15 15px;
-  pointer-events: none;
-}
+  .legenda{
+    color: #000000;
+    display: flex;
+    align-items: center;
+  }
 
-.noti{
-  font-weight: 400;
-  font-size: 14px;
-  color: #000000;
-  padding: 0 0 20px;
-  margin: 0px;
-  display: block;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: 0.2s ease-out;
-}
+  .imagemMarcacao{
+    padding: 10px;
+  }
 
-.tituloNoti{
-  font-size: 16px;
-  padding: 0px;
-  margin: 0px;
-  color: #000000;
-  display: block;
-  text-transform: capitalize;
-  text-decoration: none;
-  transition: 0.2s ease-out;
-}
+  .imagemMarcacao img{
+    width: 60px;
+    padding: 5px;
+  }
 
   /* Responsivo */
   @media (max-width: 229px) {
