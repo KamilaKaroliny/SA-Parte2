@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-//validação esqueceuSenha
+//validação esqueceusenha
 document.addEventListener("DOMContentLoaded", function () {
   const formulario = document.getElementById("esqueceusenha");
 
