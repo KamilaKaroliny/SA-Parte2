@@ -154,28 +154,25 @@
     margin-bottom: 0.1rem;
   }
 
-  #sininho2 {         
-    height: 25px;
-    width: 20px;
-}
 
   .noticacao{
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
-}
+  }
 
 .toggle{
   position: absolute;
-  top: 20px;
-  left: 45px;
-  height: 30px;
-  width: 30px;
+  top: 730px;
+  right: 79px;
+  height: 20px;
+  width: 40px;
   z-index: 1;
   cursor: pointer;
   border-radius: 2px;
-  background-color:#3b4b8b;
-  box-shadow: 0 0 5px #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 input:checked ~ .notificacoes{
@@ -195,13 +192,17 @@ input:checked ~ .notificacoes{
 }
 
 .notificacoes {
-  height: 100%;
-  width: 50%;
+  display: flex;
+  height: 50%;
+  width: 60%;
   position: absolute;
+  top: 30%;
+  right: 20%;
   background-color: #4557a1;
   color: #ffffff;
-  transition: 0.5s ease;
-  transform: translateX(-105%);
+  transform: translateX(-505%);
+  flex-direction: column;
+  align-items: center;
 }
 
 .titulo{
