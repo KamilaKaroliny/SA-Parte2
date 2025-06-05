@@ -645,3 +645,19 @@ a:active{
     color: #5263aa;
     font-size: 15px;
 }
+
+#subTexto1 {
+    color: #000000;
+    font-size: 13px;
+    justify-content: flex-start;
+    padding: 5px 13px;
+    font-weight: bold;
+}
+
+#subTexto2 {
+    color: #5263aa;
+    font-size: 30px;
+    justify-content: flex-end;
+    padding: 0px 5px;
+    font-weight: bold;
+}
