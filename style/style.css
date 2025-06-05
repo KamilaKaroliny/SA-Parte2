@@ -686,7 +686,8 @@ a:active{
 
 #grafico {
     display: flex;
+    justify-content: flex-end;
     height: 100px;
     width: 100px;
+    padding: 1px 1px;
 }
-
