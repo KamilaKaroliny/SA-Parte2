@@ -661,3 +661,20 @@ a:active{
     padding: 0px 5px;
     font-weight: bold;
 }
+
+#subTexto3 {
+    color: #000000;
+    font-size: 13px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px 17px;
+    font-weight: bold;
+}
+
+#subTexto4 {
+    color: #5263aa;
+    font-size: 30px;
+    justify-content: flex-end;
+    padding: 0px 20px;
+    font-weight: bold;
+}
