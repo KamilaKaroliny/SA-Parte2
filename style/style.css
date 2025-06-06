@@ -692,6 +692,7 @@ a:active{
     padding: 1px 1px;
 }
 
+/*Essa Classe ajuda para limitar o espaçamento da div que está localizada no cadastro.html*/
 .espacamento{
     width: 400px;
     height: 80px;
