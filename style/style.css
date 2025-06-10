@@ -335,10 +335,10 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 /*Essa classe cuida do tamanho/posição da borda (quadradinho) ao redor das linhas na telaLinha.html*/
-.quadradinhoLinha {
+.quadradinhoCircular {
     background-color: rgb(86, 106, 189);
     border: 1px solid #cecccc;
-    border-radius: 10px;
+    border-radius: 30px;
     padding: 0px;
     margin: 0px;
     width: 350px;
@@ -419,7 +419,7 @@ a:hover {
 }
 
 /*Essa classe cuida do tamanho/posição das linhas na telaLinha.html*/
-.linha {
+.text {
     padding: 0px;
     margin: 0px;
     display: flex;
