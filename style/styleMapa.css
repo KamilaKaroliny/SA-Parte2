@@ -205,12 +205,6 @@
     pointer-events: none;
   }
 
-  .legenda{
-    color: #000000;
-    display: flex;
-    align-items: center;
-  }
-
   .imagemMarcacao{
     padding: 10px;
   }
@@ -227,6 +221,28 @@
   .botao{
     width: auto;
     height: auto;
+  }
+
+  .botaoMarcacao{
+    padding: 5px 50px;
+    margin: 5px;
+    border: 0.5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #000000;
+    background-color: #566abd;
+    color: rgb(255, 255, 255);
+  }
+  
+  .legenda{
+    color: #000000;
+    display: flex;
+    align-items: center;
+  }
+
+  input:checked ~ .legenda{
+    transform: translateX(0);
+    box-shadow: 0 0 4px #ffffff;
   }
 
   /* Responsivo */
