@@ -706,6 +706,17 @@ a:active {
     font-weight: bold;
 }
 
+#texto2 {
+    color: white;
+    font-size: 20px;
+}
+
+#texto3 {
+    color: white;
+    font-size: 10px;
+    font-style: italic
+}
+
 #subTexto {
     color: #5263aa;
     font-size: 15px;

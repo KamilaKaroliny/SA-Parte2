@@ -229,6 +229,17 @@
     height: auto;
   }
 
+  .botaoMarcacao{
+    padding: 5px 50px;
+    margin: 5px;
+    border: 0.5px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: #000000;
+    background-color: #566abd;
+    color: rgb(255, 255, 255);
+  }
+
   /* Responsivo */
   @media (max-width: 229px) {
 
