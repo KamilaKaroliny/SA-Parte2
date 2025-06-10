@@ -1,5 +1,5 @@
 /*Greralzão do site, é o que deixa o fundo azul com efeito*/
-body {                                  
+body {
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
@@ -12,8 +12,8 @@ body {
     width: 384px;
 }
 
- /* Éo que deixa as letras dentro da caixa do imput branca*/
-::-webkit-input-placeholder {        
+/* Éo que deixa as letras dentro da caixa do imput branca*/
+::-webkit-input-placeholder {
     color: rgb(255, 255, 255);
 }
 
@@ -52,23 +52,24 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 /*Essa classe deixa a seta certinho no tamanho padrão do site*/
-#seta {   
+#seta {
     height: 25px;
     width: 35px;
 }
 
- /*não está sendo usada*/
-#sininho {    
+/*não está sendo usada*/
+#sininho {
     height: 60px;
     width: 30px;
 }
 
- /*Essa classe deixa a seta certinho no tamanho padrão do site*/
-#sininho2 {         
+/*Essa classe deixa a seta certinho no tamanho padrão do site*/
+#sininho2 {
     height: 25px;
     width: 20px;
 }
- /*Essa classe deixa a casa certinho no tamanho padrão do site*/
+
+/*Essa classe deixa a casa certinho no tamanho padrão do site*/
 #casa1 {
     height: 60px;
     width: 60px;
@@ -129,7 +130,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 /*essa classe alinha o nome com a imagen das estrelas*/
-#flex9 {                        
+#flex9 {
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -151,11 +152,12 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 /*essa classe cuida das imagens das estrelas tela feedback*/
-.estrelas{                                     
+.estrelas {
     width: 70px;
     padding: 20px 140px 20px 10px;
-    
+
 }
+
 /*Junta os icones "seta, imagem, e nome" alem de colocar todos no centro*/
 #flex-container {
     display: flex;
@@ -163,18 +165,21 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     gap: 10px;
     padding: 15px 20px;
 }
+
 /**/
 #flex-container1 {
     display: flex;
     align-items: stretch;
     gap: 10px;
 }
+
 /**/
 #padding {
     margin: 0px;
     border: 0px;
     padding: 20px;
 }
+
 /**/
 #button1 {
     padding: 20px 155px;
@@ -184,6 +189,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
+
 /**/
 #button2 {
     padding: 13px 165px;
@@ -193,6 +199,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
+
 /**/
 #button3 {
     padding: 20px 165px;
@@ -202,6 +209,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
+
 /**/
 #button4 {
     padding: 20px 145px;
@@ -211,6 +219,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 2px solid #ffffff;
     border-radius: 10px;
 }
+
 /**/
 #button5 {
     border: 1px solid white;
@@ -221,6 +230,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     justify-content: center;
     padding: 0 19px;
 }
+
 /**/
 .esticadinho {
     padding: 20px 90px;
@@ -229,6 +239,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 1px solid #cecccc;
     border-radius: 10px;
 }
+
 /**/
 .esticadinho2 {
     padding: 13px 90px;
@@ -237,6 +248,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border: 1px solid #cecccc;
     border-radius: 10px;
 }
+
 /**/
 .esticadinho3 {
     padding: 15px 57px;
@@ -247,11 +259,13 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     font-weight: bold;
     font-size: 14px;
 }
+
 /**/
 #esqueceuSenhaa {
     text-align: right;
     padding: 20px 20px;
 }
+
 /**/
 .quadradinho1 {
     background-color: rgb(86, 106, 189);
@@ -263,6 +277,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     height: 100px;
     font-size: 11px;
 }
+
 /**/
 .quadradinho2 {
     background-color: rgb(86, 106, 189);
@@ -274,6 +289,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     height: 60px;
     justify-content: flex-start;
 }
+
 /**/
 .quadradinho3 {
     background-color: rgb(86, 106, 189);
@@ -287,7 +303,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 
 .quadradinho4 {
     background-color: transparent;
-    border: 1px solid white;
+    border: 2px solid white;
     border-radius: 31px;
     padding: 5px;
     margin: 11px;
@@ -306,6 +322,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 20px;
     height: 15px;
 }
+
 /**/
 .quadradinhoMapa {
     background-color: rgb(86, 106, 189);
@@ -331,51 +348,61 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     justify-content: space-evenly;
     flex-direction: column;
 }
+
 /**/
 #pagina {
     padding: 0px;
     margin: 10px;
 }
+
 /**/
 a:link {
     color: white;
     text-decoration: none;
 }
+
 /**/
 a:hover {
     color: rgb(32, 13, 175);
 }
+
 /**/
 .icone1 {
     width: 50px;
     height: 50px;
 }
+
 /**/
 .icone2 {
     width: 60px;
     height: 60px;
 }
+
 /**/
 .imgTelaInicial {
     width: 70px;
 }
+
 /**/
 .imgMapa {
     width: 20px;
 }
+
 /**/
 #imgTelaInfo {
     width: 60px;
     height: 60px;
 }
+
 /**/
 .dados {
-    align-items: left;
     text-align: left;
     padding: 10px;
-    margin: 14px;
-    font-weight: bold;
+    margin: 10px;
+    font-size: 13px;
+    color: white;
 }
+
 /**/
 #fonte {
     font-size: 40px;
@@ -392,12 +419,13 @@ a:hover {
 }
 
 /*Essa classe cuida do tamanho/posição das linhas na telaLinha.html*/
-.linha{
+.linha {
     padding: 0px;
     margin: 0px;
     display: flex;
     justify-content: center;
 }
+
 /**/
 .meio1 {
     width: 100%;
@@ -406,6 +434,7 @@ a:hover {
     display: flex;
     padding-left: 0.8rem;
 }
+
 /**/
 .meio2 {
     width: 100%;
@@ -415,16 +444,19 @@ a:hover {
     padding-left: 1rem;
     justify-content: flex-end
 }
+
 /**/
 .meio3 {
     width: 20%;
 }
+
 /**/
 .meio4 {
     width: 85%;
     text-align: center;
     justify-content: center;
 }
+
 /**/
 .meio5 {
     width: 10%;
@@ -432,6 +464,7 @@ a:hover {
     margin: 0px;
     display: flex;
 }
+
 /**/
 .meio6 {
     width: 100%;
@@ -442,7 +475,7 @@ a:hover {
 }
 
 /*Essa classe cuida dos fundos brancos da tela feedback*/
-.branca {                       
+.branca {
     background-color: #f7f5f5;
     color: black;
     border-radius: 30px;
@@ -450,18 +483,19 @@ a:hover {
 }
 
 /*Essa classe cuida dos titulos dos nomes da tela feedback*/
-.branca h3 {                  
-    padding: 0px 0px;   
-    margin: 0px;            
+.branca h3 {
+    padding: 0px 0px;
+    margin: 0px;
 
 }
 
- /*Essa classe cuida dos textos dos feedback da tela feedback*/
-.branca p {                          
+/*Essa classe cuida dos textos dos feedback da tela feedback*/
+.branca p {
     height: 100px;
     padding: 0px 10px 40px 0px;
     align-items: baseline;
 }
+
 /**/
 #josevaldo {
     width: 60px;
@@ -469,11 +503,13 @@ a:hover {
     margin: 10px;
     padding: 5px;
 }
+
 /**/
 #nome1 {
     font-size: 18px;
     font-family: 'bold Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 /**/
 #entregar {
     width: 25px;
@@ -492,7 +528,7 @@ a:hover {
 }
 
 /* Essa classe cuida do titulo que ficam dentro da aba na paginaInicial.html */
-.titulo{
+.titulo {
     color: #ffffff;
     font-weight: 50px;
     text-align: right;
@@ -501,14 +537,14 @@ a:hover {
 }
 
 /* Essa classe cuida do "botão" que trás a aba na paginaInicial.html */
-.noticacao{
+.noticacao {
     display: none;
     visibility: hidden;
     -webkit-appearance: none;
 }
 
 /* Essa classe cuida da borda que está em volta do "botão" na paginaInicial.html */
-.toggle{
+.toggle {
     position: absolute;
     top: 20px;
     left: 45px;
@@ -517,18 +553,18 @@ a:hover {
     z-index: 1;
     cursor: pointer;
     border-radius: 2px;
-    background-color:#3b4b8b;
+    background-color: #3b4b8b;
     box-shadow: 0 0 5px #ffffff;
 }
 
 /* Quando esse input estiver "marcado" essa classe fará a transição da aba na paginaInicial.html */
-input:checked ~ .notificacoes{
+input:checked~.notificacoes {
     transform: translateX(0);
     box-shadow: 0 0 4px #ffffff;
 }
 
 /* Essa classe cuida da escrita que está dentro da aba na paginaInicial.html */
-.noti{
+.noti {
     font-weight: 400;
     font-size: 14px;
     color: #fefefe;
@@ -541,7 +577,7 @@ input:checked ~ .notificacoes{
 }
 
 /* Essa classe cuida do titulo que está dentro da aba na paginaInicial.html */
-.tituloNoti{
+.tituloNoti {
     font-size: 16px;
     padding: 0px;
     margin: 0px;
@@ -551,6 +587,7 @@ input:checked ~ .notificacoes{
     text-decoration: none;
     transition: 0.2s ease-out;
 }
+
 /**/
 .mensagem {
     background-color: transparent;
@@ -561,14 +598,17 @@ input:checked ~ .notificacoes{
     max-width: 70%;
     font-weight: bold;
 }
+
 /**/
 .mensagem:nth-child(1) {
     align-self: flex-end;
 }
+
 /**/
 .mensagem:nth-child(3) {
     align-self: flex-end;
 }
+
 /**/
 .container-mensagens {
     display: flex;
@@ -581,7 +621,7 @@ input:checked ~ .notificacoes{
 }
 
 /*Essa classe cuida do tamanho/posição da imagem da aba de pesquisa na telaLinha.html*/
-.abaPesquisa{
+.abaPesquisa {
     width: 380px;
     height: 55px;
     align-items: center;
@@ -589,30 +629,35 @@ input:checked ~ .notificacoes{
 }
 
 /*Essa classe cuida do tamanho/posição da div azul na telaLinha.html*/
-.linhaAzul{
-    background-color:rgb(61, 77, 138);
+.linhaAzul {
+    background-color: rgb(61, 77, 138);
     padding: 0px;
     margin: 0px;
     width: 350px;
     height: 5px;
 }
+
 /**/
-a:hover{
+a:hover {
     color: #ffffff;
-} 
+}
+
 /**/
 a:visited {
     color: #ffffff;
 }
+
 /**/
-a:active{
+a:active {
     color: #ffffff;
 }
+
 /**/
-.erro{
+.erro {
     color: red;
     font-size: 0.9em;
 }
+
 /**/
 #foto {
     width: 120px;
@@ -620,7 +665,7 @@ a:active{
 }
 
 #imgTelaRela {
-    width: 80px;
+    width: 70px;
     height: 60px;
 }
 
@@ -693,7 +738,7 @@ a:active{
 }
 
 /*Essa Classe ajuda para limitar o espaçamento da div que está localizada no cadastro.html*/
-.espacamento{
+.espacamento {
     width: 400px;
     height: 80px;
 }
