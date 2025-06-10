@@ -717,9 +717,25 @@ a:active {
     font-style: italic
 }
 
+#texto4 {
+    color: rgb(0, 0, 0);
+    font-size: 10px;
+}
+
+#blocoPretinho {
+    border: 1px solid #000000;
+    border-radius: 13px;
+}
+
+#iconesPequenos {
+    width: 25px;
+    height: 25px;
+    padding: 1px 15px;
+}
+
 #subTexto {
     color: #5263aa;
-    font-size: 15px;
+    font-size: 15px;    
 }
 
 #subTexto1 {
