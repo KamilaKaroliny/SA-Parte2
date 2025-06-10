@@ -690,6 +690,12 @@ a:active {
     font-weight: bold;
 }
 
+#texto1 {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 #subTexto {
     color: #5263aa;
     font-size: 15px;
