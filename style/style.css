@@ -559,10 +559,11 @@ a:hover {
 
 .toggle2 {
     position: relative;
-    bottom: -10px;
-    left: -3px;
+    bottom: 20px;
+    left: 170px;
     height: 40px;
     width: 40px;
+    border: 1px solid #cecccc;
     border-radius: 50%;
     background-color: #3b4b8b;
 }
@@ -704,17 +705,6 @@ a:active {
     color: white;
     font-size: 30px;
     font-weight: bold;
-}
-
-#texto2 {
-    color: white;
-    font-size: 20px;
-}
-
-#texto3 {
-    color: white;
-    font-size: 10px;
-    font-style: italic
 }
 
 #subTexto {
