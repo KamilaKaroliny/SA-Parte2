@@ -772,11 +772,6 @@ a:active {
     font-weight: bold;
 }
 
-#grafico {
-    width: 110px;
-    height: 110px;
-}
-
 .tempoMedioBloco {
     display: flex;
     align-items: center;

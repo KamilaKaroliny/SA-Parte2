@@ -225,22 +225,26 @@ function drawChart() {
   dataTable.addColumn('string', 'Categoria');
   dataTable.addColumn('number', 'Valor');
   dataTable.addRows([
-      ['Item A', 10],
+      ['OI', 40],
       ['Item B', 15],
       ['Item C', 5]
+      
   ]);
 
+  legend ([
+    
+  ])
+
   var options = {
-    title: 'Gráfico de Pizza',
     backgroundColor: 'white',
-    titleTextStyle: {color: 'black'},
+    titleTextStyle: {color: 'blue'},
     pieSliceText: 'value',
     slices: {
         0: { color: 'red' },
         1: { color: 'blue' },
         2: { color: 'green' }
     }
-};
+  };
 
   var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
   chart.draw(dataTable, options);
