@@ -736,6 +736,13 @@ a:active {
     padding: 1px 1px;
 }
 
+.tempoMedioBloco {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
 /*Essa Classe ajuda para limitar o espaçamento da div que está localizada no cadastro.html*/
 .espacamento {
     width: 400px;
