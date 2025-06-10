@@ -787,6 +787,9 @@ a:active {
 
 .iconeMais{
     font-size: 35px;
+    height: 40px;
+    width: 40px;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
