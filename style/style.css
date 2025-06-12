@@ -198,6 +198,8 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     display: flex;
     align-items: stretch;
     gap: 10px;
+    padding: 120px 0px;
+    position: fixed;
 }
 
 #centralizandoItens {
@@ -434,7 +436,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     flex-direction: column;
 }
 
-.manutencoes{
+.manutencoes {
     background-color: transparent;
     border: 2px solid white;
     border-radius: 31px;
@@ -849,7 +851,7 @@ a:active {
 
 #subTexto {
     color: #5263aa;
-    font-size: 15px;    
+    font-size: 15px;
 }
 
 #subTexto1 {
@@ -919,7 +921,7 @@ a:active {
     height: 80px;
 }
 
-.iconeMais{
+.iconeMais {
     font-size: 35px;
     height: 40px;
     width: 40px;
@@ -928,17 +930,17 @@ a:active {
     align-items: flex-end;
 }
 
-#iconeUsuario{
+#iconeUsuario {
     padding: 20 0 0 0px;
     width: 245px;
     height: 245px;
 }
 
-#Margin{
+#Margin {
     margin: 0 0 20 0px;
 }
 
-.dadosPessoais{
+.dadosPessoais {
     font-size: 18px;
     font-weight: 500;
     margin: 0px;
