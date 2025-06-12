@@ -259,32 +259,8 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 /**/
-.botaoVoltar {
-    padding: 10px 20px;
-    margin: 10px;
-    width: 100px;
-    background-color: rgb(86, 106, 189);
-    color: rgb(255, 254, 254);
-    border: 1px solid #cecccc;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-}
-
-/**/
-.botaoVoltar h4 {
-    margin: 5px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center
-}
-
-/**/
 .botaoEditar {
-    padding: 10px 20px;
-    margin: 10px;
-    width: 100px;
+    padding: 13px 90px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
     border: 1px solid #cecccc;
