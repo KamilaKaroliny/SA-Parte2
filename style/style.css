@@ -15,6 +15,7 @@ body {
     color: rgb(255, 255, 255);
 }
 
+/*Esse ID foi para arrumar o posicionamento da logo, seta e casa na tela telaEdita.html e telaEditarUsuario.html*/
 #cabecalhoEditar {
     display: flex;
     flex-direction: row;
@@ -56,6 +57,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 150px;
 }
 
+/*Esse ID foi para arrumar o tamanho da logo na tela telaEdita.html e telaEditarUsuario.html*/
 #logoEditar {
     height: 145px;
     width: 220px;
@@ -68,6 +70,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 35px;
 }
 
+/*Esse ID foi para arrumar o tamanho da seta na tela telaEdita.html e telaEditarUsuario.html*/
 #setaEditar {
     margin: 5px;
     height: 25px;
@@ -92,6 +95,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 60px;
 }
 
+/*Esse ID foi para arrumar o tamanho da casa na tela telaEdita.html e telaEditarUsuario.html*/
 #casaEditar {
     margin: 5px;
     height: 60px;
