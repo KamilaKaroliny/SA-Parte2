@@ -869,6 +869,11 @@ a:active {
     font-weight: bold;
 }
 
+#textoInfoRelatorio {
+    color: #5263aa;
+    font-size: 16px;
+}
+
 .tempoMedioBloco {
     display: flex;
     align-items: center;
