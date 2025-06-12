@@ -231,10 +231,6 @@ function drawChart() {
       
   ]);
 
-  legend ([
-    
-  ])
-
   var options = {
     backgroundColor: 'white',
     titleTextStyle: {color: 'blue'},
