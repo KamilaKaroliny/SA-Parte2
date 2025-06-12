@@ -40,20 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-//mudança de pagina
-function paginaInicial() {
-  window.location.href = "paginaInicial.html";
-}
-
-function login() {
-  window.location.href = "login.html";
-}
-
-function esqueceusenha2() {
-  window.location.href = "esqueceusenha2.html";
-}
-
-
 //adição de gráfico relatório maquinistas
 
 google.charts.load('current', {'packages':['corechart']});
