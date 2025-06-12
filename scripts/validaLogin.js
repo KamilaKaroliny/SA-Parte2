@@ -42,9 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //validação esqueceusenha
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.getElementById("esqueceusenha");
+  const esqueceusenha = document.getElementById("esqueceusenha");
 
-  formulario.addEventListener("submit", function (s) {
+  esqueceusenha.addEventListener("submit", function (s) {
     s.preventDefault();
 
     let valido = true;
@@ -91,9 +91,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //validação esqueceusenha2
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.getElementById("esqueceusenha2");
+  const esqueceusenha2 = document.getElementById("esqueceusenha2");
 
-  formulario.addEventListener("submit", function (i) {
+  esqueceusenha2.addEventListener("submit", function (i) {
     i.preventDefault();
 
     let valido = true;
@@ -130,9 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //validação cadastro
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.getElementById("maquinistaForm");
+  const maquinistaForm = document.getElementById("maquinistaForm");
 
-  formulario.addEventListener("submit", function (k) {
+  maquinistaForm.addEventListener("submit", function (k) {
     k.preventDefault();
 
     let valido = true;
@@ -213,36 +213,3 @@ function login() {
 function esqueceusenha2() {
   window.location.href = "esqueceusenha2.html";
 }
-
-
-//adição de gráfico relatório maquinistas
-
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-
-function drawChart() {
-  var dataTable = new google.visualization.DataTable();
-  dataTable.addColumn('string', 'Categoria');
-  dataTable.addColumn('number', 'Valor');
-  dataTable.addRows([
-      ['OI', 40],
-      ['Item B', 15],
-      ['Item C', 5]
-      
-  ]);
-
-  var options = {
-    backgroundColor: 'white',
-    titleTextStyle: {color: 'blue'},
-    pieSliceText: 'value',
-    slices: {
-        0: { color: 'red' },
-        1: { color: 'blue' },
-        2: { color: 'green' }
-    }
-  };
-
-  var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-  chart.draw(dataTable, options);
-}
-
