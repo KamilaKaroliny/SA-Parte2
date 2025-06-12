@@ -854,10 +854,10 @@ a:active {
 }
 
 .litros {
-    font-size: 65px;
+    font-size: 50px;
     font-weight: bold;
     color: #5263aa;
-    padding: 5px 40px;
+    padding: 5px 15px;
 }
 
 /*Essa Classe ajuda para limitar o espaçamento da div que está localizada no cadastro.html*/
