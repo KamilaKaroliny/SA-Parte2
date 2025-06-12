@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (valido) {
       alert("Senha redefinida com sucesso!");
-      formulario.reset();
+      esqueceusenha.reset();
       window.location.href = "esqueceusenha2.html";
     }
 

@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (valido) {
       alert("Senha redefinida com sucesso!");
-      formulario.reset();
+      maquinistaForm.reset();
       window.location.href = "login.html";
     }
 

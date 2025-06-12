@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (valido) {
       alert("Senha redefinida com sucesso!");
-      formulario.reset();
+      esqueceusenha2.reset();
       window.location.href = "login.html";
     }
 
