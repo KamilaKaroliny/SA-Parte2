@@ -803,3 +803,10 @@ a:active {
     justify-content: center;
     align-items: flex-end;
 }
+
+#iconeUsuario{
+    padding: 20 0 0 0px;
+    width: 220px;
+    height: 220px;
+}
+
