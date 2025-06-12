@@ -49,6 +49,12 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 150px;
 }
 
+#logoEditar {
+    height: 145px;
+    width: 220px;
+    margin: 20px;
+}
+
 /*Essa classe deixa a seta certinho no tamanho padrão do site*/
 #seta {
     height: 25px;
@@ -227,6 +233,72 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     align-items: center;
     justify-content: center;
     padding: 0 19px;
+}
+
+/**/
+.botaoVoltar {
+    padding: 10px 20px;
+    margin: 10px;
+    width: 100px;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/**/
+.botaoVoltar h4 {
+    margin: 5px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+/**/
+.botaoEditar {
+    padding: 10px 20px;
+    margin: 10px;
+    width: 100px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/**/
+.botaoEditar h4 {
+    margin: 5px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+/**/
+.botaoTelaEditar {
+    display: flex;
+    justify-content: center
+}
+
+#maquinistaForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#botaoFinalizar {
+    padding: 13px 90px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
 
 /**/
