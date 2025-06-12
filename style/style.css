@@ -206,6 +206,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    margin-bottom: 4px;
 }
 
 #centralizandoInfos {
@@ -894,12 +895,27 @@ a:active {
 
 #textoInfoRelatorio p {
     font-size: 10px;
+    margin-left: 3px;
 }
+
+span#textoInfoRelatorio {
+    margin-left: 10px;
+}
+
+.infosRelatorioLinha{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 
 .tempoMedioBloco {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
 }
 
 .graficoCombustivel {
