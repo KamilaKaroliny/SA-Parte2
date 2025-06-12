@@ -810,3 +810,10 @@ a:active {
     height: 220px;
 }
 
+#Margin{
+    margin: 0 0 20 0px;
+}
+
+.dadosPessoais{
+    display: flex;
+}
