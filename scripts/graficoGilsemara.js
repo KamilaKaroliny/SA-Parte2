@@ -8,9 +8,9 @@ function drawChart() {
   dataTable.addColumn('string', 'Categoria');
   dataTable.addColumn('number', 'Valor');
   dataTable.addRows([
-      ['Curta', 19],
-      ['Média', 32],
-      ['Longa', 48]
+      ['Curta', 20],
+      ['Média', 70],
+      ['Longa', 10]
       
   ]);
 
