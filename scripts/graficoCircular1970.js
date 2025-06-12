@@ -14,5 +14,6 @@ const ctx = document.getElementById('chartHorario').getContext('2d');
         ],
         borderColor: 'rgba(54, 162, 235, 1)',
         borderWidth: 1
-      }]
-    };
+    }]}
+    }
+)
