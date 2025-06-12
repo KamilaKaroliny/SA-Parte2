@@ -225,22 +225,21 @@ function drawChart() {
   dataTable.addColumn('string', 'Categoria');
   dataTable.addColumn('number', 'Valor');
   dataTable.addRows([
-      ['OI', 40],
-      ['Item B', 15],
-      ['Item C', 5]
-      
+      ['Item A', 19],
+      ['Item B', 32],
+      ['Item C', 48]
   ]);
 
   var options = {
     backgroundColor: 'white',
-    titleTextStyle: {color: 'blue'},
+    titleTextStyle: {color: 'black'},
     pieSliceText: 'value',
     slices: {
-        0: { color: 'red' },
-        1: { color: 'blue' },
-        2: { color: 'green' }
+        0: { color: '#6ce5e8' },
+        1: { color: '#41b8d5' },
+        2: { color: '#2d8bba' }
     }
-  };
+};
 
   var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
   chart.draw(dataTable, options);
