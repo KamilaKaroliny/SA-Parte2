@@ -4,13 +4,13 @@
     data: {
       labels: ['07:00', '14:00', '18:00', '21:00'],
       datasets: [{
-        label: 'Qtde de viagens',
+        label: 'Quantidade de viagens',
         data: [200, 144, 229, 74],
         backgroundColor: [
-          'rgba(54, 162, 235, 0.6)',
-          'rgba(54, 162, 235, 0.6)',
-          'rgba(54, 162, 235, 0.6)',
-          'rgba(54, 162, 235, 0.6)'
+          '#41b8d5',
+          '#6ce5e8',
+          '#2d8bba',
+          '#2f5f98'
         ],
       }]
     }
