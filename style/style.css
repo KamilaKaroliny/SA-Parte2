@@ -867,13 +867,13 @@ a:active {
     color: #5263aa;
     font-size: 30px;
     justify-content: flex-end;
-    padding: 0px 5px;
+    padding: 0px 2px;
     font-weight: bold;
 }
 
 #subTexto3 {
     color: #000000;
-    font-size: 13px;
+    font-size: 10px;
     display: flex;
     justify-content: flex-start;
     padding: 5px 13px;
@@ -902,7 +902,7 @@ span#textoInfoRelatorio {
     margin-left: 10px;
 }
 
-.infosRelatorioLinha{
+.infosRelatorioLinha {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

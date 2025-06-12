@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório da Circular 1970</title>
     <link rel="stylesheet" href="../style/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../scripts/gráfico1970.js"></script>
 </head>
 
 <body>
@@ -61,7 +63,7 @@
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Distância:</strong></span>
                 <div id="centralizandoItens">
-                    <span id="textoInfoRelatorio"><strong>24KM</strong></span> 
+                    <span id="textoInfoRelatorio"><strong>24KM</strong></span>
                     <img id="iconesPequenos" src="../assets/icons/distancia.png" alt="">
                 </div>
             </div>
@@ -69,7 +71,7 @@
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Tempo médio:</strong></span>
                 <div id="centralizandoItens">
-                    <span id="textoInfoRelatorio"><strong>26 min</strong></span> 
+                    <span id="textoInfoRelatorio"><strong>26 min</strong></span>
                     <img id="iconesPequenos" src="../assets/icons/iconeTempoMedio.png" alt="">
                 </div>
             </div>
@@ -77,20 +79,22 @@
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Tipo de Combustivel</strong></span>
                 <div id="centralizandoItens">
-                    <span id="textoInfoRelatorio"><strong>Elétrico</strong></span> 
+                    <span id="textoInfoRelatorio"><strong>Elétrico</strong></span>
                     <img id="iconesPequenos" src="../assets/icons/iconeTipoDeCombustivel.png" alt="">
                 </div>
             </div>
         </div>
 
-        <br> 
+        <br>
 
         <div id="centralizandoItens">
 
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Número de estações:</strong></span>
                 <div id="centralizandoInfos">
-                    <span id="textoInfoRelatorio"><strong>7</strong> <p>estações</p> </span> 
+                    <span id="textoInfoRelatorio"><strong>7</strong>
+                        <p>estações</p>
+                    </span>
                     <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeEstacoes.png" alt="">
                 </div>
             </div>
@@ -98,7 +102,9 @@
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Número de vagões:</strong></span>
                 <div id="centralizandoInfos">
-                    <span id="textoInfoRelatorio"><strong>3</strong> <p>vagões</p> </span> 
+                    <span id="textoInfoRelatorio"><strong>3</strong>
+                        <p>vagões</p>
+                    </span>
                     <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeVagoes.png" alt="">
                 </div>
             </div>
@@ -106,24 +112,23 @@
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Velocidade Média:</strong></span>
                 <div id="centralizandoItens">
-                    <span id="textoInfoRelatorio"><strong>53 km/h</strong></span> 
+                    <span id="textoInfoRelatorio"><strong>53 km/h</strong></span>
                     <img id="iconesPequenos" src="../assets/icons/iconeVelocidadeMedia.png" alt="">
                 </div>
             </div>
         </div>
 
         <div class="tempoMedioBloco">
-            <span id="subTexto3">Média de Horários mais utilizados: </span>
+            <span id="subTexto3"><strong>Média de Horários mais utilizados: </strong></span>
             <span id="subTexto2">18:00</span> <span id="texto3">Horário mais utilizado</span>
         </div>
-<br>
 
-        <span id="tituloInfoRelatorio"><strong>gráfico:</strong></span>
+        <div id="my_chart_div" style="width: 350px; height: 100px;"></div>
 
-        <br>
+
         <div class="infosRelatorioLinha">
             <div>
-                <span id="subTexto3"><strong>Ponto de Partida: </strong>  Jardim Sofia</span>
+                <span id="subTexto3"><strong>Ponto de Partida: </strong> Jardim Sofia</span>
             </div>
 
             <div>
@@ -131,13 +136,14 @@
             </div>
 
             <div>
-                <span id="subTexto3"><strong>Regiões onde ele Passa:</strong>Jardim sofia, Iririú, Boa Vista, Bucarein.</span>
+                <span id="subTexto3"><strong>Regiões onde ele Passa:</strong>Jardim sofia, Iririú, Boa Vista,
+                    Bucarein.</span>
             </div>
 
             <div>
                 <span id="subTexto3"><strong>Capacidade Máxima de Transporte: </strong> 300 pessoas.</span>
             </div>
         </div>
-        
+
 
     </section>
