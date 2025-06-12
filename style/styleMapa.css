@@ -181,11 +181,11 @@
 
   .notificacoes {
     display: flex;
-    height: 50%;
-    width: 60%;
+    height: 30%;
+    width: 30%;
     position: absolute;
     top: 30%;
-    right: 20%;
+    right: 35%;
     padding: 8px;
     border: 2px;
     border-style: solid;
@@ -195,6 +195,7 @@
     transform: translateX(-505%);
     flex-direction: column;
     align-items: center;
+    z-index: 2;
   }
 
   .titulo{
@@ -208,11 +209,13 @@
 
   .imagemMarcacao{
     padding: 10px;
+    z-index: 3;
   }
 
   .imagemMarcacao img{
     width: 60px;
     padding: 5px;
+    z-index: 4;
   }
 
   .localizacao {
@@ -302,10 +305,12 @@
     transform: translateX(-405%);
     position: absolute;
     z-index: 1;
+    display: flex;
+    align-items: center;
   }
 
   /* Responsivo */
-  @media (max-width: 229px) {
+  @media (max-width: 409px) {
 
     .containerClima {
       flex-direction: column;
@@ -343,6 +348,16 @@
       display: flex;
       padding-left: 1rem;
       justify-content: flex-end
+    }
+
+
+    .notificacoes {
+      width: 90%;
+      padding: 0px;
+      margin: 0px;
+      display: flex;
+      align-items: center;
+      padding-left: 0.8rem;
     }
 
 
