@@ -15,6 +15,13 @@ body {
     color: rgb(255, 255, 255);
 }
 
+#cabecalhoEditar {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 /*Essa classe cuida do tamanho da logo do tremalize nas paginas esqueceusenha.html, esqueceusenha2.html, 
 login.html, */
 #logo {
