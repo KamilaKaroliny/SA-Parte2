@@ -3,10 +3,7 @@ body {
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
-    margin-bottom: 8px;
-    margin-left: 8px;
-    margin-right: 8px;
-    margin-top: 8px;
+    margin-top: 10px;
     text-align: center;
 }
 
@@ -286,6 +283,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border-radius: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 /**/
@@ -294,19 +292,20 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 100px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 /**/
 .botaoTelaEditar {
     display: flex;
-    justify-content: center
+    justify-content: center;
 }
 
 #maquinistaForm {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0px;
 }
 
 #botaoFinalizar {
@@ -571,6 +570,13 @@ a:hover {
     margin: 0px;
     display: flex;
     justify-content: space-around
+}
+
+.meio7{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: flex;
 }
 
 /*Essa classe cuida dos fundos brancos da tela feedback*/
@@ -845,10 +851,9 @@ a:active {
 }
 
 #iconesPequenos {
-    width: 20px;
-    height: 20px;
-    padding-left: 3px;
-    padding-right: 15px;
+    width: 25px;
+    height: 25px;
+    padding: 1px 15px;
 }
 
 #subTexto {
@@ -866,7 +871,7 @@ a:active {
 
 #subTexto2 {
     color: #5263aa;
-    font-size: 25px;
+    font-size: 30px;
     justify-content: flex-end;
     padding: 0px 2px;
     font-weight: bold;
@@ -934,8 +939,13 @@ span#textoInfoRelatorio {
 
 /*Essa Classe ajuda para limitar o espaçamento da div que está localizada no cadastro.html*/
 .espacamento {
-    width: 400px;
-    height: 80px;
+    width: 384px;
+    height: 78px;
+}
+
+.espacamento2 {
+    width: 350px;
+    height: 60px;
 }
 
 .iconeMais {
