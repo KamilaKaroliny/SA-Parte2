@@ -1,4 +1,6 @@
- const ctx = document.getElementById('chartHorario').getContext('2d');
+//adição de gráfico relatório linhas
+
+const ctx = document.getElementById('chartHorario').getContext('2d');
   new Chart(ctx, {
     type: 'bar',
     data: {
