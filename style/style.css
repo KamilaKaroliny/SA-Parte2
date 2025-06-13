@@ -845,9 +845,10 @@ a:active {
 }
 
 #iconesPequenos {
-    width: 25px;
-    height: 25px;
-    padding: 1px 15px;
+    width: 20px;
+    height: 20px;
+    padding-left: 3px;
+    padding-right: 15px;
 }
 
 #subTexto {
@@ -865,7 +866,7 @@ a:active {
 
 #subTexto2 {
     color: #5263aa;
-    font-size: 30px;
+    font-size: 25px;
     justify-content: flex-end;
     padding: 0px 2px;
     font-weight: bold;
