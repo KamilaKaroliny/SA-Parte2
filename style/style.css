@@ -967,63 +967,6 @@ span#textoInfoRelatorio {
 }
 
 /* Style.css do Mapa */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
-    color: white;
-    min-height: 100vh;
-    padding: 1rem;
-  }
-  
-  /* Cabeçalho */
-  .cabecalho {
-    padding: 0 0 30px;
-  }
-  
-  #containerCabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  }
-
-  .colunaCabecalhoEsq, .colunaCabecalhoCentro {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    padding-left: 0.8rem;
-  }
-
-  .colunaCabecalhoDir {
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    display: flex;
-    padding-left: 1rem;
-    justify-content: flex-end
-  }
-
- #iconeVoltar {
-    height: 25px;
-    width: 35px;
-  }
-
-  #logoTremalize {
-    height: 90px;
-    width: 150px;
-  }
-
-  #iconeHome {
-    height: 60px;
-    width: 60px;
-  }
   
   /* Seções */
   .secaoClima, .secaoMapaGoogle, .secaoInfoTrem {
