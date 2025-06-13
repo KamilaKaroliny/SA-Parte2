@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,7 +74,7 @@
                 <span id="tituloInfoRelatorio"><strong>Distância:</strong></span>
                 <div id="centralizandoItens">
                     <span id="textoInfoRelatorio"><strong>24KM</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/distancia.png" alt="">
+                    <img id="iconesPequenos" src="../assets/icons/distancia.png" alt="Icone que representa a distância de sua rota">
                 </div>
             </div>
 
@@ -83,7 +82,7 @@
                 <span id="tituloInfoRelatorio"><strong>Tempo médio:</strong></span>
                 <div id="centralizandoItens">
                     <span id="textoInfoRelatorio"><strong>26 min</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeTempoMedio.png" alt="">
+                    <img id="iconesPequenos" src="../assets/icons/iconeTempoMedio.png" alt="Icone que representa o tempo médio que o trem leva para terminar sua rota">
                 </div>
             </div>
 
@@ -91,7 +90,7 @@
                 <span id="tituloInfoRelatorio"><strong>Tipo de Combustivel</strong></span>
                 <div id="centralizandoItens">
                     <span id="textoInfoRelatorio"><strong>Elétrico</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeTipoDeCombustivel.png" alt="">
+                    <img id="iconesPequenos" src="../assets/icons/iconeTipoDeCombustivel.png" alt="Icone que representa o tipo do combustível que o trem usa">
                     <br>
                 </div>
             </div>
@@ -105,10 +104,11 @@
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Número de estações:</strong></span>
                 <div id="centralizandoInfos">
+
                     <span id="textoInfoRelatorio"><strong>7</strong>
                         <p>estações</p>
                     </span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeEstacoes.png" alt="">
+                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeEstacoes.png" alt="Icone que repesenta o estações que o ônibus para">
                 </div>
             </div>
 
@@ -118,7 +118,7 @@
                     <span id="textoInfoRelatorio"><strong>3</strong>
                         <p>vagões</p>
                     </span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeVagoes.png" alt="">
+                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeVagoes.png" alt="Icone que representa a quantidade de vagões do trem">
                 </div>
             </div>
 
@@ -126,10 +126,11 @@
                 <span id="tituloInfoRelatorio"><strong>Velocidade Média:</strong></span>
                 <div id="centralizandoItens">
                     <span id="textoInfoRelatorio"><strong>53 km/h</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeVelocidadeMedia.png" alt="">
+                    <img id="iconesPequenos" src="../assets/icons/iconeVelocidadeMedia.png" alt="Icone que representa a velocidade média do trem">
                 </div>
             </div>
         </div>
+
 
         <!--Horário com mais trânsito-->
         <div class="tempoMedioBloco">
@@ -137,30 +138,33 @@
             <span id="subTexto2">18:00</span> <span id="texto3">Horário mais utilizado</span>
         </div>
 
+
         <!--Gráfico dos horários de viagens-->
         <canvas id="chartHorario" width="400" height="200"></canvas>
 
+
         <!--Informações adicionais como: Ponto de partida, Destino Final, Regiões onde ele passa, Capacidade Máxima de transporte-->
         <div class="infosRelatorioLinha">
+            <!--Ponto de Partida-->
             <div>
                 <span id="subTexto3"><strong>Ponto de Partida: </strong> Jardim Sofia</span>
             </div>
-
+            
+            <!--Destino Final-->
             <div>
                 <span id="subTexto3"><strong>Destino Final: </strong>Bucarein</span>
             </div>
-
+            
+            <!--Regiões onde ele Passa-->
             <div>
                 <span id="subTexto3"><strong>Regiões onde ele Passa:</strong>Jardim sofia, Iririú, Boa Vista,
                     Bucarein.</span>
             </div>
 
+            <!--Capacidade Máxima de Transporte-->
             <div>
                 <span id="subTexto3"><strong>Capacidade Máxima de Transporte: </strong> 300 pessoas.</span>
             </div>
         </div>
     </main>
-    
-
-
     </section>
