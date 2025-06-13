@@ -1237,6 +1237,21 @@ span#textoInfoRelatorio {
     align-items: center;
   }
 
+  #iconeVoltar {
+    height: 25px;
+    width: 35px;
+  }
+
+  #logoTremalize {
+    height: 90px;
+    width: 150px;
+  }
+
+  #iconeHome {
+    height: 60px;
+    width: 60px;
+  }
+
   
   /* Responsivo */
   @media (max-width: 409px) {
