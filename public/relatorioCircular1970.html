@@ -33,12 +33,15 @@
     </div>
     <br>
     </header>
-    
+
+    <!--Nome do trem-->
+    <span id="nomeCircular">CIRCULAR 1970</span>
+
     <main>
-        <span id="nomeCircular">CIRCULAR 1970</span>
     <br>
     <br>
 
+    <!--Datas das manutenções: A ultima manutenção e a próxima manutenção-->
     <div id="centralizandoItens">
 
         <div class="manutencoes">
@@ -54,8 +57,10 @@
         </div>
     </div>
 
-    <section class="secaoRelatorio">
+    <!--Espaço das informações do relatório-->
 
+    <!--Título com a data da última atualização-->
+    <section class="secaoRelatorio">
         <div id="cartaoRelatorio">
             <span id="texto">RELATÓRIO</span>
             <div>
@@ -63,6 +68,7 @@
             </div>
         </div>
 
+        <!--Primeira linha de informações: Distância, tempo médio, tipo de combustível-->
         <div id="centralizandoItens">
 
             <div id="reparticaoInfoRelatorio">
@@ -86,12 +92,14 @@
                 <div id="centralizandoItens">
                     <span id="textoInfoRelatorio"><strong>Elétrico</strong></span>
                     <img id="iconesPequenos" src="../assets/icons/iconeTipoDeCombustivel.png" alt="">
+                    <br>
                 </div>
             </div>
         </div>
+        
 
-        <br>
 
+         <!--Segunda linha de informações: Número de estações, Número de vagões, Velocidade média-->
         <div id="centralizandoItens">
 
             <div id="reparticaoInfoRelatorio">
@@ -123,14 +131,16 @@
             </div>
         </div>
 
+        <!--Horário com mais trânsito-->
         <div class="tempoMedioBloco">
             <span id="subTexto3"><strong>Média de Horários mais utilizados: </strong></span>
             <span id="subTexto2">18:00</span> <span id="texto3">Horário mais utilizado</span>
         </div>
 
+        <!--Gráfico dos horários de viagens-->
         <canvas id="chartHorario" width="400" height="200"></canvas>
 
-
+        <!--Informações adicionais como: Ponto de partida, Destino Final, Regiões onde ele passa, Capacidade Máxima de transporte-->
         <div class="infosRelatorioLinha">
             <div>
                 <span id="subTexto3"><strong>Ponto de Partida: </strong> Jardim Sofia</span>
