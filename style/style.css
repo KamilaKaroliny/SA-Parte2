@@ -995,8 +995,17 @@ span#textoInfoRelatorio {
 /* Style.css do Mapa */
   
   /* Seções */
+  #containerCabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 0.5rem;
+  }
+
   .secaoClima, .secaoMapaGoogle, .secaoInfoTrem {
     margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
   }
   
   .containerClima {
@@ -1012,7 +1021,7 @@ span#textoInfoRelatorio {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
-    padding: 0.2rem 0.8rem;
+    padding: 0.2rem 0.6rem;
   }
   
   .boxClimaInfo img {
@@ -1255,60 +1264,5 @@ span#textoInfoRelatorio {
   #iconeHome {
     height: 60px;
     width: 60px;
-  }
-
-  
-  /* Responsivo */
-  @media (max-width: 409px) {
-
-    .containerClima {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .logo {
-      height: 60px;
-    }
-  
-    .icone-voltar,
-    .icone-casa {
-      height: 30px;
-      width: 30px;
-    }
-
-    #containerCabecalho {
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-  
-    .colunaCabecalhoEsq, .colunaCabecalhoCentro {
-      width: 100%;
-      padding: 0px;
-      margin: 0px;
-      display: flex;
-      padding-left: 0.8rem;
-    }
-  
-    .colunaCabecalhoDir {
-      width: 100%;
-      padding: 0px;
-      margin: 0px;
-      display: flex;
-      padding-left: 1rem;
-      justify-content: flex-end
-    }
-
-
-    .notificacoesMapa {
-      width: 90%;
-      padding: 0px;
-      margin: 0px;
-      display: flex;
-      align-items: center;
-      padding-left: 0.8rem;
-    }
-
-
   }
   
