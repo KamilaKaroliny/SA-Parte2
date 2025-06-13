@@ -5,7 +5,7 @@
       labels: ['07:00', '14:00', '18:00', '21:00'],
       datasets: [{
         label: 'Quantidade de viagens',
-        data: [200, 144, 229, 74],
+        data: [200, 120, 168, 59],
         backgroundColor: [
           '#41b8d5',
           '#6ce5e8',
