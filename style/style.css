@@ -1006,6 +1006,7 @@ span#textoInfoRelatorio {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
+    flex-direction: row;
   }
   
   .containerClima {
@@ -1021,7 +1022,7 @@ span#textoInfoRelatorio {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
-    padding: 0.2rem 0.6rem;
+    padding: 0.2rem 0.3rem;
   }
   
   .boxClimaInfo img {
