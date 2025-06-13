@@ -1,4 +1,4 @@
-/*Greralzão do site, é o que deixa o fundo azul com efeito*/
+/*Geralzão do site, é o que deixa o fundo azul com efeito*/
 body {
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,7 +10,7 @@ body {
     text-align: center;
 }
 
-/* Éo que deixa as letras dentro da caixa do imput branca*/
+/* É o que deixa as letras dentro da caixa do imput branca*/
 ::-webkit-input-placeholder {
     color: rgb(255, 255, 255);
 }
@@ -156,7 +156,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     margin: 1px;
 }
 
-/*essa classe alinha o nome com a imagen das estrelas*/
+/*Esse ID alinha o nome com a imagen das estrelas*/
 #flex9 {
     justify-content: space-between;
     display: flex;
