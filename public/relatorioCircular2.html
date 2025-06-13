@@ -3,10 +3,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>relatorio</title>
-    <link rel="style" href="../style/style.css">
-    <script src="../scripts/validaLogin.js"></script>
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../scripts/graficoCircular2.js" defer></script>
 </head>
-<body>
-    
+<body>  
+    <div id="flex4">
+        <div class="meio1">
+            <a href="telaCircular.html">
+                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+            </a>
+        </div>
+
+        <div class="meio1">
+            <img id="logo2" src="../assets/icons/logoTremalize.png" alt="logo">
+        </div>
+
+        <div class="meio2">
+            <a href="paginaInicial.html">
+                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+            </a>
+        </div>
+    </div>
+    <br>
+
+    <span id="nomeCircular">CIRCULAR 2</span>
+    <br>
+    <br>
+
+    <div id="centralizandoItens">
+
+        <div class="manutencoes">
+            <span id="texto2"><strong>Última manutenção:</strong></span>
+            <span id="texto2">20/09/2024</span><br>
+            <span id="texto3">189 dias atrás</span>
+        </div>
+
+        <div class="manutencoes">
+            <span id="texto2"><strong>Próxima manutenção:</strong></span>
+            <span id="texto2">20/09/2025</span><br>
+            <span id="texto3">175 dias faltando</span>
+        </div>
+    </div>
+
+    <section class="secaoRelatorio">
+
+        <div id="cartaoRelatorio">
+            <span id="texto">RELATÓRIO</span>
+            <div>
+                <span id="textoInfoRelatorio">10/02/2025</span>
+            </div>
+        </div>
+
+        <div id="centralizandoItens">
+
+            <div id="reparticaoInfoRelatorio">
+                <span id="tituloInfoRelatorio"><strong>Distância:</strong></span>
+                <div id="centralizandoItens">
+                    <span id="textoInfoRelatorio"><strong>84KM</strong></span>
+                    <img id="iconesPequenos" src="../assets/icons/distancia.png" alt="">
+                </div>
+            </div>
+
+            <div id="reparticaoInfoRelatorio">
+                <span id="tituloInfoRelatorio"><strong>Tempo médio:</strong></span>
+                <div id="centralizandoItens">
+                    <span id="textoInfoRelatorio"><strong>20 min</strong></span>
+                    <img id="iconesPequenos" src="../assets/icons/iconeTempoMedio.png" alt="">
+                </div>
+            </div>
+
+            <div id="reparticaoInfoRelatorio">
+                <span id="tituloInfoRelatorio"><strong>Tipo de Combustivel</strong></span>
+                <div id="centralizandoItens">
+                    <span id="textoInfoRelatorio"><strong>Elétrico</strong></span>
+                    <img id="iconesPequenos" src="../assets/icons/iconeTipoDeCombustivel.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <br>
+
+        <div id="centralizandoItens">
+
+            <div id="reparticaoInfoRelatorio">
+                <span id="tituloInfoRelatorio"><strong>Número de estações:</strong></span>
+                <div id="centralizandoInfos">
+                    <span id="textoInfoRelatorio"><strong>7</strong>
+                        <p>estações</p>
+                    </span>
+                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeEstacoes.png" alt="">
+                </div>
+            </div>
+
+            <div id="reparticaoInfoRelatorio">
+                <span id="tituloInfoRelatorio"><strong>Número de vagões:</strong></span>
+                <div id="centralizandoInfos">
+                    <span id="textoInfoRelatorio"><strong>6</strong>
+                        <p>vagões</p>
+                    </span>
+                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeVagoes.png" alt="">
+                </div>
+            </div>
+
+            <div id="reparticaoInfoRelatorio">
+                <span id="tituloInfoRelatorio"><strong>Velocidade Média:</strong></span>
+                <div id="centralizandoItens">
+                    <span id="textoInfoRelatorio"><strong>53 km/h</strong></span>
+                    <img id="iconesPequenos" src="../assets/icons/iconeVelocidadeMedia.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="tempoMedioBloco">
+            <span id="subTexto3"><strong>Média de Horários mais utilizados: </strong></span>
+            <span id="subTexto2">22:40</span> <span id="texto3">Horário mais utilizado</span>
+        </div>
+
+        <canvas id="chartHorario" width="400" height="200"></canvas>
+
+
+        <div class="infosRelatorioLinha">
+            <div>
+                <span id="subTexto3"><strong>Ponto de Partida: </strong> Dona Francisca</span>
+            </div>
+
+            <div>
+                <span id="subTexto3"><strong>Destino Final: </strong>Aventureiro</span>
+            </div>
+
+            <div>
+                <span id="subTexto3"><strong>Regiões onde ele Passa:</strong> Dona Francisca, Jardim Paraíso, Jardim Sofia, Rio Bonito, Zona Industrial Norte, Aventureiro</span>
+            </div>
+
+            <div>
+                <span id="subTexto3"><strong>Capacidade Máxima de Transporte: </strong> 600 pessoas.</span>
+            </div>
+        </div>
+
+
+    </section>
 </body>
 </html>
