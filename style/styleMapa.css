@@ -160,7 +160,7 @@
     -webkit-appearance: none;
   }
 
-  .toggle{
+  .toggleMapa{
    position: absolute;
     top: 730px;
     right: 79px;
@@ -174,12 +174,12 @@
    align-items: center;
   }
 
-  input:checked ~ .notificacoes{
+  input:checked ~ .notificacoesMapa{
     transform: translateX(0);
     box-shadow: 0 0 4px #ffffff;
   }
 
-  .notificacoes {
+  .notificacoesMapa {
     display: flex;
     height: 30%;
     width: 30%;
@@ -198,7 +198,7 @@
     z-index: 2;
   }
 
-  .titulo{
+  .tituloMapa{
     color: #566abd;
     font-weight: 50px;
     text-align: right;
@@ -352,7 +352,7 @@
     }
 
 
-    .notificacoes {
+    .notificacoesMapa {
       width: 90%;
       padding: 0px;
       margin: 0px;
