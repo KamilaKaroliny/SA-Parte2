@@ -1002,6 +1002,7 @@ span#textoInfoRelatorio {
     margin-bottom: 0.5rem;
   }
 
+  /* Seções feitas alinhar todos os itens da página */
   .secaoClima, .secaoMapaGoogle, .secaoInfoTrem {
     margin-bottom: 2rem;
     display: flex;
@@ -1009,12 +1010,14 @@ span#textoInfoRelatorio {
     flex-direction: row;
   }
   
+  /*Classe que alinha a egenda, umidade e temperatura e coloca um ao lado da outra*/
   .containerClima {
     display: flex;
     justify-content: center;
     gap: 0.4rem;
   }
   
+  /*Box que forma a parte da legenda, umidade e temperatura*/
   .boxClimaInfo {
     display: flex;
     align-items: center;
@@ -1024,23 +1027,27 @@ span#textoInfoRelatorio {
     border-radius: 8px;
     padding: 0.2rem 0.3rem;
   }
-  
+
+  /*Ajeita as imagens dentro da box legenda, umidade e temperatura*/
   .boxClimaInfo img {
     width: 20px;
     padding: 0.1rem 0.1rem;
   }
   
+  /*Faz o contorno do mapa que é colocado no mapa*/
   .containerMapa {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
   }
 
+  /*Imagem da bateria que fica no canto superior direito*/
   .iconeBateria {
     padding: 0px;
     width: 30px;
   }
 
+  /*Classe criada para separar o posicionamento da bateria em relação ao retante e coloca-la */
   .iconeBateriaContainer {
     display: flex;
     justify-content: flex-end
