@@ -1,5 +1,5 @@
-Create database Tremalize;
-use Tremalize;
+Create database tremalize_db;
+use tremalize_db;
 
 create table linha (
     id int AUTO_INCREMENT not null,
