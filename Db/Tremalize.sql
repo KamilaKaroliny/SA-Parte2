@@ -18,7 +18,7 @@ create table linha (
     capacidade_maxima int not null,
     numero_estacoes int not null,
     Id_relatorio int not null
-   );
+);
 
 create table relatorio_linha(
     id int AUTO_INCREMENT not null,
@@ -33,14 +33,14 @@ create table relatorio_linha(
     manutencao_dias_faltando int not null,
     id_linha int not null,
     id_usuario int not null 
-    );
+);
     
 create table relatorio_usuario(
     id int AUTO_INCREMENT not null,
     data_relatorio_usuario date not null,
     km_percorridos int not null,
    velocidade_media_usuario int not null
-    );
+);
     
 create table usuarios(
     id int AUTO_INCREMENT PRIMARY KEY,
@@ -54,7 +54,6 @@ create table usuarios(
     Idade int null,
     velocidade int null,
     id_tipo_carga varchar(225)  null,
-    tempo_viagem int null
-    combustivel_
-    
+    tempo_viagem int null,
+    combustivel_ 
 );
