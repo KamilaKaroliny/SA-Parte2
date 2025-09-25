@@ -35,7 +35,7 @@
             <div class="espacamento">
                 <label for="ID da empresa"></label> 
                 <input class="esticadinho2" type="password" name="id" id="id"  value="" placeholder="ID da empresa">
-                <div class="erro" id="erroId"></div>
+                <div class="erro" id="erroId"></div>;
                 <br>
             </div>
         
