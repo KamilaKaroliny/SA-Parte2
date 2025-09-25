@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../style/styleMapa.css"/>
+  <link rel="stylesheet" href="../style/style.css" />
+  <title>Tremalize</title>
+</head>
+<body>
+
+  <!-- Cabeçalho -->
+  <header class="cabecalho">
+
+    <div id="containerCabecalho">
+      <div class="colunaCabecalhoEsq">
+          <a href="paginaInicial.html">
+              <img id="iconeVoltar" src="../assets/icons/seta.png" alt="seta">
+          </a>
+      </div>
+
+      <div class="colunaCabecalhoCentro">
+          <img id="logoTremalize" src="../assets/icons/logoTremalize.png" alt="logo">
+      </div>
+
+      <div class="colunaCabecalhoDir">
+          <a href="paginaInicial.html">
+              <img id="iconeHome" src="../assets/icons/casa.png" alt="casa">
+          </a>
+      </div>
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- Legenda -->
+    <section class="secaoClima">
+
+      <div class="containerClima">
+
+        <!-- Umidade -->
+        <div class="boxClimaInfo">
+          <h4>20% UR</h4>
+          <img src="../assets/icons/umidade.png" alt="Ícone Umidade" />
+        </div>
+
+        <!-- Temperatura -->
+        <div class="boxClimaInfo">
+          <h4>30°C</h4>
+          <img src="../assets/icons/sol.png" alt="Ícone Sol" />
+        </div>
+      
+          <label>
+            <input class="noticacao" type="checkbox"> 
+
+              <!-- Icone para ver a legenda -->
+              <div class="toggle, boxClimaInfo">
+                <img src="../assets/icons/legenda.png" alt="icone de marcação">
+              </div>
+
+              <!-- Tela da legenda -->
+              <div class="invisivel"></div>
+                <div class="legenda">
+                    <h2 class="tituloMapa">Legenda</h2>
+
+                    <div class="imagemLegenda">
+                      <div class="ajustarLegenda">
+                        <img src="../assets/icons/Circular.avif" alt="Icone circular vermelho">
+                        <br>
+                        <h3>Circular</h3>
+                      </div>
+                    </div>
+                  
+                  <div class="ajustarLegenda">
+                    <img src="../assets/icons/Carga.webp" alt="Icone carga laranja">
+                    <br>
+                    <h3>Carga</h3>
+                  </div>
+
+                  <div class="ajustarLegenda">
+                    <img src="../assets/icons/Turismo.webp" alt="Icone turismo verde">
+                    <br>
+                    <h3>Turismo</h3>
+                  </div>
+
+                  <div class="ajustarLegenda">
+                    <img src="../assets/icons/acidente.png" alt="Icone de acidente">
+                    <br>
+                    <h3>Acidente</h3>
+                  </div>
+                  
+                  <div class="ajustarLegenda">
+                    <img src="../assets/icons/obras.png" alt="Icone de obras">
+                    <br>
+                    <h3>Obras</h3>
+                  </div>
+                  
+                  <div class="ajustarLegenda">
+                    <img src="../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
+                    <br>
+                    <h3>Quebra no trilho</h3>
+                  </div>
+
+                </div>
+                </div>
+              </label>
+          </label>
+         
+      </div>
+
+    </section>
+
+    <!-- Mapa -->
+    <section class="secaoMapaGoogle">
+      <div class="containerMapa">
+
+        <iframe
+          title="Mapa"
+          width="100%"
+          height="350"
+          frameborder="0"
+          style="border:0"
+          src="https://maps.google.com/maps?q=Joinville&z=12&output=embed"
+          allowfullscreen>
+        </iframe>
+
+      </div>
+    </section>
+
+    <!-- Informações -->
+    <section class="secaoInfoTrem">
+      
+      <!-- Bateria do Trem-->
+      <div class="cartaoInfoTrem">
+
+        <div class="iconeBateriaContainer">
+          <img class= "iconeBateria" src="../assets/icons/bateria.png" alt="bateria dos trens">
+        </div>
+
+        <!-- Nome do Trem-->
+        <div>
+          <div class="tremInfoContainer">
+            <h2>Circular: 1970</h2>
+          </div>
+        </div>
+
+        <!-- Icone do Trem-->
+        <div class="tremInfoContainer">
+          <img class="imagemTrem" src="../assets/icons/trenzinho.png" alt="Trem circular">
+        </div>
+
+        <!-- Botão do maquinista para ele receber as infos deles -->
+        <div class="infoComplementarTrem">
+          <a href="telaInformacoesJosevaldo.html">
+              <button class="boxMaquinistaInfo">
+                <img src="../assets/icons/maquinistas.png" alt="icone do motorista">
+                <div>
+                  <h4>Josevaldo</h4>
+                </div>
+              </button>
+          </a>
+
+          <!-- Informação de próxima parada -->
+          <div class="boxMaquinistaInfo">
+            <h5>Próxima Parada:</h5>
+            <h6>Jardim Sofia</h6>
+            <h3>15:30</h3>
+          </div>
+
+          <!-- Botão de Marcação -->
+          <label>
+            <input class="noticacao" type="checkbox">
+
+              <div class="toggleMapa, boxMaquinistaInfo">
+                <img src="../assets/icons/marcacao.png" alt="icone de marcação">
+                <h4>Marcação</h4>
+              </div>
+
+              <!-- Tela de Marcação -->
+              <div class="invisivel"></div>
+              <div class="notificacoesMapa">
+                <h2 class="tituloMapa"> MARCAÇÃO</h2>
+
+                <div class="imagemMarcacao">
+                  <img src="../assets/icons/acidente.png" alt="Icone de acidente">
+                  <img src="../assets/icons/obras.png" alt="Icone de obras">
+                  <img src="../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
+                </div>
+
+                <div>
+                  <h4 class="legenda">DIGITE A RUA NO QUAL QUEIRA MARCAR</h4>
+                </div>
+
+                <div>
+                  <input class="localizacao" type="text">
+               </div>
+               
+               <div class="botao">
+                  <button class="botaoMarcacao" type="button"> MARCAR </button>
+               </div>
+
+              </div>
+          </label>
+        </div>
+
+        <!-- Tipo do trem -->
+        <div class="infoComplementarTrem"> 
+          <div class="tremInfoContainer">
+            <div class="boxTipoVelocidadeTrem">
+              <h3>Tipo:</h3>
+              <h3>Circular</h3>
+              <br>
+              <h3>-</h3>
+            </div>
+          </div>
+
+          <!-- Velocidade que o trem está andando -->
+          <div class="boxMaquinistaInfo">
+            <h5>Velocidade</h5>
+            <h4>100Km/h</h4>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+  </main>
+</body>
+</html>

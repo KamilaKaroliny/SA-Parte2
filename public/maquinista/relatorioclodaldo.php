@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio Clodaldo</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../scripts/graficoClodoaldo.js" defer></script>
+</head>
+    <body>
+        <!---cabeçalho -->
+        <div id="flex4">
+            <div class="meio1">
+                <a href="telaMaquinista.html">
+                    <img id="seta" src="../assets/icons/seta.png" alt="seta">
+                </a>
+            </div>
+            <div class="meio1">
+                <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+            </div>
+    
+            <div class="meio2">
+                <a href="paginaInicial.html">
+                    <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+                </a>
+            </div>
+        </div>
+    
+        <!-- informações ao lado da foto do maquinista -->
+        <div id="flex10">
+            <img id="foto" src="../assets/images/clodoaldo.png" alt="Imagem Clodoaldo">
+            <div class="dados">
+                <span><strong>Nome:</strong> Clodoaldo Kowalski</span><br>
+                <span><strong>Telefone:</strong> +55 (21) 95432-1098</span><br>
+                <span><strong>Idade:</strong> 71 anos</span><br>
+                <span><strong>ID:</strong>  X9Y4Z6A1B3</span><br>
+                <span><strong>Tipo:</strong> Circular</span>
+            </div>
+        </div>
+    
+        <!-- div com as imagens e informações como; velocidade média e quando já percorreu-->
+        <div id="flex">
+            <div class="quadradinho4">
+                <img id="imgTelaRela" src="../assets/icons/kmh.png" alt="Imagem chat">
+                <H2>46 KM/H</H2>
+            </div>
+    
+            <div class="quadradinho4">
+                <img id="imgTelaRela" src="../assets/icons/km.png" alt="Imagem relatorio">
+                <H2>802.703 KM</H2>
+            </div>
+        </div>
+    
+        <!-- seção do relatorio -->
+        <section class="secaoRelatorio">
+            <div id="cartaoRelatorio">
+                <span id="texto">RELATÓRIO</span>
+                <div>
+                    <span id="subTexto">10/02/2025</span>
+                </div>
+            </div>
+            <div class="tempoMedioBloco">
+                <span id="subTexto1">Tempo médio gasto de viagem:</span>
+                <span id="subTexto2">4h40m</span>
+            </div>
+            <div class="linhaRelatorio">
+                <span id="subTexto3"><strong>Média de combustível gasto: </strong></span>
+                <div>
+                    <div class="graficoCombustivel">
+                        <span class="litros">980L</span>
+                        <div id="chart_div" style="width: 600px; height: 110px;"></div> 
+                        
+                    </div>
+                </div>
+    
+                <div>
+                    <span id="subTexto3"><strong>Advertências:</strong></span>
+                    <span id="subTexto3">● Transporte de Passageiros na Área Proidida  </span>
+                   
+                </div>
+                <div>
+                    <span id="subTexto3"><strong>Tempo de empresa: </strong> 9 anos, 8 meses e 22 dias.</span>
+                </div>
+                <div>
+                    <span id="subTexto3"><strong>Quantidades de viagens: </strong> 17.415 viagens.</span>
+                </div>
+                <br>
+            </div>
+        </section>
+    
+    </body>
+    
+    </html>

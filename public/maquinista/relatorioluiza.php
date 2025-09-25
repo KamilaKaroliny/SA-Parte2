@@ -1,0 +1,91 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatorio</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="../scripts/graficoLuiza.js" defer></script>
+    
+</head>
+<body>
+    <!-- div com as imagens e informações como; velocidade média e quando já percorreu-->
+    <div id="flex4">
+        <div class="meio1">
+            <a href="telaMaquinista.html">
+                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+            </a>
+        </div>
+
+        <div class="meio1">
+            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+        </div>
+
+        <div class="meio2">
+            <a href="paginaInicial.html">
+                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+            </a>
+        </div>
+    </div>
+
+    <!-- informações ao lado da foto do maquinista -->
+    <div id="flex10">
+        <img id="foto" src="../assets/images/luiza.png" alt="Imagem Luiza">
+        <div class="dados">
+            <span><strong>Nome:</strong> Luiza Fonseca</span><br>
+            <span><strong>Telefone:</strong> +55 (21) 98765-4321</span><br>
+            <span><strong>Idade:</strong> 46 anos</span><br>
+            <span><strong>ID:</strong> Q1R9S7T3U8</span><br>
+            <span><strong>Tipo:</strong> Circular</span>
+        </div>
+    </div>
+
+    <!-- div com as imagens e informações como; velocidade média e quando já percorreu-->
+    <div id="flex">
+        <div class="quadradinho4">
+            <img id="imgTelaRela" src="../assets/icons/kmh.png" alt="Imagem chat">
+            <H2>110 KM/H</H2>
+        </div>
+
+        <div class="quadradinho4">
+            <img id="imgTelaRela" src="../assets/icons/km.png" alt="Imagem relatorio">
+            <H2>198.980 KM</H2>
+        </div>
+    </div>
+
+    <!-- seção do relatorio -->
+    <section class="secaoRelatorio">
+        <div id="cartaoRelatorio">
+            <span id="texto">RELATÓRIO</span>
+            <div>
+                <span id="subTexto">10/02/2025</span>
+            </div>
+        </div>
+        <div class="tempoMedioBloco">
+            <span id="subTexto1">Tempo médio gasto de viagem:</span>
+            <span id="subTexto2">50m</span>
+        </div>
+        <div class="linhaRelatorio">
+            <span id="subTexto3"><strong>Média de combustível gasto: </strong></span>
+            <div>
+                <div class="graficoCombustivel">
+                    <span class="litros">420L</span>
+                    <div id="chart_div" style="width: 600px; height: 110px;"></div> 
+                </div>
+            </div>
+
+            <div>
+                <span id="subTexto3"><strong>Advertências:</strong></span>
+                <span id="subTexto3">● Manobras Perigosas em Via Pública</span>
+            </div>
+            <div>
+                <span id="subTexto3"><strong>Tempo de empresa: </strong> 1 anos, 6 meses e 15 dias.</span>
+            </div>
+            <div>
+                <span id="subTexto3"><strong>Quantidades de viagens: </strong> 9.655 viagens.</span>
+            </div>
+        </div>  
+    </section> 
+    
+</body>
+</html>

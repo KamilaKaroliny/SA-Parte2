@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <script src="../scripts/validaLogin.js"></script>
+    <title>telaChat</title>
+</head>
+<body>
+
+     <!-- cabeçalho -->
+    <div id="flex4">
+        <div class="meio1">
+            <a href="paginaInicial.html">
+                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+            </a>
+        </div>
+
+        <div class="meio1">
+            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+        </div>
+
+        <div class="meio2">
+            <a href="paginaInicial.html">
+                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+            </a>
+        </div>
+    </div>
+
+    <!-- imagem da aba de Pesquisa -->
+    <img class="abaPesquisa" src="../assets/icons/abaPesquisa.png" alt="">
+
+    <!-- quadradinho que comporta todos os circulares -->
+    <div id="flex5">
+        <div class="quadradinhoCircular">
+
+            <a href="relatorioCircular1970.html">
+                <h1 class="text">Circular 1970</h1>
+            </a>
+            <div class="linhaAzul"></div>
+
+            <a href="relatorioCircular1976.html">
+                <h1 class="text">Circular 1976</h1>
+            </a>
+                <div class="linhaAzul"></div>
+
+            <a href="relatorioCircular310.html">
+                <h1 class="text">Circular 310</h1>
+            </a>
+                <div class="linhaAzul"></div>
+
+            <a href="relatorioCarga87.html">
+                <h1 class="text">Circular 87</h1>
+            </a>
+                <div class="linhaAzul"></div>
+
+            <a href="relatorioCarga4090.html">
+                <h1 class="text">Circular 4090</h1>
+            </a>
+                <div class="linhaAzul"></div>
+
+            <a href="relatorioCarga3080.html">
+                <h1 class="text">Circular 3080</h1>
+            </a>
+                <div class="linhaAzul"></div>
+
+            <a href="relatorioCircular2.html">
+                <h1 class="text">Circular 2</h1>
+            </a>
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
