@@ -1,5 +1,29 @@
 <?php 
+    include("./db/conexao.php");
    session_start();
+
+    if($_SERVER["REQUEST_METHOD"] === "POST"){
+        $email = $_POST["email"] ?? "";
+        $pass = $_POST["senha"] ?? "";
+
+        $stmt =$mysqli->prepare("SELECT id, email, senha FROM usuario WHERE email=? AND senha=?");
+        $stmt-> bind_param("ss", $email, $pass);
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+        $dados = $result -> fetch_assoc();
+        $stmt->close();
+
+        if($dados){
+            $_SESSION["user_id"] = $dados["id"];
+            $_SESSION["senha"] = $dados["senha"];
+            header("Location: ./public/admin/paginaInicial.php");
+            exit;
+
+        }else{
+            $msg = "Usuário ou senha incorretos!";
+        }
+    };
 ?>
 
 <html lang="en">
@@ -12,66 +36,36 @@
 
 <body>
 
-    <!-- Nessa div está o formulario e a logo com o nome login -->
+    <!-- Nessa div está o formulario e a logo com o nome login 
+     icaro@administrador.com
+     1icaro
+    -->
     <div class="flex">
-
-            <?php 
-             
-              include("./db/conexao.php");
-              if(isset($_POST['submit'])){
-                $email = mysqli_real_escape_string($con,$_POST['email']);
-                $password = mysqli_real_escape_string($con,$_POST['password']);
-
-                $result = mysqli_query($con,"SELECT * FROM users WHERE Email='$email' AND Password='$password' ") or die("Select Error");
-                $row = mysqli_fetch_assoc($result);
-
-                if(is_array($row) && !empty($row)){
-                    $_SESSION['valid'] = $row['Email'];
-                    $_SESSION['username'] = $row['Username'];
-                }else{
-                    echo "<div class='message'>
-                      <p>Nome de usuário ou senha incorretos</p>
-                       </div> <br>";
-                   echo "<a href='index.php'><button class='btn'>Voltar</button>";
-         
-                }
-                if(isset($_SESSION['valid'])){
-                    header("Location: ../public/admin/paginainicial.php");
-                }
-              }else{
-
-            
-            ?>
 
         <div id="formulario">
             <img id = "logo" src="./assets/icons/logoTremalize.png" alt="Logo Tremalize">
             <h1 id="padding">LOGIN</h1>
 
-            <form action="" id="gestorForm">
+            <form action="" id="gestorForm" method="POST">
         
                 <label for="email"></label><br>
-                <input class="esticadinho" type="email" nome="email" id="email" value="" placeholder="E-mail" autocomplete="off">
+                <input class="esticadinho" type="email" name="email" id="email" value="" placeholder="E-mail">
                 <div class="erro" id="erroEmail">
     
                 <label for="senha"></label><br>
-                <input class="esticadinho"  nome="senha" id="senha" value="" placeholder="Senha" autocomplete="off">
+                <input class="esticadinho" name="senha" id="senha" value="" placeholder="Senha">
                 <div class="erro" id="erroSenha">
 
                 <div id="esqueceuSenhaa">
-                    <a href="./public/esqueceusenha.html">Esqueceu a senha?</a>
+                    <a href="./public/login/esqueceusenha.php">Esqueceu a senha?</a>
                 </div>
                 <br>
                 <br>
                 
-                <!-- botão que leva a validação no JS -->
                 <button id='button1' type="submit">Enviar</button>
                 
             </form>
 
-        </div>
-        
-        <div> 
-            <?php } ?>
         </div>
 
     </div>
