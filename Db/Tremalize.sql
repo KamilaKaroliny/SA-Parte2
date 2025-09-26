@@ -2,7 +2,7 @@ create database tremalize_db;
 use tremalize_db;
 
 /*Tabela de usuarios*/
-create table usuario(
+create table usuarios(
     id int AUTO_INCREMENT primary key,
     nome varchar (125) not null,
     senha varchar (225) not null,
