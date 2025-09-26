@@ -36,7 +36,7 @@
     <!-- quadradinho do logout e meu perfil -->
     <div id="flex">
         <div class="quadradinho4">
-            <a href="login.html">
+            <a href="../login/logout.php">
                 <img id="imgTelaUsu" src="../assets/icons/logout.png" alt="Imagem logout">
                 <H2>LOGOUT</H2>
             </a>
