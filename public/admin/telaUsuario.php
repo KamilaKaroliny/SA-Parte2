@@ -1,3 +1,13 @@
+<?php
+
+include("../../db/conexao.php");
+
+$sql = "SELECT * FROM usuario";
+
+$result = $mysqli->query($sql);
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -40,9 +50,9 @@
                 <H2>LOGOUT</H2>
             </a>
         </div>
-
+    
         <div class="quadradinho4">
-            <a href="../login/telaEditar.php">
+            <a href="../login/telaEditar.php?id=<?= $row['id'] ?>">
                 <img id="imgTelaUsu" src="../../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
                 <H2>MEU PERFIL</H2>
             </a>

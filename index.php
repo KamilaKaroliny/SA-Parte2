@@ -1,6 +1,6 @@
 <?php 
     include("./db/conexao.php");
-   session_start();
+    session_start();
 
     if($_SERVER["REQUEST_METHOD"] === "POST"){
         $email = $_POST["email"] ?? "";
@@ -9,7 +9,6 @@
         $stmt =$mysqli->prepare("SELECT id, email, senha FROM usuario WHERE email=? AND senha=?");
         $stmt-> bind_param("ss", $email, $pass);
         $stmt->execute();
-
         $result = $stmt->get_result();
         $dados = $result -> fetch_assoc();
         $stmt->close();
@@ -19,7 +18,6 @@
             $_SESSION["senha"] = $dados["senha"];
             header("Location: ./public/admin/paginaInicial.php");
             exit;
-
         }else{
             $msg = "Usuário ou senha incorretos!";
         }

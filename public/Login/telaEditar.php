@@ -2,8 +2,8 @@
    include("../../db/conexao.php");
    session_start();
 
-
-   $id = $_GET['id'];
+    $id = $_GET['id'];
+    $dados = $mysqli->query("SELECT * FROM usuario WHERE id=$id")->fetch_assoc();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -23,10 +23,6 @@
         $mysqli->close();
         exit(); 
     }
-
-    $sql = "SELECT * FROM usuarios WHERE id=$id";
-    $result = $mysqli -> query($sql);
-    $row = $result -> fetch_assoc();
 
 ?>
 
@@ -67,7 +63,7 @@
 
             <div class="espacamento">
                 <label for="nome"></label> 
-                <input class="esticadinho2" type="text" name="nome" id="nome" value="<?php echo $row['name'];?>" placeholder="Nome completo" autocomplete="off">
+                <input class="esticadinho2" type="text" name="nome" id="nome" value="<?= $dados['nome'] ?>" placeholder="Nome completo" autocomplete="off">
                 <div class="erro" id="erroNome"></div>
                 <br>
             </div>
@@ -95,14 +91,14 @@
 
             <div class="espacamento">
                 <label for="senha"></label>
-                <input class="esticadinho2" type="password" name="senha" id="senha" value="<?php echo $row['senha'];?>">
+                <input class="esticadinho2" type="password" name="senha" id="senha" value="<?= $dados['senha'] ?>">
                 <div class="erro" id="erroSenha"></div>
                 <br>
             </div>
 
             <div class="espacamento">
                 <label for="confirmarSenha"></label>
-                <input class="esticadinho2" type="password" name="confirmarSenha" id="confirmarSenha" value="<?php echo $row['confirmasenha'];?>">
+                <input class="esticadinho2" type="password" name="confirmarSenha" id="confirmarSenha" value="<?= $dados['confirmasenha'] ?>">
                 <div class="erro" id="erroConfirmarSenha"></div>
                 <br>
                 <br>
