@@ -1,19 +1,35 @@
 <?php
-
+session_start();
 include("../../db/conexao.php");
 
-$sql = "SELECT * FROM usuario";
+    // garante que o usuário está logado
+    if (!isset($_SESSION["user_id"])) {
+        header("Location: ../login/login.php");
+        exit;
+    }
 
-$result = $mysqli->query($sql);
+    $id = $_SESSION["user_id"];
 
+    // busca os dados do usuário logado
+    $sql = "SELECT * FROM usuarios WHERE id = ?";
+    $stmt = $mysqli->prepare($sql);
+    $stmt->bind_param("i", $id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $usuario = $result->fetch_assoc();
+    $stmt->close();
+
+    if (!$usuario) {
+        die("Usuário não encontrado.");
+    }
 ?>
 
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
-    <title>telaChat</title>
+    <title>Tela Usuário</title>
 </head>
 <body>
 
@@ -39,7 +55,7 @@ $result = $mysqli->query($sql);
     <!-- icone do usuário e o seu nome -->
     <div>
         <img id="iconeUsuario" src="../../assets/icons/usuario.png" alt="Icone Usuário">
-        <h2 id="Margin">NOME DO USUÁRIO</h2>
+        <h2 id="Margin"><?= htmlspecialchars($usuario['nome']) ?></h2>
     </div>
 
     <!-- quadradinho do logout e meu perfil -->
@@ -47,14 +63,14 @@ $result = $mysqli->query($sql);
         <div class="quadradinho4">
             <a href="../login/logout.php">
                 <img id="imgTelaUsu" src="../../assets/icons/logout.png" alt="Imagem logout">
-                <H2>LOGOUT</H2>
+                <h2>LOGOUT</h2>
             </a>
         </div>
     
         <div class="quadradinho4">
-            <a href="../login/telaEditar.php?id=<?= $row['id'] ?>">
+            <a href="../login/telaEditar.php?id=<?= $usuario['id'] ?>">
                 <img id="imgTelaUsu" src="../../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
-                <H2>MEU PERFIL</H2>
+                <h2>MEU PERFIL</h2>
             </a>
         </div>
     </div>
@@ -64,13 +80,12 @@ $result = $mysqli->query($sql);
         <h2>DADOS PESSOAIS</h2>
 
         <div>
-            <h2 class="dadosPessoais">Nome:</h2> 
-            <h2 class="dadosPessoais">Telefone:</h2>
-            <h2 class="dadosPessoais">Idade:</h2>
-            <h2 class="dadosPessoais">ID:</h2>
+            <h2 class="dadosPessoais">Nome: <?= htmlspecialchars($usuario['nome']) ?></h2>
+            <h2 class="dadosPessoais">Telefone: <?= htmlspecialchars($usuario['telefone']) ?></h2>
+            <h2 class="dadosPessoais">Idade: <?= htmlspecialchars($usuario['idade']) ?></h2>
+            <h2 class="dadosPessoais">ID: <?= htmlspecialchars($usuario['id']) ?></h2>
         </div>
     </div>
 
 </body>
-
 </html>

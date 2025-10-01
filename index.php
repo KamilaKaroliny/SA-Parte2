@@ -1,27 +1,34 @@
 <?php 
-    include("./db/conexao.php");
-    session_start();
+include("./db/conexao.php");
+session_start();
 
-    if($_SERVER["REQUEST_METHOD"] === "POST"){
-        $email = $_POST["email"] ?? "";
-        $pass = $_POST["senha"] ?? "";
+if($_SERVER["REQUEST_METHOD"] === "POST"){
+    $email = $_POST["email"] ?? "";
+    $pass = $_POST["senha"] ?? "";
 
-        $stmt =$mysqli->prepare("SELECT id, email, senha FROM usuario WHERE email=? AND senha=?");
-        $stmt-> bind_param("ss", $email, $pass);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $dados = $result -> fetch_assoc();
-        $stmt->close();
+    $stmt = $mysqli->prepare("SELECT id, nome, email, senha, tipo FROM usuarios WHERE email=? AND senha=?");
+    $stmt->bind_param("ss", $email, $pass);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $dados = $result->fetch_assoc();
+    $stmt->close();
 
-        if($dados){
-            $_SESSION["user_id"] = $dados["id"];
-            $_SESSION["senha"] = $dados["senha"];
-            header("Location: ./public/admin/paginaInicial.php");
-            exit;
-        }else{
-            $msg = "Usuário ou senha incorretos!";
+    if($dados){
+        $_SESSION["user_id"] = $dados["id"];
+        $_SESSION["nome"] = $dados["nome"];
+        $_SESSION["email"] = $dados["email"];
+        $_SESSION["tipo"] = $dados["tipo"];
+
+        if ($dados["tipo"] === "ADM") {
+            header("Location: ./public/admin/paginaInicial.php"); // <-- Aqui vai a página de ADM
+        } else {
+            header("Location: ./public/maquinista/paginaInicial.php"); // <-- Aqui vai a página de usuário (maquinista)
         }
-    };
+        exit;
+    } else {
+        $msg = "Usuário ou senha incorretos!";
+    }
+}
 ?>
 
 <html lang="en">
