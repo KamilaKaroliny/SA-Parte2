@@ -1,32 +1,46 @@
 <?php 
-   include("../../db/conexao.php");
-   session_start();
+include("../../db/conexao.php");
+session_start();
 
-    $id = $_GET['id'];
-    $dados = $mysqli->query("SELECT * FROM usuario WHERE id=$id")->fetch_assoc();
+// Verifica se o usuário está logado
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../../index.php");
+    exit();
+}
 
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+// ID do usuário logado (não vem mais da URL!)
+$id = $_SESSION['user_id'];
 
-        $name = $_POST['name'];
-        $senha = $_POST['senha'];
-        $confirmasenha = $_POST['confirmasenha'];
+// busca os dados do usuário correspondente
+$stmt = $mysqli->prepare("SELECT * FROM usuarios WHERE id = ?");
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$dados = $stmt->get_result()->fetch_assoc();
+$stmt->close();
 
-        $sql = "UPDATE usuarios SET name ='$name',senha ='$senha',confirmasenha ='$confirmasenha' WHERE id=$id";
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        if ($mysqli->query($sql) === true) {
+    $nome = $_POST['nome'];
+    $senha = $_POST['senha'];
+
+        $sql = "UPDATE usuarios SET nome = ?, senha = ?, WHERE id = ?";
+        $stmt = $mysqli->prepare($sql);
+        $stmt->bind_param("sssi", $nome, $senha, $id);
+
+        if ($stmt->execute()) {
             echo "Registro atualizado com sucesso.
-            <a href='read.php'>Ver registros.</a>
+            <a href='telaUsuario.php?id=$id'>Voltar ao perfil</a>
             ";
         } else {
-            echo "Erro " . $sql . '<br>' . $mysqli->error;
+            echo "Erro: " . $stmt->error;
         }
+        $stmt->close();
         $mysqli->close();
         exit(); 
-    }
-
+}
 ?>
 
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,10 +51,9 @@
 <body>
     <header>
 
-        <!-- Logo e nome do Meu Perfil -->
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="../public/admin/telaUsuario.html">
+                <a href="telaUsuario.php?id=<?= $id ?>">
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
@@ -50,62 +63,57 @@
             </div>
     
             <div class="meio6">
-                <a href="paginaInicial.html">
+                <a href="paginaInicial.php">
                     <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
                 </a>
             </div>
         </div> 
 
-        <H1 id="padding">MEU PERFIL</H1>
+        <h1 id="padding">MEU PERFIL</h1>
 
         <!-- Formulário para Editar -->
-        <form action="" id="maquinistaForm">
+        <form action="" method="post" id="maquinistaForm">
 
+            <!-- Nome (editável) -->
             <div class="espacamento">
-                <label for="nome"></label> 
-                <input class="esticadinho2" type="text" name="nome" id="nome" value="<?= $dados['nome'] ?>" placeholder="Nome completo" autocomplete="off">
-                <div class="erro" id="erroNome"></div>
+                <input class="esticadinho2" type="text" name="nome" id="nome" 
+                       value="<?= htmlspecialchars($dados['nome']) ?>" 
+                       placeholder="Nome completo" autocomplete="off">
                 <br>
             </div>
 
+            <!-- Data de Nascimento (somente visualização) -->
             <div class="espacamento">
-                <label for="data nascimento"></label> 
-                <input class="esticadinho2" type="text" name="dataNascimento" id="dataNascimento" value="" placeholder="Data de Nascimento" disabled>
-                <div class="erro" id="erroDataNascimento"></div>
+                <input class="esticadinho2" type="text" 
+                       value="<?= htmlspecialchars($dados['dataNascimento']) ?>" 
+                       disabled>
                 <br>
             </div>
 
+            <!-- ID do usuário (somente visualização) -->
             <div class="espacamento">
-                <label for="ID da empresa"></label> 
-                <input class="esticadinho2" type="password" name="id" id="id"  value="" placeholder="ID da empresa" disabled>
-                <div class="erro" id="erroId"></div>
+                <input class="esticadinho2" type="text"  
+                       value="<?= $dados['id'] ?>" disabled>
                 <br>
             </div>
         
+            <!-- Email (somente visualização) -->
             <div class="espacamento">
-                <label for="email"></label>
-                <input class="esticadinho2" type="text" name="email" id="email"  value="" placeholder="Email" disabled>
-                <div class="erro" id="erroEmail"></div>
+                <input class="esticadinho2" type="text"  
+                       value="<?= htmlspecialchars($dados['email']) ?>" disabled>
                 <br>
             </div>
 
+            <!-- Senha (editável) -->
             <div class="espacamento">
-                <label for="senha"></label>
-                <input class="esticadinho2" type="password" name="senha" id="senha" value="<?= $dados['senha'] ?>">
-                <div class="erro" id="erroSenha"></div>
+                <input class="esticadinho2" type="password" name="senha" id="senha" 
+                       value="<?= htmlspecialchars($dados['senha']) ?>" placeholder="Senha">
                 <br>
             </div>
 
-            <div class="espacamento">
-                <label for="confirmarSenha"></label>
-                <input class="esticadinho2" type="password" name="confirmarSenha" id="confirmarSenha" value="<?= $dados['confirmasenha'] ?>">
-                <div class="erro" id="erroConfirmarSenha"></div>
-                <br>
-                <br>
-            </div>
-
+            <!-- Botão salvar -->
             <div class="espacamento2">
-                <h4>EDITAR</h4>
+                <button type="submit"><h4>EDITAR</h4></button>
             </div>
             
         </form>
