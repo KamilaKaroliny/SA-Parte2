@@ -29,10 +29,7 @@ create table sensor_data(
    FOREIGN KEY (id_sensor) REFERENCES sensor (id)
 );
 
-     
-/*Usuarios inceridos*/
-use tremalize_db;
-INSERT into usuario( nome, senha, credencial, email, tipo, data_nascimento, telefone, idade) VALUES
+INSERT into usuarios( nome, senha, credencial, email, tipo, data_nascimento, telefone, idade) VALUES
 ('Icaro', '1icaro','X9Y4Z6A1B4','icaro@administrador.com','ADM','2001-10-22', '4799955282', 24),
 ('Clodoaldo Kowalski', '1clodoaldo', 'X9Y4Z6A1B3','clodoaldo@maquinista.com','USER','1981-10-23','21954321098',71),
 ('Jarbas Andrade', '1jarbas',' MSJ870NSHXU6','jarbas@maquinista.com','USER','1991-10-12', '21998565489', 34);
