@@ -5,7 +5,7 @@ use tremalize_db;
 create table usuarios(
     id int AUTO_INCREMENT primary key,
     nome varchar (125) not null,
-    senha varchar (225) not null,
+    senha varchar (255) not null,
     credencial varchar(225) not null,
     email varchar(225) not null,
     tipo varchar(5) not null,
@@ -33,8 +33,8 @@ create table sensor_data(
 /*Usuarios inceridos*/
 use tremalize_db;
 INSERT into usuarios( nome, senha, credencial, email, tipo, data_nascimento, telefone, idade) VALUES
-('Icaro', '1icaro','X9Y4Z6A1B4','icaro@administrador.com','ADM','2001-10-22', '4799955282', 24),
-('Clodoaldo Kowalski', '1clodoaldo', 'X9Y4Z6A1B3','clodoaldo@maquinista.com','USER','1981-10-23','21954321098',71),
-('Jarbas Andrade', '1jarbas',' MSJ870NSHXU6','jarbas@maquinista.com','USER','1991-10-12', '21998565489', 34);
+('Icaro', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi','X9Y4Z6A1B4','icaro@administrador.com','ADM','2001-10-22', '4799955282', 24),
+('Clodoaldo Kowalski', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B3','clodoaldo@maquinista.com','USER','1981-10-23','21954321098',71),
+('Jarbas Andrade', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa',' MSJ870NSHXU6','jarbas@maquinista.com','USER','1991-10-12', '21998565489', 34);
 
 

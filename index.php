@@ -2,31 +2,31 @@
 include("./db/conexao.php");
 session_start();
 
-if($_SERVER["REQUEST_METHOD"] === "POST"){
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST["email"] ?? "";
-    $pass = $_POST["senha"] ?? "";
+    $senha = $_POST["senha"] ?? "";
 
-    $stmt = $mysqli->prepare("SELECT id, nome, email, senha, tipo FROM usuarios WHERE email=? AND senha=?");
-    $stmt->bind_param("ss", $email, $pass);
+    $stmt = $mysqli->prepare("SELECT id, nome, email, senha, tipo FROM usuarios WHERE email = ?");
+    $stmt->bind_param("s", $email);
     $stmt->execute();
     $result = $stmt->get_result();
-    $dados = $result->fetch_assoc();
+    $usuario = $result->fetch_assoc();
     $stmt->close();
 
-    if($dados){
-        $_SESSION["user_id"] = $dados["id"];
-        $_SESSION["nome"] = $dados["nome"];
-        $_SESSION["email"] = $dados["email"];
-        $_SESSION["tipo"] = $dados["tipo"];
+    if ($usuario && password_verify($senha, $usuario["senha"])) {
+        $_SESSION["user_id"] = $usuario["id"];
+        $_SESSION["nome"] = $usuario["nome"];
+        $_SESSION["email"] = $usuario["email"];
+        $_SESSION["tipo"] = $usuario["tipo"];
 
-        if ($dados["tipo"] === "ADM") {
-            header("Location: ./public/admin/paginaInicial.php"); // <-- Aqui vai a página de ADM
+        if ($usuario["tipo"] === "ADM") {
+            header("Location: ./public/admin/paginaInicial.php");
         } else {
-            header("Location: ./public/maquinista/paginaInicial.php"); // <-- Aqui vai a página de usuário (maquinista)
+            header("Location: ./public/maquinista/paginaInicial.php");
         }
         exit;
     } else {
-        $msg = "Usuário ou senha incorretos!";
+        echo "Email ou senha incorretos!";
     }
 }
 ?>

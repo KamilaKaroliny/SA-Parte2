@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <title>cadastro</title>
 </head>
 
@@ -10,47 +10,58 @@
     <header>
 
         <!-- Logo e nome do Cadastro -->
-        <img id="logo2" src="../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+        <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
         <H1 id="padding">CADASTRO</H1>
 
         <?php 
-         
-        include("php/config.php");
-        if(isset($_POST['submit'])){
-            $username = $_POST['username'];
-            $dataNascimento = $_POST['dataNascimento'];
-            $id = $_POST['id'];
-            $email = $_POST['email'];
-            $password = $_POST['password'];
+        include("../../db/conexao.php");
 
-         // verificando se o e-mail é único
+        if ($_SERVER["REQUEST_METHOD"] === "POST") {
+            $nome = $_POST['nome'] ?? '';
+            $dataNascimento = $_POST['dataNascimento'] ?? '';
+            $credencial = $_POST['id'] ?? '';
+            $email = $_POST['email'] ?? '';
+            $senha = $_POST['senha'] ?? '';
+            $confirmarSenha = $_POST['confirmarSenha'] ?? '';
+            $tipo = 'USER';
 
-        $verify_query = mysqli_query($con,"SELECT Email FROM users WHERE Email='$email'");
+            // Verifica se senhas coincidem
+            if ($senha !== $confirmarSenha) {
+                echo "<div class='message'><p>As senhas não coincidem.</p></div><br>";
+            } else {
+                // Verifica se e-mail já existe
+                $stmt = $mysqli->prepare("SELECT id FROM usuarios WHERE email = ?");
+                $stmt->bind_param("s", $email);
+                $stmt->execute();
+                $stmt->store_result();
 
-        if(mysqli_num_rows($verify_query) !=0 ){
-            echo "<div class='message'>
-                      <p>Este e-mail já está em uso, tente outro por favor!</p>
-                  </div> <br>";
-            echo "<a href='javascript:self.history.back()'><button class='btn'>Voltar</button>";
-        }
-        else{
+                if ($stmt->num_rows > 0) {
+                    echo "<div class='message'><p>Este e-mail já está em uso, tente outro por favor!</p></div><br>";
+                    echo "<a href='javascript:self.history.back()'><button class='btn'>Voltar</button></a>";
+                } else {
+                    $stmt->close();
 
-            mysqli_query($con,"INSERT INTO users(Username,Email,dataNascimento,Password) VALUES('$username','$dataNascimento','$id','$email','$password')") or die("Erroe Occured");
+                    // Criptografa a senha
+                    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-            echo "<div class='message'>
-                      <p>Cadastro realizado com sucesso!</p>
-                  </div> <br>";
-            echo "<a href='../../index.php'><button class='btn'>Acessar agora</button>";
-         
+                    // Insere usuário
+                    $stmt = $mysqli->prepare("INSERT INTO usuarios (nome, senha, credencial, email, tipo, data_nascimento) VALUES (?, ?, ?, ?, ?, ?)");
+                    $stmt->bind_param("ssssss", $nome, $senhaHash, $credencial, $email, $tipo, $dataNascimento);
+                    if ($stmt->execute()) {
+                        echo "<div class='message'><p>Cadastro realizado com sucesso!</p></div><br>";
+                        echo "<a href='../../index.php'><button class='btn'>Acessar agora</button></a>";
+                    } else {
+                        echo "<div class='message'><p>Erro ao cadastrar usuário.</p></div><br>";
+                    }
 
-        }
-
-        }else{
-         
+                    $stmt->close();
+                }
+            }
+        } else {
         ?>
 
         <!-- Formulário do cadastro -->
-        <form action="" id="maquinistaForm">
+        <form action="" id="maquinistaForm" method="POST">
 
             <div class="espacamento">
                 <label for="nome"></label> 
