@@ -8,10 +8,16 @@ create table usuarios(
     senha varchar (255) not null,
     credencial varchar(225) not null,
     email varchar(225) not null,
-    tipo varchar(5) not null,
+    classificacao ENUM('Admnistrador', 'Maquinista'),
     data_nascimento date null,
     telefone varchar(20) null,
-    idade int null
+    idade int not null,
+    cep int not null,
+    rua varchar(255) not null,
+    cidade varchar(100) not null,
+    bairro varchar(100) not null,
+    numero int not null,
+    complemento varchar(255) not null
 );
     
 create table sensor(
