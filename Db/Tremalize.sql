@@ -8,7 +8,7 @@ create table usuarios(
     senha varchar (255) not null,
     credencial varchar(225) not null,
     email varchar(225) not null,
-    classificacao ENUM('Admnistrador', 'Maquinista'),
+    classificacao ENUM('Administrador', 'Maquinista'),
     data_nascimento date null,
     telefone varchar(20) null,
     idade int not null,

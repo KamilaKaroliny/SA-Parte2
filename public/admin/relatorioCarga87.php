@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório da Circular 1970</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../scripts/graficoCircular87.js" defer></script>
 </head>
