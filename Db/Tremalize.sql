@@ -2,22 +2,35 @@ create database tremalize_db;
 use tremalize_db;
 
 /*Tabela de usuarios*/
-create table usuarios(
-    id int AUTO_INCREMENT primary key,
-    nome varchar (125) not null,
-    senha varchar (255) not null,
-    credencial varchar(225) not null,
-    email varchar(225) not null,
-    classificacao ENUM('Administrador', 'Maquinista'),
-    data_nascimento date null,
-    telefone varchar(20) null,
-    idade int not null,
-    cep int not null,
-    rua varchar(255) not null,
-    cidade varchar(100) not null,
-    bairro varchar(100) not null,
-    numero int not null,
-    complemento varchar(255) not null
+CREATE TABLE usuarios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(125) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    credencial VARCHAR(225) NOT NULL,
+    email VARCHAR(225) NOT NULL UNIQUE,
+    classificacao ENUM('Administrador', 'Maquinista') NOT NULL,
+    data_nascimento DATE,
+    telefone VARCHAR(20),
+    idade INT,
+    cep VARCHAR(10) NOT NULL,
+    rua VARCHAR(255) NOT NULL,
+    cidade VARCHAR(100) NOT NULL,
+    bairro VARCHAR(100) NOT NULL,
+    numero INT NOT NULL,
+    complemento VARCHAR(255)
+);
+
+
+CREATE TABLE trem (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    ultimaManutencao DATE NOT NULL,
+    proximaManutencao DATE NOT NULL,
+    distancia DECIMAL(10,2) NOT NULL,
+    combustivel ENUM('Elétrico', 'Combustão') NOT NULL,
+    numeroVagoes INT NOT NULL,
+    quantidadeManutencao INT DEFAULT 0,
+    combustivelMaximo DECIMAL(10,2) NOT NULL,
+    capacidadeMaxima INT NOT NULL
 );
     
 create table sensor(
