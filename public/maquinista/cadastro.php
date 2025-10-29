@@ -2,9 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/linkagemDaPagina.js"></script>
-    <script src="../scripts/validaCadastro.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/linkagemDaPagina.js"></script>
+    <script src="../../scripts/validaCadastro.js"></script>
     <title>cadastro</title>
 </head>
 
@@ -12,7 +12,7 @@
     <header>
 
         <!-- Logo e nome do Cadastro -->
-        <img id="logo2" src="../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+        <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
         <H1 id="padding">CADASTRO</H1>
 
         <!-- Formulário do cadastro -->

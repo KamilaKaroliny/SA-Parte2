@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatorio</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <script src="../scripts/grafico3080.js"></script>
 </head>
 <body>
@@ -13,17 +13,17 @@
         <div id="flex4">
         <div class="meio1">
             <a href="telaCircular.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta para voltar a página anterior">
+                <img id="seta" src="../../assets/icons/seta.png" alt="seta para voltar a página anterior">
             </a>
         </div>
 
         <div class="meio1">
-            <img id="logo2" src="../assets/icons/logoTremalize.png" alt="logo do Tremalize">
+            <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="logo do Tremalize">
         </div>
 
         <div class="meio2">
             <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="icone casa para voltar na tela inicial">
+                <img id="casa1" src="../../assets/icons/casa.png" alt="icone casa para voltar na tela inicial">
             </a>
         </div>
     </div>
@@ -105,7 +105,7 @@
                     <span id="textoInfoRelatorio"><strong>10</strong>
                         <p>estações</p>
                     </span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeEstacoes.png" alt="Icone que repesenta o estações que o ônibus para">
+                    <img id="iconesPequenos" src="../../assets/icons/iconeNumeroDeEstacoes.png" alt="Icone que repesenta o estações que o ônibus para">
                 </div>
             </div>
 
@@ -115,7 +115,7 @@
                     <span id="textoInfoRelatorio"><strong>3</strong>
                         <p>vagões</p>
                     </span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeVagoes.png" alt="Icone que representa a quantidade de vagões do trem">
+                    <img id="iconesPequenos" src="../../assets/icons/iconeNumeroDeVagoes.png" alt="Icone que representa a quantidade de vagões do trem">
                 </div>
             </div>
 
@@ -123,7 +123,7 @@
                 <span id="tituloInfoRelatorio"><strong>Velocidade Média:</strong></span>
                 <div id="centralizandoItens">
                     <span id="textoInfoRelatorio"><strong>45 km/h</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeVelocidadeMedia.png" alt="Icone que representa a velocidade média do trem">
+                    <img id="iconesPequenos" src="../../assets/icons/iconeVelocidadeMedia.png" alt="Icone que representa a velocidade média do trem">
                 </div>
             </div>
         </div>

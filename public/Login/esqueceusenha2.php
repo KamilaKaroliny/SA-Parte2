@@ -2,9 +2,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/validaEsqueceusenha2.js"></script>
-    <script src="../scripts/linkagemDaPagina.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/validaEsqueceusenha2.js"></script>
+    <script src="../../scripts/linkagemDaPagina.js"></script>
     <title>Confirmação de senha </title>
 
 </head>
@@ -12,7 +12,7 @@
   <header>
     <!-- Parte de cima do esqueceu senha2 (logo e nome "esqueci senha") -->
       <div id="Esqueceusenha">
-        <img id = "logo" src="../assets/icons/logoTremalize.png" alt="Logo Tremalize">
+        <img id = "logo" src="../../assets/icons/logoTremalize.png" alt="Logo Tremalize">
         <H1 id="padding">ESQUECI A SENHA</H1>
 
         <!-- formulario "esqueceusenha2" -->

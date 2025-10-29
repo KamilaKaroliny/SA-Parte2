@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../style/styleMapa.css"/>
-  <link rel="stylesheet" href="../style/style.css" />
+  <link rel="stylesheet" href="../../style/styleMapa.css"/>
+  <link rel="stylesheet" href="../../style/style.css" />
   <title>Tremalize</title>
 </head>
 <body>
@@ -15,17 +15,17 @@
     <div id="containerCabecalho">
       <div class="colunaCabecalhoEsq">
           <a href="paginaInicial.html">
-              <img id="iconeVoltar" src="../assets/icons/seta.png" alt="seta">
+              <img id="iconeVoltar" src="../../assets/icons/seta.png" alt="seta">
           </a>
       </div>
 
       <div class="colunaCabecalhoCentro">
-          <img id="logoTremalize" src="../assets/icons/logoTremalize.png" alt="logo">
+          <img id="logoTremalize" src="../../assets/icons/logoTremalize.png" alt="logo">
       </div>
 
       <div class="colunaCabecalhoDir">
           <a href="paginaInicial.html">
-              <img id="iconeHome" src="../assets/icons/casa.png" alt="casa">
+              <img id="iconeHome" src="../../assets/icons/casa.png" alt="casa">
           </a>
       </div>
     </div>
@@ -42,13 +42,13 @@
         <!-- Umidade -->
         <div class="boxClimaInfo">
           <h4>20% UR</h4>
-          <img src="../assets/icons/umidade.png" alt="Ícone Umidade" />
+          <img src="../../assets/icons/umidade.png" alt="Ícone Umidade" />
         </div>
 
         <!-- Temperatura -->
         <div class="boxClimaInfo">
           <h4>30°C</h4>
-          <img src="../assets/icons/sol.png" alt="Ícone Sol" />
+          <img src="../../assets/icons/sol.png" alt="Ícone Sol" />
         </div>
       
           <label>
@@ -56,7 +56,7 @@
 
               <!-- Icone para ver a legenda -->
               <div class="toggle, boxClimaInfo">
-                <img src="../assets/icons/legenda.png" alt="icone de marcação">
+                <img src="../../assets/icons/legenda.png" alt="icone de marcação">
               </div>
 
               <!-- Tela da legenda -->
@@ -66,38 +66,38 @@
 
                     <div class="imagemLegenda">
                       <div class="ajustarLegenda">
-                        <img src="../assets/icons/Circular.avif" alt="Icone circular vermelho">
+                        <img src="../../assets/icons/Circular.avif" alt="Icone circular vermelho">
                         <br>
                         <h3>Circular</h3>
                       </div>
                     </div>
                   
                   <div class="ajustarLegenda">
-                    <img src="../assets/icons/Carga.webp" alt="Icone carga laranja">
+                    <img src="../../assets/icons/Carga.webp" alt="Icone carga laranja">
                     <br>
                     <h3>Carga</h3>
                   </div>
 
                   <div class="ajustarLegenda">
-                    <img src="../assets/icons/Turismo.webp" alt="Icone turismo verde">
+                    <img src="../../assets/icons/Turismo.webp" alt="Icone turismo verde">
                     <br>
                     <h3>Turismo</h3>
                   </div>
 
                   <div class="ajustarLegenda">
-                    <img src="../assets/icons/acidente.png" alt="Icone de acidente">
+                    <img src="../../assets/icons/acidente.png" alt="Icone de acidente">
                     <br>
                     <h3>Acidente</h3>
                   </div>
                   
                   <div class="ajustarLegenda">
-                    <img src="../assets/icons/obras.png" alt="Icone de obras">
+                    <img src="../../assets/icons/obras.png" alt="Icone de obras">
                     <br>
                     <h3>Obras</h3>
                   </div>
                   
                   <div class="ajustarLegenda">
-                    <img src="../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
+                    <img src="../../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
                     <br>
                     <h3>Quebra no trilho</h3>
                   </div>
@@ -135,7 +135,7 @@
       <div class="cartaoInfoTrem">
 
         <div class="iconeBateriaContainer">
-          <img class= "iconeBateria" src="../assets/icons/bateria.png" alt="bateria dos trens">
+          <img class= "iconeBateria" src="../../assets/icons/bateria.png" alt="bateria dos trens">
         </div>
 
         <!-- Nome do Trem-->
@@ -147,14 +147,14 @@
 
         <!-- Icone do Trem-->
         <div class="tremInfoContainer">
-          <img class="imagemTrem" src="../assets/icons/trenzinho.png" alt="Trem circular">
+          <img class="imagemTrem" src="../../assets/icons/trenzinho.png" alt="Trem circular">
         </div>
 
         <!-- Botão do maquinista para ele receber as infos deles -->
         <div class="infoComplementarTrem">
           <a href="telaInformacoesJosevaldo.html">
               <button class="boxMaquinistaInfo">
-                <img src="../assets/icons/maquinistas.png" alt="icone do motorista">
+                <img src="../../assets/icons/maquinistas.png" alt="icone do motorista">
                 <div>
                   <h4>Josevaldo</h4>
                 </div>
@@ -173,7 +173,7 @@
             <input class="noticacao" type="checkbox">
 
               <div class="toggleMapa, boxMaquinistaInfo">
-                <img src="../assets/icons/marcacao.png" alt="icone de marcação">
+                <img src="../../assets/icons/marcacao.png" alt="icone de marcação">
                 <h4>Marcação</h4>
               </div>
 
@@ -183,9 +183,9 @@
                 <h2 class="tituloMapa"> MARCAÇÃO</h2>
 
                 <div class="imagemMarcacao">
-                  <img src="../assets/icons/acidente.png" alt="Icone de acidente">
-                  <img src="../assets/icons/obras.png" alt="Icone de obras">
-                  <img src="../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
+                  <img src="../../assets/icons/acidente.png" alt="Icone de acidente">
+                  <img src="../../assets/icons/obras.png" alt="Icone de obras">
+                  <img src="../../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
                 </div>
 
                 <div>

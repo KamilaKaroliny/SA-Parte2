@@ -3,33 +3,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatorio</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script src="../scripts/graficoJarbas.js"defer></script>
+    <script src="../../scripts/graficoJarbas.js"defer></script>
 </head>
 <body>
     <!---cabeçalho -->
     <div id="flex4">
         <div class="meio1">
             <a href="telaMaquinista.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+                <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
 
         <div class="meio1">
-            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+            <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
         </div>
 
         <div class="meio2">
             <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+                <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
     </div>
 
     <!-- informações ao lado da foto do maquinista -->
     <div id="flex10">
-        <img id="foto" src="../assets/images/jarbas.png" alt="Imagem Jarbas">
+        <img id="foto" src="../../assets/images/jarbas.png" alt="Imagem Jarbas">
         <div class="dados">
             <span><strong>Nome:</strong>Jarbas Andrade</span><br>
             <span><strong>Telefone:</strong>  +55 (21) 97654-3210</span><br>
@@ -42,12 +42,12 @@
     <!-- div com as imagens e informações como; velocidade média e quando já percorreu-->
     <div id="flex">
         <div class="quadradinho4">
-            <img id="imgTelaRela" src="../assets/icons/kmh.png" alt="Imagem chat">
+            <img id="imgTelaRela" src="../../assets/icons/kmh.png" alt="Imagem chat">
             <H2>54 KM/H</H2>
         </div>
 
         <div class="quadradinho4">
-            <img id="imgTelaRela" src="../assets/icons/km.png" alt="Imagem relatorio">
+            <img id="imgTelaRela" src="../../assets/icons/km.png" alt="Imagem relatorio">
             <H2>220.451 KM</H2>
         </div>
     </div>

@@ -2,23 +2,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/validaLogin.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/validaLogin.js"></script>
     <title>Tela de Informações Clodoaldo</title>
 </head>
 <body>
     <!-- Parte de cima do Informações Clodoaldo (flecha, casa e logo) -->
     <div id="flex7">
         <a href="chatClodoaldo.html">
-            <img id="seta" src="../assets/icons/seta.png" alt="seta">
+            <img id="seta" src="../../assets/icons/seta.png" alt="seta">
         </a>
         <a href="paginaInicial.html">
-            <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+            <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
         </a>
     </div>
 
         <div>
-            <img id="logo2" src="../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+            <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
         </div>
 
     <!-- Nome do maquinista e sua Foto -->
@@ -26,7 +26,7 @@
         <div>
             <br>
             <br>
-            <img src="../assets/images/clodoaldo.png">
+            <img src="../../assets/images/clodoaldo.png">
             <h3>CLODOALDO KOWALSKI</h3>
         </div>
 
@@ -34,7 +34,7 @@
         <div id="flex">
             <div class="quadradinho1">
                 <a href="chatClodoaldo.html">
-                    <img id="imgTelaInfo" src="../assets/icons/mensagens.png" alt="Imagem chat">  
+                    <img id="imgTelaInfo" src="../../assets/icons/mensagens.png" alt="Imagem chat">  
                 </a>
                 <a href="chatClodoaldo.html">
                     <H2>CHAT</H2>
@@ -42,7 +42,7 @@
             </div>
             <a href="relatorioclodaldo.html">
                 <div class="quadradinho1">
-                    <img id="imgTelaInfo" src="../assets/icons/relatorio.png" alt="Imagem relatorio"> 
+                    <img id="imgTelaInfo" src="../../assets/icons/relatorio.png" alt="Imagem relatorio"> 
                     <H2>RELATÓRIO</H2>
                 </div>
             </a>

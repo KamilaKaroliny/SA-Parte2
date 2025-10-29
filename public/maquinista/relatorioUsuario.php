@@ -1,45 +1,46 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatorio</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/grafico3080.js"></script>
+    <title>Relatório da Circular 1970</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../../scripts/graficoCircular87.js" defer></script>
 </head>
+
 <body>
-    
-     <!--Cabeçalho da página com a logo, icone de voltar e icone para retornar a tela principal-->
+
+    <!--Cabeçalho da página com a logo, icone de voltar e icone para retornar a tela principal-->
     <header>
         <div id="flex4">
         <div class="meio1">
             <a href="telaCircular.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta para voltar a página anterior">
+                <img id="seta" src="../../assets/icons/seta.png" alt="seta para voltar a página anterior">
             </a>
         </div>
 
         <div class="meio1">
-            <img id="logo2" src="../assets/icons/logoTremalize.png" alt="logo do Tremalize">
+            <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="logo do Tremalize">
         </div>
 
         <div class="meio2">
             <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="icone casa para voltar na tela inicial">
+                <img id="casa1" src="../../assets/icons/casa.png"alt="icone casa para voltar na tela inicial">
             </a>
         </div>
     </div>
     <br>
     </header>
-
-    <!--Nome do trem-->
-    <span id="nomeCircular">LINHA 3080</span>
-
+     <!--Nome do trem-->
     <main>
+        <span id="nomeCircular">LINHA 87</span>
     <br>
     <br>
 
-    <!--Datas das manutenções: A ultima manutenção e a próxima manutenção-->
     <div id="centralizandoItens">
 
+      <!--Datas das manutenções: A ultima manutenção e a próxima manutenção-->
         <div class="manutencoes">
             <span id="texto2"><strong>Última manutenção:</strong></span>
             <span id="texto2">20/09/2024</span><br>
@@ -53,33 +54,33 @@
         </div>
     </div>
 
-    <!--Espaço das informações do relatório-->
+   <!--Espaço das informações do relatório-->
 
     <!--Título com a data da última atualização-->
     <section class="secaoRelatorio">
+
         <div id="cartaoRelatorio">
             <span id="texto">RELATÓRIO</span>
             <div>
                 <span id="textoInfoRelatorio">10/02/2025</span>
             </div>
         </div>
-
-        <!--Primeira linha de informações: Distância, tempo médio, tipo de combustível-->
+     <!--Primeira linha de informações: Distância, tempo médio, tipo de combustível-->
         <div id="centralizandoItens">
 
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Distância:</strong></span>
                 <div id="centralizandoItens">
-                    <span id="textoInfoRelatorio"><strong>32KM</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/distancia.png" alt="Icone que representa a distância de sua rota">
+                    <span id="textoInfoRelatorio"><strong>20KM</strong></span>
+                    <img id="iconesPequenos" src="../../assets/icons/distancia.png"alt="Icone que representa a distância de sua rota">
                 </div>
             </div>
 
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Tempo médio:</strong></span>
                 <div id="centralizandoItens">
-                    <span id="textoInfoRelatorio"><strong>1h 10min</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeTempoMedio.png" alt="Icone que representa o tempo médio que o trem leva para terminar sua rota">
+                    <span id="textoInfoRelatorio"><strong>1h30 min</strong></span>
+                    <img id="iconesPequenos" src="../../assets/icons/iconeTempoMedio.png" alt="Icone que representa o tempo médio que o trem leva para terminar sua rota">
                 </div>
             </div>
 
@@ -87,84 +88,74 @@
                 <span id="tituloInfoRelatorio"><strong>Tipo de Combustivel</strong></span>
                 <div id="centralizandoItens">
                     <span id="textoInfoRelatorio"><strong>Elétrico</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeTipoDeCombustivel.png" alt="Icone que representa o tipo do combustível que o trem usa">
-                    <br>
+                    <img id="iconesPequenos" src="../../assets/icons/iconeTipoDeCombustivel.png" alt="Icone que representa o tipo do combustível que o trem usa">
                 </div>
             </div>
         </div>
-        
 
-
-         <!--Segunda linha de informações: Número de estações, Número de vagões, Velocidade média-->
+        <br>
+   <!--Segunda linha de informações: Número de estações, Número de vagões, Velocidade média-->
         <div id="centralizandoItens">
 
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Número de estações:</strong></span>
                 <div id="centralizandoInfos">
-
-                    <span id="textoInfoRelatorio"><strong>10</strong>
+                    <span id="textoInfoRelatorio"><strong>9</strong>
                         <p>estações</p>
                     </span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeEstacoes.png" alt="Icone que repesenta o estações que o ônibus para">
+                    <img id="iconesPequenos" src="../../assets/icons/iconeNumeroDeEstacoes.png" alt="">
                 </div>
             </div>
 
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Número de vagões:</strong></span>
                 <div id="centralizandoInfos">
-                    <span id="textoInfoRelatorio"><strong>3</strong>
+                    <span id="textoInfoRelatorio"><strong>4</strong>
                         <p>vagões</p>
                     </span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeNumeroDeVagoes.png" alt="Icone que representa a quantidade de vagões do trem">
+                    <img id="iconesPequenos" src="../../assets/icons/iconeNumeroDeVagoes.png" alt="Icone que repesenta o estações que o ônibus para">
                 </div>
             </div>
 
             <div id="reparticaoInfoRelatorio">
                 <span id="tituloInfoRelatorio"><strong>Velocidade Média:</strong></span>
                 <div id="centralizandoItens">
-                    <span id="textoInfoRelatorio"><strong>45 km/h</strong></span>
-                    <img id="iconesPequenos" src="../assets/icons/iconeVelocidadeMedia.png" alt="Icone que representa a velocidade média do trem">
+                    <span id="textoInfoRelatorio"><strong>50 km/h</strong></span>
+                    <img id="iconesPequenos" src="../../assets/icons/iconeVelocidadeMedia.png" alt="Icone que representa a quantidade de vagões do trem">
                 </div>
             </div>
         </div>
-
-
-        <!--Horário com mais trânsito-->
-         <div class="tempoMedioBloco">
+      <!--Horário com mais trânsito-->
+        <div class="tempoMedioBloco">
             <span id="subTexto3"><strong>Média de Horários mais utilizados: </strong></span>
             <span id="subTexto2">TIPO: CARGA</span> <span id="texto3">Horário mais utilizado</span>   <!--Colocar tipo carga-->
         </div>
-
-
-        <!--Gráfico dos horários de viagens-->
+     <!--Gráfico dos horários de viagens-->
         <canvas id="chartHorario" width="400" height="200"></canvas>
 
-
-        <!--Informações adicionais como: Ponto de partida, Destino Final, Regiões onde ele passa, Capacidade Máxima de transporte-->
+    <!--Informações adicionais como: Ponto de partida, Destino Final, Regiões onde ele passa, Capacidade Máxima de transporte-->  
         <div class="infosRelatorioLinha">
-            <!--Ponto de Partida-->
+         <!--Ponto de Partida-->
             <div>
-                <span id="subTexto3"><strong>Ponto de Partida: </strong>América</span>
+                <span id="subTexto3"><strong>Ponto de Partida: </strong> Jardim Paraíso</span>
+            </div>
+        <!--Destino Final-->
+            <div>
+                <span id="subTexto3"><strong>Destino Final: </strong>Zona Industrial Norte</span>
+            </div>
+        <!--Regiões onde ele Passa-->
+            <div>
+                <span id="subTexto3"><strong>Regiões onde ele Passa:</strong> Jardim Paraíso, Jardim Sofia, Rio
+            Bonito, Zona Industrial Norte</span>
             </div>
             
-            <!--Destino Final-->
+        <!--Capacidade Máxima de Transporte-->
             <div>
-                <span id="subTexto3"><strong>Destino Final: </strong>Bom Retiro</span>
-            </div>
-            
-            <!--Regiões onde ele Passa-->
-            <div>
-                <span id="subTexto3"><strong>Regiões onde ele Passa:</strong> América, Anita Garibaldi,
-            Atiradores, Bom Retiro  .</span>
-            </div>
-
-            <!--Capacidade Máxima de Transporte-->
-            <div>
-                <span id="subTexto3"><strong>Capacidade Máxima de Transporte: </strong> 400kg.</span>
+                <span id="subTexto3"><strong>Capacidade Máxima de Transporte: </strong> 3 toneladas.</span>
             </div>
         </div>
     </main>
-    </section>
     
-</body>
-</html>
+
+
+    </section>

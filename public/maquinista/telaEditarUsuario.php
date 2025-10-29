@@ -2,12 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="./scripts/validaLogin.js"></script>
-    <script src="./scripts/validaCadastro.js"></script>
-    <script src="./scripts/validaEsqueceusenha.js"></script>
-    <script src="./scripts/validaEsqueceusenha2.js"></script>
-    <script src="./scripts/graficoRelatorioM.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/validaLogin.js"></script>
+    <script src="../../scripts/validaCadastro.js"></script>
+    <script src="../../scripts/validaEsqueceusenha.js"></script>
+    <script src="../../scripts/validaEsqueceusenha2.js"></script>
+    <script src="../../scripts/graficoRelatorioM.js"></script>
     <title>Tremalize</title>
 </head>
 
@@ -18,17 +18,17 @@
         <div id="cabecalhoEditar">
             <div class="meio7">
                 <a href="../public/telaUsuario.html">
-                    <img id="setaEditar" src="../assets/icons/seta.png" alt="seta">
+                    <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
     
             <div class="meio7">
-                <img id="logoEditar" src="../assets/icons/logoTremalize.png" alt="logo">
+                <img id="logoEditar" src="../../assets/icons/logoTremalize.png" alt="logo">
             </div>
     
             <div class="meio6">
                 <a href="paginaInicial.html">
-                    <img id="casaEditar" src="../assets/icons/casa.png" alt="casa">
+                    <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
                 </a>
             </div>
         </div> 

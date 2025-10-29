@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat Clodoaldo</title>
-    <link rel="stylesheet" href="../style/style.css">
+    <title>Chat Robson</title>
+    <link rel="stylesheet" href="../../style/style.css">
 
 </head>
 
@@ -12,13 +12,13 @@
     <!-- Parte de cima do chat (seta, foto do maquinista e o nome dele(a)) -->
     <div id="flex-container">
         <a href="telaChat.html">
-            <img id="seta" src="../assets/icons/seta.png" alt="seta">
+            <img id="seta" src="../../assets/icons/seta.png" alt="seta">
         </a>
-        <a href="telaInformacoesClodoaldo.html">
-            <img id="josevaldo" src="../assets/images/clodoaldo.png" alt="Foto Josevaldo">
+        <a href="telaInformacoesRobson.html">
+            <img id="josevaldo" src="../../assets/images/robson.png" alt="Foto Josevaldo">
         </a>
-        <a href="telaInformacoesClodoaldo.html">
-            <span id="nome1">CLODOALDO</span>
+        <a href="telaInformacoesRobson.html">
+            <span id="nome1">ROBSON</span>
         </a>
     </div>
 

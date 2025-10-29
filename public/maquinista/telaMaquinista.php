@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/validaLogin.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/validaLogin.js"></script>
     <title>telaChat</title>
 </head>
 <body>
@@ -12,23 +12,23 @@
     <div id="flex4">
         <div class="meio1">
             <a href="paginaInicial.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+                <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
 
         <div class="meio1">
-            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+            <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
         </div>
 
         <div class="meio2">
             <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+                <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
     </div>
 
     <!-- imagem da aba de pesquisa -->
-    <img class="abaPesquisa" src="../assets/icons/abaPesquisa.png" alt="">
+    <img class="abaPesquisa" src="../../assets/icons/abaPesquisa.png" alt="">
 
     <!-- quadrado onde comporta os nomes dos maquinistas e a linkagem dos seus relatorios -->
     <div id="flex5">

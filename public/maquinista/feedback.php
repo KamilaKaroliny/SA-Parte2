@@ -2,12 +2,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="./scripts/validaLogin.js"></script>
-    <script src="./scripts/validaCadastro.js"></script>
-    <script src="./scripts/validaEsqueceusenha.js"></script>
-    <script src="./scripts/validaEsqueceusenha2.js"></script>
-    <script src="./scripts/graficoRelatorioM.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/validaLogin.js"></script>
+    <script src="../../scripts/validaCadastro.js"></script>
+    <script src="../../scripts/validaEsqueceusenha.js"></script>
+    <script src="../../scripts/validaEsqueceusenha2.js"></script>
+    <script src="../../scripts/graficoRelatorioM.js"></script>
     <title>Feedback</title>
 </head>
 <body>
@@ -15,17 +15,17 @@
     <div id="flex4">
         <div class="meio1">
             <a href="paginaInicial.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+                <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
 
         <div class="meio1">
-            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+            <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
         </div>
 
         <div class="meio2">
             <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+                <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
     </div>
@@ -42,7 +42,7 @@
       <div class="branca">
         <div id="flex9">
             <H4>Jackson Oliveira</H4>
-            <img class= "estrelas"src="../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
+            <img class= "estrelas"src="../../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
         </div>
         <p>"Experiência incrível! O trem era muito confortável,
             os assentos eram espaçosos e a viagem foi super
@@ -52,7 +52,7 @@
       <div class="branca">
         <div id="flex9">
             <H4>Otávio Ferreira </H4>
-            <img class="estrelas" src="../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
+            <img class="estrelas" src="../../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
         </div>
         <p>"Ótimo serviço! A equipe de bordo foi muito
             atenciosa, e o vagão-restaurante tinha boas opções
@@ -64,7 +64,7 @@
       <div class="branca">
         <div id="flex9">
             <H4>Jaqueline Elisabeth</H4>
-            <img class="estrelas" src="../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
+            <img class="estrelas" src="../../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
         </div>
         <p>"Viagem perfeita! O trem era silencioso e muito
             limpo. Gostei bastante da paisagem ao longo do
@@ -75,7 +75,7 @@
       <div class="branca">
         <div id="flex9">
             <H4>Rodrigo Medeiros</H4>
-            <img  class= "estrelas" src="../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
+            <img  class= "estrelas" src="../../assets/icons/estrelas.png" alt="Quantidade de Estrelas">
             
         </div>
         <p>"Gostei muito da experiência! O ar-condicionado

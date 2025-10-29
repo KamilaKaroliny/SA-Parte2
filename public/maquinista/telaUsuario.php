@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/validaLogin.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/validaLogin.js"></script>
     <title>telaChat</title>
 </head>
 <body>
@@ -12,24 +12,24 @@
     <div id="flex4">
         <div class="meio1">
             <a href="paginaInicial.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+                <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
 
         <div class="meio1">
-            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+            <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
         </div>
 
         <div class="meio2">
             <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+                <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
     </div>
 
     <!-- icone do usuário e o seu nome -->
     <div>
-        <img id="iconeUsuario" src="../assets/icons/usuario.png" alt="Icone Usuário">
+        <img id="iconeUsuario" src="../../assets/icons/usuario.png" alt="Icone Usuário">
         <h2 id="Margin">NOME DO USUÁRIO</h2>
     </div>
 
@@ -37,14 +37,14 @@
     <div id="flex">
         <div class="quadradinho4">
             <a href="login.html">
-                <img id="imgTelaUsu" src="../assets/icons/logout.png" alt="Imagem logout">
+                <img id="imgTelaUsu" src="../../assets/icons/logout.png" alt="Imagem logout">
                 <H2>LOGOUT</H2>
             </a>
         </div>
 
         <div class="quadradinho4">
             <a href="telaEditar.html">
-                <img id="imgTelaUsu" src="../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
+                <img id="imgTelaUsu" src="../../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
                 <H2>MEU PERFIL</H2>
             </a>
         </div>

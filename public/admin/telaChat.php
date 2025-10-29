@@ -2,8 +2,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
-    <script src="../scripts/validaLogin.js"></script>
+    <link rel="stylesheet" href="../../style/style.css">
+    <script src="../../scripts/validaLogin.js"></script>
     <title>telaChat</title>
 </head>
 <body>
@@ -12,17 +12,17 @@
     <div id="flex4">
         <div class="meio1">
             <a href="paginaInicial.html">
-                <img id="seta" src="../assets/icons/seta.png" alt="seta">
+                <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
 
         <div class="meio1">
-            <img id="logo4" src="../assets/icons/logoTremalize.png" alt="logo">
+            <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
         </div>
 
         <div class="meio2">
             <a href="paginaInicial.html">
-                <img id="casa1" src="../assets/icons/casa.png" alt="casa">
+                <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
     </div>
@@ -36,7 +36,7 @@
             <div class="quadradinho2">
                 <div id="flex5">
                     <div class="meio3">
-                        <img class="icone2" src="../assets/images/josevaldo.png" alt="foto do maquinista josevaldo">
+                        <img class="icone2" src="../../assets/images/josevaldo.png" alt="foto do maquinista josevaldo">
                     </div>
     
                     <div class="meio4">
@@ -53,7 +53,7 @@
             <div class="quadradinho2">
                 <div id="flex5">
                     <div class="meio3">
-                        <img class="icone2" src="../assets/images/robson.png" alt="foto do maquinista Robson">
+                        <img class="icone2" src="../../assets/images/robson.png" alt="foto do maquinista Robson">
                     </div>
     
                     <div class="meio4">
@@ -70,7 +70,7 @@
             <div class="quadradinho2">
                 <div id="flex5">
                     <div class="meio3">
-                        <img class="icone2" src="../assets/images/pedro.png" alt="foto do maquinista Pedro">
+                        <img class="icone2" src="../../assets/images/pedro.png" alt="foto do maquinista Pedro">
                     </div>
     
                     <div class="meio4">
@@ -87,7 +87,7 @@
             <div class="quadradinho2">
                 <div id="flex5">
                     <div class="meio3">
-                         <img class="icone2" src="../assets/images/luiza.png" alt="foto da maquinista Luiza">
+                         <img class="icone2" src="../../assets/images/luiza.png" alt="foto da maquinista Luiza">
                     </div>
     
                     <div class="meio4">
@@ -104,7 +104,7 @@
             <div class="quadradinho2">
                 <div id="flex5">
                     <div class="meio3">
-                        <img class="icone2" src="../assets/images/gilsemara.png" alt="foto da maquinista Gilsemara">
+                        <img class="icone2" src="../../assets/images/gilsemara.png" alt="foto da maquinista Gilsemara">
                     </div>
     
                     <div class="meio4">
@@ -121,7 +121,7 @@
             <div class="quadradinho2">
                 <div id="flex5">
                     <div class="meio3">
-                        <img class="icone2" src="../assets/images/clodoaldo.png" alt="foto do maquinista Clodoaldo">
+                        <img class="icone2" src="../../assets/images/clodoaldo.png" alt="foto do maquinista Clodoaldo">
                     </div>
     
                     <div class="meio4">

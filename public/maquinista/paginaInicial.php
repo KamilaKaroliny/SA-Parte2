@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
 
     <title>Tremalize</title>
 
@@ -15,7 +15,7 @@
     <label>
         <input class="noticacao" type="checkbox">
         <div class="toggle" >
-            <img id="sininho2" src="../assets/icons/sininho.png" alt="Notificação">
+            <img id="sininho2" src="../../assets/icons/sininho.png" alt="Notificação">
         </div>
 
         <div class="notificacoes">
@@ -61,14 +61,14 @@
     <div>
         <div id="flex">
             <a href="mapa.html">
-                <div class="quadradinho1"><img class="imgTelaInicial" src="../assets/icons/trilho.png"
+                <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/trilho.png"
                         alt="Imagem de Trilho">
                     <h3 id="flex">MAPA</h3>
                 </div>
             </a>
 
             <a href="telaChat.html">
-                <div class="quadradinho1"><img class="imgTelaInicial" src="../assets/icons/mensagens.png"
+                <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/mensagens.png"
                         alt="Imagem chat">
                     <h3 id="flex">CHAT</h3>
                 </div>
@@ -77,7 +77,7 @@
 
         <div id="flex">
             <a href="telaCircular.html">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../assets/icons/linhas.png" alt="Imagem Linhas">
+                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
                     <h3 id="flex">LINHAS</h3>
                 </div>
             </a>
@@ -85,14 +85,14 @@
 
         <div id="flex">
             <a href="telaUsuario.html">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../assets/icons/usuario.png"
+                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
                     alt="Imagem Usuário">
                     <h3 id="flex">USUÁRIO</h3>
                 </div>
             </a>
 
             <a href="feedback.html">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../assets/icons/feedback.png"
+                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/feedback.png"
                         alt="Imagem Feedback">
                     <h3 id="flex">FEEDBACK</h3>
                 </div>

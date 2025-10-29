@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <title>Tremalize</title>
 </head>
 
@@ -12,18 +12,18 @@
         <!-- Logo e nome do Meu Perfil -->
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="../public/telaUsuario.html">
-                    <img id="setaEditar" src="../assets/icons/seta.png" alt="seta">
+                <a href="../../public/telaUsuario.html">
+                    <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
     
             <div class="meio7">
-                <img id="logoEditar" src="../assets/icons/logoTremalize.png" alt="logo">
+                <img id="logoEditar" src="../../assets/icons/logoTremalize.png" alt="logo">
             </div>
     
             <div class="meio6">
                 <a href="paginaInicial.html">
-                    <img id="casaEditar" src="../assets/icons/casa.png" alt="casa">
+                    <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
                 </a>
             </div>
         </div> 
@@ -78,7 +78,7 @@
 
             <!-- Botão com a validação do JS -->
             <div class="espacamento2">
-                <a href="../public/telaEditarUsuario.html">
+                <a href="telaEditarUsuario.html">
                     <div class="botaoEditar">
                         <h4>EDITAR</h4>
                     </div>
