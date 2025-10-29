@@ -17,7 +17,9 @@ CREATE TABLE usuarios (
     cidade VARCHAR(100) NOT NULL,
     bairro VARCHAR(100) NOT NULL,
     numero INT NOT NULL,
-    complemento VARCHAR(255)
+    complemento VARCHAR(255),
+    data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    foto_perfil VARCHAR(255) PADRÃO 'default.jpg'
 );
 
 
