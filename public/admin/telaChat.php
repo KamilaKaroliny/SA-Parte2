@@ -11,7 +11,7 @@
     <!-- cabeçalho -->
     <div id="flex4">
         <div class="meio1">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="meio2">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
@@ -31,7 +31,7 @@
     <h1 id="fonte">CHAT</h1>
 
     <!-- aba do chat do Josevaldo  -->
-    <a href="chatJosevaldo.html">
+    <a href="chatJosevaldo.php">
         <div id="flex6">
             <div class="quadradinho2">
                 <div id="flex5">
@@ -48,7 +48,7 @@
     </a>
 
     <!-- aba do chat do Robson  -->
-    <a href="chatRobson.html">
+    <a href="chatRobson.php">
         <div id="flex6">
             <div class="quadradinho2">
                 <div id="flex5">
@@ -65,7 +65,7 @@
     </a>
 
     <!-- aba do chat do Pedro  -->
-    <a href="chatPedro.html">
+    <a href="chatPedro.php">
         <div id="flex6">
             <div class="quadradinho2">
                 <div id="flex5">
@@ -82,7 +82,7 @@
     </a>
 
     <!-- aba do chat da Luiza  -->
-    <a href="chatLuiza.html">
+    <a href="chatLuiza.php">
         <div id="flex6">
             <div class="quadradinho2">
                 <div id="flex5">
@@ -99,7 +99,7 @@
     </a>
 
     <!-- aba do chat da Gilsemara  -->
-    <a href="chatGilsemara.html">
+    <a href="chatGilsemara.php">
         <div id="flex6">
             <div class="quadradinho2">
                 <div id="flex5">
@@ -116,7 +116,7 @@
     </a>
 
     <!-- aba do chat do Clodoaldo  -->
-    <a href="chatClodoaldo.html">
+    <a href="chatClodoaldo.php">
         <div id="flex6">
             <div class="quadradinho2">
                 <div id="flex5">

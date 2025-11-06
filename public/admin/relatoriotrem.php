@@ -12,7 +12,7 @@
     <header>
         <div id="flex4">
         <div class="meio1">
-            <a href="telaCircular.html">
+            <a href="telaCircular.php">
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta para voltar a página anterior">
             </a>
         </div>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="meio2">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="casa1" src="../../assets/icons/casa.png" alt="icone casa para voltar na tela inicial">
             </a>
         </div>

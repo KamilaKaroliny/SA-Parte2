@@ -60,7 +60,7 @@
     <!-- div que comporta a linkagem de todo o nossa app (chat, mapa, maquinistas...) -->
     <div>
         <div id="flex">
-            <a href="mapa.html">
+            <a href="mapa.php">
                 <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/trilho.png"
                         alt="Imagem de Trilho">
                     <h3 id="flex">MAPA</h3>

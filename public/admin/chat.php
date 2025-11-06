@@ -11,13 +11,13 @@
 <body>
     <!-- Parte de cima do chat (seta, foto do maquinista e o nome dele(a)) -->
     <div id="flex-container">
-        <a href="telaChat.html">
+        <a href="telaChat.php">
             <img id="seta" src="../../assets/icons/seta.png" alt="seta">
         </a>
-        <a href="telaInformacoesRobson.html">
+        <a href="telaInformacoesRobson.php">
             <img id="josevaldo" src="../../assets/images/robson.png" alt="Foto Josevaldo">
         </a>
-        <a href="telaInformacoesRobson.html">
+        <a href="telaInformacoesRobson.php">
             <span id="nome1">ROBSON</span>
         </a>
     </div>

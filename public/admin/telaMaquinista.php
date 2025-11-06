@@ -11,7 +11,7 @@
     <!-- cabeçalho -->
     <div id="flex4">
         <div class="meio1">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="meio2">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
@@ -34,42 +34,42 @@
     <div id="flex5">
         <div class="quadradinhoCircular">
 
-            <a href="relatorioJosevaldo.html">
+            <a href="relatorioJosevaldo.php">
                 <h1 class="text">JOSEVALDO</h1>
             </a>
             <div class="linhaAzul"></div>
 
-            <a href="RelatorioRobson.html">
+            <a href="RelatorioRobson.php">
                 <h1 class="text">ROBSON</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioPedro.html">
+            <a href="relatorioPedro.php">
                 <h1 class="text">PEDRO</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioLuiza.html">
+            <a href="relatorioLuiza.php">
                 <h1 class="text">LUIZA</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioGilsemara.html">
+            <a href="relatorioGilsemara.php">
                 <h1 class="text">GILSEMARA</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioClodaldo.html">
+            <a href="relatorioClodaldo.php">
                 <h1 class="text">CLODOALDO</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioJarbas.html">
+            <a href="relatorioJarbas.php">
                 <h1 class="text">JARBAS</h1>
             </a>
             <div class="linhaAzul"></div>
 
-            <a href="relatorioRaimundo.html">
+            <a href="relatorioRaimundo.php">
                 <h1 class="text">RAIMUNDO</h1>
                 <br>
             </a>

@@ -9,10 +9,10 @@
 <body>
     <!-- Parte de cima do Informações Clodoaldo (flecha, casa e logo) -->
     <div id="flex7">
-        <a href="chatClodoaldo.html">
+        <a href="chatClodoaldo.php">
             <img id="seta" src="../../assets/icons/seta.png" alt="seta">
         </a>
-        <a href="paginaInicial.html">
+        <a href="paginaInicial.php">
             <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
         </a>
     </div>
@@ -33,14 +33,14 @@
         <!-- Acessos ao chat e relatório do Maquinista -->
         <div id="flex">
             <div class="quadradinho1">
-                <a href="chatClodoaldo.html">
+                <a href="chatClodoaldo.php">
                     <img id="imgTelaInfo" src="../../assets/icons/mensagens.png" alt="Imagem chat">  
                 </a>
-                <a href="chatClodoaldo.html">
+                <a href="chatClodoaldo.php">
                     <H2>CHAT</H2>
                 </a>
             </div>
-            <a href="relatorioclodaldo.html">
+            <a href="relatorioclodaldo.php">
                 <div class="quadradinho1">
                     <img id="imgTelaInfo" src="../../assets/icons/relatorio.png" alt="Imagem relatorio"> 
                     <H2>RELATÓRIO</H2>
