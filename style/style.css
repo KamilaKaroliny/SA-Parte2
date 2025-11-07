@@ -1083,16 +1083,16 @@ span#textoInfoRelatorio {
   }
 
   .boxMarcacaoEditar{
-    background-color: #566abd;
+    background-color: transparent;
     color: white;
     padding: 4px;
-    border: 2px solid #cecccc;
+    border: 2px solid #566abd;
     margin: 4px;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column
+    flex-direction: row
   }
 
   .boxTipoVelocidadeTrem{
