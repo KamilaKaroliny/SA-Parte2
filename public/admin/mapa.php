@@ -183,13 +183,16 @@
                 
 
                 <div class="boxMarcacao">
-                  <h2 class="tituloMapa"> MARCAÇÃO: </h2>
+                  <h2 class="tituloMapa">MARCAÇÃO:</h2>
 
-                  <div class="boxMarcacaoEditar" >
-                    <div class="iconeBateriaContainer">
-                    <img class= "iconeBateria" src="../../assets/icons/editar.png" alt="bateria dos trens">
-                  </div>
-                  </div>
+                  <a href="editarMarcacao.php">
+                    <div class="boxMarcacaoEditar" >
+                      <div class="iconeBateriaContainer">
+                        <img class= "iconeBateria" src="../../assets/icons/editar.png" alt="bateria dos trens">
+                      </div>
+                    </div>
+                  </a>
+                  
                   
                 </div>
                 
