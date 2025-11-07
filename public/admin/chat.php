@@ -12,7 +12,7 @@
     <!-- Parte de cima do chat (seta, foto do maquinista e o nome dele(a)) -->
     <div id="flex-container">
         <a href="telaChat.php">
-            <img id="seta" src="../../assets/icons/seta.png" alt="seta">
+            <img id="seta" src="../../assets/icons/seta.png  " alt="seta">
         </a>
         <a href="telaInformacoesRobson.php">
             <img id="josevaldo" src="../../assets/images/robson.png" alt="Foto Josevaldo">
