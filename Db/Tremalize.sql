@@ -15,7 +15,7 @@ CREATE TABLE usuarios (
     cep VARCHAR(10) NULL,
     rua VARCHAR(255)  NULL,
     cidade VARCHAR(100)  NULL,
-    bairro VARCHAR(100)  NULL,
+    bairro VARCHAR(100)  NULL, 
     numero INT  NULL,
     complemento VARCHAR(255),
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
