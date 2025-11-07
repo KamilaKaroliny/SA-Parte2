@@ -182,6 +182,13 @@
               <div class="notificacoesMapa">
                 <h2 class="tituloMapa"> MARCAÇÃO</h2>
 
+                <div class="boxMarcacaoEditar">
+                  <div class="imagemMarcacao">
+                  <img class= "iconeBateria" src="../../assets/icons/editar.png" alt="bateria dos trens">
+                  </div>
+                </div>
+                
+
                 <div class="imagemMarcacao">
                   <img src="../../assets/icons/acidente.png" alt="Icone de acidente">
                   <img src="../../assets/icons/obras.png" alt="Icone de obras">

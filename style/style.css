@@ -1082,6 +1082,19 @@ span#textoInfoRelatorio {
     flex-direction: column
   }
 
+  .boxMarcacaoEditar{
+    background-color: #566abd;
+    color: white;
+    padding: 4px;
+    border: 2px solid #cecccc;
+    margin: 4px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column
+  }
+
   .boxTipoVelocidadeTrem{
     background-color: #566abd;
     padding: 4px 43px;
