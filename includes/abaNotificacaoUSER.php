@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../style/style.css">
-    <title>aba de notificação ADM</title>
+    <title>aba de notificação USER</title>
 </head>
 <body>
     <label>
