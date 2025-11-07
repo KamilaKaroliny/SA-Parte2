@@ -1,5 +1,5 @@
 <?php
-include("./db/conexao.php");
+include("../../db/conexao.php");
 
 $id = $_GET['id'] ?? null;
 if(!$id) die("Usuário inválido.");
