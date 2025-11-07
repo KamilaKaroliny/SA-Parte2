@@ -8,7 +8,7 @@ CREATE TABLE usuarios (
     senha VARCHAR(255) NOT NULL,
     credencial VARCHAR(225) NOT NULL,
     email VARCHAR(225) NOT NULL UNIQUE,
-    classificacao ENUM('Administrador', 'Maquinista') NOT NULL,
+    tipo ENUM('ADM', 'USER') NOT NULL,
     data_nascimento DATE,
     telefone VARCHAR(20),
     idade INT,
@@ -19,7 +19,7 @@ CREATE TABLE usuarios (
     numero INT NOT NULL,
     complemento VARCHAR(255),
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    foto_perfil VARCHAR(255) PADRÃO 'default.jpg'
+    foto_perfil VARCHAR(255) DEFAULT 'default.jpg'
 );
 
 
