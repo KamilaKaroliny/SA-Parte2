@@ -3,18 +3,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
-    <script src="../../scripts/validaLogin.js"></script>
-    <script src="../../scripts/validaCadastro.js"></script>
-    <script src="../../scripts/validaEsqueceusenha.js"></script>
-    <script src="../../scripts/validaEsqueceusenha2.js"></script>
-    <script src="../../scripts/graficoRelatorioM.js"></script>
     <title>Feedback</title>
 </head>
 <body>
     <!-- Parte de cima do feedback (seta, casa e logo tremalize -->
     <div id="flex4">
         <div class="meio1">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -24,7 +19,7 @@
         </div>
 
         <div class="meio2">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
