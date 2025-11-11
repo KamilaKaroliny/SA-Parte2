@@ -1177,12 +1177,6 @@ span#textoInfoRelatorio {
     z-index: 3;
   }
 
-  .imagemMarcacao img{
-    width: 60px;
-    padding: 5px;
-    z-index: 4;
-  }
-
   .localizacao {
     width: 100%;
   }
