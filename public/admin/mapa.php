@@ -227,16 +227,17 @@ include("../../db/conexao.php");
                     <?php
 
                       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                       $localizacao = $_POST['localizacao'];
-                        $sql = " INSERT INTO marcacao (localizacao) VALUE ('$localizacao')";
+                        $localizacao = $_POST['localizacao'];
+                        $icone = $_POST['icone']; 
 
-                        if ($mysqli->query($sql) === true) {
-                        echo "Mensagem enviada";
-                        } else {
-                        echo "Erro " . $sql . '<br>' . $mysqli->error;
+                       $sql = "INSERT INTO marcacao (localizacao, tipo) VALUES ('$localizacao', '$icone')";
+
+                      if ($mysqli->query($sql) === true) {
+                        echo "<p style='color:green;'>Marcação registrada com sucesso!</p>";
+                      } else {
+                          echo "<p style='color:red;'>Erro: " . $mysqli->error . "</p>";
                         }
-                        $mysqli->close();
-                      }
+                      } 
                     ?>
                     <form method="POST" action="">
                     <input class="localizacao" type="text" name = "localizacao">

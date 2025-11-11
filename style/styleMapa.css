@@ -42,5 +42,5 @@
 
   /* Quando o input é selecionado, aplica a borda */
 .imagemMarcacao input[type="radio"]:checked + label img {
-    border-color: rgb(0, 19, 160);
+    border-color: #566abd;
 }
