@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="erro" id="erroSenha">
 
                 <div id="esqueceuSenhaa">
-                    <a href="../public/login/esqueceuSenha.php">Esqueceu a senha?</a>
+                    <a href="public/login/esqueceuSenha.php">Esqueceu a senha?</a>
                 </div>
                 <br>
                 <br>
