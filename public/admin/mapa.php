@@ -1,3 +1,10 @@
+ <?php 
+
+include("../../db/conexao.php"); 
+
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -198,21 +205,54 @@
                 
 
                 <div class="imagemMarcacao">
-                  <img src="../../assets/icons/acidente.png" alt="Icone de acidente">
-                  <img src="../../assets/icons/obras.png" alt="Icone de obras">
-                  <img src="../../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
+                  <input
+                  class="imagemMarcacaoImg"
+                  type="image"
+                  alt="Icone de acidente"
+                  src="../../assets/icons/acidente.png" 
+                  value= "Adicionar" 
+                  style="width: 60px; padding: 5px";
+                  />
+                  
+                  <input
+                  type="image"
+                  alt="Icone de obras"
+                  src="../../assets/icons/obras.png" 
+                  value= "Adicionar"
+                  style="width: 60px; padding: 5px";
+                  />
+
+                  <input
+                  type="image"
+                  alt="Icone de quebra no trilho"
+                  src="../../assets/icons/quebraNoTrilho.png" 
+                  value= "Adicionar"
+                  style="width: 60px; padding: 5px";
+                  />
+
                 </div>
 
                 <div>
-                  <h4 class="legenda">DIGITE A RUA NO QUAL QUEIRA MARCAR</h4>
-                </div>
+                    <?php
 
-                <div>
-                  <input class="localizacao" type="text">
+                      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                       $localizacao = $_POST['localizacao'];
+                        $sql = " INSERT INTO marcacao (localizacao) VALUE ('$localizacao')";
+
+                        if ($mysqli->query($sql) === true) {
+                        echo "Mensagem enviada";
+                        } else {
+                        echo "Erro " . $sql . '<br>' . $mysqli->error;
+                        }
+                        $mysqli->close();
+                      }
+                    ?>
+                    <form method="POST" action="">
+                    <input class="localizacao" type="text" name = "localizacao">
                </div>
                
                <div class="botao">
-                  <button class="botaoMarcacao" type="button"> MARCAR </button>
+                <input class="botaoMarcacao" type="submit" value="Marcar">
                </div>
 
               </div>

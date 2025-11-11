@@ -25,3 +25,9 @@
     justify-content: flex-end
 
   }
+
+input .imagemMarcacaoImg {
+    width: 60px;
+    padding: 5px;
+    z-index: 4;
+}
