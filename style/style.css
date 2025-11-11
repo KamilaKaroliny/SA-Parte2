@@ -274,6 +274,15 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     padding: 0 19px;
 }
 
+#button6 {
+    padding: 13px 154px;
+    text-align: center;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
 /**/
 .botaoEditar {
     padding: 13px 90px;

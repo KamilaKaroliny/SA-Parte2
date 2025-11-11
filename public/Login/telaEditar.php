@@ -84,8 +84,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <!-- Data de Nascimento (somente visualização) -->
             <div class="espacamento">
-                <input class="esticadinho2" type="text" 
-                       value="<?= htmlspecialchars($dados['dataNascimento']) ?>" 
+                <input class="esticadinho2" type="text" name="data_nascimento" id="data_nascimento" 
+                       value="<?= htmlspecialchars($dados['data_nascimento']) ?>"
                        disabled>
                 <br>
             </div>
@@ -99,7 +99,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         
             <!-- Email (somente visualização) -->
             <div class="espacamento">
-                <input class="esticadinho2" type="text"  
+                <input class="esticadinho2" type="text" name="email" id="email"
                        value="<?= htmlspecialchars($dados['email']) ?>" disabled>
                 <br>
             </div>
@@ -107,14 +107,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <!-- Senha (editável) -->
             <div class="espacamento">
                 <input class="esticadinho2" type="password" name="senha" id="senha" 
-                       value="<?= htmlspecialchars($dados['senha']) ?>" placeholder="Senha">
+                       value="<?= htmlspecialchars($dados['senha']) ?>">
                 <br>
             </div>
 
             <!-- Botão salvar -->
-            <div class="espacamento2">
-                <button type="submit"><h4>EDITAR</h4></button>
-            </div>
+             <button id='button6' type="submit"> Salvar </button>
             
         </form>
 
