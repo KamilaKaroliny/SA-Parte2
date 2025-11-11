@@ -10,13 +10,19 @@
 
 <body>
     <header>
-  <div>
+      <div>
+        <a href="telaChat.html">
+            <img id="seta" src="../../assets/icons/seta.png" alt="seta">
+        </a>
+        <a href="../../index.php">
+      <div>
+
+    <div id = "aviso">
       <div class="alert alert-primary d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-          <div>
-            Se você esqueceu a senha fala com seu administradar
-          </div>
-  <div>
+            Se você esqueceu a senha fala com seu administradar 
+      <div>   
+    <div>
   </header>
 </body>
 </html>
