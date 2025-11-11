@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="telaUsuario.php?id=<?= $id ?>">
+                <a href="../admin/telaUsuario.php">
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
     
             <div class="meio6">
-                <a href="paginaInicial.php">
+                <a href="../admin/paginaInicial.php">
                     <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
                 </a>
             </div>
