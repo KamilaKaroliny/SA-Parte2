@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="telaUsuario.php?id=<?= $id ?>">
+                <a href="telaUsuario.php?id=<?= $id ?>">    <!--arrumar link (kamila)-->
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
