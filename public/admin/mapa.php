@@ -186,9 +186,9 @@
                   <h2 class="tituloMapa">MARCAÇÃO:</h2>
 
                   <a href="editarMarcacao.php">
-                    <div class="boxMarcacaoEditar" >
-                      <div class="iconeBateriaContainer">
-                        <img class= "iconeBateria" src="../../assets/icons/editar.png" alt="bateria dos trens">
+                    <div class="boxMarcacaoEditar" style = "margin-left: 10px;" >
+                      <div class="iconeMarcacaoContainer">
+                        <img class= "iconeMarcacao" src="../../assets/icons/editar.png" alt="bateria dos trens">
                       </div>
                     </div>
                   </a>

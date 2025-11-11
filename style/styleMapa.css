@@ -14,3 +14,14 @@
     justify-content: center;
     flex-direction: row
 }
+
+.iconeMarcacao {
+    padding: 0px;
+    width: 20px;
+}
+
+.iconeMarcacaoContainer {
+     display: flex;
+    justify-content: flex-end
+
+  }
