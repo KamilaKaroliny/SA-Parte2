@@ -205,30 +205,21 @@ include("../../db/conexao.php");
                 
 
                 <div class="imagemMarcacao">
-                  <input
-                  class="imagemMarcacaoImg"
-                  type="image"
-                  alt="Icone de acidente"
-                  src="../../assets/icons/acidente.png" 
-                  value= "Adicionar" 
-                  style="width: 60px; padding: 5px";
-                  />
-                  
-                  <input
-                  type="image"
-                  alt="Icone de obras"
-                  src="../../assets/icons/obras.png" 
-                  value= "Adicionar"
-                  style="width: 60px; padding: 5px";
-                  />
+                
+                  <input type="radio" name="icone" id="acidente" value="Acidente">
+                  <label for="acidente">
+                    <img src="../../assets/icons/acidente.png" alt="Ícone de acidente" class="imagemMarcacaoImg">
+                  </label>
 
-                  <input
-                  type="image"
-                  alt="Icone de quebra no trilho"
-                  src="../../assets/icons/quebraNoTrilho.png" 
-                  value= "Adicionar"
-                  style="width: 60px; padding: 5px";
-                  />
+                  <input type="radio" name="icone" id="obras" value="Obras">
+                  <label for="obras">
+                    <img src="../../assets/icons/obras.png" alt="Ícone de obras" class="imagemMarcacaoImg">
+                  </label>
+
+                  <input type="radio" name="icone" id="quebra" value="Quebra de trilho">
+                  <label for="quebra">
+                    <img src="../../assets/icons/quebraNoTrilho.png" alt="Ícone de quebra no trilho" class="imagemMarcacaoImg">
+                  </label>
 
                 </div>
 

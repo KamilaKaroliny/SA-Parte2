@@ -24,10 +24,23 @@
      display: flex;
     justify-content: flex-end
 
-  }
+}
 
-input .imagemMarcacaoImg {
+.imagemMarcacaoImg {
     width: 60px;
     padding: 5px;
-    z-index: 4;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+  /* Esconde os botões de seleção */
+.imagemMarcacao input[type="radio"] {
+    display: none;
+}
+
+  /* Quando o input é selecionado, aplica a borda */
+.imagemMarcacao input[type="radio"]:checked + label img {
+    border-color: rgb(0, 19, 160);
 }
