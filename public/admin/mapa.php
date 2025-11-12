@@ -203,7 +203,23 @@ include("../../db/conexao.php");
                   
                 </div>
                 
+                <?php
 
+                      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        $localizacao = $_POST['localizacao'];
+                        $icone = $_POST['icone']; 
+
+                       $sql = "INSERT INTO marcacao (localizacao, tipo) VALUES ('$localizacao', '$icone')";
+
+                      if ($mysqli->query($sql) === true) {
+                        echo "<p style='color:green;'>Marcação registrada com sucesso!</p>";
+                      } else {
+                          echo "<p style='color:red;'>Erro: " . $mysqli->error . "</p>";
+                        }
+                      } 
+                    ?>
+
+                    <form method="POST" action="">
                 <div class="imagemMarcacao">
                 
                   <input type="radio" name="icone" id="acidente" value="Acidente">
@@ -224,22 +240,8 @@ include("../../db/conexao.php");
                 </div>
 
                 <div>
-                    <?php
-
-                      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        $localizacao = $_POST['localizacao'];
-                        $icone = $_POST['icone']; 
-
-                       $sql = "INSERT INTO marcacao (localizacao, tipo) VALUES ('$localizacao', '$icone')";
-
-                      if ($mysqli->query($sql) === true) {
-                        echo "<p style='color:green;'>Marcação registrada com sucesso!</p>";
-                      } else {
-                          echo "<p style='color:red;'>Erro: " . $mysqli->error . "</p>";
-                        }
-                      } 
-                    ?>
-                    <form method="POST" action="">
+                    
+                    
                     <input class="localizacao" type="text" name = "localizacao">
                </div>
                
@@ -248,7 +250,7 @@ include("../../db/conexao.php");
                </div>
 
               </div>
-          </label>
+              </label>
         </div>
 
         <!-- Tipo do trem -->
