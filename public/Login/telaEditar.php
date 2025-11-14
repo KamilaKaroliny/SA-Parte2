@@ -109,7 +109,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <br>
             </div>
 
-            <div class="flex">
+            <div class="flexEditar">
                 <!-- Botão alterar senha -->
                 <button id='button7' type="submit"> Alterar senha </button> 
             </div>
