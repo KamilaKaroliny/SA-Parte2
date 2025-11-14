@@ -283,6 +283,16 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border-radius: 10px;
 }
 
+#button7 {
+    padding: 13px 50px;
+    display: flex;
+    text-align: center;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
 /**/
 .botaoEditar {
     padding: 13px 90px;
@@ -1000,6 +1010,18 @@ span#textoInfoRelatorio {
 #separacao1 {
     padding-top: 140px;
 } 
+
+.editarPerfil{
+    display:flex ;
+    padding-left: 20px;
+}
+
+.flex{
+    display: flex;
+    padding-right: 160px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
 
 /* Style.css do Mapa */
   

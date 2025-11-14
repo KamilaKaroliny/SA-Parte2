@@ -76,6 +76,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <!-- Nome (editável) -->
             <div class="espacamento">
+                <label class="editarPerfil" for="nome">Primeiro Nome:</label>
                 <input class="esticadinho2" type="text" name="nome" id="nome" 
                        value="<?= htmlspecialchars($dados['nome']) ?>" 
                        placeholder="Nome completo" autocomplete="off">
@@ -84,6 +85,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <!-- Data de Nascimento (somente visualização) -->
             <div class="espacamento">
+                <label class="editarPerfil" for="data_nascimento">Data de Nascimento:</label>
                 <input class="esticadinho2" type="text" name="data_nascimento" id="data_nascimento" 
                        value="<?= htmlspecialchars($dados['data_nascimento']) ?>"
                        disabled>
@@ -92,27 +94,28 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <!-- ID do usuário (somente visualização) -->
             <div class="espacamento">
-                <input class="esticadinho2" type="text"  
+                <label class="editarPerfil" for="id">ID:</label>
+                <input class="esticadinho2" type="text" id="id" 
                        value="<?= $dados['id'] ?>" disabled>
                 <br>
             </div>
         
             <!-- Email (somente visualização) -->
             <div class="espacamento">
+                <label class="editarPerfil" for="email">Email corporativo:</label>
                 <input class="esticadinho2" type="text" name="email" id="email"
                        value="<?= htmlspecialchars($dados['email']) ?>" disabled>
                 <br>
-            </div>
-
-            <!-- Senha (editável) -->
-            <div class="espacamento">
-                <input class="esticadinho2" type="password" name="senha" id="senha" 
-                       value="<?= htmlspecialchars($dados['senha']) ?>">
                 <br>
             </div>
 
+            <div class="flex">
+                <!-- Botão alterar senha -->
+                <button id='button7' type="submit"> Alterar senha </button> 
+            </div>
+
             <!-- Botão salvar -->
-             <button id='button6' type="submit"> Salvar </button>
+            <button id='button6' type="submit"> Salvar </button>
             
         </form>
 
