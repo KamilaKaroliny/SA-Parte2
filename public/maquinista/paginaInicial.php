@@ -91,7 +91,7 @@
                 </div>
             </a>
 
-            <a href="feedback.html">
+            <a href="feedback.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/feedback.png"
                         alt="Imagem Feedback">
                     <h3 id="flex">FEEDBACK</h3>
