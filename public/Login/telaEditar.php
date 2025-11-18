@@ -8,7 +8,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// ID do usuário logado (não vem mais da URL!)
+// ID do usuário logado
 $id = $_SESSION['user_id'];
 
 // busca os dados do usuário correspondente
@@ -105,9 +105,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <br>
             </div>
 
-            <div class="flexEditar">
-                <!-- Botão alterar senha -->
-                <button id='button7' type="submit"> Alterar senha </button> 
+            <!-- Div alterar senha -->
+            <div id="divTelaEditar">
+                <div id='buttonTelaEditar'>
+                    <a href="redefinirSenha.php">
+                        <h3>Alterar senha</h3>
+                    </a>
+                </div>
             </div>
 
             <!-- Botão salvar -->
