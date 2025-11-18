@@ -60,14 +60,14 @@
     <!-- div que comporta a linkagem de todo o nossa app (chat, mapa, maquinistas...) -->
     <div>
         <div id="flex">
-            <a href="mapa.html">
+            <a href="mapa.php">
                 <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/trilho.png"
                         alt="Imagem de Trilho">
                     <h3 id="flex">MAPA</h3>
                 </div>
             </a>
 
-            <a href="telaChat.html">
+            <a href="telaChat.php">
                 <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/mensagens.png"
                         alt="Imagem chat">
                     <h3 id="flex">CHAT</h3>
@@ -76,7 +76,7 @@
         </div>
 
         <div id="flex">
-            <a href="telaCircular.html">
+            <a href="telaCircular.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
                     <h3 id="flex">LINHAS</h3>
                 </div>
@@ -84,14 +84,14 @@
         </div>
 
         <div id="flex">
-            <a href="telaUsuario.html">
+            <a href="telaUsuario.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
                     alt="Imagem Usuário">
                     <h3 id="flex">USUÁRIO</h3>
                 </div>
             </a>
 
-            <a href="feedback.html">
+            <a href="feedback.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/feedback.png"
                         alt="Imagem Feedback">
                     <h3 id="flex">FEEDBACK</h3>

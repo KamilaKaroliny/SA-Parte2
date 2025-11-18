@@ -11,7 +11,7 @@
         <!---cabeçalho -->
         <div id="flex4">
             <div class="meio1">
-                <a href="telaMaquinista.html">
+                <a href="telaMaquinista.php">
                     <img id="seta" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
@@ -20,7 +20,7 @@
             </div>
     
             <div class="meio2">
-                <a href="paginaInicial.html">
+                <a href="paginaInicial.php">
                     <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
                 </a>
             </div>

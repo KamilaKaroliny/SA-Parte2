@@ -11,7 +11,7 @@
     <!-- cabeçalho -->
     <div id="flex4">
         <div class="meio1">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="meio2">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
@@ -36,14 +36,14 @@
     <!-- quadradinho do logout e meu perfil -->
     <div id="flex">
         <div class="quadradinho4">
-            <a href="login.html">
+            <a href="login.php">
                 <img id="imgTelaUsu" src="../../assets/icons/logout.png" alt="Imagem logout">
                 <H2>LOGOUT</H2>
             </a>
         </div>
 
         <div class="quadradinho4">
-            <a href="telaEditar.html">
+            <a href="telaEditar.php">
                 <img id="imgTelaUsu" src="../../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
                 <H2>MEU PERFIL</H2>
             </a>
