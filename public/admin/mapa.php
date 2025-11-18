@@ -207,14 +207,17 @@ include("../../db/conexao.php");
 
                       if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                         $localizacao = $_POST['localizacao'];
-                        $icone = $_POST['icone']; 
+                        $icone = $_POST['icone'] ?
+                        $_POST['icone'] : null;
 
-                       $sql = "INSERT INTO marcacao (localizacao, tipo) VALUES ('$localizacao', '$icone')";
+                        if (!empty($localizacao) && !empty($icone)){
+                          $sql = "INSERT INTO marcacao (localizacao, icone) VALUES ('$localizacao', '$icone')";
 
-                      if ($mysqli->query($sql) === true) {
-                        echo "<p style='color:green;'>Marcação registrada com sucesso!</p>";
-                      } else {
-                          echo "<p style='color:red;'>Erro: " . $mysqli->error . "</p>";
+                          if ($mysqli->query($sql) === true) {
+                            echo "<p style='color:green;'>Marcação registrada com sucesso!</p>";
+                          } else {
+                            echo "<p style='color:red;'>Erro: " . $mysqli->error . "</p>";
+                          }
                         }
                       } 
                     ?>
@@ -232,7 +235,7 @@ include("../../db/conexao.php");
                     <img src="../../assets/icons/obras.png" alt="Ícone de obras" class="imagemMarcacaoImg">
                   </label>
 
-                  <input type="radio" name="icone" id="quebra" value="Quebra de trilho">
+                  <input type="radio" name="icone" id="quebra" value="Quebra">
                   <label for="quebra">
                     <img src="../../assets/icons/quebraNoTrilho.png" alt="Ícone de quebra no trilho" class="imagemMarcacaoImg">
                   </label>
