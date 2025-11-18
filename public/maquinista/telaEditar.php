@@ -12,7 +12,7 @@
         <!-- Logo e nome do Meu Perfil -->
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="../../public/telaUsuario.php">
+                <a href="../../public/maquinista/telaUsuario.php">
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
@@ -78,7 +78,7 @@
 
             <!-- Botão com a validação do JS -->
             <div class="espacamento2">
-                <a href="telaEditarUsuario.html">
+                <a href="telaEditarUsuario.php">
                     <div class="botaoEditar">
                         <h4>EDITAR</h4>
                     </div>

@@ -17,7 +17,7 @@
         <!-- Logo e nome do Meu Perfil -->
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="../public/telaUsuario.php">
+                <a href="../public/telaEditar.php">
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
