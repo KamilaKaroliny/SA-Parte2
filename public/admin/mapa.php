@@ -260,17 +260,11 @@ include("../../db/conexao.php");
         <div class="infoComplementarTrem"> 
           <div class="tremInfoContainer">
             <div class="boxTipoVelocidadeTrem">
-              <h3>Tipo:</h3>
-              <h3>Circular</h3>
-              <br>
-              <h3>-</h3>
-            </div>
-          </div>
-
-          <!-- Velocidade que o trem está andando -->
-          <div class="boxMaquinistaInfo">
-            <h5>Velocidade</h5>
-            <h4>100Km/h</h4>
+              <?php
+                if (isset($localizacao)) {
+                echo "<div>Marcação: <br><img src='../../assets/icons/$icone.png' style='width: 20px;'> " . htmlspecialchars($localizacao) . "</div>";
+                }
+              ?>
           </div>
         </div>
         
@@ -279,12 +273,3 @@ include("../../db/conexao.php");
   </main>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
