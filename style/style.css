@@ -293,34 +293,28 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border-radius: 10px;
 }
 
-/**/
-.botaoEditar {
-    padding: 13px 90px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-    border: 1px solid #cecccc;
+#divTelaEditar {
+    display: flex;
+    padding-right: 235px;
+    padding-bottom: 20px;
+    padding-top: 10px;
+}
+
+#buttonTelaEditar {
+    padding: 13px 15px;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 2px solid #ffffff;
     border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 16px;
+}
+
+#buttonTelaEditar h3{
+    margin: 0%;
+    font-size: small;
+    font-weight: 550;
 }
 
 /**/
-.botaoEditar h4 {
-    margin: 5px;
-    width: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-/**/
-.botaoTelaEditar {
-    display: flex;
-    justify-content: center;
-}
-
 #maquinistaForm {
     display: flex;
     flex-direction: column;
@@ -1014,13 +1008,6 @@ span#textoInfoRelatorio {
 .editarPerfil{
     display:flex ;
     padding-left: 20px;
-}
-
-.flexEditar{
-    display: flex;
-    padding-right: 160px;
-    padding-bottom: 20px;
-    padding-top: 10px;
 }
 
 /* Style.css do Mapa */
