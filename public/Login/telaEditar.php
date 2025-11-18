@@ -21,16 +21,13 @@ $stmt->close();
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $nome = $_POST['nome'];
-    $senha = $_POST['senha'];
 
-        $sql = "UPDATE usuarios SET nome = ?, senha = ?, WHERE id = ?";
+        $sql = "UPDATE usuarios SET nome = ? WHERE id = ?";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("sssi", $nome, $senha, $id);
+        $stmt->bind_param("si", $nome, $id);
 
         if ($stmt->execute()) {
-            echo "Registro atualizado com sucesso.
-            <a href='telaUsuario.php?id=$id'>Voltar ao perfil</a>
-            ";
+            header("Location: ../admin/telaUsuario.php?id=$id");
         } else {
             echo "Erro: " . $stmt->error;
         }
@@ -87,8 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="espacamento">
                 <label class="editarPerfil" for="data_nascimento">Data de Nascimento:</label>
                 <input class="esticadinho2" type="text" name="data_nascimento" id="data_nascimento" 
-                       value="<?= htmlspecialchars($dados['data_nascimento']) ?>"
-                       disabled>
+                       value="<?= htmlspecialchars($dados['data_nascimento']) ?> "style="color:rgb(175, 174, 174);" disabled>
                 <br>
             </div>
 
@@ -96,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="espacamento">
                 <label class="editarPerfil" for="id">ID:</label>
                 <input class="esticadinho2" type="text" id="id" 
-                       value="<?= $dados['id'] ?>" disabled>
+                       value="<?= $dados['id'] ?>" style="color:rgb(175, 174, 174);" disabled>
                 <br>
             </div>
         
@@ -104,7 +100,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="espacamento">
                 <label class="editarPerfil" for="email">Email corporativo:</label>
                 <input class="esticadinho2" type="text" name="email" id="email"
-                       value="<?= htmlspecialchars($dados['email']) ?>" disabled>
+                       value= "<?= htmlspecialchars($dados['email']) ?>" style="color:rgb(175, 174, 174);" disabled>
                 <br>
                 <br>
             </div>
