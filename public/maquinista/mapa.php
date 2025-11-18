@@ -14,7 +14,7 @@
 
     <div id="containerCabecalho">
       <div class="colunaCabecalhoEsq">
-          <a href="paginaInicial.html">
+          <a href="paginaInicial.php">
               <img id="iconeVoltar" src="../../assets/icons/seta.png" alt="seta">
           </a>
       </div>
@@ -24,7 +24,7 @@
       </div>
 
       <div class="colunaCabecalhoDir">
-          <a href="paginaInicial.html">
+          <a href="paginaInicial.php">
               <img id="iconeHome" src="../../assets/icons/casa.png" alt="casa">
           </a>
       </div>

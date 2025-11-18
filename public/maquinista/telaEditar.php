@@ -12,7 +12,7 @@
         <!-- Logo e nome do Meu Perfil -->
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="../../public/telaUsuario.html">
+                <a href="../../public/telaUsuario.php">
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
@@ -22,7 +22,7 @@
             </div>
     
             <div class="meio6">
-                <a href="paginaInicial.html">
+                <a href="paginaInicial.php">
                     <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
                 </a>
             </div>

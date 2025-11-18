@@ -11,7 +11,7 @@
      <!-- cabeçalho -->
     <div id="flex4">
         <div class="meio1">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -21,7 +21,7 @@
         </div>
 
         <div class="meio2">
-            <a href="paginaInicial.html">
+            <a href="paginaInicial.php">
                 <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
@@ -34,17 +34,17 @@
     <div id="flex5">
         <div class="quadradinhoCircular">
 
-            <a href="relatorioCircular1970.html">
+            <a href="relatorioCircular1970.php">
                 <h1 class="text">Circular 1970</h1>
             </a>
             <div class="linhaAzul"></div>
 
-            <a href="relatorioCircular1976.html">
+            <a href="relatorioCircular1976.php">
                 <h1 class="text">Circular 1976</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioCircular310.html">
+            <a href="relatorioCircular310.php">
                 <h1 class="text">Circular 310</h1>
             </a>
                 <div class="linhaAzul"></div>
