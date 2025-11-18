@@ -44,14 +44,14 @@
 
         <div id="flex">
             <a href="telaMaquinista.php">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/maquinistas.png"
-                    alt="Imagem Maquinista">
-                    <h3 id="flex" style="margin-top: 10px " ;>MAQUINISTAS</h3>
+                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuarios.png"
+                    alt="Imagem Usuários">
+                    <h3 id="flex" style="margin-top: 10px " ;>USUARIOS</h3>
                 </div>
             </a>
             <a href="telaCircular.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
-                    <h3 id="flex">LINHAS</h3>
+                    <h3 id="flex">TRENS</h3>
                 </div>
             </a>
         </div>
@@ -60,7 +60,7 @@
             <a href="telaUsuario.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
                     alt="Imagem Usuário">
-                    <h3 id="flex">USUÁRIO</h3>
+                    <h3 id="flex">PERFIL</h3>
                 </div>
             </a>
 
