@@ -64,7 +64,7 @@ if (!empty($msg)) {
     <div class="flex">
 
 
-            <?php
+        <?php
             $tipo = $_SESSION["tipo"] ?? "";
 
             if ($tipo === "ADM") {

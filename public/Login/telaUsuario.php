@@ -32,11 +32,21 @@ include("../../db/conexao.php");
     <title>Tela Usuário</title>
 </head>
 <body>
+    <?php
+        $tipo = $_SESSION["tipo"] ?? "";
 
-    <!-- cabeçalho -->
+        if ($tipo === "ADM") {
+            $voltar = "../admin/paginaInicial.php";
+            $home   = "../admin/paginaInicial.php";
+        } else {
+            $voltar = "../maquinista/paginaInicial.php";
+            $home   = "../maquinista/paginaInicial.php";
+        }
+    ?>
+
     <div id="flex4">
         <div class="meio1">
-            <a href="paginaInicial.php">
+            <a href="<?= $voltar ?>">
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -46,7 +56,7 @@ include("../../db/conexao.php");
         </div>
 
         <div class="meio2">
-            <a href="paginaInicial.php">
+            <a href="<?= $home ?>">
                 <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
             </a>
         </div>
