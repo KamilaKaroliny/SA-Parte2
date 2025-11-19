@@ -63,8 +63,18 @@ if (!empty($msg)) {
 <body>
     <div class="flex">
 
+
+            <?php
+            $tipo = $_SESSION["tipo"] ?? "";
+
+            if ($tipo === "ADM") {
+                $voltar = "telaEditar.php";
+            } else {
+                $voltar = "telaEditar.php";
+            }
+        ?>
             <div class="meio7">
-                <a href="telaEditar.php">
+                <a href="<?= $voltar ?>">
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>

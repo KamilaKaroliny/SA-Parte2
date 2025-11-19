@@ -84,7 +84,7 @@
         </div>
 
         <div id="flex">
-            <a href="telaUsuario.php">
+            <a href="../login/telaUsuario.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
                     alt="Imagem Usuário">
                     <h3 id="flex">USUÁRIO</h3>

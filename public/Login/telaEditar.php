@@ -48,24 +48,36 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <header>
 
+       <?php
+            $tipo = $_SESSION["tipo"] ?? "";
+
+            if ($tipo === "ADM") {
+                $voltar = "telaUsuario.php";
+                $home   = "../admin/paginaInicial.php";
+            } else {
+                $voltar = "telaUsuario.php";
+                $home   = "../maquinista/paginaInicial.php";
+            }
+        ?>
+
         <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="../admin/telaUsuario.php">
+                <a href="<?= $voltar ?>">
                     <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
-    
+
             <div class="meio7">
                 <img id="logoEditar" src="../../assets/icons/logoTremalize.png" alt="logo">
             </div>
-    
+
             <div class="meio6">
-                <a href="../admin/paginaInicial.php">
+                <a href="<?= $home ?>">
                     <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
                 </a>
             </div>
-        </div> 
-
+        </div>
+        
         <h1 id="padding">MEU PERFIL</h1>
 
         <!-- Formulário para Editar -->
