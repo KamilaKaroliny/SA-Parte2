@@ -27,7 +27,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt->bind_param("si", $nome, $id);
 
         if ($stmt->execute()) {
-            header("Location: ../admin/telaUsuario.php?id=$id");
+            // Usa a mesma lógica do cabeçalho
+            $tipo = $_SESSION["tipo"] ?? "";
+
+            if ($tipo === "ADM") {
+                $destino = "telaUsuario.php";
+            } else {
+                $destino = "telaUsuario.php";
+            }
+
+            header("Location: $destino?id=$id");
+            exit();
         } else {
             echo "Erro: " . $stmt->error;
         }
