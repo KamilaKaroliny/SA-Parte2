@@ -2,38 +2,53 @@
 include("../../db/conexao.php");
 session_start();
 
-// Verifica se o usuário está logado
 if (!isset($_SESSION['user_id'])) {
     header("Location: ../../index.php");
     exit();
 }
 
-// ID do usuário logado
 $id = $_SESSION['user_id'];
 
-// busca os dados do usuário correspondente
 $stmt = $mysqli->prepare("SELECT * FROM usuarios WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $dados = $stmt->get_result()->fetch_assoc();
 $stmt->close();
 
+$msg = ""; 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $nSenha = $_POST['senha'];
+    $senhaAtual = $_POST['senhaAtual'];
+    $novaSenha = $_POST['novaSenha'];
+    $confirmaSenha = $_POST['confirmaSenha'];
 
-        $sql = "UPDATE usuarios SET nome = ? WHERE id = ?";
+    if (!password_verify($senhaAtual, $dados['senha'])) {
+        $msg = "A senha atual está incorreta!";
+    }
+    else if ($novaSenha !== $confirmaSenha) {
+        $msg = "A nova senha e a confirmação não coincidem!";
+    } 
+    else {
+        $novaSenhaHash = password_hash($novaSenha, PASSWORD_DEFAULT);
+
+        $sql = "UPDATE usuarios SET senha = ? WHERE id = ?";
         $stmt = $mysqli->prepare($sql);
-        $stmt->bind_param("si", $nSenha, $id);
+        $stmt->bind_param("si", $novaSenhaHash, $id);
 
         if ($stmt->execute()) {
-            header("Location: telaEditar.php?id=$id");
+            $msg = "Senha alterada com sucesso!";
         } else {
-            echo "Erro: " . $stmt->error;
+            $msg = "Falha ao alterar senha!";
         }
+
         $stmt->close();
         $mysqli->close();
-        exit(); 
+    }
+}
+
+if (!empty($msg)) {
+    echo "<p style='color:white; text-align:center; font-size:12px; margin-top:10px;'>$msg</p>";
 }
 ?>
 
@@ -48,26 +63,41 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
     <div class="flex">
 
+            <div class="meio7">
+                <a href="telaEditar.php">
+                    <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
+                </a>
+            </div>
+
         <div id="formulario">
+
             <img id = "logo" src="../../assets/icons/logoTremalize.png" alt="Logo Tremalize">
-            <h1 id="padding">Alterar senhas</h1>
+            <h1 id="padding">Alterar senha</h1>
 
             <form action="" id="alterarForm" method="POST">
     
-                <label for="senha"></label><br>
-                <input class="esticadinho" name="senha" id="senhaA" value="" placeholder="Senha antiga">
-                <div class="erro" id="erroSenha">
+                <input 
+                    class="esticadinho" type="password" name="senhaAtual" id="senhaA" placeholder="Senha antiga"
+                    required>
+                <div class="erro" id="erroSenha"></div>
 
-                <label for="nSenha"></label><br>
-                <input class="esticadinho" name="senha" id="nSenha" value="" placeholder="Nova senha">
-                <div class="erro" id="erroSenha">
+                <br>
 
-                <label for="novaSenha2"></label><br>
-                <input class="esticadinho" name="senha" id="rSenha" value="" placeholder="Repita a senha">
-                <div class="erro" id="erroSenha"> <br> <br>
-                
+                <input 
+                    class="esticadinho" type="password" name="novaSenha" id="nSenha" placeholder="Nova senha"
+                    required>
+                <div class="erro" id="erroSenha"></div>
+
+                <br>
+
+                <input 
+                    class="esticadinho" type="password" name="confirmaSenha" id="rSenha" placeholder="Repita a senha"
+                    required>
+                <div class="erro" id="erroSenha"></div>
+
+                <br><br>
+
                 <button id='button1' type="submit">Redefinir</button>
-                
             </form>
 
         </div>
