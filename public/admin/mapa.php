@@ -1,7 +1,25 @@
  <?php 
+  session_start();
+  include("../../db/conexao.php"); 
 
-include("../../db/conexao.php"); 
 
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $localizacao = $_POST['localizacao'];
+    $icone = $_POST['icone'] ?? null;
+
+    if (!empty($localizacao) && !empty($icone)) {
+        $sql = "INSERT INTO marcacao (localizacao, icone) VALUES ('$localizacao', '$icone')";
+
+        if ($mysqli->query($sql) === true) {
+
+            $_SESSION['ultima_marcacao_local'] = $localizacao;
+            $_SESSION['ultima_marcacao_icone'] = $icone;
+
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit;
+        } 
+    }
+ }
  ?>
 
 
@@ -204,25 +222,14 @@ include("../../db/conexao.php");
                 </div>
                 
                 <?php
+                  if (isset($_SESSION['ultima_marcacao_local']) && isset($_SESSION['ultima_marcacao_icone'])) {
 
-                      if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        $localizacao = $_POST['localizacao'];
-                        $icone = $_POST['icone'] ?
-                        $_POST['icone'] : null;
+                  $icone = $_SESSION['ultima_marcacao_icone'];
+                  $local = $_SESSION['ultima_marcacao_local'];
+                }
+                ?>
 
-                        if (!empty($localizacao) && !empty($icone)){
-                          $sql = "INSERT INTO marcacao (localizacao, icone) VALUES ('$localizacao', '$icone')";
-
-                          if ($mysqli->query($sql) === true) {
-                            echo "<p style='color:green;'>Marcação registrada com sucesso!</p>";
-                          } else {
-                            echo "<p style='color:red;'>Erro: " . $mysqli->error . "</p>";
-                          }
-                        }
-                      } 
-                    ?>
-
-                    <form method="POST" action="">
+                <form method="POST" action="">
                 <div class="imagemMarcacao">
                 
                   <input type="radio" name="icone" id="acidente" value="Acidente">
@@ -261,9 +268,8 @@ include("../../db/conexao.php");
           <div class="tremInfoContainer">
             <div class="boxTipoVelocidadeTrem">
               <?php
-                if (isset($localizacao)) {
-                echo "<div>Marcação: <br><img src='../../assets/icons/$icone.png' style='width: 20px;'> " . htmlspecialchars($localizacao) . "</div>";
-                }
+                echo "<div>Marcação:<br><img src='../../assets/icons/$icone.png' style='width:20px;'> " 
+                  . htmlspecialchars($local) . "</div>";
               ?>
           </div>
         </div>
