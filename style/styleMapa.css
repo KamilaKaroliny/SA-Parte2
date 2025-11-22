@@ -44,3 +44,16 @@
 .imagemMarcacao input[type="radio"]:checked + label img {
     border-color: #566abd;
 }
+
+
+.itemMarcacao {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px solid #020347;
+}
+
+.itemMarcacao:last-child {
+  border-bottom: none;
+}

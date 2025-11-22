@@ -20,6 +20,9 @@
         } 
     }
  }
+
+  $sql_listar = "SELECT * FROM marcacao ORDER BY id DESC";
+  $resultado_marcacoes = $mysqli->query($sql_listar);
  ?>
 
 
@@ -267,10 +270,24 @@
         <div class="infoComplementarTrem"> 
           <div class="tremInfoContainer">
             <div class="boxTipoVelocidadeTrem">
-              <?php
-                echo "<div>Marcação:<br><img src='../../assets/icons/$icone.png' style='width:20px;'> " 
-                  . htmlspecialchars($local) . "</div>";
-              ?>
+             <div class="listaMarcacoes">
+               <h3>Marcações recentes:</h3>
+
+               <?php
+                  if ($resultado_marcacoes->num_rows > 0) {
+                  while ($linha = $resultado_marcacoes->fetch_assoc()) {
+                    echo "
+                  <div class='itemMarcacao'>
+                  <img src='../../assets/icons/".$linha['icone'].".png' style='width:20px; margin-right:6px;'>
+                  <span>".$linha['localizacao']."</span>
+                  </div>
+                  ";
+                }
+                } else {
+                  echo "<p>Nenhuma marcação registrada.</p>";
+                }
+                ?>
+              </div>
           </div>
         </div>
         
