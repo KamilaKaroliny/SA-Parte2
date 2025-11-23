@@ -31,9 +31,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $tipo = $_SESSION["tipo"] ?? "";
 
             if ($tipo === "ADM") {
-                $destino = "telaUsuario.php";
+                $destino = "perfil.php";
             } else {
-                $destino = "telaUsuario.php";
+                $destino = "perfil.php";
             }
 
             header("Location: $destino?id=$id");
@@ -62,10 +62,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $tipo = $_SESSION["tipo"] ?? "";
 
             if ($tipo === "ADM") {
-                $voltar = "telaUsuario.php";
+                $voltar = "perfil.php";
                 $home   = "../admin/paginaInicial.php";
             } else {
-                $voltar = "telaUsuario.php";
+                $voltar = "perfil.php";
                 $home   = "../maquinista/paginaInicial.php";
             }
         ?>
