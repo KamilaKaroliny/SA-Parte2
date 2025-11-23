@@ -2,7 +2,11 @@
 body {
     color: rgb(255, 255, 255);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
+    background: linear-gradient(to top left,
+            rgb(61, 77, 138),
+            rgb(86, 106, 189),
+            rgb(63, 82, 155),
+            rgb(68, 85, 150));
     margin-top: 10px;
     text-align: center;
     min-height: 97.5vh;
@@ -1306,4 +1310,177 @@ input:checked~.legenda {
     width: 100%;
     height: 40%;
     padding-right: 15%;
+}
+
+.lista {
+    margin-top: 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.usuario {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff15;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    padding: 8px 12px;
+    margin-bottom: 15px;
+}
+
+/* ALINHAR INFORMAÇÕES RENTE AO NOME */
+.usuario .infos {
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+    /* deixa mais colado */
+}
+
+.usuario .infos h2 {
+    margin: 0;
+    margin-bottom: 2px;
+    /* encosta o subtítulo */
+    font-size: 18px;
+    color: white;
+}
+
+.infos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 2px;
+}
+
+.usuario .infos p {
+    margin: 0;
+    margin-top: -2px;
+    /* puxa mais pra cima */
+    font-size: 14px;
+    color: #eaeaea;
+}
+
+/* ÍCONES */
+.icones {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ic {
+    width: 28px;
+    cursor: pointer;
+}
+
+/* BARRA DE PESQUISA */
+#searchContainer {
+    width: 90%;
+    margin: 20px auto 10px auto;
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+}
+
+#pesquisa {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+}
+
+/* LUPA */
+#btnBuscar {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+#btnBuscar img,
+#lupa {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* BOTÃO DE ADICIONAR */
+#addButton {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+#addButton img {
+    width: 65px;
+    height: 65px;
+}
+
+#subtitulo {
+    font-size: 18px;
+    margin-top: -10px;
+}
+
+#mesesContainer {
+    width: 88%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid white;
+    border-radius: 15px;
+}
+
+.mesCard {
+    width: 100%;
+    margin: 10px 0;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mesCard h3 {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
+
+.mesIcons img {
+    width: 26px;
+    margin-left: 10px;
+}
+
+#addRelatorioBtn {
+    margin-top: 30px;
+}
+
+#addRelatorioBtn img {
+    width: 60px;
+}
+
+.tituloRel {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.tituloRel h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.tituloRel .sub {
+    font-size: 16px;
+    color: #444;
+    margin-top: -5px;
 }

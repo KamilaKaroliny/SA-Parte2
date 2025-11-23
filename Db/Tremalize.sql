@@ -59,9 +59,37 @@ CREATE TABLE sensor_data (
    FOREIGN KEY (id_sensor) REFERENCES sensor (id)
 );
 
+CREATE TABLE relatorios (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT NOT NULL,
+    ano INT NOT NULL,
+    mes INT NOT NULL,
+
+    velocidade_media DECIMAL(10,2),
+    km_percorridos DECIMAL(10,2),
+    tempo_medio_viagem DECIMAL(10,2),
+    combustivel_medio DECIMAL(10,2),
+
+    tempo_empresa INT,
+    quantidade_viagens INT,
+    advertencias INT,
+
+    data_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+);
+
 -- Inserção de usuários
-INSERT INTO usuarios (nome, senha, credencial, email, tipo, data_nascimento, telefone, idade)
+INSERT INTO usuarios (nome, senha, credencial, email, tipo, data_nascimento, telefone, idade, foto_perfil)
 VALUES
-('Icaro', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi', 'X9Y4Z6A1B4', 'icaro@administrador.com', 'ADM', '2001-10-22', '4799955282', 24),
-('Clodoaldo Kowalski', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B3', 'clodoaldo@maquinista.com', 'USER', '1981-10-23', '21954321098', 71),
-('Jarbas Andrade', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU6', 'jarbas@maquinista.com', 'USER', '1991-10-12', '21998565489', 34);
+('Icaro', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi', 'X9Y4Z6A1B4', 'icaro@administrador.com', 'ADM', '2001-10-22', '4799955282', 24, 'clodoaldo.png'),
+('Clodoaldo Kowalski', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B3', 'clodoaldo@maquinista.com', 'USER', '1981-10-23', '21954321098', 71, 'icaro.png'),
+('Jarbas Andrade', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU6', 'jarbas@maquinista.com', 'USER', '1991-10-12', '21998565489', 34, 'jarbas.png');
+
+INSERT INTO relatorios 
+(id_usuario, ano, mes, velocidade_media, km_percorridos, tempo_medio_viagem, combustivel_medio, tempo_empresa, quantidade_viagens, advertencias)
+VALUES
+(2, 2025, 1, 68.4, 1320, 2.1, 340, 5, 28, 0),   -- Clodoaldo
+(2, 2025, 2, 70.2, 1410, 2.0, 360, 5, 31, 1),
+(3, 2025, 1, 74.5, 1500, 1.8, 390, 3, 35, 0),   -- Jarbas
+(3, 2025, 2, 73.1, 1470, 1.9, 380, 3, 33, 0);
