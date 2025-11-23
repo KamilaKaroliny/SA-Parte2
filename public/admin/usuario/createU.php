@@ -106,7 +106,7 @@
         </div>
 
         <div class="api">
-            <div class="flex">
+            <div class="flexApi">
                 <div class="espacamento4">
                     <label class="labelUp1">CEP:</label>
                     <input class="esticadinho5" type="text" name="cep" id="cep">
@@ -118,7 +118,7 @@
                 </div>
             </div>
     
-            <div class="flex">
+            <div class="flexApi">
                 <div class="espacamento4">
                     <label class="labelUp1">Bairro:</label>
                     <input class="esticadinho5" type="text" name="bairro" id="bairro" readonly>
@@ -130,7 +130,7 @@
                 </div>
             </div>
     
-            <div class="flex">
+            <div class="flexApi">
                 <div class="espacamento4">
                     <label class="labelUp1">Número:</label>
                     <input class="esticadinho5" type="text" name="numero">
