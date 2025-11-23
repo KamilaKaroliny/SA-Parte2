@@ -5,6 +5,7 @@ body {
     background-image: linear-gradient(to top left, rgb(61, 77, 138), rgb(86, 106, 189), rgb(63, 82, 155), rgb(68, 85, 150));
     margin-top: 10px;
     text-align: center;
+    min-height: 97.5vh;
 }
 
 /* É o que deixa as letras dentro da caixa do imput branca*/
@@ -308,7 +309,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border-radius: 10px;
 }
 
-#buttonTelaEditar h3{
+#buttonTelaEditar h3 {
     margin: 0%;
     font-size: small;
     font-weight: 550;
@@ -586,7 +587,7 @@ a:hover {
     justify-content: space-around
 }
 
-.meio7{
+.meio7 {
     width: 100%;
     padding: 0px;
     margin: 0px;
@@ -991,7 +992,7 @@ span#textoInfoRelatorio {
     align-items: flex-start;
 }
 
-#imgTelaUsu{
+#imgTelaUsu {
     width: 50px;
     height: 50px;
     padding-top: 10px;
@@ -999,44 +1000,46 @@ span#textoInfoRelatorio {
 
 #separacao {
     padding-top: 70px;
-} 
+}
 
 #separacao1 {
     padding-top: 140px;
-} 
+}
 
-.editarPerfil{
-    display:flex ;
+.editarPerfil {
+    display: flex;
     padding-left: 20px;
 }
 
 /* Style.css do Mapa */
-  
-  /* Seções */
-  #containerCabecalho {
+
+/* Seções */
+#containerCabecalho {
     display: flex;
     align-items: center;
     justify-content: space-around;
     margin-bottom: 0.5rem;
-  }
+}
 
-  /* Seções feitas alinhar todos os itens da página */
-  .secaoClima, .secaoMapaGoogle, .secaoInfoTrem {
+/* Seções feitas alinhar todos os itens da página */
+.secaoClima,
+.secaoMapaGoogle,
+.secaoInfoTrem {
     margin-bottom: 2rem;
     display: flex;
     justify-content: center;
     flex-direction: row;
-  }
-  
-  /*Classe que alinha a egenda, umidade e temperatura e coloca um ao lado da outra*/
-  .containerClima {
+}
+
+/*Classe que alinha a egenda, umidade e temperatura e coloca um ao lado da outra*/
+.containerClima {
     display: flex;
     justify-content: center;
     gap: 0.4rem;
-  }
-  
-  /*Box que forma a parte da legenda, umidade e temperatura*/
-  .boxClimaInfo {
+}
+
+/*Box que forma a parte da legenda, umidade e temperatura*/
+.boxClimaInfo {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1044,50 +1047,50 @@ span#textoInfoRelatorio {
     border: 2px solid #cecccc;
     border-radius: 8px;
     padding: 0.2rem 0.3rem;
-  }
+}
 
-  /*Ajeita as imagens dentro da box legenda, umidade e temperatura*/
-  .boxClimaInfo img {
+/*Ajeita as imagens dentro da box legenda, umidade e temperatura*/
+.boxClimaInfo img {
     width: 20px;
     padding: 0.1rem 0.1rem;
-  }
-  
-  /*Faz o contorno do mapa que é colocado no mapa*/
-  .containerMapa {
+}
+
+/*Faz o contorno do mapa que é colocado no mapa*/
+.containerMapa {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
-  }
+}
 
-  /*Imagem da bateria que fica no canto superior direito*/
-  .iconeBateria {
+/*Imagem da bateria que fica no canto superior direito*/
+.iconeBateria {
     padding: 0px;
     width: 30px;
-  }
+}
 
-  /*Classe criada para separar o posicionamento da bateria em relação ao retante e coloca-la */
-  .iconeBateriaContainer {
+/*Classe criada para separar o posicionamento da bateria em relação ao retante e coloca-la */
+.iconeBateriaContainer {
     display: flex;
     justify-content: flex-end
-  }
+}
 
-  .tremInfoContainer {
+.tremInfoContainer {
     padding: 0px;
     display: flex;
     justify-content: center
-  }
+}
 
-  .infoComplementarTrem {
+.infoComplementarTrem {
     padding: 10px;
     display: flex;
     justify-content: center
-  }
+}
 
-  .imagemTrem {
+.imagemTrem {
     width: 60px;
-  }
-  
-  .boxMaquinistaInfo{
+}
+
+.boxMaquinistaInfo {
     background-color: #566abd;
     color: white;
     padding: 4px;
@@ -1098,9 +1101,9 @@ span#textoInfoRelatorio {
     align-items: center;
     justify-content: center;
     flex-direction: column
-  }
+}
 
-  .boxMarcacaoEditar{
+.boxMarcacaoEditar {
     background-color: transparent;
     color: white;
     padding: 3px;
@@ -1111,9 +1114,9 @@ span#textoInfoRelatorio {
     align-items: center;
     justify-content: center;
     flex-direction: row
-  }
+}
 
-  .boxTipoVelocidadeTrem{
+.boxTipoVelocidadeTrem {
     background-color: #566abd;
     padding: 4px 43px;
     border: 2px solid #cecccc;
@@ -1123,25 +1126,27 @@ span#textoInfoRelatorio {
     align-items: center;
     justify-content: flex-start;
     flex-direction: row
-  }
+}
 
-  .boxMaquinistaInfo img{
+.boxMaquinistaInfo img {
     width: 40px;
-  }
+}
 
-  .secaoInfo, .cartaoInfoTrem {
+.secaoInfo,
+.cartaoInfoTrem {
     background-color: #566abd;
     border: 2px solid #cecccc;
     border-radius: 8px;
     padding: 0.4rem 0.3rem;
     margin: 0.004rem;
-  }
+}
 
-  h2, h4 {
+h2,
+h4 {
     margin-bottom: 0.1rem;
-  }
+}
 
-  .toggleMapa{
+.toggleMapa {
     cursor: pointer;
     border-radius: 2px;
     display: flex;
@@ -1149,13 +1154,13 @@ span#textoInfoRelatorio {
     align-items: center;
 }
 
-  input:checked ~ .notificacoesMapa{
+input:checked~.notificacoesMapa {
     transform: translateX(0);
     box-shadow: 0 0 4px #ffffff;
-  }
+}
 
-  .notificacoesMapa {
-   display: flex;
+.notificacoesMapa {
+    display: flex;
     height: 30%;
     width: 60%;
     position: absolute;
@@ -1173,32 +1178,32 @@ span#textoInfoRelatorio {
     align-content: center;
     flex-direction: column;
     justify-content: flex-start;
-  }
+}
 
-  .tituloMapa{
+.tituloMapa {
     color: #566abd;
     font-weight: 50px;
     text-align: right;
     padding: 70 15 15px;
     pointer-events: none;
     z-index: 3;
-  }
+}
 
-  .imagemMarcacao{
+.imagemMarcacao {
     padding: 10px;
     z-index: 3;
-  }
+}
 
-  .localizacao {
+.localizacao {
     width: 100%;
-  }
+}
 
-  .botao{
+.botao {
     width: auto;
     height: auto;
-  }
+}
 
-  .botaoMarcacao{
+.botaoMarcacao {
     padding: 5px 50px;
     margin: 5px;
     border: 0.5px;
@@ -1207,9 +1212,9 @@ span#textoInfoRelatorio {
     border-color: #000000;
     background-color: #566abd;
     color: rgb(255, 255, 255);
-  }
+}
 
-  .legenda{
+.legenda {
     display: flex;
     height: 50%;
     width: 60%;
@@ -1226,26 +1231,26 @@ span#textoInfoRelatorio {
     flex-direction: column;
     align-items: center;
     z-index: 2;
-  }
+}
 
-  input:checked ~ .invisivel{
+input:checked~.invisivel {
     transform: translateX(0);
     box-shadow: 0 0 4px #ffffff;
-  }
+}
 
-  input:checked ~ .legenda{
+input:checked~.legenda {
     transform: translateX(0);
     box-shadow: 0 0 4px #ffffff;
-  }
-  
-  .imagemLegenda{
+}
+
+.imagemLegenda {
     display: flex;
     flex-direction: column;
     color: #000000;
     z-index: 4;
-  }
+}
 
-  .legenda img{
+.legenda img {
     margin: 3px;
     width: 30px;
     height: 30px;
@@ -1254,18 +1259,18 @@ span#textoInfoRelatorio {
     border-radius: 10px;
     border-color: #000000;
     z-index: 6;
-  }
+}
 
-  .ajustarLegenda{
+.ajustarLegenda {
     display: flex;
     margin: 6px;
     padding: 2px;
     align-items: center;
     color: #000000;
     z-index: 5;
-  }
+}
 
-  .invisivel{
+.invisivel {
     opacity: 40%;
     background-color: rgb(0, 0, 0);
     width: 1000%;
@@ -1278,27 +1283,27 @@ span#textoInfoRelatorio {
     z-index: 1;
     display: flex;
     align-items: center;
-  }
+}
 
-  #iconeVoltar {
+#iconeVoltar {
     height: 25px;
     width: 35px;
-  }
+}
 
-  #logoTremalize {
+#logoTremalize {
     height: 90px;
     width: 150px;
-  }
+}
 
-  #iconeHome {
+#iconeHome {
     height: 60px;
     width: 60px;
-  }
-  
-  /*Id para centralizar o aviso da tela de esqueceu senha*/
-  #aviso{
+}
+
+/*Id para centralizar o aviso da tela de esqueceu senha*/
+#aviso {
     padding-top: 60%;
     width: 100%;
     height: 40%;
     padding-right: 15%;
-  }
+}

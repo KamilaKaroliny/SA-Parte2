@@ -1,30 +1,34 @@
 <?php
 include("../../db/conexao.php"); 
 
+// Verifica se o ID foi enviado
 if (!isset($_GET['id'])) {
-    die('Maquinista não especificado.');
+    die('Usuário não especificado.');
 }
 
 $id = intval($_GET['id']);
 
-$sql = "SELECT * FROM usuarios WHERE id = ? AND tipo = 'USER'";
-$stmt = $conn->prepare($sql);
+// Busca qualquer usuário (USER ou ADM)
+$sql = "SELECT * FROM usuarios WHERE id = ?";
+$stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
 $result = $stmt->get_result();
 
+// Caso não encontre nenhum usuário
 if ($result->num_rows == 0) {
-    die('Maquinista não encontrado.');
+    die('Usuário não encontrado.');
 }
 
-$maquinista = $result->fetch_assoc();
+$usuario = $result->fetch_assoc();
 
-$nome = $maquinista['nome'];
-$telefone = $maquinista['telefone'];
-$idade = $maquinista['idade'];
-$credencial = $maquinista['credencial'];
-$foto = $maquinista['foto_perfil'] ?? 'default.jpg';
-
+// Variáveis
+$nome = $usuario['nome'];
+$telefone = $usuario['telefone'];
+$idade = $usuario['idade'];
+$credencial = $usuario['credencial'];
+$tipo = $usuario['tipo']; // ADM ou USER
+$foto = $usuario['foto_perfil'] ?: 'default.jpg';
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,53 +36,69 @@ $foto = $maquinista['foto_perfil'] ?? 'default.jpg';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
-    <title>Tela de Informações Usuários</title>
+    <title>Informações do Usuário</title>
 </head>
 <body>
+
+    <!-- Parte superior -->
     <div id="flex7">
-        <a href="chat.php?id=<?php echo $id; ?>">
-            <img id="seta" src="../../assets/icons/seta.png" alt="seta">
+        <a href="listaMaquinistas.php">
+            <img id="seta" src="../../assets/icons/seta.png" alt="voltar">
         </a>
-        <a href="paginaInicial.php">
-            <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
+        <a href="../paginaInicial.php">
+            <img id="casa1" src="../../assets/icons/casa.png" alt="home">
         </a>
     </div>
 
+    <!-- Logo -->
     <div>
-        <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+        <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="Logo Tremalize">
     </div>
 
     <main>
-        <div>
+
+        <!-- Foto + Nome -->
+        <div style="text-align:center;">
             <br><br>
-            <img src="../../assets/images/<?php echo $foto; ?>" alt="Foto do maquinista">
+            <img src="../../assets/images/<?php echo $foto; ?>" 
+                 style="width:130px; height:130px; border-radius:50%; object-fit:cover;">
             <h3><?php echo strtoupper($nome); ?></h3>
+            <p style="color:white; margin-top:-10px;">
+                <?php echo ($tipo === "ADM" ? "Administrador" : "Maquinista"); ?>
+            </p>
         </div>
 
+        <!-- Botões -->
         <div id="flex">
+            <!-- CHAT SEMPRE APARECE -->
             <div class="quadradinho1">
                 <a href="chat.php?id=<?php echo $id; ?>">
                     <img id="imgTelaInfo" src="../../assets/icons/mensagens.png" alt="Imagem chat">  
                 </a>
-                <a href="chat.php?id=<?php echo $id; ?>">
-                    <H2>CHAT</H2>
-                </a>
+                <a href="chat.php?id=<?php echo $id; ?>"><h2>CHAT</h2></a>
             </div>
+
+            <!-- RELATÓRIO APENAS PARA MAQUINISTA -->
+            <?php if ($tipo === "USER"): ?>
             <a href="relatorio.php?id=<?php echo $id; ?>">
                 <div class="quadradinho1">
                     <img id="imgTelaInfo" src="../../assets/icons/relatorio.png" alt="Imagem relatorio"> 
-                    <H2>RELATÓRIO</H2>
+                    <h2>RELATÓRIO</h2>
                 </div>
             </a>
+            <?php endif; ?>
         </div>
 
+        <!-- Dados pessoais -->
         <h3>DADOS PESSOAIS</h3>
         <div class="dados">
             <span><strong>Nome: </strong><?php echo $nome; ?></span><br>
             <span><strong>Telefone: </strong><?php echo $telefone; ?></span><br>
-            <span><strong>Idade:</strong> <?php echo $idade; ?> anos</span><br>
-            <span><strong>ID: </strong><?php echo $credencial; ?></span>
+            <span><strong>Idade: </strong><?php echo $idade; ?> anos</span><br>
+            <span><strong>ID (Credencial): </strong><?php echo $credencial; ?></span><br>
+            <span><strong>Tipo: </strong><?php echo ($tipo === "ADM" ? "Administrador" : "Maquinista"); ?></span>
         </div>
+
     </main>
 </body>
 </html>

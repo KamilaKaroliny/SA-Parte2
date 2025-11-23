@@ -11,7 +11,7 @@
     <!-- cabeçalho -->
     <div id="flex4">
         <div class="meio1">
-            <a href="paginaInicial.php">
+            <a href="paginaInicial.php>
                 <img id="seta" src="../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -34,37 +34,37 @@
     <div id="flex5">
         <div class="quadradinhoCircular">
 
-            <a href="relatorioJosevaldo.php">
+            <a href="relatorioJosevaldo.html">
                 <h1 class="text">JOSEVALDO</h1>
             </a>
             <div class="linhaAzul"></div>
 
-            <a href="RelatorioRobson.php">
+            <a href="RelatorioRobson.html">
                 <h1 class="text">ROBSON</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioPedro.php">
+            <a href="relatorioPedro.html">
                 <h1 class="text">PEDRO</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioLuiza.php">
+            <a href="relatorioLuiza.html">
                 <h1 class="text">LUIZA</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioGilsemara.php">
+            <a href="relatorioGilsemara.html">
                 <h1 class="text">GILSEMARA</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioClodaldo.php">
+            <a href="relatorioClodaldo.html">
                 <h1 class="text">CLODOALDO</h1>
             </a>
                 <div class="linhaAzul"></div>
 
-            <a href="relatorioJarbas.php">
+            <a href="relatorioJarbas.html">
                 <h1 class="text">JARBAS</h1>
             </a>
             <div class="linhaAzul"></div>
