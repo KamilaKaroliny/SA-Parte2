@@ -306,6 +306,15 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border-radius: 10px;
 }
 
+#inputF {
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: #5a66d6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #divTelaEditar {
     display: flex;
     padding-right: 235px;
@@ -1120,7 +1129,7 @@ span#textoInfoRelatorio {
     padding-right: 290px;
 }
 
-.flex {
+.flexApi {
     display: flex;
 }
 

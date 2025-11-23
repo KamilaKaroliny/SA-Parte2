@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <div class="api">
         
-        <div class="flex">
+        <div class="flexApi">
             <div class="espacamento4">
                 <label class="labelUp1">CEP:</label>
                 <input class="esticadinho5" type="text" id="cep" name="cep" value="<?php echo $u['cep']; ?>">
@@ -115,7 +115,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
         </div>
             
-        <div class="flex">
+        <div class="flexApi">
             <div class="espacamento4">
                 <label class="labelUp1">Bairro:</label>
                 <input class="esticadinho5" type="text" id="bairro" name="bairro" value="<?php echo $u['bairro']; ?>">
@@ -127,7 +127,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             </div>
         </div>
 
-        <div class="flex">
+        <div class="flexApi">
             <div class="espacamento4">
                 <label class="labelUp1">Número:</label>
                 <input class="esticadinho5" type="text" name="numero" value="<?php echo $u['numero']; ?>">

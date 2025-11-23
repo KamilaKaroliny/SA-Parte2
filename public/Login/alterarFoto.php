@@ -71,14 +71,25 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["foto"])) {
 </head>
 <body>
 
+    <div class="meio7">
+        <a href="perfil.php">
+            <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
+        </a>
+    </div>
+
 <div class="container">
-    <h2>Alterar Foto de Perfil</h2>
+    <img id = "logo" src="../../assets/icons/logoTremalize.png" alt="Logo Tremalize">
+    <h1 id="padding">Alterar Foto de Perfil</h1>
 
     <form method="POST" enctype="multipart/form-data">
-        <label>Selecione uma imagem:</label>
-        <input type="file" name="foto" accept="image/*" required>
+        <div class="">
+            <label>Selecione uma imagem:</label>
+            <input id="inputF" type="file" name="foto" accept="image/*" required>
+        </div>
 
-        <button type="submit" id="button7">Salvar Foto</button>
+        <br>
+        <br>
+        <button type="submit" id="button6">Salvar Foto</button>
     </form>
 
 </div>
