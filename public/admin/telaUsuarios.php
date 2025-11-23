@@ -72,12 +72,12 @@ if (!$result) {
 
             <div class="icones">
                 <!-- EDITAR -->
-                <a href="../../includes/updateM.php?id=<?php echo $u['id']; ?>">
+                <a href="../../includes/updateU.php?id=<?php echo $u['id']; ?>">
                     <img class="ic" src="../../assets/icons/editarMaquinistas.png">
                 </a>
 
                 <!-- DELETAR -->
-                <a href="../../includes/deleteM.php?id=<?php echo $u['id']; ?>">
+                <a href="../../includes/deleteU.php?id=<?php echo $u['id']; ?>">
                     <img class="ic" src="../../assets/icons/lixeira.png">
                 </a>
 
