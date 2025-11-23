@@ -1,5 +1,5 @@
 <?php
-include("../db/conexao.php");
+include("../../../db/conexao.php");
 
 // PEGAR ID
 $id = $_GET['id'] ?? 0;
@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmtUpd->bind_param("ssssi", $nome, $email, $telefone, $tipo, $id);
 
     if ($stmtUpd->execute()) {
-        header("Location:../public/admin/telaUsuarios.php?msg=editado");
+        header("Location:telaUsuarios.php?msg=editado");
         exit;
     } else {
         echo "Erro ao atualizar: " . $mysqli->error;
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Editar Usuário</title>
-    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../../style/style.css">
 </head>
 <body>
 

@@ -43,7 +43,7 @@
         </div>
 
         <div id="flex">
-            <a href="telaUsuarios.php">
+            <a href="usuario/telaUsuarios.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuarios.png"
                     alt="Imagem Usuários">
                     <h3 id="flex" style="margin-top: 10px " ;>USUARIOS</h3>

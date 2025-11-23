@@ -1,5 +1,5 @@
 <?php
-include("../db/conexao.php");
+include("../../../db/conexao.php");
 
 $id = $_GET['id'] ?? 0;
 
