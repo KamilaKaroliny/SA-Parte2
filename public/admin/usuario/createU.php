@@ -23,41 +23,45 @@
 
     if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
-        $nome = $_POST['nome'] ?? '';
-        $dataNascimento = $_POST['dataNascimento'] ?? '';
-        $credencial = $_POST['id'] ?? '';
-        $email = $_POST['email'] ?? '';
-        $senha = $_POST['senha'] ?? '';
-        $confirmarSenha = $_POST['confirmarSenha'] ?? '';
+        // CAPTURA
+        $nome = trim($_POST['nome'] ?? '');
+        $dataNascimento = trim($_POST['dataNascimento'] ?? '');
+        $credencial = trim($_POST['id'] ?? '');
+        $email = trim($_POST['email'] ?? '');
+        $senha = trim($_POST['senha'] ?? '');
         $tipo = $_POST['tipo'] ?? 'USER';
-        $telefone = $_POST['telefone'] ?? '';
-        $cep = $_POST['cep'] ?? '';
-        $rua = $_POST['rua'] ?? '';
-        $bairro = $_POST['bairro'] ?? '';
-        $cidade = $_POST['cidade'] ?? '';
-        $numero = $_POST['numero'] ?? '';
-        $complemento = $_POST['complemento'] ?? '';
+        $telefone = trim($_POST['telefone'] ?? '');
+        $cep = trim($_POST['cep'] ?? '');
+        $rua = trim($_POST['rua'] ?? '');
+        $bairro = trim($_POST['bairro'] ?? '');
+        $cidade = trim($_POST['cidade'] ?? '');
+        $numero = trim($_POST['numero'] ?? '');
+        $complemento = trim($_POST['complemento'] ?? '');
 
-        // Verifica senha
-        if ($senha !== $confirmarSenha) {
-            echo "<div class='message'><p>As senhas não coincidem.</p></div><br>";
+        // VALIDAR CAMPOS OBRIGATÓRIOS
+        if (
+            empty($nome) || empty($dataNascimento) || empty($telefone) ||
+            empty($cep) || empty($rua) || empty($bairro) || empty($cidade) ||
+            empty($numero) || empty($credencial) || empty($email) || empty($senha)
+        ) {
+            echo "<div class='message'><p>Preencha todos os campos obrigatórios!</p></div><br>";
         } else {
 
-            // Verifica email existente
+            // VERIFICA EMAIL EXISTENTE
             $stmt = $mysqli->prepare("SELECT id FROM usuarios WHERE email = ?");
             $stmt->bind_param("s", $email);
             $stmt->execute();
             $stmt->store_result();
 
             if ($stmt->num_rows > 0) {
-                echo "<div class='message'><p>Este e-mail já está em uso, tente outro.</p></div><br>";
-                echo "<a href='javascript:self.history.back()'><button class='btn'>Voltar</button></a>";
+                echo "<div class='message'><p>Este e-mail já está em uso!</p></div><br>";
+                echo "<a href='javascript:self.history.back()'><button id='button8'>Voltar</button></a>";
             } else {
                 $stmt->close();
 
                 $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-                // INSERIR NO BANCO COM ENDEREÇO COMPLETO
+                // INSERIR NO BANCO
                 $stmt = $mysqli->prepare(
                     "INSERT INTO usuarios 
                     (nome, senha, credencial, email, tipo, data_nascimento, telefone, cep, rua, cidade, bairro, numero, complemento)
@@ -88,75 +92,70 @@
 
         <div class="espacamento">
             <label class="labelUp1">Nome:</label>
-            <input class="esticadinho2" type="text" name="nome" autocomplete="off">
+            <input class="esticadinho2" type="text" name="nome">
         </div>
 
         <div class="espacamento">
             <label class="labelUp1">Data nascimento:</label>
-            <input class="esticadinho2" type="text" name="dataNascimento" autocomplete="off">
+            <input class="esticadinho2" type="text" name="dataNascimento">
         </div>
 
         <div class="espacamento">
             <label class="labelUp1">Telefone:</label>
-            <input class="esticadinho2" type="text" name="telefone" id="telefone" autocomplete="off">
+            <input class="esticadinho2" type="text" name="telefone" id="telefone">
         </div>
 
         <div class="api">
             <div class="flex">
                 <div class="espacamento4">
                     <label class="labelUp1">CEP:</label>
-                    <input class="esticadinho5" type="text" name="cep" id="cep" autocomplete="off">
+                    <input class="esticadinho5" type="text" name="cep" id="cep">
                 </div>
         
                 <div class="espacamento4">
                     <label class="labelUp1">Rua:</label>
-                    <input class="esticadinho5" type="text" name="rua" id="rua" autocomplete="off" readonly>
+                    <input class="esticadinho5" type="text" name="rua" id="rua" readonly>
                 </div>
             </div>
     
             <div class="flex">
                 <div class="espacamento4">
                     <label class="labelUp1">Bairro:</label>
-                    <input class="esticadinho5" type="text" name="bairro" id="bairro" autocomplete="off" readonly>
+                    <input class="esticadinho5" type="text" name="bairro" id="bairro" readonly>
                 </div>
         
                 <div class="espacamento4">
                     <label class="labelUp1">Cidade:</label>
-                    <input class="esticadinho5" type="text" name="cidade" id="cidade" autocomplete="off" readonly>
+                    <input class="esticadinho5" type="text" name="cidade" id="cidade" readonly>
                 </div>
             </div>
     
             <div class="flex">
                 <div class="espacamento4">
                     <label class="labelUp1">Número:</label>
-                    <input class="esticadinho5" type="text" name="numero" autocomplete="off">
+                    <input class="esticadinho5" type="text" name="numero">
                 </div>
                 
                 <div class="espacamento4">
                     <label class="labelUp1">Complemento:</label>
-                    <input class="esticadinho5" type="text" name="complemento" autocomplete="off">
+                    <input class="esticadinho5" type="text" name="complemento">
                 </div>
             </div>
         </div>
 
         <div class="espacamento">
             <label class="labelUp1">ID empresa:</label>
-            <input class="esticadinho2" type="text" name="id" autocomplete="off">
+            <input class="esticadinho2" type="text" name="id">
         </div>
 
         <div class="espacamento">
             <label class="labelUp1">Email:</label>
-            <input class="esticadinho2" type="text" name="email" autocomplete="off">
+            <input class="esticadinho2" type="email" name="email">
         </div>
 
         <div class="espacamento">
             <label class="labelUp1">Senha:</label>
-            <input class="esticadinho2" type="password" name="senha" autocomplete="off">
-        </div>
-
-        <div class="espacamento">
-            <label class="labelUp1">Confirmar senha:</label>
-            <input class="esticadinho2" type="password" name="confirmarSenha" autocomplete="off">
+            <input class="esticadinho2" type="password" name="senha">
         </div>
 
         <div class="espacamento">
@@ -177,15 +176,13 @@
 
 </header>
 
-<!-- API ViaCEP -->
+<!-- API ViaCEP (mantida, não é validação) -->
 <script>
-document.getElementById("cep").addEventListener("blur", function(){
-
+document.getElementById("cep").addEventListener("blur", function () {
     let cep = this.value.replace(/\D/g, "");
-
     if (cep.length === 8) {
         fetch(`https://viacep.com.br/ws/${cep}/json/`)
-            .then(resp => resp.json())
+            .then(r => r.json())
             .then(data => {
                 if (!data.erro) {
                     document.getElementById("rua").value = data.logradouro;
