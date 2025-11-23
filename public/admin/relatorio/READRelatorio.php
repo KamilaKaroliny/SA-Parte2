@@ -29,12 +29,7 @@ $foto = $user['foto_perfil'] ?: 'default.jpg';
 // =============================
 // ANOS DISPONÍVEIS
 // =============================
-$sql_anos = "
-SELECT DISTINCT ano 
-FROM relatorios 
-WHERE id_usuario = ?
-ORDER BY ano DESC
-";
+$sql_anos = "SELECT DISTINCT ano FROM relatorios WHERE id_usuario = ? ORDER BY ano DESC";
 $stmt_anos = $mysqli->prepare($sql_anos);
 $stmt_anos->bind_param("i", $id_usuario);
 $stmt_anos->execute();
@@ -58,14 +53,7 @@ $offset = ($pagina - 1) * $porPagina;
 // =============================
 // BUSCAR MESES DO ANO SELECIONADO
 // =============================
-$sql_meses = "
-SELECT mes 
-FROM relatorios 
-WHERE id_usuario = ? AND ano = ?
-ORDER BY mes ASC
-LIMIT ? OFFSET ?
-";
-
+$sql_meses = "SELECT id, mes FROM relatorios WHERE id_usuario = ? AND ano = ? ORDER BY mes ASC LIMIT ? OFFSET ?";
 $stmt_meses = $mysqli->prepare($sql_meses);
 $stmt_meses->bind_param("iiii", $id_usuario, $anoSelecionado, $porPagina, $offset);
 $stmt_meses->execute();
@@ -93,21 +81,19 @@ function nomeMes($m) {
 
     <!-- cabeçalho -->
     <div id="cabecalhoEditar">
-            <div class="meio7">
-                <a href="../telaInformacoes.php?id=<?php echo $id_usuario; ?>">
+        <div class="meio7">
+            <a href="../telaInformacoes.php?id=<?php echo $id_usuario; ?>">
                 <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
-                </a>
-            </div>
-
-            <div class="meio7">
-                <img id="logoEditar" src="../../../assets/icons/logoTremalize.png" alt="logo">
-            </div>
-
-            <div class="meio6">
-                <a href="../paginaInicial.php">
-                    <img id="casaEditar" src="../../../assets/icons/casa.png" alt="casa">
-                </a>
-            </div>
+            </a>
+        </div>
+        <div class="meio7">
+            <img id="logoEditar" src="../../../assets/icons/logoTremalize.png" alt="logo">
+        </div>
+        <div class="meio6">
+            <a href="../paginaInicial.php">
+                <img id="casaEditar" src="../../../assets/icons/casa.png" alt="casa">
+            </a>
+        </div>
     </div>
 
     <main>
@@ -125,8 +111,7 @@ function nomeMes($m) {
                 <input type="hidden" name="id" value="<?php echo $id_usuario; ?>">
                 <select name="ano" class="select-ano">
                     <?php foreach ($anos as $a): ?>
-                        <option value="<?php echo $a; ?>" 
-                            <?php echo ($a == $anoSelecionado) ? 'selected' : ''; ?>>
+                        <option value="<?php echo $a; ?>" <?php echo ($a == $anoSelecionado) ? 'selected' : ''; ?>>
                             <?php echo $a; ?>
                         </option>
                     <?php endforeach; ?>
@@ -137,50 +122,41 @@ function nomeMes($m) {
 
         <!-- Lista de meses -->
         <div class="lista">
-
             <?php if ($result_meses->num_rows == 0): ?>
-
-                <p class="sem-registros">
-                    Nenhum relatório encontrado neste ano.
-                </p>
-
+                <p class="sem-registros">Nenhum relatório encontrado neste ano.</p>
             <?php else: ?>
-
                 <?php while ($m = $result_meses->fetch_assoc()): ?>
                     <div class="cartao">
                         <strong><?php echo nomeMes($m['mes']); ?></strong>
 
-            <div class="icones">
-                <!-- EDITAR -->
-                <a href="updateU.php?id=<?php echo $u['id']; ?>">
-                    <img class="ic" src="../../../assets/icons/editarMaquinistas.png">
-                </a>
+                        <div class="icones">
+                            <!-- EDITAR -->
+                            <a href="EDITRelatorio.php?id_usuario=<?php echo $id_usuario; ?>&id_relatorio=<?php echo $m['id']; ?>">
+                                <img class="ic" src="../../../assets/icons/editarMaquinistas.png">
+                            </a>
 
-                <!-- DELETAR -->
-                <a href="deleteU.php?id=<?php echo $u['id']; ?>">
-                    <img class="ic" src="../../../assets/icons/lixeira.png">
-                </a>
+                            <!-- DELETAR -->
+                            <a href="DELETERelatorio.php?id_usuario=<?php echo $id_usuario; ?>&id_relatorio=<?php echo $m['id']; ?>">
+                            <img class="ic" src="../../../assets/icons/lixeira.png">
+                            </a>
 
-                <!-- INFORMACOES -->
-                <a href="READRelatorioMaquinista.php?id=<?php echo $id_usuario; ?>&ano=<?php echo $anoSelecionado; ?>&mes=<?php echo $m['mes']; ?>">
-                    <img class="ic" src="../../../assets/icons/setinha.png">
-                </a>
-            </div>
+                            <!-- INFORMACOES -->
+                            <a href="READRelatorioMaquinista.php?id=<?php echo $id_usuario; ?>&ano=<?php echo $anoSelecionado; ?>&mes=<?php echo $m['mes']; ?>">
+                                <img class="ic" src="../../../assets/icons/setinha.png">
+                            </a>
+                        </div>
                     </div>
                 <?php endwhile; ?>
-
             <?php endif; ?>
-
         </div>
 
         <!-- Botão novo relatório -->
-    <div id="addButton">
-        <a href="createU.php">
-            <img src="../../../assets/icons/add.png">
-        </a>
-    </div>
+        <div id="addButton">
+            <a href="ADDRelatorio.php?id=<?php echo $id_usuario; ?>">
+                <img src="../../../assets/icons/add.png">
+            </a>
+        </div>
 
     </main>
-
 </body>
 </html>
