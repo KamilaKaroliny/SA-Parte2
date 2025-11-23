@@ -1,14 +1,37 @@
 <?php
 session_start();
 include("../../../db/conexao.php");
+?>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Trem</title>
+    <link rel="stylesheet" href="../../../style/style.css">
+</head>
 
-// Se o formulário foi enviado
+<body>
+<header>
+
+    <div class="meio7">
+        <a href="telaCircular.php">
+            <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
+        </a>
+    </div>
+
+    <img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo">
+    <h1 id="padding">CADASTRAR TREM</h1>
+
+<?php
+
+// Se foi enviado o formulário
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nome = trim($_POST['nome'] ?? '');
     $tipo = trim($_POST['tipo'] ?? '');
 
-    // validação
+    // validando campos
     if (empty($nome) || empty($tipo)) {
         echo "<div class='message'><p>Preencha todos os campos!</p></div><br>";
     } else {
@@ -27,54 +50,37 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         $stmt->close();
     }
-}
+
+} else {
 ?>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Trem</title>
-    <link rel="stylesheet" href="../../../style/style.css">
-</head>
-<body>
+<!-- FORMULÁRIO (só aparece se não enviou POST) -->
+<form method="POST" id="maquinistaForm">
 
-<header>
-
-    <div class="meio7">
-        <a href="telaCircular.php">
-            <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
-        </a>
+    <div class="espacamento">
+        <label class="labelUp1">Nome do Trem:</label>
+        <input class="esticadinho2" type="text" name="nome">
     </div>
 
-    <img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo">
-    <h1 id="padding">CADASTRAR TREM</h1>
+    <div class="espacamento">
+        <label class="labelUp1">Tipo:</label>
+        <select class="esticadinho4" name="tipo">
+            <option value="CIR">Circular</option>
+            <option value="CAR">Carga</option>
+            <option value="TUR">Turismo</option>
+        </select>
+    </div>
 
-    <!-- FORMULÁRIO -->
-    <form method="POST" id="maquinistaForm">
+    <br>
 
-        <div class="espacamento">
-            <label class="labelUp1">Nome do Trem:</label>
-            <input class="esticadinho2" type="text" name="nome">
-        </div>
+    <div class="espacamento">
+        <button id="button8" type="submit">Cadastrar</button>
+    </div>
 
-        <div class="espacamento">
-            <label class="labelUp1">Tipo:</label>
-            <select class="esticadinho4" name="tipo">
-                <option value="CIR">Circular</option>
-                <option value="CAR">Carga</option>
-                <option value="TUR">Turismo</option>
-            </select>
-        </div>
+</form>
 
-        <div class="espacamento">
-            <button id="button8" type="submit">Cadastrar</button>
-        </div>
-
-    </form>
+<?php } ?>
 
 </header>
-
 </body>
 </html>

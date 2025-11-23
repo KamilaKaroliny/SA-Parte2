@@ -404,6 +404,14 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border-radius: 10px;
 }
 
+.esticadinho6 {
+    padding: 13px 160px;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
+}
+
 /**/
 #esqueceuSenhaa {
     text-align: right;
