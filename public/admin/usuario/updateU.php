@@ -40,30 +40,45 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editar Usuário</title>
     <link rel="stylesheet" href="../../../style/style.css">
 </head>
 <body>
 
-<h1 style="text-align:center;">Editar Usuário</h1>
+<img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+<H1 id="padding">EDITAR USUÁRIOS</H1>
 
-<form method="POST" class="formEditar">
-    <label>Nome</label>
-    <input type="text" name="nome" value="<?php echo $u['nome']; ?>" required>
+<form  action="" method="POST" id="maquinistaForm">
+    <div class="espacamento">
+        <label>Nome</label>
+        <input class="esticadinho2" type="text" name="nome" value="<?php echo $u['nome']; ?>" required>
+    </div>
 
-    <label>Email</label>
-    <input type="email" name="email" value="<?php echo $u['email']; ?>" required>
 
-    <label>Telefone</label>
-    <input type="text" name="telefone" value="<?php echo $u['telefone']; ?>">
+    <div class="espacamento">
+        <label>Email</label>
+        <input class="esticadinho2" type="email" name="email" value="<?php echo $u['email']; ?>" required>
+    </div>
+
+
+    <div class="espacamento">
+        <label>Telefone</label>
+        <input class="esticadinho2" type="text" name="telefone" value="<?php echo $u['telefone']; ?>">
+    </div>
+
 
     <label>Tipo</label>
-    <select name="tipo">
+    <select class="esticadinho2" name="tipo">
         <option value="USER" <?php echo ($u['tipo'] === "USER") ? "selected" : ""; ?>>Maquinista</option>
         <option value="ADM" <?php echo ($u['tipo'] === "ADM") ? "selected" : ""; ?>>Admin</option>
     </select>
 
-    <button type="submit" class="btnSalvar">Salvar Alterações</button>
+
+    <div class="espacamento">
+        <button id='button2' type="submit">Salvar Alterações</button>
+    </div>
+
 </form>
 
 </body>
