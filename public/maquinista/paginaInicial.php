@@ -51,14 +51,14 @@
         <div class="meio6">
             <div id=flex2>
                 <div class="meio4">
-                    <img id="logo3" src="../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+                    <img id="logo3" src="../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
                 </div>
             </div>
         </div>
     </div>
 
     <!-- div que comporta a linkagem de todo o nossa app (chat, mapa, maquinistas...) -->
-    <div>
+    <div id="centralizar">
         <div id="flex">
             <a href="mapa.php">
                 <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/trilho.png"
@@ -66,16 +66,6 @@
                     <h3 id="flex">MAPA</h3>
                 </div>
             </a>
-
-            <a href="telaChat.php">
-                <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/mensagens.png"
-                        alt="Imagem chat">
-                    <h3 id="flex">CHAT</h3>
-                </div>
-            </a>
-        </div>
-
-        <div id="flex">
             <a href="telaCircular.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
                     <h3 id="flex">LINHAS</h3>
@@ -83,6 +73,9 @@
             </a>
         </div>
 
+        <div id="flex">
+            
+        </div>
         <div id="flex">
             <a href="../login/telaUsuario.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
