@@ -49,7 +49,7 @@
                     <h3 id="flex" style="margin-top: 10px " ;>USUARIOS</h3>
                 </div>
             </a>
-            <a href="telaCircular.php">
+            <a href="trens/telaCircular.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
                     <h3 id="flex">TRENS</h3>
                 </div>
