@@ -25,6 +25,8 @@ CREATE TABLE usuarios (
 -- Tabela de trens
 CREATE TABLE trem (
     id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(125) NOT NULL,
+    tipo ENUM('CIR', 'CAR', 'TUR') NOT NULL,
     ultimaManutencao DATE NOT NULL,
     proximaManutencao DATE NOT NULL,
     distancia DECIMAL(10,2) NOT NULL,
