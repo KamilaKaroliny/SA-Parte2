@@ -164,7 +164,7 @@
                 <option value="USER">Maquinista</option>
                 <option value="ADM">Administrador</option>
             </select>
-        </div>
+        </div> <br>
 
         <div class="espacamento">
             <button id='button8' type="submit">Cadastrar</button>
