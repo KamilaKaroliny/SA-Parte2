@@ -82,12 +82,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["foto"])) {
     <h1 id="padding">Alterar Foto de Perfil</h1>
 
     <form method="POST" enctype="multipart/form-data">
-        <div class="">
-            <label>Selecione uma imagem:</label>
+        <label>Selecione uma imagem:</label>
+        <br> <br>
+        <div class="inputForms">
             <input id="inputF" type="file" name="foto" accept="image/*" required>
         </div>
 
-        <br>
         <br>
         <button type="submit" id="button6">Salvar Foto</button>
     </form>
