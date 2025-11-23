@@ -2,26 +2,26 @@
 session_start();
 include("../../db/conexao.php");
 
-    // garante que o usuário está logado
-    if (!isset($_SESSION["user_id"])) {
-        header("Location: ../../index.php");
-        exit;
-    }
+// garante que o usuário está logado
+if (!isset($_SESSION["user_id"])) {
+    header("Location: ../../index.php");
+    exit;
+}
 
-    $id = $_SESSION["user_id"];
+$id = $_SESSION["user_id"];
 
-    // busca os dados do usuário logado
-    $sql = "SELECT * FROM usuarios WHERE id = ?";
-    $stmt = $mysqli->prepare($sql);
-    $stmt->bind_param("i", $id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $usuario = $result->fetch_assoc();
-    $stmt->close();
+// busca os dados do usuário logado
+$sql = "SELECT * FROM usuarios WHERE id = ?";
+$stmt = $mysqli->prepare($sql);
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+$usuario = $result->fetch_assoc();
+$stmt->close();
 
-    if (!$usuario) {
-        die("Usuário não encontrado.");
-    }
+if (!$usuario) {
+    die("Usuário não encontrado.");
+}
 ?>
 
 <html lang="pt-BR">
@@ -30,72 +30,84 @@ include("../../db/conexao.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
     <title>Tela Usuário</title>
+
 </head>
 <body>
-    <?php
-        $tipo = $_SESSION["tipo"] ?? "";
 
-        if ($tipo === "ADM") {
-            $voltar = "../admin/paginaInicial.php";
-            $home   = "../admin/paginaInicial.php";
-        } else {
-            $voltar = "../maquinista/paginaInicial.php";
-            $home   = "../maquinista/paginaInicial.php";
-        }
-    ?>
+<?php
+    $tipo = $_SESSION["tipo"] ?? "";
 
-    <div id="flex4">
-        <div class="meio1">
-            <a href="<?= $voltar ?>">
-                <img id="seta" src="../../assets/icons/seta.png" alt="seta">
-            </a>
-        </div>
+    if ($tipo === "ADM") {
+        $voltar = "../admin/paginaInicial.php";
+        $home   = "../admin/paginaInicial.php";
+    } else {
+        $voltar = "../maquinista/paginaInicial.php";
+        $home   = "../maquinista/paginaInicial.php";
+    }
+?>
 
-        <div class="meio1">
-            <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
-        </div>
-
-        <div class="meio2">
-            <a href="<?= $home ?>">
-                <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
-            </a>
-        </div>
+<div id="flex4">
+    <div class="meio1">
+        <a href="<?= $voltar ?>">
+            <img id="seta" src="../../assets/icons/seta.png" alt="seta">
+        </a>
     </div>
 
-    <!-- icone do usuário e o seu nome -->
-    <div>
-        <img id="iconeUsuario" src="../../assets/icons/usuario.png" alt="Icone Usuário">
-        <h2 id="Margin"><?= htmlspecialchars($usuario['nome']) ?></h2>
+    <div class="meio1">
+        <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
     </div>
 
-    <!-- quadradinho do logout e meu perfil -->
-    <div id="flex">
-        <div class="quadradinho4">
-            <a href="../login/logout.php">
-                <img id="imgTelaUsu" src="../../assets/icons/logout.png" alt="Imagem logout">
-                <h2>LOGOUT</h2>
-            </a>
+    <div class="meio2">
+        <a href="<?= $home ?>">
+            <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
+        </a>
+    </div>
+</div>
+
+<div class="perfil-container2">
+    <div class="perfil-container1">
+        <div class="perfil-foto-box1">
+            <img src="../../uploads/<?php echo htmlspecialchars($usuario['foto_perfil']); ?>" 
+                 class="perfil-foto1" alt="Foto de Perfil">
         </div>
     
-        <div class="quadradinho4">
-            <a href="../login/telaEditar.php?id=<?= $usuario['id'] ?>">
-                <img id="imgTelaUsu" src="../../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
-                <h2>MEU PERFIL</h2>
-            </a>
+        <div class="perfil-info1">
+            <h2 id="Margin"><?= htmlspecialchars($usuario['nome']) ?></h2>
+
+            <!-- AGORA É APENAS UM LINK -->
+            <a class="btn-editar1" href="../login/alterarFoto.php">Editar foto</a>
         </div>
     </div>
+</div>
 
-    <!-- dados pessoais -->
+<!-- quadradinho do logout e meu perfil -->
+<div id="flex">
+    <div class="quadradinho4">
+        <a href="../login/logout.php">
+            <img id="imgTelaUsu" src="../../assets/icons/logout.png" alt="Imagem logout">
+            <h2>LOGOUT</h2>
+        </a>
+    </div>
+
+    <div class="quadradinho4">
+        <a href="../login/telaEditar.php?id=<?= $usuario['id'] ?>">
+            <img id="imgTelaUsu" src="../../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
+            <h2>MEU PERFIL</h2>
+        </a>
+    </div>
+</div>
+
+<!-- dados pessoais -->
+<div>
+    <h2>DADOS PESSOAIS</h2>
+
     <div>
-        <h2>DADOS PESSOAIS</h2>
-
-        <div>
-            <h2 class="dadosPessoais">Nome: <?= htmlspecialchars($usuario['nome']) ?></h2>
-            <h2 class="dadosPessoais">Telefone: <?= htmlspecialchars($usuario['telefone']) ?></h2>
-            <h2 class="dadosPessoais">Idade: <?= htmlspecialchars($usuario['idade']) ?></h2>
-            <h2 class="dadosPessoais">ID: <?= htmlspecialchars($usuario['id']) ?></h2>
-        </div>
+        <h2 class="dadosPessoais">Nome: <?= htmlspecialchars($usuario['nome']) ?></h2>
+        <h2 class="dadosPessoais">Telefone: <?= htmlspecialchars($usuario['telefone']) ?></h2>
+        <h2 class="dadosPessoais">Idade: <?= htmlspecialchars($usuario['idade']) ?></h2>
+        <h2 class="dadosPessoais">ID: <?= htmlspecialchars($usuario['id']) ?></h2>
     </div>
+</div>
 
 </body>
 </html>
