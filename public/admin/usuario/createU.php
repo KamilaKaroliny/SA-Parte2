@@ -2,19 +2,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../style/style.css">
-    <title>cadastro</title>
+    <link rel="stylesheet" href="../../../style/style.css">
+    <title>cadastrar novo usuario</title>
 </head>
 
 <body>
     <header>
 
         <!-- Logo e nome do Cadastro -->
-        <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+        <img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
         <H1 id="padding">CADASTRO</H1>
 
         <?php 
-        include("../../db/conexao.php");
+        include("../../../db/conexao.php");
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $nome = $_POST['nome'] ?? '';
@@ -49,7 +49,7 @@
                     $stmt->bind_param("ssssss", $nome, $senhaHash, $credencial, $email, $tipo, $dataNascimento);
                     if ($stmt->execute()) {
                         echo "<div class='message'><p>Cadastro realizado com sucesso!</p></div><br>";
-                        echo "<a href='../../index.php'><button class='btn'>Acessar agora</button></a>";
+                        echo "<a href='telaUsuarios.php'><button id='button8'>Acessar agora</button></a>";
                     } else {
                         echo "<div class='message'><p>Erro ao cadastrar usuário.</p></div><br>";
                     }
@@ -108,8 +108,8 @@
 
             <div class="espacamento">
                 <br>
-                <a href="../../index.php">
-                    <button id='button2' type="submit"> ⟶ </button>
+                <a href="telaUsuarios.php">
+                    <button id='button8' type="submit"> Cadastrar </button>
                 </a>
             </div>
             

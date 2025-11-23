@@ -297,6 +297,15 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     border-radius: 10px;
 }
 
+#button8 {
+    padding: 13px 148px;
+    text-align: center;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
 #divTelaEditar {
     display: flex;
     padding-right: 235px;

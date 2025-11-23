@@ -92,7 +92,7 @@ if (!$result) {
 
     <!-- BOTÃO DE ADICIONAR -->
     <div id="addButton">
-        <a href="add.php">
+        <a href="createU.php">
             <img src="../../../assets/icons/add.png">
         </a>
     </div>

@@ -34,19 +34,30 @@ if (isset($_POST['confirmar'])) {
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deletar Usuário</title>
-    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../../style/style.css">
 </head>
 <body>
 
-<h1 style="text-align:center;color:red;">Excluir Usuário</h1>
+<div 
+    class="meio7">
+        <a href="telaUsuarios.php">
+        <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
+    </a>
+</div>
+
+<img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
+<H1 id="padding">EXCLUIR USUÁRIOS</H1>
 
 <div class="cardConfirmar">
-    <p>Tem certeza que deseja excluir o usuário <strong><?php echo $u['nome']; ?></strong>?</p>
+    <p>
+        Tem certeza que deseja excluir o usuário <strong><?php echo $u['nome']; ?></strong>?
+    </p>
+    <br>
 
     <form method="POST">
-        <button type="submit" name="confirmar" class="btnExcluir">Sim, excluir</button>
-        <a href="listaUsuarios.php" class="btnCancelar">Cancelar</a>
+        <button type="submit" name="confirmar" id='button8'>Sim, excluir</button>
     </form>
 </div>
 
