@@ -10,6 +10,16 @@ if (!isset($_SESSION["user_id"])) {
 
 $id = $_SESSION["user_id"];
 
+// ---> BUSCA FOTO ATUAL DO USUÁRIO
+$sql = "SELECT foto_perfil FROM usuarios WHERE id=?";
+$stmt = $mysqli->prepare($sql);
+$stmt->bind_param("i", $id);
+$stmt->execute();
+$result = $stmt->get_result();
+$dados = $result->fetch_assoc();
+$foto_antiga = $dados["foto_perfil"] ?? null;
+$stmt->close();
+
 // Se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["foto"])) {
 
@@ -31,6 +41,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["foto"])) {
 
     // Move o arquivo
     if (move_uploaded_file($nomeTemp, $caminhoFinal)) {
+
+        // ---> SE TIVER FOTO ANTIGA, APAGA
+        if ($foto_antiga && file_exists($pasta . $foto_antiga)) {
+            unlink($pasta . $foto_antiga);
+        }
 
         // Atualiza no banco
         $sql = "UPDATE usuarios SET foto_perfil=? WHERE id=?";
