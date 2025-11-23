@@ -4,7 +4,7 @@ include("../../../db/conexao.php");
 $id = $_GET['id'] ?? 0;
 
 // BUSCAR USUÁRIO
-$sql = "SELECT nome FROM usuarios WHERE id = ?";
+$sql = "SELECT nome FROM trem WHERE id = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -18,12 +18,12 @@ $u = $result->fetch_assoc();
 
 // SE CONFIRMAR A EXCLUSÃO
 if (isset($_POST['confirmar'])) {
-    $sqlDel = "DELETE FROM usuarios WHERE id = ?";
+    $sqlDel = "DELETE FROM trem WHERE id = ?";
     $stmtDel = $mysqli->prepare($sqlDel);
     $stmtDel->bind_param("i", $id);
 
     if ($stmtDel->execute()) {
-        header("Location: ../public/admin/telaUsuarios.php?msg=deletado");
+        header("Location: telaCircular.php?msg=deletado");
         exit;
     } else {
         echo "Erro ao deletar: " . $mysqli->error;
@@ -42,7 +42,7 @@ if (isset($_POST['confirmar'])) {
 
 <div 
     class="meio7">
-        <a href="telaUsuarios.php">
+        <a href="telaCircular.php">
         <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
     </a>
 </div>

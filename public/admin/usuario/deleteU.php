@@ -23,7 +23,7 @@ if (isset($_POST['confirmar'])) {
     $stmtDel->bind_param("i", $id);
 
     if ($stmtDel->execute()) {
-        header("Location: ../public/admin/telaUsuarios.php?msg=deletado");
+        header("Location: telaUsuarios.php?msg=deletado");
         exit;
     } else {
         echo "Erro ao deletar: " . $mysqli->error;
