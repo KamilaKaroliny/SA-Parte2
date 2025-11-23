@@ -1,85 +1,100 @@
-<html lang="en">
+<?php
+include("../../db/conexao.php");
+
+$busca = isset($_GET['q']) ? trim($_GET['q']) : "";
+
+$sql = "SELECT id, nome, tipo FROM usuarios";
+
+if ($busca !== "") {
+    $sql .= " WHERE nome LIKE ?";
+    $sql .= " ORDER BY nome ASC";
+    $stmt = $mysqli->prepare($sql);
+    $like = "%$busca%";
+    $stmt->bind_param("s", $like);
+    $stmt->execute();
+    $result = $stmt->get_result();
+} else {
+    $sql .= " ORDER BY nome ASC";
+    $result = $mysqli->query($sql);
+}
+
+if (!$result) {
+    die("Erro: " . $mysqli->error);
+}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../style/style.css">
-    <script src="../../scripts/validaLogin.js"></script>
-    <title>telaChat</title>
+    <title>Lista de Maquinistas</title>
 </head>
 <body>
 
     <!-- cabeçalho -->
-    <div id="flex4">
-        <div class="meio1">
-            <a href="paginaInicial.php>
-                <img id="seta" src="../../assets/icons/seta.png" alt="seta">
-            </a>
-        </div>
+    <div id="cabecalhoEditar">
+            <div class="meio7">
+                <a href="./paginaInicial.php">
+                    <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
+                </a>
+            </div>
 
-        <div class="meio1">
-            <img id="logo4" src="../../assets/icons/logoTremalize.png" alt="logo">
-        </div>
+            <div class="meio7">
+                <img id="logoEditar" src="../../assets/icons/logoTremalize.png" alt="logo">
+            </div>
 
-        <div class="meio2">
-            <a href="paginaInicial.php">
-                <img id="casa1" src="../../assets/icons/casa.png" alt="casa">
-            </a>
-        </div>
+            <div class="meio6">
+                <a href="./paginaInicial.php">
+                    <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
+                </a>
+            </div>
     </div>
 
-    <!-- imagem da aba de pesquisa -->
-    <img class="abaPesquisa" src="../../assets/icons/abaPesquisa.png" alt="">
+    <!-- barra de pesquisa -->
+    <form method="GET" id="searchContainer">
+        <input 
+            type="text" name="q" id="pesquisa" placeholder="Pesquisa" 
+            value="<?php echo htmlspecialchars($busca); ?>">
+        <button type="submit" id="btnBuscar">
+            <img id="lupa" src="../../assets/icons/lupa.png" alt="buscar">
+        </button>
+    </form>
 
-    <!-- quadrado onde comporta os nomes dos maquinistas e a linkagem dos seus relatorios -->
-    <div id="flex5">
-        <div class="quadradinhoCircular">
+    <!-- listagem -->
+    <div class="lista">
+    <?php while ($u = $result->fetch_assoc()): ?>
+        <div class="card usuario">
+            <div class="infos">
+                <h2><?php echo strtoupper($u['nome']); ?></h2>
+                <p><?php echo ($u['tipo'] === "USER") ? "Maquinista" : "Admin"; ?></p>
+            </div>
 
-            <a href="relatorioJosevaldo.html">
-                <h1 class="text">JOSEVALDO</h1>
-            </a>
-            <div class="linhaAzul"></div>
+            <div class="icones">
+                <!-- EDITAR -->
+                <a href="editar.php?id=<?php echo $u['id']; ?>">
+                    <img class="ic" src="../../assets/icons/editarMaquinistas.png">
+                </a>
 
-            <a href="RelatorioRobson.html">
-                <h1 class="text">ROBSON</h1>
-            </a>
-                <div class="linhaAzul"></div>
+                <!-- DELETAR -->
+                <a href="deletar.php?id=<?php echo $u['id']; ?>">
+                    <img class="ic" src="../../assets/icons/lixeira.png">
+                </a>
 
-            <a href="relatorioPedro.html">
-                <h1 class="text">PEDRO</h1>
-            </a>
-                <div class="linhaAzul"></div>
-
-            <a href="relatorioLuiza.html">
-                <h1 class="text">LUIZA</h1>
-            </a>
-                <div class="linhaAzul"></div>
-
-            <a href="relatorioGilsemara.html">
-                <h1 class="text">GILSEMARA</h1>
-            </a>
-                <div class="linhaAzul"></div>
-
-            <a href="relatorioClodaldo.html">
-                <h1 class="text">CLODOALDO</h1>
-            </a>
-                <div class="linhaAzul"></div>
-
-            <a href="relatorioJarbas.html">
-                <h1 class="text">JARBAS</h1>
-            </a>
-            <div class="linhaAzul"></div>
-
-            <a href="relatorioRaimundo.php">
-                <h1 class="text">RAIMUNDO</h1>
-                <br>
-            </a>
-
+                <!-- INFORMACOES -->
+                <a href="telaInformacoes.php?id=<?php echo $u['id']; ?>">
+                    <img class="ic" src="../../assets/icons/setinha.png">
+                </a>
+            </div>
         </div>
+    <?php endwhile; ?>
     </div>
-    
-    <!-- circulo onde comporta o icone + -->
-    <div class="toggle2" >
-        <i class="iconeMais"> + </i>
+
+    <!-- BOTÃO DE ADICIONAR -->
+    <div id="addButton">
+        <a href="add.php">
+            <img src="../../assets/icons/add.png">
+        </a>
     </div>
 
 </body>
