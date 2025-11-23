@@ -289,8 +289,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 #button7 {
-    padding: 13px 50px;
-    display: flex;
+    padding: 0px 120px;
     text-align: center;
     background-color: rgb(86, 106, 189);
     color: rgb(255, 254, 254);
@@ -364,6 +363,14 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     color: white;
     font-weight: bold;
     font-size: 14px;
+}
+
+.esticadinho4 {
+    padding: 13px 130px;
+    background-color: rgb(86, 106, 189);
+    color: rgb(255, 254, 254);
+    border: 1px solid #cecccc;
+    border-radius: 10px;
 }
 
 /**/
@@ -967,6 +974,13 @@ span#textoInfoRelatorio {
     height: 60px;
 }
 
+.espacamento3 {
+    width: 384px;
+    height: 46px;
+    justify-content: center;
+    display: flex;
+}
+
 .iconeMais {
     font-size: 35px;
     height: 40px;
@@ -1013,6 +1027,15 @@ span#textoInfoRelatorio {
 .editarPerfil {
     display: flex;
     padding-left: 20px;
+}
+
+.labelUp1{
+    display: flex;
+    padding-left: 30px;
+}
+
+.labelUp2{
+    padding-right: 290px;
 }
 
 /* Style.css do Mapa */

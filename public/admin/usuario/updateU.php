@@ -46,37 +46,44 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
 
+<div 
+    class="meio7">
+        <a href="telaUsuarios.php">
+        <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
+    </a>
+</div>
+
 <img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
 <H1 id="padding">EDITAR USUÁRIOS</H1>
 
 <form  action="" method="POST" id="maquinistaForm">
     <div class="espacamento">
-        <label>Nome</label>
+        <label class="labelUp1">Nome:</label>
         <input class="esticadinho2" type="text" name="nome" value="<?php echo $u['nome']; ?>" required>
     </div>
 
 
     <div class="espacamento">
-        <label>Email</label>
+        <label class="labelUp1">Email:</label>
         <input class="esticadinho2" type="email" name="email" value="<?php echo $u['email']; ?>" required>
     </div>
 
 
     <div class="espacamento">
-        <label>Telefone</label>
+        <label class="labelUp1">Telefone:</label>
         <input class="esticadinho2" type="text" name="telefone" value="<?php echo $u['telefone']; ?>">
     </div>
 
 
-    <label>Tipo</label>
-    <select class="esticadinho2" name="tipo">
+    <label class="labelUp2">Tipo:</label>
+    <select class="esticadinho4" name="tipo">
         <option value="USER" <?php echo ($u['tipo'] === "USER") ? "selected" : ""; ?>>Maquinista</option>
         <option value="ADM" <?php echo ($u['tipo'] === "ADM") ? "selected" : ""; ?>>Admin</option>
-    </select>
+    </select> <br> <br>
 
 
-    <div class="espacamento">
-        <button id='button2' type="submit">Salvar Alterações</button>
+    <div class="espacamento3">
+        <button id='button7' type="submit">Salvar Alterações</button>
     </div>
 
 </form>
