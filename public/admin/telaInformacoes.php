@@ -39,20 +39,22 @@ $foto = $usuario['foto_perfil'] ?: 'default.jpg';
     <title>Informações do Usuário</title>
 </head>
 <body>
+    <div id="cabecalhoEditar">
+            <div class="meio7">
+                <a href="usuario/telaUsuarios.php">
+                    <img id="setaEditar" src="../../assets/icons/seta.png" alt="seta">
+                </a>
+            </div>
 
-    <!-- Parte superior -->
-    <div id="flex7">
-        <a href="listaMaquinistas.php">
-            <img id="seta" src="../../assets/icons/seta.png" alt="voltar">
-        </a>
-        <a href="../paginaInicial.php">
-            <img id="casa1" src="../../assets/icons/casa.png" alt="home">
-        </a>
-    </div>
+            <div class="meio7">
+                <img id="logoEditar" src="../../assets/icons/logoTremalize.png" alt="logo">
+            </div>
 
-    <!-- Logo -->
-    <div>
-        <img id="logo2" src="../../assets/icons/logoTremalize.png" alt="Logo Tremalize">
+            <div class="meio6">
+                <a href="paginaInicial.php">
+                    <img id="casaEditar" src="../../assets/icons/casa.png" alt="casa">
+                </a>
+            </div>
     </div>
 
     <main>
