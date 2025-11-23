@@ -43,7 +43,7 @@
         </div>
 
         <div id="flex">
-            <a href="telaMaquinista.php">
+            <a href="telaUsuarios.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuarios.png"
                     alt="Imagem Usuários">
                     <h3 id="flex" style="margin-top: 10px " ;>USUARIOS</h3>
@@ -57,7 +57,7 @@
         </div>
 
         <div id="flex">
-            <a href="../login/telaUsuario.php">
+            <a href="../login/perfil.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
                     alt="Imagem Usuário">
                     <h3 id="flex">PERFIL</h3>

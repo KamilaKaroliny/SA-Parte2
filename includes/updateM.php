@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmtUpd->bind_param("ssssi", $nome, $email, $telefone, $tipo, $id);
 
     if ($stmtUpd->execute()) {
-        header("Location:../public/admin/telaMaquinista.php?msg=editado");
+        header("Location:../public/admin/telaUsuarios.php?msg=editado");
         exit;
     } else {
         echo "Erro ao atualizar: " . $mysqli->error;
