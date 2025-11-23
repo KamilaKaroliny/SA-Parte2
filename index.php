@@ -58,7 +58,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <div class="erro" id="erroEmail">
     
                 <label for="senha"></label><br>
-                <input class="esticadinho" name="senha" id="senha" value="" placeholder="Senha">
+                <input class="esticadinho" type="password" name="senha" id="senha" value="" placeholder="Senha">
                 <div class="erro" id="erroSenha">
 
                 <div id="esqueceuSenhaa">
