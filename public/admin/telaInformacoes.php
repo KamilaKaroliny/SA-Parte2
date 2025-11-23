@@ -82,7 +82,7 @@ $foto = $usuario['foto_perfil'] ?: 'default.jpg';
 
             <!-- RELATÓRIO APENAS PARA MAQUINISTA -->
             <?php if ($tipo === "USER"): ?>
-            <a href="relatorios/READRelatorio.php?id=<?php echo $id; ?>">
+            <a href="relatorio/READRelatorio.php?id=<?php echo $id; ?>">
                 <div class="quadradinho1">
                     <img id="imgTelaInfo" src="../../assets/icons/relatorio.png" alt="Imagem relatorio"> 
                     <h2>RELATÓRIO</h2>

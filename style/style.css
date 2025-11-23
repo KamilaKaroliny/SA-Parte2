@@ -1038,12 +1038,12 @@ span#textoInfoRelatorio {
     padding-left: 20px;
 }
 
-.labelUp1{
+.labelUp1 {
     display: flex;
     padding-left: 30px;
 }
 
-.labelUp2{
+.labelUp2 {
     padding-right: 290px;
 }
 
@@ -1515,4 +1515,113 @@ input:checked~.legenda {
     font-size: 16px;
     color: #444;
     margin-top: -5px;
+}
+
+/*AQUI:*/
+
+/* Barra superior */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.icon {
+    width: 40px;
+}
+
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.logo {
+    width: 120px;
+}
+
+/* Foto + nome */
+.perfil {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.perfil-foto {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.perfil-nome {
+    margin-top: 10px;
+}
+
+.divisor {
+    width: 70%;
+    margin: 10px auto;
+    border: 1px solid #6fb8cc;
+}
+
+/* Seleção de ano */
+.ano-box {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.select-ano {
+    padding: 7px;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-filtrar {
+    padding: 7px 12px;
+    background: #09292e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Lista */
+.lista {
+    width: 85%;
+    margin: 25px auto;
+}
+
+.sem-registros {
+    text-align: center;
+    color: #c8e4ef;
+}
+
+/* Cartões dos meses */
+.cartao {
+    background: #02485a;
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+}
+
+.acao-link {
+    color: #8cd8ff;
+    text-decoration: none;
+}
+
+.acao-link:hover {
+    text-decoration: underline;
+}
+
+/* Botão criar novo */
+.novo-btn-container {
+    text-align: center;
+    margin-bottom: 40px;
 }
