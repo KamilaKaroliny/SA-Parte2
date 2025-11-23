@@ -315,7 +315,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     justify-content: center;
 }
 
-.inputForms{
+.inputForms {
     display: flex;
     justify-content: center;
 }
@@ -1054,62 +1054,62 @@ span#textoInfoRelatorio {
 }
 
 .perfil-container2 {
-    display: flex ;
-    justify-content: center ;
-    width: 100% ;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 .perfil-container1 {
-    display: flex ;
-    align-items: center ;
-    flex-direction: column ;
-    gap: 15px ;
-    padding: 15px ;
-    width: fit-content ;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    width: fit-content;
 }
 
 /* Círculo branco */
 .perfil-foto-box1 {
-    width: 250px ;
-    height: 250px ;
-    border-radius: 50% ;
-    background: #ffffff ;
-    border: 2px solid #cccccc ;
-    display: flex ;
-    justify-content: center ;
-    align-items: center ;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 2px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Foto dentro do círculo */
 .perfil-foto1 {
-    width: 240px ;
-    height: 240px ;
-    border-radius: 50% ;
-    object-fit: cover ;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 /* Nome e botão */
 .perfil-info1 {
-    display: flex ;
+    display: flex;
     flex-direction: column;
-    align-items: center ;
+    align-items: center;
 }
 
 /* Botão de editar */
 .btn-editar1 {
-    margin-top: 5px ;
-    display: inline-block ;
-    padding: 6px 12px ;
-    background: #3b6dc4 ;
-    color: white ;
-    border-radius: 6px ;
-    cursor: pointer ;
-    font-size: 14px ;
-    text-decoration: none ;
+    margin-top: 5px;
+    display: inline-block;
+    padding: 6px 12px;
+    background: #3b6dc4;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
 }
 
 .btn-editar1:hover {
-    background: #2a57a6 ;
+    background: #2a57a6;
 }
 
 #separacao {
@@ -1792,4 +1792,16 @@ input:checked~.legenda {
     font-size: 20px;
     font-weight: bold;
     color: black;
+}
+
+#centralizar {
+    display: flex;
+    flex-direction: column;
+    /* mantém as linhas uma embaixo da outra */
+    align-items: center;
+    /* centraliza horizontalmente o conjunto de linhas */
+    gap: 20px;
+    /* mantém espaço entre as linhas */
+    width: 100%;
+    /* ocupa a largura total */
 }

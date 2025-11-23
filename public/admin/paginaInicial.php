@@ -25,52 +25,49 @@
     </div>
 
     <!-- div que comporta a linkagem de todo o nossa app (chat, mapa, maquinistas...) -->
-    <div>
-        <div id="flex">
-            <a href="mapa.php">
-                <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/trilho.png"
-                        alt="Imagem de Trilho">
-                    <h3 id="flex">MAPA</h3>
-                </div>
-            </a>
-
-            <a href="telaChat.php">
-                <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/mensagens.png"
-                        alt="Imagem chat">
-                    <h3 id="flex">CHAT</h3>
-                </div>
-            </a>
+     <div id="centralizar">
+        <div>
+            <div id="flex">
+                <a href="mapa.php">
+                    <div class="quadradinho1"><img class="imgTelaInicial" src="../../assets/icons/trilho.png"
+                            alt="Imagem de Trilho">
+                        <h3 id="flex">MAPA</h3>
+                    </div>
+                </a>
+                <a href="usuario/telaUsuarios.php">
+                    <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuarios.png"
+                        alt="Imagem Usuários">
+                        <h3 id="flex" style="margin-top: 10px " ;>USUARIOS</h3>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <div id="flex">
-            <a href="usuario/telaUsuarios.php">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuarios.png"
-                    alt="Imagem Usuários">
-                    <h3 id="flex" style="margin-top: 10px " ;>USUARIOS</h3>
-                </div>
-            </a>
-            <a href="trens/telaCircular.php">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
-                    <h3 id="flex">TRENS</h3>
-                </div>
-            </a>
+        <div>
+            <div id="flex">
+                <a href="trens/telaCircular.php">
+                    <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
+                        <h3 id="flex">TRENS</h3>
+                    </div>
+                </a>
+                <a href="../login/perfil.php">
+                    <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
+                        alt="Imagem Usuário">
+                        <h3 id="flex">PERFIL</h3>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <div id="flex">
-            <a href="../login/perfil.php">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
-                    alt="Imagem Usuário">
-                    <h3 id="flex">PERFIL</h3>
-                </div>
-            </a>
+            <div id="flex">
+                <a href="feedback.php">
+                    <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/feedback.png"
+                            alt="Imagem Feedback">
+                        <h3 id="flex">FEEDBACK</h3>
+                    </div>
+                </a>
 
-            <a href="feedback.php">
-                <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/feedback.png"
-                        alt="Imagem Feedback">
-                    <h3 id="flex">FEEDBACK</h3>
-                </div>
-            </a>
-
+            </div>
         </div>
     </div>
 
