@@ -95,3 +95,9 @@ VALUES
 (2, 2025, 2, 70.2, 1410, 2.0, 360, 5, 31, 1),
 (3, 2025, 1, 74.5, 1500, 1.8, 390, 3, 35, 0),   -- Jarbas
 (3, 2025, 2, 73.1, 1470, 1.9, 380, 3, 33, 0);
+
+INSERT INTO trem (nome, tipo, ultimaManutencao, proximaManutencao, distancia, combustivel, numeroVagoes, quantidadeManutencao, combustivelMaximo, capacidadeMaxima)
+VALUES
+('Expresso Azul', 'CIR', '2025-10-01', '2026-04-01', 12000.50, 'Elétrico', 8, 3, 500.00, 400),
+('Carreta Verde', 'CAR', '2025-09-15', '2026-03-15', 15000.00, 'Combustão', 12, 4, 800.00, 600),
+('Trem Turístico', 'TUR', '2025-08-20', '2026-02-20', 5000.75, 'Elétrico', 5, 2, 300.00, 200);
