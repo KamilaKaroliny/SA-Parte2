@@ -1061,11 +1061,11 @@ span#textoInfoRelatorio {
     padding-right: 290px;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.api{
+.api {
     display: flex;
     flex-direction: column;
     padding-left: 15px;
@@ -1648,4 +1648,75 @@ input:checked~.legenda {
 .novo-btn-container {
     text-align: center;
     margin-bottom: 40px;
+}
+
+:root {
+    --rel-bg-body: #f5f7fa;
+    --rel-card-bg: #ffffff;
+    --rel-card-radius: 12px;
+    --rel-card-shadow: 10px 1px 2px rgba(0, 0, 0, 0.1);
+    --rel-primary-color: #333333;
+    --rel-secondary-color: #555555;
+    --rel-gap: 20px;
+}
+
+.rel-perfil {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.rel-perfil-foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+}
+
+.rel-perfil-nome {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.rel-separator {
+    width: 80%;
+    margin: 10px auto;
+    border: 0;
+    border-top: 1px solid white;
+}
+
+.rel-mes-ano {
+    margin-top: 5px;
+    font-size: 16px;
+    color: white;
+}
+
+/* =========================== */
+/* CARDS                        */
+/* =========================== */
+.rel-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(197px, 1fr));
+    gap: var(--rel-gap);
+}
+
+.rel-card {
+    background-color: var(--rel-card-bg);
+    border-radius: var(--rel-card-radius);
+    padding: 10px;
+    box-shadow: var(--rel-card-shadow);
+    text-align: center;
+}
+
+.rel-card strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 14px;
+    color: black;
+}
+
+.rel-card span {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
 }

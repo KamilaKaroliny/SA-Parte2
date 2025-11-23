@@ -86,7 +86,7 @@ function nomeMes($m) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Relatórios</title>
+    <title>Relatórios Usuários</title>
     <link rel="stylesheet" href="../../../style/style.css">
 </head>
 <body>
@@ -94,8 +94,8 @@ function nomeMes($m) {
     <!-- cabeçalho -->
     <div id="cabecalhoEditar">
             <div class="meio7">
-                <a href="../telaInformacoes.php">
-                    <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
+                <a href="../telaInformacoes.php?id=<?php echo $id_usuario; ?>">
+                <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
                 </a>
             </div>
 
@@ -162,7 +162,7 @@ function nomeMes($m) {
                 </a>
 
                 <!-- INFORMACOES -->
-                <a href="../telaInformacoes.php?id=<?php echo $u['id']; ?>">
+                <a href="READRelatorioMaquinista.php?id=<?php echo $id_usuario; ?>&ano=<?php echo $anoSelecionado; ?>&mes=<?php echo $m['mes']; ?>">
                     <img class="ic" src="../../../assets/icons/setinha.png">
                 </a>
             </div>
