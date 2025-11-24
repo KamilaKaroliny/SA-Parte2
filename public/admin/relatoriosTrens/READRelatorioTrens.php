@@ -139,7 +139,7 @@ function nomeMes($m) {
                             </a>
 
                             <!-- INFORMAÇÕES -->
-                            <a href="READRelatorioTremDetalhes.php?id=<?php echo $id_trem; ?>&ano=<?php echo $anoSelecionado; ?>&mes=<?php echo $m['mes']; ?>">
+                            <a href="READRelatorioDosTrens.php?id=<?php echo $id_trem; ?>&ano=<?php echo $anoSelecionado; ?>&mes=<?php echo $m['mes']; ?>">
                                 <img class="ic" src="../../../assets/icons/setinha.png">
                             </a>
                         </div>
