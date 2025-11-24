@@ -1,3 +1,31 @@
+ <?php 
+  session_start();
+  include("../../db/conexao.php"); 
+
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $localizacao = $_POST['localizacao'];
+    $icone = $_POST['icone'] ?? null;
+
+    if (!empty($localizacao) && !empty($icone)) {
+        $sql = "INSERT INTO marcacao (localizacao, icone) VALUES ('$localizacao', '$icone')";
+
+        if ($mysqli->query($sql) === true) {
+
+            $_SESSION['ultima_marcacao_local'] = $localizacao;
+            $_SESSION['ultima_marcacao_icone'] = $icone;
+
+            header("Location: " . $_SERVER['PHP_SELF']);
+            exit;
+        } 
+    }
+ }
+
+  $sql_listar = "SELECT * FROM marcacao ORDER BY id DESC";
+  $resultado_marcacoes = $mysqli->query($sql_listar);
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -152,7 +180,7 @@
 
         <!-- Botão do maquinista para ele receber as infos deles -->
         <div class="infoComplementarTrem">
-          <a href="telaInformacoesJosevaldo.html">
+          <a href="telaInformacoesJosevaldo.php">
               <button class="boxMaquinistaInfo">
                 <img src="../../assets/icons/maquinistas.png" alt="icone do motorista">
                 <div>
@@ -180,45 +208,86 @@
               <!-- Tela de Marcação -->
               <div class="invisivel"></div>
               <div class="notificacoesMapa">
-                <h2 class="tituloMapa"> MARCAÇÃO</h2>
+                
 
+                <div class="boxMarcacao">
+                  <h2 class="tituloMapa">MARCAÇÃO:</h2>
+
+                  <a href="editarMarcacao.php">
+                    <div class="boxMarcacaoEditar" style = "margin-left: 10px;" >
+                      <div class="iconeMarcacaoContainer">
+                        <img class= "iconeMarcacao" src="../../assets/icons/editar.png" alt="bateria dos trens">
+                      </div>
+                    </div>
+                  </a>
+                  
+                  
+                </div>
+                
+                <?php
+                  if (isset($_SESSION['ultima_marcacao_local']) && isset($_SESSION['ultima_marcacao_icone'])) {
+
+                  $icone = $_SESSION['ultima_marcacao_icone'];
+                  $local = $_SESSION['ultima_marcacao_local'];
+                }
+                ?>
+
+                <form method="POST" action="">
                 <div class="imagemMarcacao">
-                  <img src="../../assets/icons/acidente.png" alt="Icone de acidente">
-                  <img src="../../assets/icons/obras.png" alt="Icone de obras">
-                  <img src="../../assets/icons/quebraNoTrilho.png" alt="Icone de quebra no trilho">
+                
+                  <input type="radio" name="icone" id="acidente" value="Acidente">
+                  <label for="acidente">
+                    <img src="../../assets/icons/acidente.png" alt="Ícone de acidente" class="imagemMarcacaoImg">
+                  </label>
+
+                  <input type="radio" name="icone" id="obras" value="Obras">
+                  <label for="obras">
+                    <img src="../../assets/icons/obras.png" alt="Ícone de obras" class="imagemMarcacaoImg">
+                  </label>
+
+                  <input type="radio" name="icone" id="quebra" value="Quebra">
+                  <label for="quebra">
+                    <img src="../../assets/icons/quebraNoTrilho.png" alt="Ícone de quebra no trilho" class="imagemMarcacaoImg">
+                  </label>
+
                 </div>
 
                 <div>
-                  <h4 class="legenda">DIGITE A RUA NO QUAL QUEIRA MARCAR</h4>
-                </div>
-
-                <div>
-                  <input class="localizacao" type="text">
+                    
+                    
+                    <input class="localizacao" type="text" name = "localizacao">
                </div>
                
                <div class="botao">
-                  <button class="botaoMarcacao" type="button"> MARCAR </button>
+                <input class="botaoMarcacao" type="submit" value="Marcar">
                </div>
 
               </div>
-          </label>
+              </label>
         </div>
 
         <!-- Tipo do trem -->
         <div class="infoComplementarTrem"> 
           <div class="tremInfoContainer">
             <div class="boxTipoVelocidadeTrem">
-              <h3>Tipo:</h3>
-              <h3>Circular</h3>
-              <br>
-              <h3>-</h3>
-            </div>
-          </div>
+             <div class="listaMarcacoes">
+               <h3>Marcações recentes:</h3>
 
-          <!-- Velocidade que o trem está andando -->
-          <div class="boxMaquinistaInfo">
-            <h5>Velocidade</h5>
-            <h4>100Km/h</h4>
+               <?php
+                  if ($resultado_marcacoes->num_rows > 0) {
+                  while ($linha = $resultado_marcacoes->fetch_assoc()) {
+                    echo "
+                  <div class='itemMarcacao'>
+                  <img src='../../assets/icons/".$linha['icone'].".png' style='width:20px; margin-right:6px;'>
+                  <span>".$linha['localizacao']."</span>
+                  </div>
+                  ";
+                }
+                } else {
+                  echo "<p>Nenhuma marcação registrada.</p>";
+                }
+                ?>
+              </div>
           </div>
         </div>
         
