@@ -3,11 +3,10 @@ include("../../../db/conexao.php");
 
 $busca = isset($_GET['q']) ? trim($_GET['q']) : "";
 
-$sql = "SELECT id, nome, tipo FROM usuarios";
+$sql = "SELECT id, nome, tipo FROM trem";
 
 if ($busca !== "") {
-    $sql .= " WHERE nome LIKE ?";
-    $sql .= " ORDER BY nome ASC";
+    $sql .= " WHERE nome LIKE ? ORDER BY nome ASC";
     $stmt = $mysqli->prepare($sql);
     $like = "%$busca%";
     $stmt->bind_param("s", $like);
@@ -28,27 +27,27 @@ if (!$result) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../../style/style.css">
-    <title>Lista de Maquinistas</title>
+    <title>Lista de Trens</title>
 </head>
 <body>
 
     <!-- cabeçalho -->
     <div id="cabecalhoEditar">
-            <div class="meio7">
-                <a href="../paginaInicial.php">
-                    <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
-                </a>
-            </div>
+        <div class="meio7">
+            <a href="../paginaInicial.php">
+                <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
+            </a>
+        </div>
 
-            <div class="meio7">
-                <img id="logoEditar" src="../../../assets/icons/logoTremalize.png" alt="logo">
-            </div>
+        <div class="meio7">
+            <img id="logoEditar" src="../../../assets/icons/logoTremalize.png" alt="logo">
+        </div>
 
-            <div class="meio6">
-                <a href="../paginaInicial.php">
-                    <img id="casaEditar" src="../../../assets/icons/casa.png" alt="casa">
-                </a>
-            </div>
+        <div class="meio6">
+            <a href="../paginaInicial.php">
+                <img id="casaEditar" src="../../../assets/icons/casa.png" alt="casa">
+            </a>
+        </div>
     </div>
 
     <!-- barra de pesquisa -->
@@ -64,37 +63,32 @@ if (!$result) {
     <!-- listagem -->
     <div class="lista">
     <?php while ($u = $result->fetch_assoc()): ?>
+
         <div class="card usuario">
             <div class="infos">
                 <h2><?php echo strtoupper($u['nome']); ?></h2>
-                <p><?php echo ($u['tipo'] === "USER") ? "Maquinista" : "Admin"; ?></p>
+
+                <p>
+                <?php
+                    $tipos = [
+                        "CIR" => "Circular",
+                        "CAR" => "Carga",
+                        "TUR" => "Turismo"
+                    ];
+                    echo $tipos[$u['tipo']] ?? "Tipo desconhecido";
+                ?>
+                </p>
             </div>
+                <div class="icones">
 
-            <div class="icones">
-                <!-- EDITAR -->
-                <a href="updateU.php?id=<?php echo $u['id']; ?>">
-                    <img class="ic" src="../../../assets/icons/editarMaquinistas.png">
-                </a>
-
-                <!-- DELETAR -->
-                <a href="deleteU.php?id=<?php echo $u['id']; ?>">
-                    <img class="ic" src="../../../assets/icons/lixeira.png">
-                </a>
-
-                <!-- INFORMACOES -->
+                <!-- INFORMAÇÕES -->
                 <a href="../telaInformacoes.php?id=<?php echo $u['id']; ?>">
                     <img class="ic" src="../../../assets/icons/setinha.png">
                 </a>
             </div>
         </div>
-    <?php endwhile; ?>
-    </div>
 
-    <!-- BOTÃO DE ADICIONAR -->
-    <div id="addButton">
-        <a href="createU.php">
-            <img src="../../../assets/icons/add.png">
-        </a>
+    <?php endwhile; ?>
     </div>
 
 </body>

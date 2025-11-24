@@ -66,7 +66,7 @@
                     <h3 id="flex">MAPA</h3>
                 </div>
             </a>
-            <a href="telaCircular.php">
+            <a href="trens/telaCircular.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/linhas.png" alt="Imagem Linhas">
                     <h3 id="flex">LINHAS</h3>
                 </div>
@@ -77,10 +77,10 @@
             
         </div>
         <div id="flex">
-            <a href="../login/telaUsuario.php">
+            <a href="../login/perfil.php">
                 <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/usuario.png"
                     alt="Imagem Usuário">
-                    <h3 id="flex">USUÁRIO</h3>
+                    <h3 id="flex">Perfil</h3>
                 </div>
             </a>
 
