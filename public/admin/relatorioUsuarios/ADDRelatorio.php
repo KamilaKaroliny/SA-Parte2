@@ -99,57 +99,59 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <?php if (!empty($msg)) echo $msg; ?>
 
     <form action="" method="POST" class="rel-form">
+        <!-- MANTER ID DO USUÁRIO OU TREM SE NECESSÁRIO -->
+        <input type="hidden" name="id" value="<?php echo $id_usuario ?? $trem_id; ?>">
 
-        <div class="rel-input-group">
-            <label>Ano:</label>
-            <input type="number" name="ano" required>
+        <div class="rel-form-group">
+            <label class="rel-label">Ano</label>
+            <input class="rel-input" type="number" name="ano" required>
         </div>
 
-        <div class="rel-input-group">
-            <label>Mês:</label>
-            <input type="number" name="mes" min="1" max="12" required>
+        <div class="rel-form-group">
+            <label class="rel-label">Mês</label>
+            <input class="rel-input" type="number" name="mes" min="1" max="12" required>
         </div>
 
-        <div class="rel-input-group">
-            <label>Velocidade Média (KM/H):</label>
-            <input type="number" step="0.1" name="velocidade_media">
+        <div class="rel-form-group">
+            <label class="rel-label">Velocidade Média (KM/H)</label>
+            <input class="rel-input" type="number" step="0.1" name="velocidade_media">
         </div>
 
-        <div class="rel-input-group">
-            <label>KM Percorridos:</label>
-            <input type="number" step="0.1" name="km_percorridos">
+        <div class="rel-form-group">
+            <label class="rel-label">KM Percorridos</label>
+            <input class="rel-input" type="number" step="0.1" name="km_percorridos">
         </div>
 
-        <div class="rel-input-group">
-            <label>Tempo Médio de Viagem (h):</label>
-            <input type="number" step="0.1" name="tempo_medio">
+        <div class="rel-form-group">
+            <label class="rel-label">Tempo Médio de Viagem (h)</label>
+            <input class="rel-input" type="number" step="0.1" name="tempo_medio">
         </div>
 
-        <div class="rel-input-group">
-            <label>Média de Combustível (L):</label>
-            <input type="number" step="0.1" name="combustivel_medio">
+        <div class="rel-form-group">
+            <label class="rel-label">Média de Combustível (L)</label>
+            <input class="rel-input" type="number" step="0.1" name="combustivel_medio">
         </div>
 
-        <div class="rel-input-group">
-            <label>Tempo de Empresa (anos):</label>
-            <input type="number" name="tempo_empresa">
+        <div class="rel-form-group">
+            <label class="rel-label">Tempo de Empresa (anos)</label>
+            <input class="rel-input" type="number" name="tempo_empresa">
         </div>
 
-        <div class="rel-input-group">
-            <label>Quantidade de Viagens:</label>
-            <input type="number" name="qtd_viagens">
+        <div class="rel-form-group">
+            <label class="rel-label">Quantidade de Viagens</label>
+            <input class="rel-input" type="number" name="qtd_viagens">
         </div>
 
-        <div class="rel-input-group">
-            <label>Advertências:</label>
-            <input type="number" name="advertencias">
+        <div class="rel-form-group">
+            <label class="rel-label">Advertências</label>
+            <input class="rel-input" type="number" name="advertencias">
         </div>
 
-        <div class="rel-input-group">
-            <button type="submit">Adicionar Relatório</button>
+        <div class="rel-form-group">
+            <button type="submit" class="rel-btn">Adicionar Relatório</button>
         </div>
-
     </form>
+
 </main>
 
 </body>
