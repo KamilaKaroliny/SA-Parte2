@@ -81,7 +81,7 @@ function nomeMes($m) {
     <!-- cabeçalho -->
     <div id="cabecalhoEditar">
         <div class="meio7">
-            <a href="../telaInformacoesTrem.php?id=<?php echo $id_trem; ?>">
+            <a href="../trens/telaCircular.php?id=<?php echo $id_usuario; ?>">
                 <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
             </a>
         </div>
@@ -129,12 +129,12 @@ function nomeMes($m) {
 
                         <div class="icones">
                             <!-- EDITAR -->
-                            <a href="EDITRelatorioTrem.php?id_trem=<?php echo $id_trem; ?>&id_relatorio=<?php echo $m['id']; ?>">
+                            <a href="EDITRelatorioTrens.php?id_trem=<?php echo $id_trem; ?>&id_relatorio=<?php echo $m['id']; ?>">
                                 <img class="ic" src="../../../assets/icons/editarMaquinistas.png">
                             </a>
 
                             <!-- DELETAR -->
-                            <a href="DELETERelatorioTrem.php?id_trem=<?php echo $id_trem; ?>&id_relatorio=<?php echo $m['id']; ?>">
+                            <a href="DELETERelatorioTrens.php?id_trem=<?php echo $id_trem; ?>&id_relatorio=<?php echo $m['id']; ?>">
                             <img class="ic" src="../../../assets/icons/lixeira.png">
                             </a>
 
@@ -150,7 +150,7 @@ function nomeMes($m) {
 
         <!-- Botão novo relatório -->
         <div id="addButton">
-            <a href="ADDRelatorioTrem.php?id=<?php echo $id_trem; ?>">
+            <a href="ADDRelatorioTrens.php?id=<?php echo $id_trem; ?>">
                 <img src="../../../assets/icons/add.png">
             </a>
         </div>

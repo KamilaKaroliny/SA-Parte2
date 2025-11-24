@@ -72,14 +72,6 @@ $foto = $usuario['foto_perfil'] ?: 'default.jpg';
 
         <!-- Botões -->
         <div id="flex">
-            <!-- CHAT SEMPRE APARECE -->
-            <div class="quadradinho1">
-                <a href="chat.php?id=<?php echo $id; ?>">
-                    <img id="imgTelaInfo" src="../../assets/icons/mensagens.png" alt="Imagem chat">  
-                </a>
-                <a href="chat.php?id=<?php echo $id; ?>"><h2>CHAT</h2></a>
-            </div>
-
             <!-- RELATÓRIO APENAS PARA MAQUINISTA -->
             <?php if ($tipo === "USER"): ?>
             <a href="relatorioUsuarios/READRelatorio.php?id=<?php echo $id; ?>">

@@ -1,8 +1,8 @@
-CREATE DATABASE tremalize_db;
+CREATE DATABASE IF NOT EXISTS tremalize_db;
 USE tremalize_db;
 
 -- Tabela de usuários
-CREATE TABLE usuarios (
+CREATE TABLE IF NOT EXISTS usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(125) NOT NULL,
     senha VARCHAR(255) NOT NULL,
@@ -23,7 +23,7 @@ CREATE TABLE usuarios (
 );
 
 -- Tabela de trens
-CREATE TABLE trem (
+CREATE TABLE IF NOT EXISTS trem (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(125) NOT NULL,
     tipo ENUM('CIR', 'CAR', 'TUR') NOT NULL,
@@ -34,18 +34,19 @@ CREATE TABLE trem (
     numeroVagoes INT NOT NULL,
     quantidadeManutencao INT DEFAULT 0,
     combustivelMaximo DECIMAL(10,2) NOT NULL,
-    capacidadeMaxima INT NOT NULL
+    capacidadeMaxima INT NOT NULL,
+    imagem VARCHAR(255) DEFAULT 'default_trem.jpg'
 );
 
 -- Tabela de marcações
-CREATE TABLE marcacao (
+CREATE TABLE IF NOT EXISTS marcacao (
     id INT AUTO_INCREMENT PRIMARY KEY,
     localizacao VARCHAR(225) NOT NULL,
     icone ENUM('Acidente', 'Obras', 'Quebra') NOT NULL
 );
 
 -- Tabela de sensores
-CREATE TABLE sensor (
+CREATE TABLE IF NOT EXISTS sensor (
     id INT AUTO_INCREMENT PRIMARY KEY,
     tipo VARCHAR(225) NOT NULL,
     descricao VARCHAR(225) NOT NULL,
@@ -53,7 +54,7 @@ CREATE TABLE sensor (
 );
 
 -- Tabela de dados dos sensores
-CREATE TABLE sensor_data (
+CREATE TABLE IF NOT EXISTS sensor_data (
    id INT AUTO_INCREMENT PRIMARY KEY,
    valor BIGINT NOT NULL,
    data_hora DATETIME NOT NULL,
@@ -61,42 +62,36 @@ CREATE TABLE sensor_data (
    FOREIGN KEY (id_sensor) REFERENCES sensor (id)
 );
 
-CREATE TABLE relatorios_usuarios (
+-- Relatórios de usuários
+CREATE TABLE IF NOT EXISTS relatorios_usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
     ano INT NOT NULL,
     mes INT NOT NULL,
-
     velocidade_media DECIMAL(10,2),
     km_percorridos DECIMAL(10,2),
     tempo_medio_viagem DECIMAL(10,2),
     combustivel_medio DECIMAL(10,2),
-
     tempo_empresa INT,
     quantidade_viagens INT,
     advertencias INT,
-
     data_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
 
-CREATE TABLE relatorios_trens (
+-- Relatórios de trens
+CREATE TABLE IF NOT EXISTS relatorios_trens (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_trem INT NOT NULL,
     ano INT NOT NULL,
     mes INT NOT NULL,
-
     velocidade_media DECIMAL(10,2),
     km_percorridos DECIMAL(10,2),
     tempo_medio_viagem DECIMAL(10,2),
     combustivel_medio DECIMAL(10,2),
-
     manutencoes INT,
     incidentes INT,
-
     data_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-
     FOREIGN KEY (id_trem) REFERENCES trem(id)
 );
 
@@ -107,26 +102,29 @@ VALUES
 ('Clodoaldo Kowalski', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B3', 'clodoaldo@maquinista.com', 'USER', '1981-10-23', '21954321098', 71, 'clodoaldo.png'),
 ('Jarbas Andrade', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU6', 'jarbas@maquinista.com', 'USER', '1991-10-12', '21998565489', 34, 'jarbas.png');
 
+-- Inserção de trens
+INSERT INTO trem (nome, tipo, ultimaManutencao, proximaManutencao, distancia, combustivel, numeroVagoes, quantidadeManutencao, combustivelMaximo, capacidadeMaxima, imagem)
+VALUES
+('Expresso Azul', 'CIR', '2025-10-01', '2026-04-01', 12000.50, 'Elétrico', 8, 3, 500.00, 400, 'expresso_azul.jpg'),
+('Carreta Verde', 'CAR', '2025-09-15', '2026-03-15', 15000.00, 'Combustão', 12, 4, 800.00, 600, 'carreta_verde.jpg'),
+('Trem Turístico', 'TUR', '2025-08-20', '2026-02-20', 5000.75, 'Elétrico', 5, 2, 300.00, 200, 'trem_turistico.jpg');
+
+-- Inserção de relatórios de usuários
 INSERT INTO relatorios_usuarios 
 (id_usuario, ano, mes, velocidade_media, km_percorridos, tempo_medio_viagem, combustivel_medio, tempo_empresa, quantidade_viagens, advertencias)
 VALUES
-(2, 2025, 1, 68.4, 1320, 2.1, 340, 5, 28, 0),   -- Clodoaldo
+(2, 2025, 1, 68.4, 1320, 2.1, 340, 5, 28, 0),
 (2, 2025, 2, 70.2, 1410, 2.0, 360, 5, 31, 1),
-(3, 2025, 1, 74.5, 1500, 1.8, 390, 3, 35, 0),   -- Jarbas
+(3, 2025, 1, 74.5, 1500, 1.8, 390, 3, 35, 0),
 (3, 2025, 2, 73.1, 1470, 1.9, 380, 3, 33, 0);
 
-INSERT INTO trem (nome, tipo, ultimaManutencao, proximaManutencao, distancia, combustivel, numeroVagoes, quantidadeManutencao, combustivelMaximo, capacidadeMaxima)
-VALUES
-('Expresso Azul', 'CIR', '2025-10-01', '2026-04-01', 12000.50, 'Elétrico', 8, 3, 500.00, 400),
-('Carreta Verde', 'CAR', '2025-09-15', '2026-03-15', 15000.00, 'Combustão', 12, 4, 800.00, 600),
-('Trem Turístico', 'TUR', '2025-08-20', '2026-02-20', 5000.75, 'Elétrico', 5, 2, 300.00, 200);
-
+-- Inserção de relatórios de trens
 INSERT INTO relatorios_trens 
 (id_trem, ano, mes, velocidade_media, km_percorridos, tempo_medio_viagem, combustivel_medio, manutencoes, incidentes)
 VALUES
-(1, 2025, 1, 90.5, 12000, 3.2, 250, 1, 0),   -- Expresso Azul
+(1, 2025, 1, 90.5, 12000, 3.2, 250, 1, 0),
 (1, 2025, 2, 92.3, 12500, 3.0, 260, 0, 1),
-(2, 2025, 1, 80.2, 15000, 4.1, 500, 2, 1),   -- Carreta Verde
+(2, 2025, 1, 80.2, 15000, 4.1, 500, 2, 1),
 (2, 2025, 2, 82.0, 15500, 4.0, 510, 1, 0),
-(3, 2025, 1, 60.7, 5000, 2.5, 120, 0, 0),    -- Trem Turístico
+(3, 2025, 1, 60.7, 5000, 2.5, 120, 0, 0),
 (3, 2025, 2, 61.5, 5200, 2.4, 125, 0, 0);
