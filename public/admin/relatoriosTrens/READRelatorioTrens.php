@@ -81,7 +81,7 @@ function nomeMes($m) {
     <!-- cabeçalho -->
     <div id="cabecalhoEditar">
         <div class="meio7">
-            <a href="../trens/telaCircular.php?id=<?php echo $id_usuario; ?>">
+            <a href="../trens/telaCircular.php">
                 <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
             </a>
         </div>

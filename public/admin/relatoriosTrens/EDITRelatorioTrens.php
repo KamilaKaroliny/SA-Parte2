@@ -94,76 +94,77 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <title>Editar Relatório - <?php echo strtoupper($nome_trem); ?></title>
 <link rel="stylesheet" href="../../../style/style.css">
 </head>
-<body>
+<body class="rel-body">
 
-<header>
-    <div class="meio7">
-        <a href="READRelatorioTrens.php?id=<?php echo $trem_id; ?>">
-            <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
-        </a>
+<header class="rel-header">
+    <div id="cabecalhoEditar">
+        <div class="meio7">
+            <a href="READRelatorioTrens.php?id=<?php echo $trem_id; ?>">
+                <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
+            </a>
+        </div>
+        <div class="meio7">
+            <img id="logoEditar" src="../../../assets/icons/logoTremalize.png" alt="logo">
+        </div>
+        <div class="meio6">
+            <a href="../paginaInicial.php">
+                <img id="casaEditar" src="../../../assets/icons/casa.png" alt="casa">
+            </a>
+        </div>
     </div>
-
-    <img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
-    <h1 id="padding">EDITAR RELATÓRIO</h1>
 </header>
 
-<main class="rel-form-container">
+<div class="rel-perfil-trem">
+    <h2 class="rel-trem-nome"><?php echo strtoupper($nome_trem); ?></h2>
+</div>
 
-    <div class="rel-perfil">
-        <img src="../../../assets/images/<?php echo $imagem_trem; ?>" class="rel-perfil-foto" alt="Foto do Trem">
-        <h2><?php echo strtoupper($nome_trem); ?></h2>
+<?php if (!empty($msg)) echo "<div class='rel-msg'>{$msg}</div>"; ?>
+
+<form method="POST" class="rel-form">
+
+    <div class="rel-form-group">
+        <label class="rel-label">Ano</label>
+        <input class="rel-input" type="number" name="ano" required value="<?php echo htmlspecialchars($relatorio['ano']); ?>">
     </div>
 
-    <?php if (!empty($msg)) echo $msg; ?>
+    <div class="rel-form-group">
+        <label class="rel-label">Mês</label>
+        <input class="rel-input" type="number" name="mes" min="1" max="12" required value="<?php echo htmlspecialchars($relatorio['mes']); ?>">
+    </div>
 
-    <form action="" method="POST" class="rel-form">
+    <div class="rel-form-group">
+        <label class="rel-label">Velocidade Média (KM/H)</label>
+        <input class="rel-input" type="number" step="0.1" name="velocidade_media" value="<?php echo htmlspecialchars($relatorio['velocidade_media']); ?>">
+    </div>
 
-        <div class="rel-input-group">
-            <label>Ano:</label>
-            <input type="number" name="ano" required value="<?php echo htmlspecialchars($relatorio['ano']); ?>">
-        </div>
+    <div class="rel-form-group">
+        <label class="rel-label">KM Percorridos</label>
+        <input class="rel-input" type="number" step="0.1" name="km_percorridos" value="<?php echo htmlspecialchars($relatorio['km_percorridos']); ?>">
+    </div>
 
-        <div class="rel-input-group">
-            <label>Mês:</label>
-            <input type="number" name="mes" min="1" max="12" required value="<?php echo htmlspecialchars($relatorio['mes']); ?>">
-        </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Tempo Médio de Viagem (h)</label>
+        <input class="rel-input" type="number" step="0.1" name="tempo_medio" value="<?php echo htmlspecialchars($relatorio['tempo_medio_viagem']); ?>">
+    </div>
 
-        <div class="rel-input-group">
-            <label>Velocidade Média (KM/H):</label>
-            <input type="number" step="0.1" name="velocidade_media" value="<?php echo htmlspecialchars($relatorio['velocidade_media']); ?>">
-        </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Média de Combustível (L)</label>
+        <input class="rel-input" type="number" step="0.1" name="combustivel_medio" value="<?php echo htmlspecialchars($relatorio['combustivel_medio']); ?>">
+    </div>
 
-        <div class="rel-input-group">
-            <label>KM Percorridos:</label>
-            <input type="number" step="0.1" name="km_percorridos" value="<?php echo htmlspecialchars($relatorio['km_percorridos']); ?>">
-        </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Manutenções Realizadas</label>
+        <input class="rel-input" type="number" name="manutencoes" value="<?php echo htmlspecialchars($relatorio['manutencoes']); ?>">
+    </div>
 
-        <div class="rel-input-group">
-            <label>Tempo Médio de Viagem (h):</label>
-            <input type="number" step="0.1" name="tempo_medio" value="<?php echo htmlspecialchars($relatorio['tempo_medio_viagem']); ?>">
-        </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Incidentes Registrados</label>
+        <input class="rel-input" type="number" name="incidentes" value="<?php echo htmlspecialchars($relatorio['incidentes']); ?>">
+    </div>
 
-        <div class="rel-input-group">
-            <label>Média de Combustível (L):</label>
-            <input type="number" step="0.1" name="combustivel_medio" value="<?php echo htmlspecialchars($relatorio['combustivel_medio']); ?>">
-        </div>
+    <button type="submit" class="rel-btn">Atualizar Relatório</button>
 
-        <div class="rel-input-group">
-            <label>Manutenções Realizadas:</label>
-            <input type="number" name="manutencoes" value="<?php echo htmlspecialchars($relatorio['manutencoes']); ?>">
-        </div>
-
-        <div class="rel-input-group">
-            <label>Incidentes Registrados:</label>
-            <input type="number" name="incidentes" value="<?php echo htmlspecialchars($relatorio['incidentes']); ?>">
-        </div>
-
-        <div class="rel-input-group">
-            <button type="submit">Atualizar Relatório</button>
-        </div>
-
-    </form>
-</main>
+</form>
 
 </body>
 </html>

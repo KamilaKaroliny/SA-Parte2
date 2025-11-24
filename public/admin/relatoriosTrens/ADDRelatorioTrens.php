@@ -31,6 +31,7 @@ $imagem_trem = $trem['imagem'] ?: 'default_trem.jpg';
 $stmt_trem->close();
 
 // TRATAMENTO DO FORMULÁRIO
+$msg = '';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     // CAPTURAR CAMPOS
@@ -79,80 +80,75 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adicionar Relatório - <?php echo strtoupper($nome_trem); ?></title>
-    <link rel="stylesheet" href="../../../style/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adicionar Relatório - Tremalize</title>
+<link rel="stylesheet" href="../../../style/style.css">
 </head>
 <body>
 
 <header>
-    <div class="meio7">
-        <a href="READRelatorioTrens.php?id=<?php echo $trem_id; ?>">
-            <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
-        </a>
-    </div>
+    <div id="cabecalhoEditar">
+        <!-- BOTÃO VOLTAR -->
+        <div class="meio7">
+            <a href="READRelatorioTrens.php?id=<?php echo $trem_id; ?>">
+                <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
+            </a>
+        </div>
 
-    <img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
-    <h1 id="padding">ADICIONAR RELATÓRIO</h1>
+        <div class="meio7">
+            <img id="logoEditar" src="../../../assets/icons/logoTremalize.png" alt="logo">
+        </div>
+
+        <div class="meio6">
+            <a href="../paginaInicial.php">
+                <img id="casaEditar" src="../../../assets/icons/casa.png" alt="casa">
+            </a>
+        </div>
+    </div>
 </header>
 
-<main class="rel-form-container">
+<?php if (!empty($msg)) echo "<div class='msg'>{$msg}</div>"; ?>
 
-    <div class="rel-perfil">
-        <img src="../../../assets/images/<?php echo $imagem_trem; ?>" class="rel-perfil-foto" alt="Foto do Trem">
-        <h2><?php echo strtoupper($nome_trem); ?></h2>
+<main>
+<form method="POST" class="rel-form">
+    <!-- MANTER ID DO TREM -->
+    <input type="hidden" name="id" value="<?php echo $trem_id; ?>">
+
+    <div class="rel-form-group">
+        <label class="rel-label">Ano</label>
+        <input class="rel-input" type="number" name="ano" required>
     </div>
-
-    <?php if (!empty($msg)) echo $msg; ?>
-
-    <form action="" method="POST" class="rel-form">
-
-        <div class="rel-input-group">
-            <label>Ano:</label>
-            <input type="number" name="ano" required>
-        </div>
-
-        <div class="rel-input-group">
-            <label>Mês:</label>
-            <input type="number" name="mes" min="1" max="12" required>
-        </div>
-
-        <div class="rel-input-group">
-            <label>Velocidade Média (KM/H):</label>
-            <input type="number" step="0.1" name="velocidade_media">
-        </div>
-
-        <div class="rel-input-group">
-            <label>KM Percorridos:</label>
-            <input type="number" step="0.1" name="km_percorridos">
-        </div>
-
-        <div class="rel-input-group">
-            <label>Tempo Médio de Viagem (h):</label>
-            <input type="number" step="0.1" name="tempo_medio">
-        </div>
-
-        <div class="rel-input-group">
-            <label>Média de Combustível (L):</label>
-            <input type="number" step="0.1" name="combustivel_medio">
-        </div>
-
-        <div class="rel-input-group">
-            <label>Manutenções Realizadas:</label>
-            <input type="number" name="manutencoes">
-        </div>
-
-        <div class="rel-input-group">
-            <label>Incidentes Registrados:</label>
-            <input type="number" name="incidentes">
-        </div>
-
-        <div class="rel-input-group">
-            <button type="submit">Adicionar Relatório</button>
-        </div>
-
-    </form>
+    <div class="rel-form-group">
+        <label class="rel-label">Mês</label>
+        <input class="rel-input" type="number" name="mes" min="1" max="12" required>
+    </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Velocidade Média (KM/H)</label>
+        <input class="rel-input" type="number" step="0.1" name="velocidade_media">
+    </div>
+    <div class="rel-form-group">
+        <label class="rel-label">KM Percorridos</label>
+        <input class="rel-input" type="number" step="0.1" name="km_percorridos">
+    </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Tempo Médio de Viagem (h)</label>
+        <input class="rel-input" type="number" step="0.1" name="tempo_medio">
+    </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Média de Combustível (L)</label>
+        <input class="rel-input" type="number" step="0.1" name="combustivel_medio">
+    </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Manutenções Realizadas</label>
+        <input class="rel-input" type="number" name="manutencoes">
+    </div>
+    <div class="rel-form-group">
+        <label class="rel-label">Incidentes Registrados</label>
+        <input class="rel-input" type="number" name="incidentes">
+    </div>
+    <button type="submit" class="rel-btn">Adicionar Relatório</button>
+</form>
 </main>
 
 </body>
