@@ -61,7 +61,7 @@ CREATE TABLE sensor_data (
    FOREIGN KEY (id_sensor) REFERENCES sensor (id)
 );
 
-CREATE TABLE relatorios (
+CREATE TABLE relatorios_usuarios (
     id INT AUTO_INCREMENT PRIMARY KEY,
     id_usuario INT NOT NULL,
     ano INT NOT NULL,
@@ -81,6 +81,25 @@ CREATE TABLE relatorios (
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
 );
 
+CREATE TABLE relatorios_trens (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    id_trem INT NOT NULL,
+    ano INT NOT NULL,
+    mes INT NOT NULL,
+
+    velocidade_media DECIMAL(10,2),
+    km_percorridos DECIMAL(10,2),
+    tempo_medio_viagem DECIMAL(10,2),
+    combustivel_medio DECIMAL(10,2),
+
+    manutencoes INT,
+    incidentes INT,
+
+    data_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (id_trem) REFERENCES trem(id)
+);
+
 -- Inserção de usuários
 INSERT INTO usuarios (nome, senha, credencial, email, tipo, data_nascimento, telefone, idade, foto_perfil)
 VALUES
@@ -88,7 +107,7 @@ VALUES
 ('Clodoaldo Kowalski', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B3', 'clodoaldo@maquinista.com', 'USER', '1981-10-23', '21954321098', 71, 'clodoaldo.png'),
 ('Jarbas Andrade', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU6', 'jarbas@maquinista.com', 'USER', '1991-10-12', '21998565489', 34, 'jarbas.png');
 
-INSERT INTO relatorios 
+INSERT INTO relatorios_usuarios 
 (id_usuario, ano, mes, velocidade_media, km_percorridos, tempo_medio_viagem, combustivel_medio, tempo_empresa, quantidade_viagens, advertencias)
 VALUES
 (2, 2025, 1, 68.4, 1320, 2.1, 340, 5, 28, 0),   -- Clodoaldo
@@ -101,3 +120,13 @@ VALUES
 ('Expresso Azul', 'CIR', '2025-10-01', '2026-04-01', 12000.50, 'Elétrico', 8, 3, 500.00, 400),
 ('Carreta Verde', 'CAR', '2025-09-15', '2026-03-15', 15000.00, 'Combustão', 12, 4, 800.00, 600),
 ('Trem Turístico', 'TUR', '2025-08-20', '2026-02-20', 5000.75, 'Elétrico', 5, 2, 300.00, 200);
+
+INSERT INTO relatorios_trens 
+(id_trem, ano, mes, velocidade_media, km_percorridos, tempo_medio_viagem, combustivel_medio, manutencoes, incidentes)
+VALUES
+(1, 2025, 1, 90.5, 12000, 3.2, 250, 1, 0),   -- Expresso Azul
+(1, 2025, 2, 92.3, 12500, 3.0, 260, 0, 1),
+(2, 2025, 1, 80.2, 15000, 4.1, 500, 2, 1),   -- Carreta Verde
+(2, 2025, 2, 82.0, 15500, 4.0, 510, 1, 0),
+(3, 2025, 1, 60.7, 5000, 2.5, 120, 0, 0),    -- Trem Turístico
+(3, 2025, 2, 61.5, 5200, 2.4, 125, 0, 0);

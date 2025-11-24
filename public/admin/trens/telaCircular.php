@@ -93,7 +93,7 @@ if (!$result) {
                 </a>
 
                 <!-- INFORMAÇÕES -->
-                <a href="../telaInformacoes.php?id=<?php echo $u['id']; ?>">
+                <a href="../../admin/relatoriosTrens/READRelatorioTrens.php?id=<?php echo $u['id']; ?>">
                     <img class="ic" src="../../../assets/icons/setinha.png">
                 </a>
             </div>
