@@ -10,7 +10,7 @@
 
 <body>
     <header>
-      <div class="meio2">
+      <div class="meio1">
         <a href="../../index.php" >
             <img id="seta" src="../../assets/icons/seta.png" alt="seta">
         </a>
@@ -19,7 +19,7 @@
 
    <div id="aviso">
       <div class="alert alert-primary d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2"  width="0" height="40" role="img" aria-label="Info:">
+        <svg class="bi flex-shrink-0 me-2"  width="0" height="20" role="img" aria-label="Info:">
           <use xlink:href="#info-fill" />
         </svg>
         <div>
