@@ -33,7 +33,7 @@ $foto_maquinista = $user['foto_perfil'] ?: 'default.jpg';
 // =============================
 $msg = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $stmt = $mysqli->prepare("DELETE FROM relatorios WHERE id = ?");
+    $stmt = $mysqli->prepare("DELETE FROM relatorios_usuarios WHERE id = ?");
     $stmt->bind_param("i", $id_relatorio);
     
     if ($stmt->execute()) {

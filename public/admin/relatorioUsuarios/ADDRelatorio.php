@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     } else {
         // INSERIR NO BANCO
         $stmt = $mysqli->prepare("
-            INSERT INTO relatorios
+            INSERT INTO relatorios_usuarios
             (id_usuario, ano, mes, velocidade_media, km_percorridos, tempo_medio_viagem,
             combustivel_medio, tempo_empresa, quantidade_viagens, advertencias)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)

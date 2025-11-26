@@ -46,7 +46,7 @@ $anoSelecionado = isset($_GET['ano']) ? (int)$_GET['ano'] : ($anos[0] ?? null);
 // PAGINAÇÃO DOS MESES (5 POR PÁGINA)
 // =============================
 $pagina = isset($_GET['p']) ? (int)$_GET['p'] : 1;
-$porPagina = 5;
+$porPagina = 12;
 $offset = ($pagina - 1) * $porPagina;
 
 // =============================
