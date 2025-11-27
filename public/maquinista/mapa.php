@@ -214,13 +214,6 @@
 
   </svg>
 
-  <!-- Botões -->
-  <div style="margin-top:10px;">
-    <button id="btnIniciar">Iniciar</button>
-    <button id="btnPausar">Pausar</button>
-    <button id="btnReset">Resetar</button>
-  </div>
-
   <!-- Painel -->
   <div id="painel">
     <p>Velocidade atual: <span id="velAtual">0</span> px/s</p>
@@ -230,13 +223,6 @@
 </div>
 
 <script>
-/* ======================================================
-    VERSÃO SIMPLES DO SIMULADOR
-    - Trem segue um caminho SVG
-    - Sensores ativam/desativam com clique
-    - Se sensor à frente estiver ON → reduz velocidade
-======================================================= */
-
 // Caminho
 const trilho = document.getElementById('trilho');
 const trem = document.getElementById('trem');
@@ -251,9 +237,7 @@ let velocidadeAtual = 0;
 let velocidadeAlvo = velocidadeBase;
 
 // Controle de movimento
-let posicao = 0;
-let rodando = false;
-let ultimoTempo = null;
+
 
 // Sensores simples (em porcentagem 0–1)
 let sensores = [
@@ -341,23 +325,7 @@ function animar(timestamp) {
 }
 
 /* Botões */
-document.getElementById("btnIniciar").onclick = () => {
-  rodando = true;
-  ultimoTempo = null;
-};
 
-document.getElementById("btnPausar").onclick = () => {
-  rodando = false;
-};
-
-document.getElementById("btnReset").onclick = () => {
-  rodando = false;
-  posicao = 0;
-  velocidadeAtual = 0;
-  const p = trilho.getPointAtLength(0);
-  trem.setAttribute("cx", p.x);
-  trem.setAttribute("cy", p.y);
-};
 
 // iniciar animação
 requestAnimationFrame(animar);
