@@ -98,7 +98,7 @@ CREATE TABLE IF NOT EXISTS relatorios_trens (
 -- Inserção de usuários
 INSERT INTO usuarios (nome, senha, credencial, email, tipo, data_nascimento, telefone, idade, foto_perfil)
 VALUES
-('Icaro', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi', 'X9Y4Z6A1B4', 'icaro@administrador.com', 'ADM', '2001-10-22', '4799955282', 24, 'foto_69238508108245.46554602.jpeg'),
+('Icaro', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi', 'X9Y4Z6A1B4', 'icaro@administrador.com', 'ADM', '2001-10-22', '4799955282', 24, 'icaro.png'),
 ('Clodoaldo Kowalski', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B3', 'clodoaldo@maquinista.com', 'USER', '1981-10-23', '21954321098', 71, 'clodoaldo.png'),
 ('Jarbas Andrade', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU6', 'jarbas@maquinista.com', 'USER', '1991-10-12', '21998565489', 34, 'jarbas.png');
 

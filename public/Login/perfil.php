@@ -11,7 +11,7 @@ if (!isset($_SESSION["user_id"])) {
 $id = $_SESSION["user_id"];
 
 // busca os dados do usuário logado
-$sql = "SELECT * FROM usuarios WHERE id = ?";
+$sql= "SELECT nome,foto_perfil,telefone,idade FROM usuarios WHERE id = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -22,6 +22,10 @@ $stmt->close();
 if (!$usuario) {
     die("Usuário não encontrado.");
 }
+
+$user = $result->fetch_assoc();
+$nome = $user['nome'];
+$foto = $user['foto_perfil'] ?: 'default.jpg';
 ?>
 
 <html lang="pt-BR">
@@ -67,14 +71,13 @@ if (!$usuario) {
 <div class="perfil-container2">
     <div class="perfil-container1">
         <div class="perfil-foto-box1">
-            <img src="../../uploads/<?php echo htmlspecialchars($usuario['foto_perfil']); ?>" 
+            <img src="../../../assets/images/<?php htmlspecialchars($usuario['foto_perfil']); ?>" 
                  class="perfil-foto1" alt="Foto de Perfil">
         </div>
     
         <div class="perfil-info1">
-            <h2 id="Margin"><?= htmlspecialchars($usuario['nome']) ?></h2>
+            <h2 id="Margin"> <?= htmlspecialchars($usuario['nome']) ?></h2>
 
-            <!-- AGORA É APENAS UM LINK -->
             <a class="btn-editar1" href="../login/alterarFoto.php">Editar foto</a>
         </div>
     </div>
@@ -90,7 +93,7 @@ if (!$usuario) {
     </div>
 
     <div class="quadradinho4">
-        <a href="../login/telaEditar.php?id=<?= $usuario['id'] ?>">
+        <a href="../login/telaEditar.php?id=<?= $usuario['id']?>">
             <img id="imgTelaUsu" src="../../assets/icons/meuPerfil.png" alt="Imagem meu perfil">
             <h2>MEU PERFIL</h2>
         </a>
