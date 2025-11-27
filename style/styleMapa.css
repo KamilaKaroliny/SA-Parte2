@@ -57,3 +57,44 @@
 .itemMarcacao:last-child {
   border-bottom: none;
 }
+
+
+body { 
+  background: #566abd; color:white; 
+}
+
+.lista { 
+  max-width:900px; margin:auto; 
+}
+
+.card {
+  background:#1e293b;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.form-editar {
+  background:#23324d;
+  padding:20px;
+  border-radius:10px;
+  margin-top:20px;
+}
+
+input, select { 
+  padding:8px; 
+  width:100%; 
+  margin:5px 0; 
+}
+
+button { 
+  padding:8px 15px; 
+  border:none; 
+  background:#2563eb; 
+  color:white; 
+  border-radius:6px; 
+  cursor:pointer; 
+}
