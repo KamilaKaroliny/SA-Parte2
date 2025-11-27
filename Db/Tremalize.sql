@@ -19,7 +19,8 @@ CREATE TABLE IF NOT EXISTS usuarios (
     numero INT,
     complemento VARCHAR(255),
     data_criacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    foto_perfil VARCHAR(255) DEFAULT 'default.jpg'
+    foto_perfil VARCHAR(255) DEFAULT 'default.jpg',
+    feedback  varchar(550) null
 );
 
 -- Tabela de trens
@@ -128,3 +129,15 @@ VALUES
 (2, 2025, 2, 82.0, 15500, 4.0, 510, 1, 0),
 (3, 2025, 1, 60.7, 5000, 2.5, 120, 0, 0),
 (3, 2025, 2, 61.5, 5200, 2.4, 125, 0, 0);
+
+
+INSERT INTO usuarios 
+(nome, senha, credencial, email, tipo, data_nascimento, telefone, idade, foto_perfil, feedback)
+VALUES
+('Jackson Oliveira', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi', 'X9Y4Z6A1B5', 'jackson@usuario.com', 'USER', '2001-10-22', '4799955282', 24, 'foto_69238508108245.46554602.jpeg', 'Experiência incrível! O trem era muito confortável, os assentos eram espaçosos e a viagem foi super tranquila. Além disso, a pontualidade foi impecável. Com certeza viajarei novamente!'),
+
+('Otávio Ferreira', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B6', 'otavio@usuario.com', 'USER', '1981-10-23', '21954321098', 71, 'clodoaldo.png', 'Ótimo serviço! A equipe de bordo foi muito atenciosa, e o vagão-restaurante tinha boas opções de comida. Só acho que poderia ter mais tomadas para carregar o celular, mas no geral, foi uma viagem excelente!'),
+
+('Jaqueline Elisabeth', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU7', 'jaqueline@usuario.com', 'USER', '1991-10-12', '21998565489', 34, 'jarbas.png', 'Viagem perfeita! O trem era silencioso e muito limpo. Gostei bastante da paisagem ao longo do trajeto. Cheguei ao destino no horário certo e sem estresse. Super recomendo!'),
+
+('Rodrigo Medeiros', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU8', 'rodrigo@usuario.com', 'USER', '1991-10-12', '21998565489', 34, 'rodrigo.png', 'Gostei muito da experiência! O ar-condicionado estava na temperatura ideal, e os assentos eram confortáveis. A única coisa que poderia melhorar é o Wi-Fi, que às vezes falhava. Fora isso, tudo excelente!');
