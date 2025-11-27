@@ -2,15 +2,9 @@
 session_start();
 include("../../db/conexao.php");
 
-// Tipo do usuário logado
-$tipoUsuario = $_SESSION["tipo"] ?? "";
+$tipoUsuario = strtoupper($_SESSION["tipo"] ?? "");
 
-/*
-    ADM  → vê todas notificações
-    USER → vê somente notificações de trem
-*/
-
-// Contar notificações não lidas
+// CONTAR NOTIFICAÇÕES NÃO LIDAS
 if ($tipoUsuario === "ADM") {
     $sql_count = "SELECT COUNT(*) AS total FROM notificacoes WHERE lida = 0";
 } else {
@@ -20,7 +14,7 @@ if ($tipoUsuario === "ADM") {
 $res = $mysqli->query($sql_count)->fetch_assoc();
 $totalNoti = $res["total"] ?? 0;
 
-// Buscar últimas notificações
+// BUSCAR LISTA DE NOTIFICAÇÕES
 if ($tipoUsuario === "ADM") {
     $sql_not = "SELECT * FROM notificacoes ORDER BY data_hora DESC LIMIT 20";
 } else {
@@ -39,56 +33,48 @@ $notificacoes = $mysqli->query($sql_not);
 </head>
 <body>
 
-<label>
+<!-- CHECKBOX PARA ABRIR A ABA -->
+<input type="checkbox" id="checkNoti" class="noticacao" onclick="marcarComoLida()">
 
-    <!-- CHECKBOX QUE ABRE A ABA -->
-    <input class="noticacao" id="abrirNoti" type="checkbox" onclick="marcarComoLida()">
-
-    <!-- BOTÃO (SINO) -->
-    <div class="toggle">
-        <img id="sininho2" src="../../assets/icons/sininho.png" alt="Notificação">
-
-        <?php if ($totalNoti > 0): ?>
-            <span class="badgeNoti" id="badgeNoti"><?= $totalNoti ?></span>
-        <?php endif; ?>
-    </div>
-
-    <!-- ABA DESLIZANDO -->
-    <div class="notificacoes">
-        <h2 class="titulo">NOTIFICAÇÕES</h2>
-
-        <?php if (!$notificacoes || $notificacoes->num_rows == 0): ?>
-            <p>Nenhuma notificação encontrada.</p>
-
-        <?php else: ?>
-            <?php while ($n = $notificacoes->fetch_assoc()): ?>
-                <div class="notificacao-item <?= ($n['lida'] == 0) ? 'unread' : '' ?>">
-                    
-                    <h2 class="tituloNoti">
-                        <?= ($n['tipo'] === 'TREM') ? "Operação de Trem" : "Ação Administrativa"; ?>
-                    </h2>
-
-                    <h3 class="noti">
-                        <?= htmlspecialchars($n["mensagem"]); ?>
-                    </h3>
-
-                    <p style="font-size: 12px; opacity: .8;">
-                        <?= date("d/m/Y H:i", strtotime($n["data_hora"])); ?>
-                    </p>
-                </div>
-            <?php endwhile; ?>
-        <?php endif; ?>
-    </div>
-
+<!-- ÍCONE DO SINO -->
+<label for="checkNoti" class="toggle">
+    <img id="sininho2" src="../../assets/icons/sininho.png" alt="Notificação">
+    <?php if ($totalNoti > 0): ?>
+        <span class="badgeNoti" id="badgeNoti"><?= $totalNoti ?></span>
+    <?php endif; ?>
 </label>
+
+<!-- A ABA DE NOTIFICAÇÕES -->
+<div class="notificacoes">
+    <div class="titulo">Notificações</div>
+
+    <?php if ($notificacoes->num_rows > 0): ?>
+        <?php while ($n = $notificacoes->fetch_assoc()): ?>
+            <div class="notificacao-item <?= $n['lida'] == 0 ? 'unread' : '' ?>">
+                <div class="tituloNoti">
+                    <?= ($n["tipo"] === "USER" ? "Novo Usuário" : "Trem") ?>
+                </div>
+
+                <div class="noti">
+                    <?= htmlspecialchars($n["mensagem"]) ?>
+                </div>
+
+                <small><?= date("d/m/Y H:i", strtotime($n["data_hora"])) ?></small>
+            </div>
+        <?php endwhile; ?>
+    <?php else: ?>
+        <p>Nenhuma notificação encontrada.</p>
+    <?php endif; ?>
+</div>
 
 <script>
 function marcarComoLida() {
-    const chk = document.getElementById("abrirNoti");
+    const chk = document.getElementById("checkNoti");
 
     if (chk.checked) {
         let img = new Image();
-        img.src = "../../includes/marcarLidas.php?t=" + new Date().getTime();
+
+        img.src = "marcarLidas.php?t=" + new Date().getTime();
 
         let badge = document.getElementById("badgeNoti");
         if (badge) badge.remove();
