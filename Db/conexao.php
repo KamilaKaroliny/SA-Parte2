@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "root";
+$password = "";
 $dbname = "tremalize_db";
 
 $mysqli =  new mysqli($servername, $username, $password, $dbname);

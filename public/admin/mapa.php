@@ -180,11 +180,11 @@
 
         <!-- Botão do maquinista para ele receber as infos deles -->
         <div class="infoComplementarTrem">
-          <a href="telaInformacoesJosevaldo.php">
+          <a href="telaInformacoes.php?id=2">
               <button class="boxMaquinistaInfo">
                 <img src="../../assets/icons/maquinistas.png" alt="icone do motorista">
                 <div>
-                  <h4>Josevaldo</h4>
+                  <h4>Cloadoaldo</h4>
                 </div>
               </button>
           </a>

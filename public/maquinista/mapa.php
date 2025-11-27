@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="../../style/style.css" />
   <title>Tremalize</title>
 </head>
+
+
 <body>
 
   <!-- Cabeçalho -->
@@ -69,16 +71,16 @@
 
         <!-- Umidade -->
         <div class="boxClimaInfo">
-          <h4>20% UR</h4>
+          <h4 id="umidade">-- % UR</h4>
           <img src="../../assets/icons/umidade.png" alt="Ícone Umidade" />
-        </div>
+          </div>
 
         <!-- Temperatura -->
         <div class="boxClimaInfo">
-          <h4>30°C</h4>
+          <h4 id="temperatura">-- °C</h4>
           <img src="../../assets/icons/sol.png" alt="Ícone Sol" />
         </div>
-      
+
           <label>
             <input class="noticacao" type="checkbox"> 
 
@@ -139,19 +141,231 @@
 
     </section>
 
-    <!-- Mapa -->
-    <section class="secaoMapaGoogle">
-      <div class="containerMapa">
+    <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Simulação Trem - Versão Simples</title>
 
-        <iframe
-          title="Mapa"
-          width="100%"
-          height="350"
-          frameborder="0"
-          style="border:0"
-          src="https://maps.google.com/maps?q=Joinville&z=12&output=embed"
-          allowfullscreen>
-        </iframe>
+<style>
+  body {
+    background: #0f1724;
+    color: white;
+    font-family: Arial;
+    padding: 20px;
+  }
+
+  .area {
+    background: #111827;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+  }
+
+  button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    margin-right: 5px;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  #painel {
+    margin-top: 20px;
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .sensor-on { fill: #16a34a !important; }
+  .sensor-off { fill: #888 !important; }
+</style>
+</head>
+<body>
+
+<div class="area">
+
+  <h2>Simulador de Trem (Versão Simplificada)</h2>
+
+  <!-- Mapa -->
+  <svg id="svgMapa" width="100%" height="400" viewBox="0 0 1000 500">
+
+    <!-- Caminho central (onde o trem anda) -->
+    <path id="trilho" 
+      d="M 150 400
+         C 200 300, 350 250, 500 250
+         C 650 250, 800 300, 850 400
+         C 700 380, 500 380, 300 390
+         C 180 395, 150 400, 150 400"
+      stroke="white" stroke-width="5" fill="none" />
+
+    <!-- Sensores (serão posicionados via JS) -->
+    <g id="sensores"></g>
+
+    <!-- Trem -->
+    <circle id="trem" cx="150" cy="400" r="15" fill="#60a5fa" stroke="black" stroke-width="2" />
+
+  </svg>
+
+  <!-- Botões -->
+  <div style="margin-top:10px;">
+    <button id="btnIniciar">Iniciar</button>
+    <button id="btnPausar">Pausar</button>
+    <button id="btnReset">Resetar</button>
+  </div>
+
+  <!-- Painel -->
+  <div id="painel">
+    <p>Velocidade atual: <span id="velAtual">0</span> px/s</p>
+    <p>Próximo sensor: <span id="proxSensor">—</span></p>
+  </div>
+
+</div>
+
+<script>
+/* ======================================================
+    VERSÃO SIMPLES DO SIMULADOR
+    - Trem segue um caminho SVG
+    - Sensores ativam/desativam com clique
+    - Se sensor à frente estiver ON → reduz velocidade
+======================================================= */
+
+// Caminho
+const trilho = document.getElementById('trilho');
+const trem = document.getElementById('trem');
+const grupoSensores = document.getElementById('sensores');
+
+// Comprimento total do trilho
+const caminhoTotal = trilho.getTotalLength();
+
+// Velocidades
+let velocidadeBase = 150;   // px por segundo
+let velocidadeAtual = 0;
+let velocidadeAlvo = velocidadeBase;
+
+// Controle de movimento
+let posicao = 0;
+let rodando = false;
+let ultimoTempo = null;
+
+// Sensores simples (em porcentagem 0–1)
+let sensores = [
+  { id: "S1", pct: 0.20, ativo: false },
+  { id: "S2", pct: 0.50, ativo: false },
+  { id: "S3", pct: 0.80, ativo: false }
+];
+
+// Criar marcadores dos sensores
+function criarSensores() {
+  sensores.forEach(s => {
+    const p = trilho.getPointAtLength(s.pct * caminhoTotal);
+
+    const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    c.setAttribute("cx", p.x);
+    c.setAttribute("cy", p.y);
+    c.setAttribute("r", 12);
+    c.setAttribute("data-id", s.id);
+    c.classList.add("sensor-off");
+    c.style.cursor = "pointer";
+
+    c.addEventListener("click", () => toggleSensor(s.id));
+
+    grupoSensores.appendChild(c);
+  });
+}
+
+criarSensores();
+
+function toggleSensor(id) {
+  const s = sensores.find(x => x.id === id);
+  s.ativo = !s.ativo;
+
+  const el = document.querySelector(`[data-id="${id}"]`);
+  el.classList.toggle("sensor-on", s.ativo);
+  el.classList.toggle("sensor-off", !s.ativo);
+}
+
+/* Determinar próximo sensor */
+function getProxSensor() {
+  const pctAtual = posicao / caminhoTotal;
+
+  for (let s of sensores) {
+    if (s.pct > pctAtual) return s;
+  }
+  return sensores[0]; // volta para o primeiro (loop)
+}
+
+/* Loop principal */
+function animar(timestamp) {
+  if (!rodando) {
+    requestAnimationFrame(animar);
+    return;
+  }
+
+  if (!ultimoTempo) ultimoTempo = timestamp;
+  const dt = (timestamp - ultimoTempo) / 1000;
+  ultimoTempo = timestamp;
+
+  // Verifica comportamento por sensor
+  const prox = getProxSensor();
+  document.getElementById("proxSensor").textContent = prox.id;
+
+  if (prox.ativo) {
+    velocidadeAlvo = 40; // reduz
+  } else {
+    velocidadeAlvo = velocidadeBase; // acelera
+  }
+
+  // aproximação simples
+  velocidadeAtual += (velocidadeAlvo - velocidadeAtual) * 0.1;
+
+  posicao += velocidadeAtual * dt;
+
+  if (posicao >= caminhoTotal) posicao = 0; // loop
+
+  // aplica posição ao trem
+  const p = trilho.getPointAtLength(posicao);
+  trem.setAttribute("cx", p.x);
+  trem.setAttribute("cy", p.y);
+
+  document.getElementById("velAtual").textContent = velocidadeAtual.toFixed(0);
+
+  requestAnimationFrame(animar);
+}
+
+/* Botões */
+document.getElementById("btnIniciar").onclick = () => {
+  rodando = true;
+  ultimoTempo = null;
+};
+
+document.getElementById("btnPausar").onclick = () => {
+  rodando = false;
+};
+
+document.getElementById("btnReset").onclick = () => {
+  rodando = false;
+  posicao = 0;
+  velocidadeAtual = 0;
+  const p = trilho.getPointAtLength(0);
+  trem.setAttribute("cx", p.x);
+  trem.setAttribute("cy", p.y);
+};
+
+// iniciar animação
+requestAnimationFrame(animar);
+</script>
+
+</body>
+</html>
+
 
       </div>
     </section>
