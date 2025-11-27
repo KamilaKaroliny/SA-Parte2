@@ -30,16 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nome = trim($_POST['nome'] ?? '');
     $tipo = trim($_POST['tipo'] ?? '');
+    $maquinista = trim($_POST['maquinista'] ?? '');
 
     // validando campos
     if (empty($nome) || empty($tipo)) {
         echo "<div class='message'><p>Preencha todos os campos!</p></div><br>";
     } else {
 
-        $stmt = $mysqli->prepare(
-            "INSERT INTO trem (nome, tipo) VALUES (?, ?)"
-        );
-        $stmt->bind_param("ss", $nome, $tipo);
+        $stmt = $mysqli->prepare("INSERT INTO trem (nome, tipo, maquinista) VALUES (?, ?, ?)");
+
+        $stmt->bind_param("ssi", $nome, $tipo, $maquinista);
 
         if ($stmt->execute()) {
             echo "<div class='message'><p>Trem cadastrado com sucesso!</p></div><br>";
@@ -70,6 +70,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <option value="TUR">Turismo</option>
         </select>
     </div>
+
+    <div class="espacamento">
+            <label for="maquinista" class="labelUp1">Maquinista</label>
+            <select name="maquinista" class="esticadinho4" required>
+                <?php
+                    $result = $mysqli->query("SELECT id, tipo, nome FROM usuarios WHERE tipo='USER'");
+                    while($row = $result->fetch_assoc()) {
+                        echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                    }
+                ?>
+            </select>
+        </div>
 
     <br>
 

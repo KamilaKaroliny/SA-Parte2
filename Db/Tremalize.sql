@@ -27,15 +27,17 @@ CREATE TABLE IF NOT EXISTS trem (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(125) NOT NULL,
     tipo ENUM('CIR', 'CAR', 'TUR') NOT NULL,
-    ultimaManutencao DATE NOT NULL,
-    proximaManutencao DATE NOT NULL,
-    distancia DECIMAL(10,2) NOT NULL,
-    combustivel ENUM('Elétrico', 'Combustão') NOT NULL,
-    numeroVagoes INT NOT NULL,
+    ultimaManutencao DATE NULL,
+    proximaManutencao DATE NULL,
+    distancia DECIMAL(10,2) NULL,
+    combustivel ENUM('Elétrico', 'Combustão') NULL,
+    numeroVagoes INT NULL,
     quantidadeManutencao INT DEFAULT 0,
-    combustivelMaximo DECIMAL(10,2) NOT NULL,
-    capacidadeMaxima INT NOT NULL,
-    imagem VARCHAR(255) DEFAULT 'default_trem.jpg'
+    combustivelMaximo DECIMAL(10,2) NULL,
+    capacidadeMaxima INT NULL,
+    imagem VARCHAR(255) DEFAULT 'default_trem.jpg',
+    maquinista INT NULL,
+    FOREIGN KEY (maquinista) REFERENCES usuarios(id)
 );
 
 -- Tabela de marcações
