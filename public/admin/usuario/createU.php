@@ -55,10 +55,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             );
 
             if ($stmt->execute()) {
-                // Insere notificação
+                // Insere notificação COM TIPO = 'USER'
                 $mensagemNoti = "Novo maquinista cadastrado: " . $nome;
-                $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem) VALUES (?)");
-                $stmtNoti->bind_param("s", $mensagemNoti);
+                $tipoNoti = "USER";
+                $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem, tipo) VALUES (?, ?)");
+                $stmtNoti->bind_param("ss", $mensagemNoti, $tipoNoti);
                 $stmtNoti->execute();
                 $stmtNoti->close();
 

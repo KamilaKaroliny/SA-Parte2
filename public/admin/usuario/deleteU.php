@@ -23,10 +23,11 @@ if (isset($_POST['confirmar'])) {
     $stmtDel->bind_param("i", $id);
 
     if ($stmtDel->execute()) {
-        // Inserir notificação de exclusão
+        // Inserir notificação de exclusão COM TIPO = 'USER'
         $mensagemNoti = "O maquinista " . $u['nome'] . " foi excluído.";
-        $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem) VALUES (?)");
-        $stmtNoti->bind_param("s", $mensagemNoti);
+        $tipoNoti = "USER";
+        $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem, tipo) VALUES (?, ?)");
+        $stmtNoti->bind_param("ss", $mensagemNoti, $tipoNoti);
         $stmtNoti->execute();
         $stmtNoti->close();
 

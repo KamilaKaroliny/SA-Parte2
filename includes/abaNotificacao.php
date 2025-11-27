@@ -1,16 +1,31 @@
 <?php
+session_start();
 include("../../db/conexao.php");
 
+// Tipo do usuário logado
+$tipoUsuario = $_SESSION["tipo"] ?? "";
+
+/*
+    ADM  → vê todas notificações
+    USER → vê somente notificações de trem
+*/
+
 // Contar notificações não lidas
-$sql_count = "SELECT COUNT(*) AS total FROM notificacoes WHERE lida = 0";
+if ($tipoUsuario === "ADM") {
+    $sql_count = "SELECT COUNT(*) AS total FROM notificacoes WHERE lida = 0";
+} else {
+    $sql_count = "SELECT COUNT(*) AS total FROM notificacoes WHERE lida = 0 AND tipo = 'TREM'";
+}
+
 $res = $mysqli->query($sql_count)->fetch_assoc();
 $totalNoti = $res["total"] ?? 0;
 
 // Buscar últimas notificações
-$sql_not = "SELECT id, mensagem, data_hora, lida 
-            FROM notificacoes 
-            ORDER BY data_hora DESC 
-            LIMIT 20";
+if ($tipoUsuario === "ADM") {
+    $sql_not = "SELECT * FROM notificacoes ORDER BY data_hora DESC LIMIT 20";
+} else {
+    $sql_not = "SELECT * FROM notificacoes WHERE tipo = 'TREM' ORDER BY data_hora DESC LIMIT 20";
+}
 
 $notificacoes = $mysqli->query($sql_not);
 ?>
@@ -20,7 +35,7 @@ $notificacoes = $mysqli->query($sql_not);
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style/style.css">
-    <title>Aba de Notificação ADM</title>
+    <title>Notificações</title>
 </head>
 <body>
 
@@ -48,7 +63,11 @@ $notificacoes = $mysqli->query($sql_not);
         <?php else: ?>
             <?php while ($n = $notificacoes->fetch_assoc()): ?>
                 <div class="notificacao-item <?= ($n['lida'] == 0) ? 'unread' : '' ?>">
-                    <h2 class="tituloNoti">Notificação</h2>
+                    
+                    <h2 class="tituloNoti">
+                        <?= ($n['tipo'] === 'TREM') ? "Operação de Trem" : "Ação Administrativa"; ?>
+                    </h2>
+
                     <h3 class="noti">
                         <?= htmlspecialchars($n["mensagem"]); ?>
                     </h3>
@@ -68,11 +87,9 @@ function marcarComoLida() {
     const chk = document.getElementById("abrirNoti");
 
     if (chk.checked) {
-        // chama PHP através de uma imagem invisível
         let img = new Image();
         img.src = "../../includes/marcarLidas.php?t=" + new Date().getTime();
 
-        // some com o badge
         let badge = document.getElementById("badgeNoti");
         if (badge) badge.remove();
     }

@@ -18,7 +18,6 @@ $u = $result->fetch_assoc();
 $sqlMaq = "SELECT id, nome FROM usuarios WHERE tipo = 'USER'";
 $maquinistas = $mysqli->query($sqlMaq);
 
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nome = trim($_POST['nome']);
@@ -30,6 +29,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $stmtUpd->bind_param("ssii", $nome, $tipo, $maquinista, $id);
 
     if ($stmtUpd->execute()) {
+
+        $msg = "Trem atualizado: $nome";
+        $tipoNoti = "TREM";
+        $n = $mysqli->prepare("INSERT INTO notificacoes (mensagem, tipo) VALUES (?, ?)");
+        $n->bind_param("ss", $msg, $tipoNoti);
+        $n->execute();
+
         header("Location: telaCircular.php?msg=editado");
         exit;
     } else {
@@ -68,23 +74,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="espacamento">
         <label class="labelUp1">Tipo:</label>
         <select class="esticadinho4" name="tipo">
-            <option value="CIR" <?php echo ($u['tipo'] === "CIR") ? "selected" : ""; ?>>Circular</option>
-            <option value="CAR" <?php echo ($u['tipo'] === "CAR") ? "selected" : ""; ?>>Carga</option>
-            <option value="TUR" <?php echo ($u['tipo'] === "TUR") ? "selected" : ""; ?>>Turismo</option>
+            <option value="CIR" <?= $u['tipo'] === "CIR" ? "selected" : ""; ?>>Circular</option>
+            <option value="CAR" <?= $u['tipo'] === "CAR" ? "selected" : ""; ?>>Carga</option>
+            <option value="TUR" <?= $u['tipo'] === "TUR" ? "selected" : ""; ?>>Turismo</option>
         </select>
     </div>
 
     <div class="espacamento">
         <label class="labelUp1">Maquinista:</label>
         <select class="esticadinho4" name="maquinista" required>
-            <option value="">Selecione...</option>
 
             <?php while ($m = $maquinistas->fetch_assoc()) { ?>
-                <option value="<?php echo $m['id']; ?>"
-                    <?php echo ($u['maquinista'] == $m['id']) ? "selected" : ""; ?>>
-                    <?php echo $m['nome']; ?>
+                <option value="<?= $m['id']; ?>"
+                    <?= ($u['maquinista'] == $m['id']) ? "selected" : ""; ?>>
+                    <?= $m['nome']; ?>
                 </option>
             <?php } ?>
+
         </select>
     </div>
 

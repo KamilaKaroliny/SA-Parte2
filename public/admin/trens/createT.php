@@ -25,23 +25,27 @@ include("../../../db/conexao.php");
 
 <?php
 
-// Se foi enviado o formulário
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nome = trim($_POST['nome'] ?? '');
     $tipo = trim($_POST['tipo'] ?? '');
     $maquinista = trim($_POST['maquinista'] ?? '');
 
-    // validando campos
     if (empty($nome) || empty($tipo)) {
         echo "<div class='message'><p>Preencha todos os campos!</p></div><br>";
     } else {
 
         $stmt = $mysqli->prepare("INSERT INTO trem (nome, tipo, maquinista) VALUES (?, ?, ?)");
-
         $stmt->bind_param("ssi", $nome, $tipo, $maquinista);
 
         if ($stmt->execute()) {
+
+            $msg = "Novo trem cadastrado: $nome";
+            $tipoNoti = "TREM";
+            $n = $mysqli->prepare("INSERT INTO notificacoes (mensagem, tipo) VALUES (?, ?)");
+            $n->bind_param("ss", $msg, $tipoNoti);
+            $n->execute();
+
             echo "<div class='message'><p>Trem cadastrado com sucesso!</p></div><br>";
             echo "<a href='telaCircular.php'><button id='button8'>Voltar</button></a>";
         } else {
@@ -54,7 +58,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 } else {
 ?>
 
-<!-- FORMULÁRIO (só aparece se não enviou POST) -->
 <form method="POST" id="maquinistaForm">
 
     <div class="espacamento">
@@ -72,19 +75,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     </div>
 
     <div class="espacamento">
-            <label for="maquinista" class="labelUp1">Maquinista</label>
-            <select name="maquinista" class="esticadinho4" required>
-                <?php
-                    $result = $mysqli->query("SELECT id, tipo, nome FROM usuarios WHERE tipo='USER'");
-                    while($row = $result->fetch_assoc()) {
-                        echo "<option value='{$row['id']}'>{$row['nome']}</option>";
-                    }
-                ?>
-            </select>
-        </div>
+        <label for="maquinista" class="labelUp1">Maquinista</label>
+        <select name="maquinista" class="esticadinho4" required>
+            <?php
+                $result = $mysqli->query("SELECT id, nome FROM usuarios WHERE tipo='USER'");
+                while($row = $result->fetch_assoc()) {
+                    echo "<option value='{$row['id']}'>{$row['nome']}</option>";
+                }
+            ?>
+        </select>
+    </div>
 
     <br>
-
     <div class="espacamento">
         <button id="button8" type="submit">Cadastrar</button>
     </div>

@@ -47,10 +47,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     );
 
     if ($stmtUpd->execute()) {
-        // Inserir notificação de edição
+        // Inserir notificação de edição COM TIPO = 'USER'
         $mensagemNoti = "O maquinista $nome teve seus dados atualizados.";
-        $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem) VALUES (?)");
-        $stmtNoti->bind_param("s", $mensagemNoti);
+        $tipoNoti = "USER";
+        $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem, tipo) VALUES (?, ?)");
+        $stmtNoti->bind_param("ss", $mensagemNoti, $tipoNoti);
         $stmtNoti->execute();
         $stmtNoti->close();
 
