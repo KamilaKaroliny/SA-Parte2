@@ -141,22 +141,16 @@
 
     </section>
 
-    <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<title>Simulação Trem - Versão Simples</title>
-
-<style>
+ <style>
   body {
-    background: #0f1724;
+    background: #566abd;
     color: white;
     font-family: Arial;
     padding: 20px;
   }
 
   .area {
-    background: #111827;
+    background: #566abd;
     padding: 20px;
     border-radius: 10px;
     max-width: 900px;
@@ -184,16 +178,18 @@
     border-radius: 10px;
   }
 
-  .sensor-on { fill: #16a34a !important; }
-  .sensor-off { fill: #888 !important; }
-</style>
-</head>
+  .sensor-on { 
+    fill: #16a34a !important; 
+  }
+  .sensor-off { 
+    fill: #888 !important; 
+  }
+ </style>
+
 <body>
 
 <div class="area">
-
-  <h2>Simulador de Trem (Versão Simplificada)</h2>
-
+  
   <!-- Mapa -->
   <svg id="svgMapa" width="100%" height="400" viewBox="0 0 1000 500">
 
@@ -210,7 +206,15 @@
     <g id="sensores"></g>
 
     <!-- Trem -->
-    <circle id="trem" cx="150" cy="400" r="15" fill="#60a5fa" stroke="black" stroke-width="2" />
+    <image 
+    id="trem"
+    href="../../assets/icons/trenzinho.png"
+    width="40"
+    height="40"
+    x="150"
+    y="400"
+    />
+
 
   </svg>
 
@@ -230,30 +234,11 @@
 </div>
 
 <script>
-/* ======================================================
-    VERSÃO SIMPLES DO SIMULADOR
-    - Trem segue um caminho SVG
-    - Sensores ativam/desativam com clique
-    - Se sensor à frente estiver ON → reduz velocidade
-======================================================= */
-
 // Caminho
 const trilho = document.getElementById('trilho');
-const trem = document.getElementById('trem');
-const grupoSensores = document.getElementById('sensores');
 
-// Comprimento total do trilho
+// ❗ Primeiro calcula o comprimento do trilho
 const caminhoTotal = trilho.getTotalLength();
-
-// Velocidades
-let velocidadeBase = 150;   // px por segundo
-let velocidadeAtual = 0;
-let velocidadeAlvo = velocidadeBase;
-
-// Controle de movimento
-let posicao = 0;
-let rodando = false;
-let ultimoTempo = null;
 
 // Sensores simples (em porcentagem 0–1)
 let sensores = [
@@ -262,10 +247,14 @@ let sensores = [
   { id: "S3", pct: 0.80, ativo: false }
 ];
 
+// Grupo onde os sensores serão adicionados
+const grupoSensores = document.getElementById('sensores');
+
 // Criar marcadores dos sensores
 function criarSensores() {
   sensores.forEach(s => {
-    const p = trilho.getPointAtLength(s.pct * caminhoTotal);
+    const pos = caminhoTotal * s.pct;
+    const p = trilho.getPointAtLength(pos);
 
     const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
     c.setAttribute("cx", p.x);
@@ -283,6 +272,31 @@ function criarSensores() {
 
 criarSensores();
 
+// ================= TRENS =====================
+let trens = [
+  {
+    id: "trem",
+    el: document.getElementById("trem"),
+    posicao: 0,
+    velocidadeAtual: 40,
+    velocidadeAlvo: 150
+  }
+  /*
+  -> Se quiser ativar o TREM 2 depois:
+  {
+    id: "trem2",
+    el: document.getElementById("trem2"),
+    posicao: caminhoTotal * 0.15,
+    velocidadeAtual: 40,
+    velocidadeAlvo: 150
+  }
+  */
+];
+
+let rodando = false;
+let ultimoTempo = null;
+
+// Alternar sensor
 function toggleSensor(id) {
   const s = sensores.find(x => x.id === id);
   s.ativo = !s.ativo;
@@ -292,55 +306,40 @@ function toggleSensor(id) {
   el.classList.toggle("sensor-off", !s.ativo);
 }
 
-/* Determinar próximo sensor */
-function getProxSensor() {
-  const pctAtual = posicao / caminhoTotal;
+function getProxSensor(pos) {
+  const pct = pos / caminhoTotal;
 
   for (let s of sensores) {
-    if (s.pct > pctAtual) return s;
+    if (s.pct > pct) return s;
   }
-  return sensores[0]; // volta para o primeiro (loop)
+  return sensores[0];
 }
 
-/* Loop principal */
-function animar(timestamp) {
-  if (!rodando) {
-    requestAnimationFrame(animar);
-    return;
-  }
+function animar(time) {
+  if (!rodando) return requestAnimationFrame(animar);
 
-  if (!ultimoTempo) ultimoTempo = timestamp;
-  const dt = (timestamp - ultimoTempo) / 1000;
-  ultimoTempo = timestamp;
+  if (ultimoTempo == null) ultimoTempo = time;
+  const dt = (time - ultimoTempo) / 1000;
+  ultimoTempo = time;
 
-  // Verifica comportamento por sensor
-  const prox = getProxSensor();
-  document.getElementById("proxSensor").textContent = prox.id;
+  trens.forEach(t => {
+    const prox = getProxSensor(t.posicao);
 
-  if (prox.ativo) {
-    velocidadeAlvo = 40; // reduz
-  } else {
-    velocidadeAlvo = velocidadeBase; // acelera
-  }
+    t.velocidadeAlvo = prox.ativo ? 40 : 150;
+    t.velocidadeAtual += (t.velocidadeAlvo - t.velocidadeAtual) * 0.1;
 
-  // aproximação simples
-  velocidadeAtual += (velocidadeAlvo - velocidadeAtual) * 0.1;
+    t.posicao += t.velocidadeAtual * dt;
+    if (t.posicao >= caminhoTotal) t.posicao = 0;
 
-  posicao += velocidadeAtual * dt;
-
-  if (posicao >= caminhoTotal) posicao = 0; // loop
-
-  // aplica posição ao trem
-  const p = trilho.getPointAtLength(posicao);
-  trem.setAttribute("cx", p.x);
-  trem.setAttribute("cy", p.y);
-
-  document.getElementById("velAtual").textContent = velocidadeAtual.toFixed(0);
+    const p = trilho.getPointAtLength(t.posicao);
+    t.el.setAttribute("x", p.x - 20);
+    t.el.setAttribute("y", p.y - 20);
+  });
 
   requestAnimationFrame(animar);
 }
 
-/* Botões */
+// Botões
 document.getElementById("btnIniciar").onclick = () => {
   rodando = true;
   ultimoTempo = null;
@@ -352,21 +351,22 @@ document.getElementById("btnPausar").onclick = () => {
 
 document.getElementById("btnReset").onclick = () => {
   rodando = false;
-  posicao = 0;
-  velocidadeAtual = 0;
-  const p = trilho.getPointAtLength(0);
-  trem.setAttribute("cx", p.x);
-  trem.setAttribute("cy", p.y);
+
+  trens.forEach(t => {
+    t.posicao = 0;
+    t.velocidadeAtual = 0;
+
+    const p = trilho.getPointAtLength(0);
+    t.el.setAttribute("x", p.x - 20);
+    t.el.setAttribute("y", p.y - 20);
+  });
 };
 
-// iniciar animação
+// Iniciar loop
 requestAnimationFrame(animar);
 </script>
 
 </body>
-</html>
-
-
       </div>
     </section>
 
