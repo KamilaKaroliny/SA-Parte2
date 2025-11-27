@@ -2,7 +2,6 @@
 session_start();
 include("../../db/conexao.php");
 
-// garante que o usuário está logado
 if (!isset($_SESSION["user_id"])) {
     header("Location: ../../index.php");
     exit;
@@ -10,8 +9,7 @@ if (!isset($_SESSION["user_id"])) {
 
 $id = $_SESSION["user_id"];
 
-// busca os dados do usuário logado
-$sql= "SELECT nome,foto_perfil,telefone,idade FROM usuarios WHERE id = ?";
+$sql= "SELECT id, nome, foto_perfil, telefone, idade FROM usuarios WHERE id = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -23,9 +21,8 @@ if (!$usuario) {
     die("Usuário não encontrado.");
 }
 
-$user = $result->fetch_assoc();
-$nome = $user['nome'];
-$foto = $user['foto_perfil'] ?: 'default.jpg';
+$nome = $usuario['nome'];
+$foto = $usuario['foto_perfil'] ?: 'default.jpg';
 ?>
 
 <html lang="pt-BR">
@@ -71,7 +68,7 @@ $foto = $user['foto_perfil'] ?: 'default.jpg';
 <div class="perfil-container2">
     <div class="perfil-container1">
         <div class="perfil-foto-box1">
-            <img src="../../../assets/images/<?php htmlspecialchars($usuario['foto_perfil']); ?>" 
+            <img src="../../assets/images/<?php echo htmlspecialchars($usuario['foto_perfil']); ?>" 
                  class="perfil-foto1" alt="Foto de Perfil">
         </div>
     
