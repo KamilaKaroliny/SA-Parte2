@@ -190,10 +190,9 @@
 
 <div class="area">
   
-  <!-- Mapa -->
+    <!-- MAPA -->
   <svg id="svgMapa" width="100%" height="400" viewBox="0 0 1000 500">
 
-    <!-- Caminho central (onde o trem anda) -->
     <path id="trilho" 
       d="M 150 400
          C 200 300, 350 250, 500 250
@@ -202,30 +201,20 @@
          C 180 395, 150 400, 150 400"
       stroke="white" stroke-width="5" fill="none" />
 
-    <!-- Sensores (serão posicionados via JS) -->
     <g id="sensores"></g>
 
-    <!-- Trem -->
     <image 
-    id="trem"
-    href="../../assets/icons/trenzinho.png"
-    width="40"
-    height="40"
-    x="150"
-    y="400"
+      id="trem"
+      href="../../assets/icons/trenzinho.png"
+      width="40"
+      height="40"
+      x="150"
+      y="400"
     />
-
-
   </svg>
 
-  <!-- Botões -->
-  <div style="margin-top:10px;">
-    <button id="btnIniciar">Iniciar</button>
-    <button id="btnPausar">Pausar</button>
-    <button id="btnReset">Resetar</button>
-  </div>
 
-  <!-- Painel -->
+  <!-- PAINEL -->
   <div id="painel">
     <p>Velocidade atual: <span id="velAtual">0</span> px/s</p>
     <p>Próximo sensor: <span id="proxSensor">—</span></p>
@@ -233,24 +222,86 @@
 
 </div>
 
-<script>
-// Caminho
-const trilho = document.getElementById('trilho');
 
-// ❗ Primeiro calcula o comprimento do trilho
+<!-- Informações do trem -->
+<section class="secaoInfoTrem">
+  <div class="cartaoInfoTrem">
+
+    <div class="iconeBateriaContainer">
+      <img class="iconeBateria" src="../../assets/icons/bateria.png">
+    </div>
+
+    <div>
+      <div class="tremInfoContainer">
+        <h2>Circular: 1970</h2>
+      </div>
+    </div>
+
+    <div class="tremInfoContainer">
+      <img class="imagemTrem" src="../../assets/icons/trenzinho.png">
+    </div>
+
+    <div class="infoComplementarTrem">
+      <button class="boxMaquinistaInfo" disabled>
+        <img src="../../assets/icons/maquinistas.png">
+        <div><h4>Josevaldo</h4></div>
+      </button>
+
+      <div class="boxMaquinistaInfo">
+        <h5>Próxima Parada:</h5>
+        <h6>Jardim Sofia</h6>
+        <h3>15:30</h3>
+      </div>
+    </div>
+
+    <div class="infoComplementarTrem">
+      <div class="tremInfoContainer">
+        <div class="boxTipoVelocidadeTrem">
+          <div class="listaMarcacoes">
+            <h3>Marcações recentes:</h3>
+
+            <?php
+            if ($resultado_marcacoes->num_rows > 0) {
+              while ($linha = $resultado_marcacoes->fetch_assoc()) {
+                echo "
+                  <div class='itemMarcacao'>
+                    <img src='../../assets/icons/".$linha['icone'].".png' style='width:20px; margin-right:6px;'>
+                    <span>".$linha['localizacao']."</span>
+                  </div>";
+              }
+            } else {
+              echo "<p>Nenhuma marcação registrada.</p>";
+            }
+            ?>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<!-- ====================== SCRIPTS ====================== -->
+<script>
+// =======================================================================
+// CONFIGURAÇÃO DO TREM (SIMULADO)
+// =======================================================================
+
+const trilho = document.getElementById("trilho");
 const caminhoTotal = trilho.getTotalLength();
 
-// Sensores simples (em porcentagem 0–1)
 let sensores = [
   { id: "S1", pct: 0.20, ativo: false },
   { id: "S2", pct: 0.50, ativo: false },
   { id: "S3", pct: 0.80, ativo: false }
 ];
 
-// Grupo onde os sensores serão adicionados
-const grupoSensores = document.getElementById('sensores');
+const grupoSensores = document.getElementById("sensores");
 
-// Criar marcadores dos sensores
+// cria sensores sem clique
 function criarSensores() {
   sensores.forEach(s => {
     const pos = caminhoTotal * s.pct;
@@ -262,9 +313,9 @@ function criarSensores() {
     c.setAttribute("r", 12);
     c.setAttribute("data-id", s.id);
     c.classList.add("sensor-off");
-    c.style.cursor = "pointer";
 
-    c.addEventListener("click", () => toggleSensor(s.id));
+    // maquinista NÃO pode clicar
+    c.style.pointerEvents = "none";
 
     grupoSensores.appendChild(c);
   });
@@ -272,99 +323,65 @@ function criarSensores() {
 
 criarSensores();
 
-// ================= TRENS =====================
-let trens = [
-  {
-    id: "trem",
-    el: document.getElementById("trem"),
-    posicao: 0,
-    velocidadeAtual: 40,
-    velocidadeAlvo: 150
-  }
-  /*
-  -> Se quiser ativar o TREM 2 depois:
-  {
-    id: "trem2",
-    el: document.getElementById("trem2"),
-    posicao: caminhoTotal * 0.15,
-    velocidadeAtual: 40,
-    velocidadeAlvo: 150
-  }
-  */
-];
 
-let rodando = false;
+// =======================================================================
+// MOVIMENTO DO TREM
+// =======================================================================
+
+let trem = {
+  el: document.getElementById("trem"),
+  posicao: 0,
+  velocidadeAtual: 60,
+  velocidadeAlvo: 150
+};
+
+let rodando = true;
 let ultimoTempo = null;
-
-// Alternar sensor
-function toggleSensor(id) {
-  const s = sensores.find(x => x.id === id);
-  s.ativo = !s.ativo;
-
-  const el = document.querySelector(`[data-id="${id}"]`);
-  el.classList.toggle("sensor-on", s.ativo);
-  el.classList.toggle("sensor-off", !s.ativo);
-}
-
-function getProxSensor(pos) {
-  const pct = pos / caminhoTotal;
-
-  for (let s of sensores) {
-    if (s.pct > pct) return s;
-  }
-  return sensores[0];
-}
 
 function animar(time) {
   if (!rodando) return requestAnimationFrame(animar);
 
-  if (ultimoTempo == null) ultimoTempo = time;
+  if (ultimoTempo === null) ultimoTempo = time;
   const dt = (time - ultimoTempo) / 1000;
   ultimoTempo = time;
 
-  trens.forEach(t => {
-    const prox = getProxSensor(t.posicao);
+  trem.velocidadeAtual += (trem.velocidadeAlvo - trem.velocidadeAtual) * 0.1;
+  trem.posicao += trem.velocidadeAtual * dt;
 
-    t.velocidadeAlvo = prox.ativo ? 40 : 150;
-    t.velocidadeAtual += (t.velocidadeAlvo - t.velocidadeAtual) * 0.1;
+  if (trem.posicao >= caminhoTotal) trem.posicao = 0;
 
-    t.posicao += t.velocidadeAtual * dt;
-    if (t.posicao >= caminhoTotal) t.posicao = 0;
-
-    const p = trilho.getPointAtLength(t.posicao);
-    t.el.setAttribute("x", p.x - 20);
-    t.el.setAttribute("y", p.y - 20);
-  });
+  const p = trilho.getPointAtLength(trem.posicao);
+  trem.el.setAttribute("x", p.x - 20);
+  trem.el.setAttribute("y", p.y - 20);
 
   requestAnimationFrame(animar);
 }
 
-// Botões
-document.getElementById("btnIniciar").onclick = () => {
-  rodando = true;
-  ultimoTempo = null;
-};
-
-document.getElementById("btnPausar").onclick = () => {
-  rodando = false;
-};
-
-document.getElementById("btnReset").onclick = () => {
-  rodando = false;
-
-  trens.forEach(t => {
-    t.posicao = 0;
-    t.velocidadeAtual = 0;
-
-    const p = trilho.getPointAtLength(0);
-    t.el.setAttribute("x", p.x - 20);
-    t.el.setAttribute("y", p.y - 20);
-  });
-};
-
-// Iniciar loop
 requestAnimationFrame(animar);
+
+
+// =======================================================================
+// ATUALIZA SENSORES EM TEMPO REAL (via PHP)
+// =======================================================================
+
+setInterval(() => {
+  fetch("../../../api/sensores/status.php")
+    .then(r => r.json())
+    .then(dados => {
+      sensores.forEach(s => {
+        s.ativo = dados[s.id] == 1;
+
+        const el = document.querySelector(`[data-id="${s.id}"]`);
+        el.classList.toggle("sensor-on", s.ativo);
+        el.classList.toggle("sensor-off", !s.ativo);
+
+        trem.velocidadeAlvo = s.ativo ? 40 : 150;
+      });
+    });
+}, 1000);
+
 </script>
+
 
 </body>
       </div>
