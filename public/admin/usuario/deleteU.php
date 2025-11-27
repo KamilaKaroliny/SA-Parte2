@@ -16,25 +16,50 @@ if ($result->num_rows == 0) {
 
 $u = $result->fetch_assoc();
 
+$erro = "";
+
 // SE CONFIRMAR A EXCLUSÃO
 if (isset($_POST['confirmar'])) {
-    $sqlDel = "DELETE FROM usuarios WHERE id = ?";
-    $stmtDel = $mysqli->prepare($sqlDel);
-    $stmtDel->bind_param("i", $id);
 
-    if ($stmtDel->execute()) {
-        // Inserir notificação de exclusão COM TIPO = 'USER'
-        $mensagemNoti = "O maquinista " . $u['nome'] . " foi excluído.";
-        $tipoNoti = "USER";
-        $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem, tipo) VALUES (?, ?)");
-        $stmtNoti->bind_param("ss", $mensagemNoti, $tipoNoti);
-        $stmtNoti->execute();
-        $stmtNoti->close();
+    // ---- VERIFICAR VÍNCULOS ----
+    // Trem → maquinista
+    $check1 = $mysqli->prepare("SELECT COUNT(*) AS total FROM trem WHERE maquinista = ?");
+    $check1->bind_param("i", $id);
+    $check1->execute();
+    $v1 = $check1->get_result()->fetch_assoc()['total'];
 
-        header("Location: telaUsuarios.php?msg=deletado");
-        exit;
+    // Relatórios de usuários
+    $check2 = $mysqli->prepare("SELECT COUNT(*) AS total FROM relatorios_usuarios WHERE id_usuario = ?");
+    $check2->bind_param("i", $id);
+    $check2->execute();
+    $v2 = $check2->get_result()->fetch_assoc()['total'];
+
+    if ($v1 > 0 || $v2 > 0) {
+        $erro = "❌ Não é possível excluir. O usuário possui vínculos em:</br>
+                • Trens<br>
+                • Relatórios de usuários<br>";
     } else {
-        echo "Erro ao deletar: " . $mysqli->error;
+
+        // ---- EXCLUIR ----
+        $sqlDel = "DELETE FROM usuarios WHERE id = ?";
+        $stmtDel = $mysqli->prepare($sqlDel);
+        $stmtDel->bind_param("i", $id);
+
+        if ($stmtDel->execute()) {
+
+            // Notificação
+            $mensagemNoti = "O maquinista " . $u['nome'] . " foi excluído.";
+            $tipoNoti = "USER";
+            $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem, tipo) VALUES (?, ?)");
+            $stmtNoti->bind_param("ss", $mensagemNoti, $tipoNoti);
+            $stmtNoti->execute();
+            $stmtNoti->close();
+
+            header("Location: telaUsuarios.php?msg=deletado");
+            exit;
+        } else {
+            $erro = "Erro ao deletar: " . $mysqli->error;
+        }
     }
 }
 ?>
@@ -54,18 +79,27 @@ if (isset($_POST['confirmar'])) {
     </a>
 </div>
 
-<img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo do Tremalize">
-<H1 id="padding">EXCLUIR USUÁRIOS</H1>
+<img id="logo2" src="../../../assets/icons/logoTremalize.png" alt="Logo">
+<h1 id="padding">EXCLUIR USUÁRIO</h1>
 
 <div class="cardConfirmar">
-    <p>
-        Tem certeza que deseja excluir o usuário <strong><?php echo htmlspecialchars($u['nome']); ?></strong>?
-    </p>
-    <br>
+
+    <?php if (!empty($erro)): ?>
+        <p><?= $erro ?></p>
+        <br>
+        <a href="telaUsuarios.php">
+            <button id="button8">Voltar</button>
+        </a>
+    <?php else: ?>
+
+    <p>Tem certeza que deseja excluir o usuário <strong><?= htmlspecialchars($u['nome']) ?></strong>?</p>
 
     <form method="POST">
-        <button type="submit" name="confirmar" id='button8'>Sim, excluir</button>
+        <button type="submit" name="confirmar" id="button8">Sim, excluir</button>
     </form>
+
+    <?php endif; ?>
+
 </div>
 
 </body>
