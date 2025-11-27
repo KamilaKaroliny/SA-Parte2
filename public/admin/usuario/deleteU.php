@@ -23,6 +23,13 @@ if (isset($_POST['confirmar'])) {
     $stmtDel->bind_param("i", $id);
 
     if ($stmtDel->execute()) {
+        // Inserir notificação de exclusão
+        $mensagemNoti = "O maquinista " . $u['nome'] . " foi excluído.";
+        $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem) VALUES (?)");
+        $stmtNoti->bind_param("s", $mensagemNoti);
+        $stmtNoti->execute();
+        $stmtNoti->close();
+
         header("Location: telaUsuarios.php?msg=deletado");
         exit;
     } else {
@@ -40,9 +47,8 @@ if (isset($_POST['confirmar'])) {
 </head>
 <body>
 
-<div 
-    class="meio7">
-        <a href="telaUsuarios.php">
+<div class="meio7">
+    <a href="telaUsuarios.php">
         <img id="setaEditar" src="../../../assets/icons/seta.png" alt="seta">
     </a>
 </div>
@@ -52,7 +58,7 @@ if (isset($_POST['confirmar'])) {
 
 <div class="cardConfirmar">
     <p>
-        Tem certeza que deseja excluir o usuário <strong><?php echo $u['nome']; ?></strong>?
+        Tem certeza que deseja excluir o usuário <strong><?php echo htmlspecialchars($u['nome']); ?></strong>?
     </p>
     <br>
 

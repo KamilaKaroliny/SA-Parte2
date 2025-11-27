@@ -47,6 +47,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     );
 
     if ($stmtUpd->execute()) {
+        // Inserir notificação de edição
+        $mensagemNoti = "O maquinista $nome teve seus dados atualizados.";
+        $stmtNoti = $mysqli->prepare("INSERT INTO notificacoes (mensagem) VALUES (?)");
+        $stmtNoti->bind_param("s", $mensagemNoti);
+        $stmtNoti->execute();
+        $stmtNoti->close();
+
         header("Location:telaUsuarios.php?msg=editado");
         exit;
     } else {
@@ -121,9 +128,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 <input class="esticadinho5" type="text" id="bairro" name="bairro" value="<?php echo $u['bairro']; ?>">
             </div>
             
-            <div class="espacamento4">
-                <label class="labelUp1">Cidade:</label>
-                <input class="esticadinho5" type="text" id="cidade" name="cidade" value="<?php echo $u['cidade']; ?>">
+            <div class="flexApi">
+                <div class="espacamento4">
+                    <label class="labelUp1">Cidade:</label>
+                    <input class="esticadinho5" type="text" id="cidade" name="cidade" value="<?php echo $u['cidade']; ?>">
+                </div>
             </div>
         </div>
 
@@ -162,9 +171,7 @@ document.getElementById("cep").addEventListener("blur", async function () {
 
     if (cep.length === 8) {
         let response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-
         let dados = await response.json();
-
         if (!dados.erro) {
             document.getElementById("rua").value = dados.logradouro;
             document.getElementById("bairro").value = dados.bairro;

@@ -11,7 +11,7 @@
 
 <body>
 
- <?php include("../../includes/abaNotificacaoADM.php"); ?>
+ <?php include("../../includes/abaNotificacao.php"); ?>
 
     <!-- div flex que comporta a logo -->
     <div id=flex2>
