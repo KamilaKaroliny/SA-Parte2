@@ -35,6 +35,8 @@
   <link rel="stylesheet" href="../../style/style.css" />
   <title>Tremalize</title>
 </head>
+
+
 <body>
 
   <!-- Cabeçalho -->
@@ -69,16 +71,16 @@
 
         <!-- Umidade -->
         <div class="boxClimaInfo">
-          <h4>20% UR</h4>
+          <h4 id="umidade">-- % UR</h4>
           <img src="../../assets/icons/umidade.png" alt="Ícone Umidade" />
-        </div>
+          </div>
 
         <!-- Temperatura -->
         <div class="boxClimaInfo">
-          <h4>30°C</h4>
+          <h4 id="temperatura">-- °C</h4>
           <img src="../../assets/icons/sol.png" alt="Ícone Sol" />
         </div>
-      
+
           <label>
             <input class="noticacao" type="checkbox"> 
 
@@ -139,20 +141,232 @@
 
     </section>
 
-    <!-- Mapa -->
-    <section class="secaoMapaGoogle">
-      <div class="containerMapa">
+ <style>
+  body {
+    background: #566abd;
+    color: white;
+    font-family: Arial;
+    padding: 20px;
+  }
 
-        <iframe
-          title="Mapa"
-          width="100%"
-          height="350"
-          frameborder="0"
-          style="border:0"
-          src="https://maps.google.com/maps?q=Joinville&z=12&output=embed"
-          allowfullscreen>
-        </iframe>
+  .area {
+    background: #566abd;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 900px;
+    margin: auto;
+  }
 
+  button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background: #2563eb;
+    color: white;
+    margin-right: 5px;
+  }
+
+  button:active {
+    transform: scale(0.95);
+  }
+
+  #painel {
+    margin-top: 20px;
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .sensor-on { 
+    fill: #16a34a !important; 
+  }
+  .sensor-off { 
+    fill: #888 !important; 
+  }
+ </style>
+
+<body>
+
+<div class="area">
+  
+  <!-- Mapa -->
+  <svg id="svgMapa" width="100%" height="400" viewBox="0 0 1000 500">
+
+    <!-- Caminho central (onde o trem anda) -->
+    <path id="trilho" 
+      d="M 150 400
+         C 200 300, 350 250, 500 250
+         C 650 250, 800 300, 850 400
+         C 700 380, 500 380, 300 390
+         C 180 395, 150 400, 150 400"
+      stroke="white" stroke-width="5" fill="none" />
+
+    <!-- Sensores (serão posicionados via JS) -->
+    <g id="sensores"></g>
+
+    <!-- Trem -->
+    <image 
+    id="trem"
+    href="../../assets/icons/trenzinho.png"
+    width="40"
+    height="40"
+    x="150"
+    y="400"
+    />
+
+
+  </svg>
+
+  <!-- Botões -->
+  <div style="margin-top:10px;">
+    <button id="btnIniciar">Iniciar</button>
+    <button id="btnPausar">Pausar</button>
+    <button id="btnReset">Resetar</button>
+  </div>
+
+  <!-- Painel -->
+  <div id="painel">
+    <p>Velocidade atual: <span id="velAtual">0</span> px/s</p>
+    <p>Próximo sensor: <span id="proxSensor">—</span></p>
+  </div>
+
+</div>
+
+<script>
+// Caminho
+const trilho = document.getElementById('trilho');
+
+// ❗ Primeiro calcula o comprimento do trilho
+const caminhoTotal = trilho.getTotalLength();
+
+// Sensores simples (em porcentagem 0–1)
+let sensores = [
+  { id: "S1", pct: 0.20, ativo: false },
+  { id: "S2", pct: 0.50, ativo: false },
+  { id: "S3", pct: 0.80, ativo: false }
+];
+
+// Grupo onde os sensores serão adicionados
+const grupoSensores = document.getElementById('sensores');
+
+// Criar marcadores dos sensores
+function criarSensores() {
+  sensores.forEach(s => {
+    const pos = caminhoTotal * s.pct;
+    const p = trilho.getPointAtLength(pos);
+
+    const c = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    c.setAttribute("cx", p.x);
+    c.setAttribute("cy", p.y);
+    c.setAttribute("r", 12);
+    c.setAttribute("data-id", s.id);
+    c.classList.add("sensor-off");
+    c.style.cursor = "pointer";
+
+    c.addEventListener("click", () => toggleSensor(s.id));
+
+    grupoSensores.appendChild(c);
+  });
+}
+
+criarSensores();
+
+// ================= TRENS =====================
+let trens = [
+  {
+    id: "trem",
+    el: document.getElementById("trem"),
+    posicao: 0,
+    velocidadeAtual: 40,
+    velocidadeAlvo: 150
+  }
+  /*
+  -> Se quiser ativar o TREM 2 depois:
+  {
+    id: "trem2",
+    el: document.getElementById("trem2"),
+    posicao: caminhoTotal * 0.15,
+    velocidadeAtual: 40,
+    velocidadeAlvo: 150
+  }
+  */
+];
+
+let rodando = false;
+let ultimoTempo = null;
+
+// Alternar sensor
+function toggleSensor(id) {
+  const s = sensores.find(x => x.id === id);
+  s.ativo = !s.ativo;
+
+  const el = document.querySelector(`[data-id="${id}"]`);
+  el.classList.toggle("sensor-on", s.ativo);
+  el.classList.toggle("sensor-off", !s.ativo);
+}
+
+function getProxSensor(pos) {
+  const pct = pos / caminhoTotal;
+
+  for (let s of sensores) {
+    if (s.pct > pct) return s;
+  }
+  return sensores[0];
+}
+
+function animar(time) {
+  if (!rodando) return requestAnimationFrame(animar);
+
+  if (ultimoTempo == null) ultimoTempo = time;
+  const dt = (time - ultimoTempo) / 1000;
+  ultimoTempo = time;
+
+  trens.forEach(t => {
+    const prox = getProxSensor(t.posicao);
+
+    t.velocidadeAlvo = prox.ativo ? 40 : 150;
+    t.velocidadeAtual += (t.velocidadeAlvo - t.velocidadeAtual) * 0.1;
+
+    t.posicao += t.velocidadeAtual * dt;
+    if (t.posicao >= caminhoTotal) t.posicao = 0;
+
+    const p = trilho.getPointAtLength(t.posicao);
+    t.el.setAttribute("x", p.x - 20);
+    t.el.setAttribute("y", p.y - 20);
+  });
+
+  requestAnimationFrame(animar);
+}
+
+// Botões
+document.getElementById("btnIniciar").onclick = () => {
+  rodando = true;
+  ultimoTempo = null;
+};
+
+document.getElementById("btnPausar").onclick = () => {
+  rodando = false;
+};
+
+document.getElementById("btnReset").onclick = () => {
+  rodando = false;
+
+  trens.forEach(t => {
+    t.posicao = 0;
+    t.velocidadeAtual = 0;
+
+    const p = trilho.getPointAtLength(0);
+    t.el.setAttribute("x", p.x - 20);
+    t.el.setAttribute("y", p.y - 20);
+  });
+};
+
+// Iniciar loop
+requestAnimationFrame(animar);
+</script>
+
+</body>
       </div>
     </section>
 
@@ -180,11 +394,11 @@
 
         <!-- Botão do maquinista para ele receber as infos deles -->
         <div class="infoComplementarTrem">
-          <a href="telaInformacoes.php?id=2">
+          <a href="telaInformacoesJosevaldo.php">
               <button class="boxMaquinistaInfo">
                 <img src="../../assets/icons/maquinistas.png" alt="icone do motorista">
                 <div>
-                  <h4>Cloadoaldo</h4>
+                  <h4>Josevaldo</h4>
                 </div>
               </button>
           </a>
