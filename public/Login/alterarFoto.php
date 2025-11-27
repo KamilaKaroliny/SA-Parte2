@@ -23,8 +23,8 @@ $stmt->close();
 // Se o formulário foi enviado
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["foto"])) {
 
-    // Criar pasta uploads caso não exista
-    $pasta = "../../uploads/";
+    // Coloca na pasta imagens
+    $pasta = "../../assets/images/";
     if (!is_dir($pasta)) {
         mkdir($pasta, 0777, true);
     }
@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["foto"])) {
     // Move o arquivo
     if (move_uploaded_file($nomeTemp, $caminhoFinal)) {
 
-        // ---> SE TIVER FOTO ANTIGA, APAGA
+        // SE TIVER FOTO ANTIGA, APAGA
         if ($foto_antiga && file_exists($pasta . $foto_antiga)) {
             unlink($pasta . $foto_antiga);
         }

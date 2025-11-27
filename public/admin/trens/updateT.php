@@ -1,10 +1,8 @@
 <?php
 include("../../../db/conexao.php");
 
-// PEGAR ID
 $id = $_GET['id'] ?? 0;
 
-// BUSCAR TREM PELO ID
 $sql = "SELECT * FROM trem WHERE id = ?";
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("i", $id);
@@ -17,15 +15,19 @@ if ($result->num_rows == 0) {
 
 $u = $result->fetch_assoc();
 
-// SE ENVIAR O FORMULÁRIO (UPDATE)
+$sqlMaq = "SELECT id, nome FROM usuarios WHERE tipo = 'USER'";
+$maquinistas = $mysqli->query($sqlMaq);
+
+
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nome = trim($_POST['nome']);
     $tipo = trim($_POST['tipo']);
+    $maquinista = trim($_POST['maquinista']);
 
-    $sqlUpdate = "UPDATE trem SET nome = ?, tipo = ? WHERE id = ?";
+    $sqlUpdate = "UPDATE trem SET nome = ?, tipo = ?, maquinista = ? WHERE id = ?";
     $stmtUpd = $mysqli->prepare($sqlUpdate);
-    $stmtUpd->bind_param("ssi", $nome, $tipo, $id);
+    $stmtUpd->bind_param("ssii", $nome, $tipo, $maquinista, $id);
 
     if ($stmtUpd->execute()) {
         header("Location: telaCircular.php?msg=editado");
@@ -69,6 +71,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             <option value="CIR" <?php echo ($u['tipo'] === "CIR") ? "selected" : ""; ?>>Circular</option>
             <option value="CAR" <?php echo ($u['tipo'] === "CAR") ? "selected" : ""; ?>>Carga</option>
             <option value="TUR" <?php echo ($u['tipo'] === "TUR") ? "selected" : ""; ?>>Turismo</option>
+        </select>
+    </div>
+
+    <div class="espacamento">
+        <label class="labelUp1">Maquinista:</label>
+        <select class="esticadinho4" name="maquinista" required>
+            <option value="">Selecione...</option>
+
+            <?php while ($m = $maquinistas->fetch_assoc()) { ?>
+                <option value="<?php echo $m['id']; ?>"
+                    <?php echo ($u['maquinista'] == $m['id']) ? "selected" : ""; ?>>
+                    <?php echo $m['nome']; ?>
+                </option>
+            <?php } ?>
         </select>
     </div>
 

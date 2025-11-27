@@ -28,15 +28,17 @@ CREATE TABLE IF NOT EXISTS trem (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(125) NOT NULL,
     tipo ENUM('CIR', 'CAR', 'TUR') NOT NULL,
-    ultimaManutencao DATE NOT NULL,
-    proximaManutencao DATE NOT NULL,
-    distancia DECIMAL(10,2) NOT NULL,
-    combustivel ENUM('Elétrico', 'Combustão') NOT NULL,
-    numeroVagoes INT NOT NULL,
+    ultimaManutencao DATE NULL,
+    proximaManutencao DATE NULL,
+    distancia DECIMAL(10,2) NULL,
+    combustivel ENUM('Elétrico', 'Combustão') NULL,
+    numeroVagoes INT NULL,
     quantidadeManutencao INT DEFAULT 0,
-    combustivelMaximo DECIMAL(10,2) NOT NULL,
-    capacidadeMaxima INT NOT NULL,
-    imagem VARCHAR(255) DEFAULT 'default_trem.jpg'
+    combustivelMaximo DECIMAL(10,2) NULL,
+    capacidadeMaxima INT NULL,
+    imagem VARCHAR(255) DEFAULT 'default_trem.jpg',
+    maquinista INT NULL,
+    FOREIGN KEY (maquinista) REFERENCES usuarios(id)
 );
 
 -- Tabela de marcações
@@ -99,7 +101,7 @@ CREATE TABLE IF NOT EXISTS relatorios_trens (
 -- Inserção de usuários
 INSERT INTO usuarios (nome, senha, credencial, email, tipo, data_nascimento, telefone, idade, foto_perfil)
 VALUES
-('Icaro', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi', 'X9Y4Z6A1B4', 'icaro@administrador.com', 'ADM', '2001-10-22', '4799955282', 24, 'foto_69238508108245.46554602.jpeg'),
+('Icaro', '$2y$10$C1PHSSorIqP0NAj84qC0tO1KJOszl4cfEadt3g1kTZhNPnXmY6AYi', 'X9Y4Z6A1B4', 'icaro@administrador.com', 'ADM', '2001-10-22', '4799955282', 24, 'icaro.png'),
 ('Clodoaldo Kowalski', '$2y$10$0bEiISHnAtiCfCt7WVdWQOtpnPhzzZG6nfuEVAkTpEkG7A5Zv.Hhe', 'X9Y4Z6A1B3', 'clodoaldo@maquinista.com', 'USER', '1981-10-23', '21954321098', 71, 'clodoaldo.png'),
 ('Jarbas Andrade', '$2y$10$DDqAqp/FfIRp7/G8SXL2k.SJ80smRuZ/.Nf4DyurIQba9jyo76uYa', 'MSJ870NSHXU6', 'jarbas@maquinista.com', 'USER', '1991-10-12', '21998565489', 34, 'jarbas.png');
 

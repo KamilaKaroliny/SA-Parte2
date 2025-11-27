@@ -1090,8 +1090,8 @@ span#textoInfoRelatorio {
 
 /* Foto dentro do círculo */
 .perfil-foto1 {
-    width: 240px;
-    height: 240px;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
     object-fit: cover;
 }
