@@ -60,7 +60,7 @@
         </div>
 
             <div id="flex">
-                <a href="feedback.php">
+                <a href="feedback/READfeedback.php">
                     <div class="quadradinho1"> <img class="imgTelaInicial" src="../../assets/icons/feedback.png"
                             alt="Imagem Feedback">
                         <h3 id="flex">FEEDBACK</h3>
