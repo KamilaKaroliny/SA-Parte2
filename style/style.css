@@ -397,7 +397,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 .esticadinho5 {
-    padding: 13px 5px;
+    padding: 13px 0px;
     background-color: rgb(86, 106, 189);
     color: rgb(255, 254, 254);
     border: 1px solid #cecccc;
@@ -1028,9 +1028,7 @@ span#textoInfoRelatorio {
 }
 
 .espacamento4 {
-    width: 150px;
-    height: 70px;
-    padding-right: 50px;
+    padding-right: 10px;
 }
 
 .iconeMais {
@@ -1151,12 +1149,13 @@ span#textoInfoRelatorio {
 
 .flexApi {
     display: flex;
+    padding-left: 8px;
 }
 
 .api {
     display: flex;
     flex-direction: column;
-    padding-left: 15px;
+    padding-left: 5px;
 }
 
 /* Style.css do Mapa */
