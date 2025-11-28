@@ -109,6 +109,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 2rem;
 }
 
 #flex2 {
@@ -185,6 +186,21 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
     width: 70px;
     padding: 20px 140px 20px 10px;
 
+}
+
+.btn-delete {
+    background-color: red;
+    color: white;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.btn-delete:hover {
+    background-color: darkred;
 }
 
 /*Junta os icones "seta, imagem, e nome" alem de colocar todos no centro*/
@@ -421,7 +437,7 @@ telainformacoesGilsemara.html, telainformacoesJosevaldo.html, telainformacoesLui
 }
 
 .esticadinho8 {
-    padding: 13px 76px;
+    padding: 13px 105px;
     background-color: rgb(86, 106, 189);
     color: rgb(255, 254, 254);
     border: 1px solid #cecccc;
@@ -672,8 +688,10 @@ a:hover {
 .branca {
     background-color: #f7f5f5;
     color: black;
-    border-radius: 30px;
-    padding: 0px 10px 0px 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
 
 /*Essa classe cuida dos titulos dos nomes da tela feedback*/
@@ -1896,4 +1914,86 @@ input:checked~.legenda {
 .rel-msg {
     text-align: center;
     font-weight: bold;
+}
+
+/*  RESPONSIVO DESKTOP */
+
+
+@media (min-width: 800px) {
+
+    body {
+        text-align: center;
+    }
+
+    /* LOGOS ficam mais elegantes em telas grandes */
+    #logo, #logo1, #logo2, #logo3, #logo4, #logoEditar {
+        width: auto;
+        height: 220px;
+    }
+
+    /* Ajusta containers para evitar que fiquem muito largos */
+    #flex, #flex2, #flex3, #flex4, #flex5,
+    #flex6, #flex7, #flex8, #flex9, #flex10,
+    #flex11, #flex-container, #flex-container1 {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    /* Caixas como quadradinhos, mapas e painéis */
+    .quadradinho1, .quadradinho2, .quadradinho3,
+    .quadradinho4, .quadradinhoMapa, .quadradinhoCircular,
+    .manutencoes, .branca, .secaoRelatorio {
+        max-width: 800px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Botões maiores em desktop */
+    button, 
+    #button1, #button2, #button3, #button4,
+    #button5, #button6, #button7, #button8,
+    .esticadinho, .esticadinho2, .esticadinho3,
+    .esticadinho4, .esticadinho5, .esticadinho6 {
+        padding: 18px 60px;
+        font-size: 18px;
+    }
+
+    /* Inputs centralizados com largura maior */
+    input, select {
+        width: 60%;
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    /* Texto maior no desktop */
+    .nome, .text, .dados, p, h3, h2, h1 {
+        font-size: 20px;
+    }
+
+    /* Ajustes do chat */
+    .container-mensagens {
+        max-width: 700px;
+        margin: 0 auto;
+        height: 70vh;
+    }
+
+    .mensagem {
+        max-width: 50%;
+        font-size: 18px;
+    }
+
+    /* Notificações posicionadas corretamente no desktop */
+    .notificacoes {
+        width: 350px;
+    }
+
+    .toggle {
+        left: 80px;
+    }
+
+    /* Mapa / pesquisa */
+    .abaPesquisa {
+        width: 600px;
+    }
 }
