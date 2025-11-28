@@ -28,8 +28,8 @@ $notificacoes = $mysqli->query($sql_not);
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../style/style.css">
     <title>Notificações</title>
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
 
