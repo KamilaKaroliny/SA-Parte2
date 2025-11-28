@@ -175,7 +175,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         <div class="espacamento">
             <label class="labelUp2">Tipo:</label>
-            <select class="esticadinho4" name="tipo">
+            <select class="esticadinho7" name="tipo">
                 <option value="USER" <?php echo (isset($tipo) && $tipo === "USER") ? "selected" : ""; ?>>Maquinista</option>
                 <option value="ADM" <?php echo (isset($tipo) && $tipo === "ADM") ? "selected" : ""; ?>>Administrador</option>
             </select>

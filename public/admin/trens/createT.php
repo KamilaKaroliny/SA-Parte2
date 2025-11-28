@@ -67,7 +67,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <div class="espacamento">
         <label class="labelUp1">Tipo:</label>
-        <select class="esticadinho4" name="tipo">
+        <select class="esticadinho9" name="tipo">
             <option value="CIR">Circular</option>
             <option value="CAR">Carga</option>
             <option value="TUR">Turismo</option>
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <div class="espacamento">
         <label for="maquinista" class="labelUp1">Maquinista</label>
-        <select name="maquinista" class="esticadinho4" required>
+        <select name="maquinista" class="esticadinho8" required>
             <?php
                 $result = $mysqli->query("SELECT id, nome FROM usuarios WHERE tipo='USER'");
                 while($row = $result->fetch_assoc()) {
