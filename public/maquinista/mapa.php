@@ -233,7 +233,7 @@
 
     <div>
       <div class="tremInfoContainer">
-        <h2>Circular: 1970</h2>
+        <h2>Expresso Verde</h2>
       </div>
     </div>
 
@@ -244,7 +244,7 @@
     <div class="infoComplementarTrem">
       <button class="boxMaquinistaInfo" disabled>
         <img src="../../assets/icons/maquinistas.png">
-        <div><h4>Josevaldo</h4></div>
+        <div><h4>Clodoaldo</h4></div>
       </button>
 
       <div class="boxMaquinistaInfo">
@@ -381,149 +381,4 @@ setInterval(() => {
 }, 1000);
 
 </script>
-
-
-</body>
-      </div>
-    </section>
-
-    <!-- Informações -->
-    <section class="secaoInfoTrem">
-      
-      <!-- Bateria do Trem-->
-      <div class="cartaoInfoTrem">
-
-        <div class="iconeBateriaContainer">
-          <img class= "iconeBateria" src="../../assets/icons/bateria.png" alt="bateria dos trens">
-        </div>
-
-        <!-- Nome do Trem-->
-        <div>
-          <div class="tremInfoContainer">
-            <h2>Circular: 1970</h2>
-          </div>
-        </div>
-
-        <!-- Icone do Trem-->
-        <div class="tremInfoContainer">
-          <img class="imagemTrem" src="../../assets/icons/trenzinho.png" alt="Trem circular">
-        </div>
-
-        <!-- Botão do maquinista para ele receber as infos deles -->
-        <div class="infoComplementarTrem">
-          <a href="telaInformacoesJosevaldo.php">
-              <button class="boxMaquinistaInfo">
-                <img src="../../assets/icons/maquinistas.png" alt="icone do motorista">
-                <div>
-                  <h4>Josevaldo</h4>
-                </div>
-              </button>
-          </a>
-
-          <!-- Informação de próxima parada -->
-          <div class="boxMaquinistaInfo">
-            <h5>Próxima Parada:</h5>
-            <h6>Jardim Sofia</h6>
-            <h3>15:30</h3>
-          </div>
-
-          <!-- Botão de Marcação -->
-          <label>
-            <input class="noticacao" type="checkbox">
-
-              <div class="toggleMapa, boxMaquinistaInfo">
-                <img src="../../assets/icons/marcacao.png" alt="icone de marcação">
-                <h4>Marcação</h4>
-              </div>
-
-              <!-- Tela de Marcação -->
-              <div class="invisivel"></div>
-              <div class="notificacoesMapa">
-                
-
-                <div class="boxMarcacao">
-                  <h2 class="tituloMapa">MARCAÇÃO:</h2>
-
-                  <a href="editarMarcacao.php">
-                    <div class="boxMarcacaoEditar" style = "margin-left: 10px;" >
-                      <div class="iconeMarcacaoContainer">
-                        <img class= "iconeMarcacao" src="../../assets/icons/editar.png" alt="bateria dos trens">
-                      </div>
-                    </div>
-                  </a>
-                  
-                  
-                </div>
-                
-                <?php
-                  if (isset($_SESSION['ultima_marcacao_local']) && isset($_SESSION['ultima_marcacao_icone'])) {
-
-                  $icone = $_SESSION['ultima_marcacao_icone'];
-                  $local = $_SESSION['ultima_marcacao_local'];
-                }
-                ?>
-
-                <form method="POST" action="">
-                <div class="imagemMarcacao">
-                
-                  <input type="radio" name="icone" id="acidente" value="Acidente">
-                  <label for="acidente">
-                    <img src="../../assets/icons/acidente.png" alt="Ícone de acidente" class="imagemMarcacaoImg">
-                  </label>
-
-                  <input type="radio" name="icone" id="obras" value="Obras">
-                  <label for="obras">
-                    <img src="../../assets/icons/obras.png" alt="Ícone de obras" class="imagemMarcacaoImg">
-                  </label>
-
-                  <input type="radio" name="icone" id="quebra" value="Quebra">
-                  <label for="quebra">
-                    <img src="../../assets/icons/quebraNoTrilho.png" alt="Ícone de quebra no trilho" class="imagemMarcacaoImg">
-                  </label>
-
-                </div>
-
-                <div>
-                    
-                    
-                    <input class="localizacao" type="text" name = "localizacao">
-               </div>
-               
-               <div class="botao">
-                <input class="botaoMarcacao" type="submit" value="Marcar">
-               </div>
-
-              </div>
-              </label>
-        </div>
-
-        <!-- Tipo do trem -->
-        <div class="infoComplementarTrem"> 
-          <div class="tremInfoContainer">
-            <div class="boxTipoVelocidadeTrem">
-             <div class="listaMarcacoes">
-               <h3>Marcações recentes:</h3>
-
-               <?php
-                  if ($resultado_marcacoes->num_rows > 0) {
-                  while ($linha = $resultado_marcacoes->fetch_assoc()) {
-                    echo "
-                  <div class='itemMarcacao'>
-                  <img src='../../assets/icons/".$linha['icone'].".png' style='width:20px; margin-right:6px;'>
-                  <span>".$linha['localizacao']."</span>
-                  </div>
-                  ";
-                }
-                } else {
-                  echo "<p>Nenhuma marcação registrada.</p>";
-                }
-                ?>
-              </div>
-          </div>
-        </div>
-        
-      </div>
-    </section>
-  </main>
-</body>
 </html>

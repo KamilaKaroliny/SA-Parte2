@@ -193,7 +193,7 @@
   <!-- Mapa -->
   <svg id="svgMapa" width="100%" height="400" viewBox="0 0 1000 500">
 
-    <!-- Caminho central (onde o trem anda) -->
+    
     <path id="trilho" 
       d="M 150 400
          C 200 300, 350 250, 500 250
@@ -202,7 +202,7 @@
          C 180 395, 150 400, 150 400"
       stroke="white" stroke-width="5" fill="none" />
 
-    <!-- Sensores (serão posicionados via JS) -->
+    
     <g id="sensores"></g>
 
     <!-- Trem -->
@@ -234,20 +234,20 @@
 </div>
 
 <script>
-// Caminho
+
 const trilho = document.getElementById('trilho');
 
 // ❗ Primeiro calcula o comprimento do trilho
 const caminhoTotal = trilho.getTotalLength();
 
-// Sensores simples (em porcentagem 0–1)
+
 let sensores = [
   { id: "S1", pct: 0.20, ativo: false },
   { id: "S2", pct: 0.50, ativo: false },
   { id: "S3", pct: 0.80, ativo: false }
 ];
 
-// Grupo onde os sensores serão adicionados
+
 const grupoSensores = document.getElementById('sensores');
 
 // Criar marcadores dos sensores
@@ -272,7 +272,7 @@ function criarSensores() {
 
 criarSensores();
 
-// ================= TRENS =====================
+
 let trens = [
   {
     id: "trem",
@@ -383,7 +383,7 @@ requestAnimationFrame(animar);
         <!-- Nome do Trem-->
         <div>
           <div class="tremInfoContainer">
-            <h2>Circular: 1970</h2>
+            <h2>Expresso Verde</h2>
           </div>
         </div>
 
@@ -398,7 +398,7 @@ requestAnimationFrame(animar);
               <button class="boxMaquinistaInfo">
                 <img src="../../assets/icons/maquinistas.png" alt="icone do motorista">
                 <div>
-                  <h4>Josevaldo</h4>
+                  <h4>Clodoaldo</h4>
                 </div>
               </button>
           </a>
