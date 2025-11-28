@@ -1,15 +1,11 @@
 <?php
 include("../../db/conexao.php");
 
-// =============================
 // LISTAR MARCAÇÕES
-// =============================
 $sql = "SELECT * FROM marcacao ORDER BY id DESC";
 $res = $mysqli->query($sql);
 
-// =============================
 // EDITAR MARCAÇÃO
-// =============================
 if (isset($_POST['editar'])) {
     $id = $_POST['id'];
     $localizacao = $_POST['localizacao'];
@@ -24,9 +20,7 @@ if (isset($_POST['editar'])) {
     exit;
 }
 
-// =============================
 // EXCLUIR MARCAÇÃO
-// =============================
 if (isset($_GET['del'])) {
     $id = (int)$_GET['del'];
     $mysqli->query("DELETE FROM marcacao WHERE id = $id");
@@ -48,20 +42,19 @@ if (isset($_GET['del'])) {
 <body>
 
 <!-- Cabeçalho -->
-<div id="cabecalhoEditar">
+<div>
     <div class="meio7">
         <a href="paginaInicial.php">
             <img id="setaEditar" src="../../assets/icons/seta.png">
         </a>
     </div>
-    <div class="meio7">
         <img id="logoEditar" src="../../assets/icons/logoTremalize.png">
     </div>
 </div>
 
 <main>
 
-    <h2 style="text-align:center;">Editar Marcações</h2>
+    <h2 style="text-align:center; font-size:50px;">Editar Marcações</h2>
     <hr>
 
     <div class="lista">

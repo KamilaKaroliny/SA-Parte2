@@ -52,7 +52,7 @@ $notificacoes = $mysqli->query($sql_not);
         <?php while ($n = $notificacoes->fetch_assoc()): ?>
             <div class="notificacao-item <?= $n['lida'] == 0 ? 'unread' : '' ?>">
                 <div class="tituloNoti">
-                    <?= ($n["tipo"] === "USER" ? "Novo Usuário" : "Trem") ?>
+                    <?= ($n["tipo"] === "USER" ? "Usuário" : "Trem") ?>
                 </div>
 
                 <div class="noti">

@@ -383,7 +383,7 @@ requestAnimationFrame(animar);
         <!-- Nome do Trem-->
         <div>
           <div class="tremInfoContainer">
-            <h2>Expresso Verde</h2>
+            <h2>Expresso Azul</h2>
           </div>
         </div>
 
@@ -394,7 +394,7 @@ requestAnimationFrame(animar);
 
         <!-- Botão do maquinista para ele receber as infos deles -->
         <div class="infoComplementarTrem">
-          <a href="telaInformacoesJosevaldo.php">
+          <a>
               <button class="boxMaquinistaInfo">
                 <img src="../../assets/icons/maquinistas.png" alt="icone do motorista">
                 <div>
