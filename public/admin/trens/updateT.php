@@ -73,7 +73,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <div class="espacamento">
         <label class="labelUp1">Tipo:</label>
-        <select class="esticadinho4" name="tipo">
+        <select class="esticadinho9" name="tipo">
             <option value="CIR" <?= $u['tipo'] === "CIR" ? "selected" : ""; ?>>Circular</option>
             <option value="CAR" <?= $u['tipo'] === "CAR" ? "selected" : ""; ?>>Carga</option>
             <option value="TUR" <?= $u['tipo'] === "TUR" ? "selected" : ""; ?>>Turismo</option>
@@ -82,7 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     <div class="espacamento">
         <label class="labelUp1">Maquinista:</label>
-        <select class="esticadinho4" name="maquinista" required>
+        <select class="esticadinho8" name="maquinista" required>
 
             <?php while ($m = $maquinistas->fetch_assoc()) { ?>
                 <option value="<?= $m['id']; ?>"
